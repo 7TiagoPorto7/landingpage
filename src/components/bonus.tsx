@@ -3,27 +3,29 @@
 import { Calculator, Code, FileSpreadsheet, Gift } from "lucide-react";
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+
 const bonuses = [
     {
         icon: FileSpreadsheet,
         title: "Pack de Modelos Prontos",
         description: "Templates profissionais de Valuation, DRE, LBO e M&A prontos para usar.",
         value: "R$ 497",
-        image: "/Users/tiagoporto/.gemini/antigravity/brain/739acb02-0f72-4759-a5de-96ccd8339843/bonus_templates_1765809781435.png",
+        image: "/bonus_templates.png",
     },
     {
         icon: Calculator,
         title: "Curso de HP12C",
         description: "Domine a calculadora financeira mais usada no mercado com aulas práticas.",
         value: "R$ 297",
-        image: "/Users/tiagoporto/.gemini/antigravity/brain/739acb02-0f72-4759-a5de-96ccd8339843/bonus_hp12c_1765809887094.png",
+        image: "/bonus_hp12c.png",
     },
     {
         icon: Code,
         title: "Python para Finanças",
         description: "Introdução à programação para automatizar análises e manipular dados financeiros.",
         value: "R$ 597",
-        image: "/Users/tiagoporto/.gemini/antigravity/brain/739acb02-0f72-4759-a5de-96ccd8339843/bonus_python_1765810268107.png",
+        image: "/bonus_python.png",
     },
 ];
 
@@ -37,10 +39,10 @@ export function Bonus() {
 
                 {/* Blurred 3D Gifts */}
                 <div className="absolute top-10 left-[-5%] w-64 h-64 opacity-40 blur-sm animate-pulse">
-                    <img src="/3d_gift_blue_black_1765852176786.png" alt="" className="w-full h-full object-contain rotate-12" />
+                    <Image src="/3d_gift_blue_black_1765852176786.png" alt="" width={256} height={256} className="w-full h-full object-contain rotate-12" />
                 </div>
                 <div className="absolute bottom-10 right-[-5%] w-80 h-80 opacity-40 blur-sm animate-pulse delay-1000">
-                    <img src="/3d_gift_blue_black_1765852176786.png" alt="" className="w-full h-full object-contain -rotate-12" />
+                    <Image src="/3d_gift_blue_black_1765852176786.png" alt="" width={320} height={320} className="w-full h-full object-contain -rotate-12" />
                 </div>
             </div>
 

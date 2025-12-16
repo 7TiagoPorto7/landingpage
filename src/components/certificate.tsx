@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export function Certificate() {
     return (
@@ -55,9 +56,11 @@ export function Certificate() {
                     >
                         <div className="absolute inset-0 bg-amber-500/20 blur-[100px] rounded-full opacity-30" />
                         <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group hover:scale-[1.02] transition-transform duration-500">
-                            <img
+                            <Image
                                 src="/certificate_mockup_1765852371603.png"
                                 alt="Certificado de Conclusão Modelagem Financeira"
+                                width={600}
+                                height={400}
                                 className="w-full h-auto object-cover"
                             />
                             {/* Shine Effect */}

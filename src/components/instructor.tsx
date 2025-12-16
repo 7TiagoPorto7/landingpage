@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
+import Image from "next/image";
+
 export function Instructor() {
     return (
         <section className="py-24 bg-secondary/20">
@@ -17,10 +19,11 @@ export function Instructor() {
                         className="w-full md:w-1/2"
                     >
                         <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                            <img
-                                src="/Users/tiagoporto/.gemini/antigravity/brain/739acb02-0f72-4759-a5de-96ccd8339843/instructor_headshot_1765809612100.png"
+                            <Image
+                                src="/instructor_headshot.png"
                                 alt="Instrutor de Modelagem Financeira"
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <div className="absolute bottom-0 left-0 p-8">
@@ -37,9 +40,6 @@ export function Instructor() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="w-full md:w-1/2 space-y-6"
                     >
-                        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                            Aprenda com quem vive o mercado
-                        </h2>
                         <p className="text-lg text-muted-foreground">
                             Com mais de 15 anos de experiência em bancos de investimento e consultorias de elite, Carlos já liderou transações que somam mais de R$ 2 bilhões.
                         </p>

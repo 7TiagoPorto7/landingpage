@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export function MazeGrid() {
     // Generate a grid of paths to simulate a maze/circuit forming
@@ -19,6 +20,12 @@ export function MazeGrid() {
         "M30 30 H70 V70 H30 Z"
     ];
 
+    const [durations, setDurations] = useState<number[]>([]);
+
+    useEffect(() => {
+        setDurations(paths.map(() => 3 + Math.random() * 2));
+    }, []);
+
     return (
         <div className="absolute inset-0 z-0 overflow-hidden opacity-20 pointer-events-none">
             <svg
@@ -36,7 +43,7 @@ export function MazeGrid() {
                         initial={{ pathLength: 0, opacity: 0 }}
                         animate={{ pathLength: 1, opacity: 1 }}
                         transition={{
-                            duration: 3 + Math.random() * 2,
+                            duration: durations[i] || 4,
                             ease: "easeInOut",
                             repeat: Infinity,
                             repeatType: "reverse",
