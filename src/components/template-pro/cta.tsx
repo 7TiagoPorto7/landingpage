@@ -8,7 +8,7 @@ const included = [
     "18 abas interligadas (DRE → BP → DFC → DCF → Múltiplos → Comps → Cenários → Monte Carlo → VaR)",
     "Guia explicativo em cada aba",
     "4 scripts Python documentados linha por linha",
-    "Trilha de aprendizado de 15–20h com exercícios",
+    "Trilha de aprendizado guiada com exercícios e gabarito",
     "Tabela de sensibilidade 7×7 (WACC × g)",
     "Football Field com 4 metodologias",
     "Legenda de cores padrão de mercado",

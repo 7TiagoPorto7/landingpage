@@ -86,7 +86,7 @@ export function TemplateSolution() {
                             "18 abas interligadas — da premissa ao Football Field",
                             "Guia explicativo em cada aba com o que, por que e como",
                             "Checks automáticos no Balanço e na DFC (= 0 em todos os anos)",
-                            "Trilha de aprendizado de 15–20h com exercícios práticos",
+                            "Trilha de aprendizado guiada com exercícios práticos e gabarito",
                         ].map((feature, index) => (
                             <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/[0.02] transition-colors">
                                 <CheckCircle2 className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />

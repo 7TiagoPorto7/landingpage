@@ -24,7 +24,7 @@ const differentials = [
         number: "③",
         icon: GraduationCap,
         title: "Trilha de aprendizado estruturada",
-        description: "6 módulos progressivos com exercícios práticos que indicam a célula exata a verificar. 15–20h de aprendizado hands-on — do básico ao Monte Carlo.",
+        description: "6 módulos progressivos com exercícios práticos que indicam a célula exata a verificar. Trilha de aprendizado guiada com gabarito — do básico ao Monte Carlo.",
         color: "text-purple-400",
         bgColor: "bg-purple-500/10",
     },

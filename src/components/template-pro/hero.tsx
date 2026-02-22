@@ -52,7 +52,7 @@ export function TemplateProHero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="max-w-3xl mx-auto mb-12 text-lg text-muted-foreground md:text-xl leading-relaxed"
                 >
-                    Modelo financeiro completo com <strong className="text-white">18 abas interligadas</strong>, trilha de aprendizado de <strong className="text-white">15–20h</strong>, <strong className="text-white">4 scripts Python</strong> e guia explicativo em cada aba. Tudo editável. Tudo auditável.
+                    Modelo financeiro completo com <strong className="text-white">18 abas interligadas</strong>, <strong className="text-white">trilha de aprendizado guiada</strong> com exercícios e gabarito, <strong className="text-white">4 scripts Python</strong> e guia explicativo em cada aba. Tudo editável. Tudo auditável.
                 </motion.p>
 
                 <motion.div
@@ -89,7 +89,7 @@ export function TemplateProHero() {
                     {[
                         { value: "18", label: "Abas Interligadas" },
                         { value: "6", label: "Módulos" },
-                        { value: "15–20h", label: "De Aprendizado" },
+                        { value: "✅", label: "Exercícios + Gabarito" },
                         { value: "4", label: "Scripts Python" },
                     ].map((stat, index) => (
                         <div key={index} className="text-center p-4 rounded-xl bg-white/5 border border-white/5 backdrop-blur-sm">
