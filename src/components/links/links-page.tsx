@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
     TrendingUp,
     Download,
-    Instagram,
     Linkedin,
     Youtube,
     ExternalLink,
@@ -170,7 +169,7 @@ export function LinksPage() {
                         <div className="flex items-center gap-2 mb-4 px-1">
                             <GraduationCap className="w-4 h-4 text-amber-400" />
                             <span className="text-xs font-bold uppercase tracking-widest text-amber-400/80">
-                                Minicursos
+                                Cursos
                             </span>
                         </div>
                     </motion.div>
@@ -209,7 +208,7 @@ export function LinksPage() {
 
                     {/* Banner: Downloads Gratuitos */}
                     <BannerCard
-                        href="#"
+                        href="/downloads"
                         image="/banner_downloads_gratis.png"
                         title="Arquivos Gratuitos para Download"
                         description="Templates, planilhas e materiais de apoio para suas análises financeiras."
@@ -241,12 +240,7 @@ export function LinksPage() {
                         label="Template Pro — Modelo Financeiro + Valuation"
                     />
 
-                    <LinkButton
-                        href="#"
-                        icon={<Instagram className="w-5 h-5" />}
-                        label="Instagram"
-                        external
-                    />
+
 
                     <LinkButton
                         href="https://www.youtube.com/@Tiago_Porto"
