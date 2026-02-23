@@ -249,14 +249,14 @@ export function LinksPage() {
                     />
 
                     <LinkButton
-                        href="#"
+                        href="https://www.youtube.com/@Tiago_Porto"
                         icon={<Youtube className="w-5 h-5" />}
                         label="YouTube"
                         external
                     />
 
                     <LinkButton
-                        href="#"
+                        href="https://www.linkedin.com/in/portotiago/"
                         icon={<Linkedin className="w-5 h-5" />}
                         label="LinkedIn"
                         external
