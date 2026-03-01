@@ -24,10 +24,32 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-2 px-3 py-1 mb-8 text-sm font-medium rounded-full bg-white/5 border border-white/10 text-primary backdrop-blur-sm"
+                    className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-medium rounded-full bg-white/5 border border-white/10 text-primary backdrop-blur-sm"
                 >
                     <TrendingUp className="w-4 h-4" />
                     <span>Modelagem Financeira na Prática</span>
+                </motion.div>
+
+                {/* EM BREVE Banner */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.05 }}
+                    className="flex justify-center mb-8"
+                >
+                    <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-amber-400/30 bg-amber-500/10 backdrop-blur-sm shadow-[0_0_30px_rgba(245,158,11,0.15)]">
+                        <span className="relative flex h-2.5 w-2.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400" />
+                        </span>
+                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
+                            Em Breve
+                        </span>
+                        <span className="hidden sm:block text-white/30 text-xs">|</span>
+                        <span className="hidden sm:block text-xs text-white/50 font-medium">
+                            Curso disponível em breve — cadastre-se para ser notificado
+                        </span>
+                    </div>
                 </motion.div>
 
                 <motion.h1

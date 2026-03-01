@@ -24,62 +24,7 @@ interface DownloadFile {
     downloadUrl: string;
 }
 
-const files: DownloadFile[] = [
-    {
-        id: "modelo-dre",
-        title: "Modelo de DRE Simplificado",
-        description:
-            "Demonstração de Resultado do Exercício com fórmulas prontas. Ideal para iniciantes em modelagem financeira.",
-        type: "xlsx",
-        size: "245 KB",
-        downloadUrl: "#",
-    },
-    {
-        id: "checklist-valuation",
-        title: "Checklist de Valuation",
-        description:
-            "PDF com 30 itens essenciais para revisar antes de apresentar um valuation. Nunca mais esqueça um passo.",
-        type: "pdf",
-        size: "1.2 MB",
-        downloadUrl: "#",
-    },
-    {
-        id: "template-fluxo-caixa",
-        title: "Template Fluxo de Caixa",
-        description:
-            "Planilha de fluxo de caixa mensal com categorização automática e gráficos dinâmicos.",
-        type: "xlsx",
-        size: "380 KB",
-        downloadUrl: "#",
-    },
-    {
-        id: "guia-indicadores",
-        title: "Guia de Indicadores Financeiros",
-        description:
-            "PDF completo com os principais KPIs financeiros, fórmulas e interpretação prática de cada indicador.",
-        type: "pdf",
-        size: "2.1 MB",
-        downloadUrl: "#",
-    },
-    {
-        id: "modelo-balanco",
-        title: "Modelo de Balanço Patrimonial",
-        description:
-            "Planilha estruturada de Balanço Patrimonial com validações e conferência automática de saldo.",
-        type: "xlsx",
-        size: "310 KB",
-        downloadUrl: "#",
-    },
-    {
-        id: "glossario-financas",
-        title: "Glossário de Finanças Corporativas",
-        description:
-            "PDF com +100 termos de finanças corporativas explicados de forma clara e objetiva.",
-        type: "pdf",
-        size: "890 KB",
-        downloadUrl: "#",
-    },
-];
+const files: DownloadFile[] = [];
 
 const container = {
     hidden: { opacity: 0 },
@@ -316,41 +261,33 @@ export function DownloadsPage() {
                     </p>
                 </motion.div>
 
-                {/* File Grid */}
+                {/* Em Breve Placeholder */}
                 <motion.div
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    className="grid gap-4 sm:grid-cols-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="flex flex-col items-center justify-center py-20 px-6 rounded-2xl border border-dashed border-white/10 bg-white/[0.02] text-center"
                 >
-                    {files.map((file) => (
-                        <motion.div key={file.id} variants={item}>
-                            <button
-                                onClick={() => setSelectedFile(file)}
-                                className="group text-left w-full p-5 rounded-2xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.07] hover:bg-white/[0.06] hover:border-white/15 transition-all duration-300 hover:scale-[1.02]"
-                            >
-                                <div className="flex items-start gap-4">
-                                    <FileIcon type={file.type} />
-                                    <div className="flex-1 min-w-0">
-                                        <div className="flex items-center gap-2 mb-1.5">
-                                            <FileBadge type={file.type} />
-                                            <span className="text-[11px] text-white/30">{file.size}</span>
-                                        </div>
-                                        <h3 className="text-sm font-bold text-white mb-1.5 group-hover:text-emerald-300 transition-colors">
-                                            {file.title}
-                                        </h3>
-                                        <p className="text-xs text-white/40 leading-relaxed line-clamp-2">
-                                            {file.description}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-emerald-400/70 group-hover:text-emerald-400 transition-colors">
-                                    <Download className="w-3.5 h-3.5" />
-                                    Baixar gratuitamente
-                                </div>
-                            </button>
-                        </motion.div>
-                    ))}
+                    <div className="relative mb-6">
+                        <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
+                            <Download className="w-9 h-9 text-emerald-400/60" />
+                        </div>
+                        <span className="absolute -top-2 -right-2 flex h-5 w-5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-40" />
+                            <span className="relative inline-flex rounded-full h-5 w-5 bg-emerald-500/20 border border-emerald-400/40 items-center justify-center">
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                            </span>
+                        </span>
+                    </div>
+                    <span className="inline-flex items-center gap-2 px-4 py-1 mb-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest">
+                        Em Breve
+                    </span>
+                    <h2 className="text-lg font-bold text-white mb-2">
+                        Arquivos chegando em breve
+                    </h2>
+                    <p className="text-sm text-white/40 max-w-sm leading-relaxed">
+                        Estamos preparando templates, planilhas e materiais de qualidade para você. Volte em breve!
+                    </p>
                 </motion.div>
 
                 {/* Bottom CTA */}

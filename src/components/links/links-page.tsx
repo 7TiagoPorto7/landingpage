@@ -8,7 +8,6 @@ import {
     Youtube,
     ExternalLink,
     FileSpreadsheet,
-    GraduationCap,
     BookOpen,
     ArrowRight,
 } from "lucide-react";
@@ -164,38 +163,6 @@ export function LinksPage() {
                     animate="show"
                     className="space-y-4"
                 >
-                    {/* Section: Minicursos */}
-                    <motion.div variants={item} className="mb-2">
-                        <div className="flex items-center gap-2 mb-4 px-1">
-                            <GraduationCap className="w-4 h-4 text-amber-400" />
-                            <span className="text-xs font-bold uppercase tracking-widest text-amber-400/80">
-                                Cursos
-                            </span>
-                        </div>
-                    </motion.div>
-
-                    {/* Banner 1: Minicurso Modelagem Financeira */}
-                    <BannerCard
-                        href="#"
-                        image="/banner_minicurso_modelagem.png"
-                        title="Minicurso: Modelagem Financeira"
-                        description="Aprenda os fundamentos da modelagem financeira do zero. Aulas práticas e diretas."
-                        badge="Gratuito"
-                        gradient="from-black/90 via-black/60 to-transparent"
-                        glowColor="rgba(245,158,11,0.25)"
-                    />
-
-                    {/* Banner 2: Minicurso Valuation & DCF */}
-                    <BannerCard
-                        href="#"
-                        image="/banner_minicurso_valuation.png"
-                        title="Minicurso: Valuation & DCF"
-                        description="Entenda como avaliar empresas usando Fluxo de Caixa Descontado na prática."
-                        badge="Gratuito"
-                        gradient="from-black/90 via-black/60 to-transparent"
-                        glowColor="rgba(99,102,241,0.25)"
-                    />
-
                     {/* Section: Downloads */}
                     <motion.div variants={item} className="pt-4 mb-2">
                         <div className="flex items-center gap-2 mb-4 px-1">
