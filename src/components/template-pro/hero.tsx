@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, FileSpreadsheet } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function TemplateProHero() {
@@ -97,6 +98,32 @@ export function TemplateProHero() {
                             <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
                         </div>
                     ))}
+                </motion.div>
+
+                {/* GIF Demo */}
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.7 }}
+                    className="relative max-w-5xl mx-auto mt-14 pb-6"
+                >
+                    <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_80px_rgba(16,185,129,0.12)]">
+                        {/* Glow overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none rounded-2xl" />
+                        <Image
+                            src="/template-pro-demo.gif"
+                            alt="Template Pro — demonstração em vídeo"
+                            width={1200}
+                            height={675}
+                            className="w-full h-auto"
+                            unoptimized
+                        />
+                    </div>
+                    {/* Label */}
+                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black border border-emerald-500/30 text-emerald-400 text-xs font-semibold shadow-lg whitespace-nowrap">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Veja o Template Pro em ação
+                    </div>
                 </motion.div>
             </div>
         </section>
