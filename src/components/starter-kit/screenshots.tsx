@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 
 const tabs = [
@@ -77,8 +76,8 @@ export function SKScreenshots() {
                             id={`tab-${tab.id}`}
                             onClick={() => setActive(i)}
                             className={`flex items-center gap-2 px-5 py-3 rounded-full font-medium text-sm transition-all duration-200 ${active === i
-                                    ? "bg-[#2F5496] text-white shadow-lg shadow-[#2F5496]/30"
-                                    : "bg-[#F2F2F2] text-gray-600 hover:bg-[#2F5496]/10 hover:text-[#2F5496]"
+                                ? "bg-[#2F5496] text-white shadow-lg shadow-[#2F5496]/30"
+                                : "bg-[#F2F2F2] text-gray-600 hover:bg-[#2F5496]/10 hover:text-[#2F5496]"
                                 }`}
                         >
                             <span>{tab.icon}</span>
@@ -108,19 +107,12 @@ export function SKScreenshots() {
                                     Financeiro
                                 </span>
                             </div>
-                            <Image
-                                src={tabs[active].image}
-                                alt={tabs[active].alt}
-                                width={1000}
-                                height={600}
-                                className="w-full object-cover"
-                            />
-                            {/* Description overlay */}
-                            <div className="bg-[#F2F2F2] px-6 py-4 border-t border-gray-200">
-                                <p className="text-[#2F5496] font-medium text-sm">
-                                    {tabs[active].description}
-                                </p>
+                            <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gradient-to-br from-white to-[#F2F2F2] flex flex-col items-center justify-center p-8 text-center">
+                                <span className="text-6xl md:text-8xl mb-6 opacity-80">{tabs[active].icon}</span>
+                                <h3 className="text-3xl md:text-4xl font-bold text-[#2F5496] mb-4">{tabs[active].label}</h3>
+                                <p className="text-gray-500 text-lg md:text-xl max-w-2xl">{tabs[active].description}</p>
                             </div>
+                            {/* Removed Description overlay since it's now in the card */}
                         </motion.div>
                     </AnimatePresence>
                 </div>
