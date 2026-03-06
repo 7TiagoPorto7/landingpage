@@ -2,7 +2,7 @@
 title: "Como iniciar uma carreira em Investment Banking"
 date: "05 Dez 2025"
 readTime: "6 min"
-author: "Carlos Mendes"
+author: "Tiago Porto"
 image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200"
 excerpt: "Dicas essenciais para quem quer entrar em uma das áreas mais competitivas e bem pagas do mercado financeiro."
 ---

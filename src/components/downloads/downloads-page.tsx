@@ -84,17 +84,32 @@ function EmailModal({ file, onClose }: EmailModalProps) {
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!email) return;
+        if (!email || !file) return;
 
         setLoading(true);
-        // Simulate API call — replace with real endpoint
-        setTimeout(() => {
-            setLoading(false);
+        setError("");
+
+        try {
+            const res = await fetch("/api/leads", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, fileId: file.id }),
+            });
+
+            if (!res.ok) {
+                throw new Error("Falha ao registrar e-mail");
+            }
+
             setSubmitted(true);
-        }, 1200);
+        } catch {
+            setError("Erro ao processar. Tente novamente.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     if (!file) return null;
@@ -180,6 +195,11 @@ function EmailModal({ file, onClose }: EmailModalProps) {
                             <p className="mt-4 text-[11px] text-center text-white/25">
                                 Seu e-mail não será compartilhado. Apenas conteúdo relevante.
                             </p>
+                            {error && (
+                                <p className="mt-2 text-[12px] text-center text-red-400">
+                                    {error}
+                                </p>
+                            )}
                         </>
                     ) : (
                         <div className="text-center py-4">

@@ -2,7 +2,7 @@
 title: "Valuation: DCF vs Múltiplos de Mercado"
 date: "10 Dez 2025"
 readTime: "8 min"
-author: "Carlos Mendes"
+author: "Tiago Porto"
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "Entenda as principais diferenças entre as duas metodologias de avaliação de empresas mais utilizadas."
 ---

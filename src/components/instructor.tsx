@@ -27,8 +27,8 @@ export function Instructor() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                             <div className="absolute bottom-0 left-0 p-8">
-                                <h3 className="text-2xl font-bold text-white">Carlos Mendes</h3>
-                                <p className="text-primary font-medium">Especialista em Valuation & M&A</p>
+                                <h3 className="text-2xl font-bold text-white">Tiago Porto</h3>
+                                <p className="text-primary font-medium">Especialista em Modelagem Financeira</p>
                             </div>
                         </div>
                     </motion.div>

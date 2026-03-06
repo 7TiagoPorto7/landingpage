@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# n8n secrets
+n8n-workflow-blog-generator.json
+scripts/test-blog-generator.mjs
+scripts/n8n-formatar-codigo.js
