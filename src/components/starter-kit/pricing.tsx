@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Check, Shield, Zap, CreditCard } from "lucide-react";
 
-const SK_BUY_URL = "https://pay.hotmart.com/YOUR_PRODUCT_ID"; // To be updated with real URL
+const SK_BUY_URL = "https://pay.hotmart.com/B104777770W?off=fwpjg9hw";
 
 const included = [
     "DRE automática — 12 meses",
