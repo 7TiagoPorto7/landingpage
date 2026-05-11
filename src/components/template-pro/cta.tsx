@@ -71,7 +71,7 @@ export function TemplateProCTA() {
                             </div>
 
                             <Link
-                                href="https://pay.hotmart.com/B104550189M"
+                                href="https://pay.hotmart.com/N105779312S"
                                 className="relative flex items-center justify-center w-full h-16 mb-10 text-lg font-bold text-black transition-all rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] overflow-hidden group"
                             >
                                 <span className="relative z-10 flex items-center gap-2">

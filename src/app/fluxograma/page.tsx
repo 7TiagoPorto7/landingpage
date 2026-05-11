@@ -7,6 +7,7 @@ import { DreTable } from "@/components/fluxograma/dre-table";
 import { FluxoCaixaTable } from "@/components/fluxograma/fluxo-caixa-table";
 import { BalancoTable } from "@/components/fluxograma/balanco-table";
 import { PremissasTable } from "@/components/fluxograma/premissas-table";
+import { ValuationTable } from "@/components/fluxograma/valuation-table";
 import { FluxogramaCTA } from "@/components/fluxograma/cta-banner";
 import { Footer } from "@/components/footer";
 
@@ -161,6 +162,86 @@ export default function FluxogramaPage() {
                         </div>
                         <p className="text-gray-500 text-[11px] leading-relaxed">
                             <strong className="text-gray-300">PMR, PMP, PME</strong> calculam Contas a Receber, Fornecedores e Estoques a partir da DRE.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Divider */}
+                <div className="py-4">
+                    <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                </div>
+
+                {/* Valuation Section */}
+                <div className="text-center mb-4">
+                    <h2 className="text-xl md:text-2xl font-bold text-white mb-1">
+                        Valuation — Quanto vale a empresa?
+                    </h2>
+                    <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+                        Passe o mouse sobre cada método para destacar o indicador correspondente na{" "}
+                        <span className="text-emerald-400 font-medium">DRE</span>.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 xl:grid-cols-4 gap-3 items-start">
+                    <ValuationTable
+                        activeConnection={activeConnection}
+                        onHighlight={setActiveConnection}
+                        compact
+                    />
+                </div>
+
+                {/* Valuation Legend */}
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div
+                        className="p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/10 cursor-pointer hover:bg-emerald-500/10 transition-all"
+                        onMouseEnter={() => setActiveConnection("valuation-ebitda")}
+                        onMouseLeave={() => setActiveConnection(null)}
+                    >
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                            <span className="text-emerald-400 font-bold text-xs">EV/EBITDA</span>
+                        </div>
+                        <p className="text-gray-500 text-[11px] leading-relaxed">
+                            <strong className="text-gray-300">EBITDA</strong> × múltiplo de mercado. Método mais usado em empresas maduras.
+                        </p>
+                    </div>
+                    <div
+                        className="p-3 rounded-xl bg-blue-500/5 border border-blue-500/10 cursor-pointer hover:bg-blue-500/10 transition-all"
+                        onMouseEnter={() => setActiveConnection("valuation-lucro")}
+                        onMouseLeave={() => setActiveConnection(null)}
+                    >
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="w-2 h-2 rounded-full bg-blue-400" />
+                            <span className="text-blue-400 font-bold text-xs">P/L — Preço / Lucro</span>
+                        </div>
+                        <p className="text-gray-500 text-[11px] leading-relaxed">
+                            <strong className="text-gray-300">Lucro Líquido</strong> × múltiplo. Indica quantos anos de lucro o comprador pagaria.
+                        </p>
+                    </div>
+                    <div
+                        className="p-3 rounded-xl bg-amber-500/5 border border-amber-500/10 cursor-pointer hover:bg-amber-500/10 transition-all"
+                        onMouseEnter={() => setActiveConnection("valuation-receita")}
+                        onMouseLeave={() => setActiveConnection(null)}
+                    >
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="w-2 h-2 rounded-full bg-amber-400" />
+                            <span className="text-amber-400 font-bold text-xs">EV/Receita</span>
+                        </div>
+                        <p className="text-gray-500 text-[11px] leading-relaxed">
+                            <strong className="text-gray-300">Receita Bruta</strong> × múltiplo. Para empresas em crescimento sem lucro ainda.
+                        </p>
+                    </div>
+                    <div
+                        className="p-3 rounded-xl bg-rose-500/5 border border-rose-500/10 cursor-pointer hover:bg-rose-500/10 transition-all"
+                        onMouseEnter={() => setActiveConnection("valuation-dcf")}
+                        onMouseLeave={() => setActiveConnection(null)}
+                    >
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="w-2 h-2 rounded-full bg-rose-400" />
+                            <span className="text-rose-400 font-bold text-xs">DCF — Fluxo Descontado</span>
+                        </div>
+                        <p className="text-gray-500 text-[11px] leading-relaxed">
+                            Projeta FCL futuro e desconta ao presente. Método mais robusto e completo.
                         </p>
                     </div>
                 </div>

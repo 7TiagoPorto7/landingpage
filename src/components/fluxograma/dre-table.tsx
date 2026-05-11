@@ -10,20 +10,20 @@ interface DreTableProps {
 }
 
 const dreData = [
-    { label: "Receita Bruta", value: 500000, indent: 0 },
+    { label: "Receita Bruta", value: 500000, indent: 0, connections: ["valuation-receita"] },
     { label: "(–) Deduções", value: -50000, indent: 1 },
-    { label: "= Receita Líquida", value: 450000, indent: 0, bold: true, connection: "premissa-pmr" },
-    { label: "(–) CMV / CPV", value: -180000, indent: 1, connection: "premissa-pmp" },
+    { label: "= Receita Líquida", value: 450000, indent: 0, bold: true, connections: ["premissa-pmr"] },
+    { label: "(–) CMV / CPV", value: -180000, indent: 1, connections: ["premissa-pmp"] },
     { label: "= Lucro Bruto", value: 270000, indent: 0, bold: true },
     { label: "(–) Despesas Operacionais", value: -120000, indent: 1 },
-    { label: "= EBITDA", value: 150000, indent: 0, bold: true },
-    { label: "(–) Depreciação & Amortização", value: -30000, indent: 1, connection: "dre-dfc-depreciacao" },
+    { label: "= EBITDA", value: 150000, indent: 0, bold: true, connections: ["valuation-ebitda"] },
+    { label: "(–) Depreciação & Amortização", value: -30000, indent: 1, connections: ["dre-dfc-depreciacao"] },
     { label: "= EBIT (Lucro Operacional)", value: 120000, indent: 0, bold: true },
     { label: "(–) Despesas Financeiras", value: -15000, indent: 1 },
     { label: "(+) Receitas Financeiras", value: 5000, indent: 1 },
     { label: "= LAIR (Lucro Antes do IR)", value: 110000, indent: 0, bold: true },
     { label: "(–) IR & CSLL (34%)", value: -37400, indent: 1 },
-    { label: "= Lucro Líquido", value: 72600, indent: 0, bold: true, highlight: true, connection: "dre-dfc-lucro" },
+    { label: "= Lucro Líquido", value: 72600, indent: 0, bold: true, highlight: true, connections: ["dre-dfc-lucro", "valuation-lucro"] },
 ];
 
 function formatCurrency(value: number) {
@@ -73,8 +73,15 @@ export function DreTable({ activeConnection, onHighlight, compact }: DreTablePro
                         </thead>
                         <tbody>
                             {dreData.map((row, i) => {
-                                const isActive = row.connection && activeConnection === row.connection;
-                                const isDimmed = activeConnection && !isActive && row.connection;
+                                const isActive = row.connections && row.connections.includes(activeConnection ?? "");
+                                const isDimmed = activeConnection && !isActive && row.connections && row.connections.length > 0;
+                                // Determine the primary dot color based on which connection is active or the first one
+                                const primaryConn = activeConnection && row.connections?.includes(activeConnection)
+                                    ? activeConnection
+                                    : row.connections?.[0];
+                                const dotColor = primaryConn?.includes("premissa") ? "bg-violet-400"
+                                    : primaryConn?.includes("valuation") ? "bg-rose-400"
+                                    : "bg-emerald-400";
                                 return (
                                     <motion.tr
                                         key={i}
@@ -90,16 +97,14 @@ export function DreTable({ activeConnection, onHighlight, compact }: DreTablePro
                                             ${isDimmed ? "opacity-40" : ""}
                                             hover:bg-white/[0.04]
                                         `}
-                                        onMouseEnter={() => row.connection && onHighlight(row.connection)}
-                                        onMouseLeave={() => row.connection && onHighlight(null)}
+                                        onMouseEnter={() => row.connections?.[0] && onHighlight(row.connections[0])}
+                                        onMouseLeave={() => row.connections?.[0] && onHighlight(null)}
                                     >
                                         <td className={`${px} ${py} ${row.indent ? plIndent : ""} ${row.bold ? "font-semibold text-white" : "text-gray-400"}`}>
                                             <div className="flex items-center gap-1.5">
                                                 {row.label}
-                                                {row.connection && (
-                                                    <span className={`inline-block w-1.5 h-1.5 rounded-full ${
-                                                        row.connection.includes("premissa") ? "bg-violet-400" : "bg-emerald-400"
-                                                    } ${isActive ? "animate-pulse" : ""}`} />
+                                                {row.connections && row.connections.length > 0 && (
+                                                    <span className={`inline-block w-1.5 h-1.5 rounded-full ${dotColor} ${isActive ? "animate-pulse" : ""}`} />
                                                 )}
                                             </div>
                                         </td>

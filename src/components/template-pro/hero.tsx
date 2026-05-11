@@ -63,7 +63,7 @@ export function TemplateProHero() {
                     className="flex flex-col items-center justify-center gap-4 sm:flex-row"
                 >
                     <Link
-                        href="https://pay.hotmart.com/B104550189M"
+                        href="https://pay.hotmart.com/N105779312S"
                         className="relative inline-flex items-center justify-center h-14 px-8 text-lg font-bold text-black transition-all duration-300 rounded-full bg-gradient-to-r from-emerald-400 to-teal-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black overflow-hidden group"
                     >
                         <span className="relative z-10 flex items-center">
