@@ -202,11 +202,164 @@ export const modules: Module[] = [
       },
     ],
   },
-  { id: "mod-06", title: "Modelagem de M&A", available: false, topics: [] },
-  { id: "mod-07", title: "LBO (Leveraged Buyout)", available: false, topics: [] },
-  { id: "mod-08", title: "Modelagem de Project Finance", available: false, topics: [] },
-  { id: "mod-09", title: "Modelagem de Startups e Venture Capital", available: false, topics: [] },
-  { id: "mod-10", title: "Boas Práticas em Excel para Modelagem", available: false, topics: [] },
+  {
+    id: "mod-06",
+    title: "Modelagem de M&A",
+    available: true,
+    topics: [
+      {
+        id: "t06-01",
+        title: "Fundamentos de M&A",
+        lessons: [
+          { id: "tipos-ma", title: "Tipos de Transações (Fusão, Aquisição, Incorporação)", url: "/plataforma/aulas/tipos-ma" },
+          { id: "motivacoes-ma", title: "Motivações Estratégicas e Sinergias", url: "/plataforma/aulas/motivacoes-ma" },
+          { id: "processo-ma", title: "O Processo de M&A Passo a Passo", url: "/plataforma/aulas/processo-ma" },
+        ],
+      },
+      {
+        id: "t06-02",
+        title: "Análise de Sinergias",
+        lessons: [
+          { id: "sinergias-receita", title: "Sinergias de Receita", url: "/plataforma/aulas/sinergias-receita" },
+          { id: "sinergias-custo", title: "Sinergias de Custo", url: "/plataforma/aulas/sinergias-custo" },
+          { id: "sinergias-financeiras", title: "Sinergias Financeiras e Fiscais", url: "/plataforma/aulas/sinergias-financeiras" },
+        ],
+      },
+      {
+        id: "t06-03",
+        title: "Accretion/Dilution Analysis",
+        lessons: [
+          { id: "accretion-dilution", title: "Conceito de Accretion e Dilution", url: "/plataforma/aulas/accretion-dilution" },
+          { id: "modelo-accretion", title: "Construção do Modelo Accretion/Dilution", url: "/plataforma/aulas/modelo-accretion" },
+          { id: "goodwill-ppa", title: "Goodwill e Purchase Price Allocation (PPA)", url: "/plataforma/aulas/goodwill-ppa" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "mod-07",
+    title: "LBO (Leveraged Buyout)",
+    available: true,
+    topics: [
+      {
+        id: "t07-01",
+        title: "Fundamentos de LBO",
+        lessons: [
+          { id: "o-que-e-lbo", title: "O que é um LBO?", url: "/plataforma/aulas/o-que-e-lbo" },
+          { id: "perfil-empresa-lbo", title: "Perfil de Empresa Ideal para LBO", url: "/plataforma/aulas/perfil-empresa-lbo" },
+          { id: "estrutura-financiamento-lbo", title: "Estrutura de Financiamento", url: "/plataforma/aulas/estrutura-financiamento-lbo" },
+        ],
+      },
+      {
+        id: "t07-02",
+        title: "Construção do Modelo LBO",
+        lessons: [
+          { id: "sources-uses", title: "Sources & Uses of Funds", url: "/plataforma/aulas/sources-uses" },
+          { id: "debt-schedule-lbo", title: "Debt Schedule e Cascata de Pagamento", url: "/plataforma/aulas/debt-schedule-lbo" },
+          { id: "retorno-irr-moic", title: "Cálculo de Retorno: IRR e MOIC", url: "/plataforma/aulas/retorno-irr-moic" },
+        ],
+      },
+      {
+        id: "t07-03",
+        title: "Análise de Retorno",
+        lessons: [
+          { id: "drivers-retorno-lbo", title: "Drivers de Retorno no LBO", url: "/plataforma/aulas/drivers-retorno-lbo" },
+          { id: "sensibilidade-lbo", title: "Sensibilidade: Alavancagem vs. Múltiplo de Saída", url: "/plataforma/aulas/sensibilidade-lbo" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "mod-08",
+    title: "Modelagem de Project Finance",
+    available: true,
+    topics: [
+      {
+        id: "t08-01",
+        title: "Fundamentos de Project Finance",
+        lessons: [
+          { id: "o-que-e-pf", title: "O que é Project Finance?", url: "/plataforma/aulas/o-que-e-pf" },
+          { id: "spe-non-recourse", title: "SPE e Financiamento Non-Recourse", url: "/plataforma/aulas/spe-non-recourse" },
+          { id: "setores-pf", title: "Setores: Energia, Infraestrutura e Concessões", url: "/plataforma/aulas/setores-pf" },
+        ],
+      },
+      {
+        id: "t08-02",
+        title: "Modelo de Project Finance",
+        lessons: [
+          { id: "premissas-operacionais-pf", title: "Premissas Operacionais e Regulatórias", url: "/plataforma/aulas/premissas-operacionais-pf" },
+          { id: "dscr-llcr", title: "DSCR, LLCR e Indicadores de Cobertura", url: "/plataforma/aulas/dscr-llcr" },
+          { id: "sculpting-divida", title: "Debt Sculpting e Amortização", url: "/plataforma/aulas/sculpting-divida" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "mod-09",
+    title: "Modelagem de Startups e Venture Capital",
+    available: true,
+    topics: [
+      {
+        id: "t09-01",
+        title: "Valuation de Startups",
+        lessons: [
+          { id: "desafios-valuation-startup", title: "Desafios do Valuation Pré-Receita", url: "/plataforma/aulas/desafios-valuation-startup" },
+          { id: "metodo-vc", title: "Método Venture Capital", url: "/plataforma/aulas/metodo-vc" },
+          { id: "scorecard-berkus", title: "Scorecard e Berkus Method", url: "/plataforma/aulas/scorecard-berkus" },
+        ],
+      },
+      {
+        id: "t09-02",
+        title: "Modelagem Financeira para Startups",
+        lessons: [
+          { id: "unit-economics", title: "Unit Economics: CAC, LTV e Payback", url: "/plataforma/aulas/unit-economics" },
+          { id: "cohort-analysis", title: "Cohort Analysis e Churn", url: "/plataforma/aulas/cohort-analysis" },
+          { id: "runway-cash-burn", title: "Runway e Cash Burn Rate", url: "/plataforma/aulas/runway-cash-burn" },
+        ],
+      },
+      {
+        id: "t09-03",
+        title: "Cap Table e Rodadas",
+        lessons: [
+          { id: "cap-table", title: "Construção da Cap Table", url: "/plataforma/aulas/cap-table" },
+          { id: "diluicao-rodadas", title: "Diluição nas Rodadas de Investimento", url: "/plataforma/aulas/diluicao-rodadas" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "mod-10",
+    title: "Boas Práticas em Excel para Modelagem",
+    available: true,
+    topics: [
+      {
+        id: "t10-01",
+        title: "Estrutura e Organização",
+        lessons: [
+          { id: "arquitetura-modelo", title: "Arquitetura de um Modelo Profissional", url: "/plataforma/aulas/arquitetura-modelo" },
+          { id: "convencoes-formatacao", title: "Convenções de Formatação e Cores", url: "/plataforma/aulas/convencoes-formatacao" },
+          { id: "navegacao-auditoria", title: "Navegação e Trilha de Auditoria", url: "/plataforma/aulas/navegacao-auditoria" },
+        ],
+      },
+      {
+        id: "t10-02",
+        title: "Fórmulas e Funções Avançadas",
+        lessons: [
+          { id: "index-match", title: "INDEX/MATCH e Referências Dinâmicas", url: "/plataforma/aulas/index-match" },
+          { id: "funcoes-financeiras", title: "Funções Financeiras (XNPV, XIRR, PMT)", url: "/plataforma/aulas/funcoes-financeiras" },
+          { id: "data-tables-cenarios", title: "Data Tables e Gerenciador de Cenários", url: "/plataforma/aulas/data-tables-cenarios" },
+        ],
+      },
+      {
+        id: "t10-03",
+        title: "Controle de Erros",
+        lessons: [
+          { id: "error-checks", title: "Error Checks e Balance Checks", url: "/plataforma/aulas/error-checks" },
+          { id: "circularidade", title: "Tratamento de Circularidade", url: "/plataforma/aulas/circularidade" },
+        ],
+      },
+    ],
+  },
 ];
 
 /* ── Helper: encontrar aula e navegação (anterior/próxima) ──── */
