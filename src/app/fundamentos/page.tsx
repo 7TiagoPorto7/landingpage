@@ -5,6 +5,7 @@ import { FundamentosHero } from "@/components/fundamentos/hero";
 const FundamentosProblema = dynamic(() => import("@/components/fundamentos/problem").then((mod) => mod.FundamentosProblema));
 const FundamentosSolucao = dynamic(() => import("@/components/fundamentos/solution").then((mod) => mod.FundamentosSolucao));
 const FundamentosAudiencia = dynamic(() => import("@/components/fundamentos/audience").then((mod) => mod.FundamentosAudiencia));
+const FundamentosTestimonials = dynamic(() => import("@/components/fundamentos/testimonials").then((mod) => mod.FundamentosTestimonials));
 const FundamentosCurriculo = dynamic(() => import("@/components/fundamentos/curriculum").then((mod) => mod.FundamentosCurriculo));
 const FundamentosBonus = dynamic(() => import("@/components/fundamentos/bonus").then((mod) => mod.FundamentosBonus));
 const FundamentosPricing = dynamic(() => import("@/components/fundamentos/pricing").then((mod) => mod.FundamentosPricing));
@@ -34,6 +35,7 @@ export default function FundamentosPage() {
             <FundamentosProblema />
             <FundamentosSolucao />
             <FundamentosAudiencia />
+            <FundamentosTestimonials />
             <FundamentosCurriculo />
             <FundamentosBonus />
             <FundamentosPricing />

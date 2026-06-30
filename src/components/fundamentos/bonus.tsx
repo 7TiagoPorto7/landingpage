@@ -5,9 +5,9 @@ import { Gift, FileSpreadsheet, ClipboardCheck, Sparkles } from "lucide-react";
 
 export function FundamentosBonus() {
     return (
-        <section className="py-24 bg-black relative overflow-hidden">
+        <section className="py-24 bg-white relative overflow-hidden">
             {/* Background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/6 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="container px-4 mx-auto relative z-10">
                 <div className="max-w-3xl mx-auto text-center mb-16">
@@ -15,7 +15,7 @@ export function FundamentosBonus() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"
+                        className="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-3"
                     >
                         Bônus Inclusos
                     </motion.p>
@@ -23,7 +23,7 @@ export function FundamentosBonus() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl font-bold tracking-tight md:text-4xl"
+                        className="text-3xl font-bold tracking-tight md:text-4xl text-slate-900"
                     >
                         Leve ainda mais com o seu curso
                     </motion.h2>
@@ -37,11 +37,11 @@ export function FundamentosBonus() {
                     className="max-w-3xl mx-auto mb-8 relative"
                 >
                     {/* Animated gradient border */}
-                    <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-500 via-cyan-400 to-amber-500 rounded-[22px] opacity-60 blur-sm animate-pulse" />
+                    <div className="absolute -inset-[2px] bg-gradient-to-r from-amber-400 via-teal-400 to-amber-400 rounded-[22px] opacity-50 blur-sm animate-pulse" />
 
-                    <div className="relative p-8 md:p-10 rounded-[20px] bg-gradient-to-br from-white/[0.06] to-white/[0.02] border border-white/10 backdrop-blur-sm">
+                    <div className="relative p-8 md:p-10 rounded-[20px] bg-amber-50/50 border border-amber-200">
                         {/* EXCLUSIVO badge */}
-                        <div className="absolute top-0 right-0 px-5 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-black text-xs font-extrabold rounded-bl-xl rounded-tr-[20px] uppercase tracking-wider">
+                        <div className="absolute top-0 right-0 px-5 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-extrabold rounded-bl-xl rounded-tr-[20px] uppercase tracking-wider">
                             <span className="flex items-center gap-1.5">
                                 <Sparkles className="w-3.5 h-3.5" />
                                 Exclusivo
@@ -49,14 +49,14 @@ export function FundamentosBonus() {
                         </div>
 
                         <div className="flex flex-col md:flex-row items-start gap-6">
-                            <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 text-amber-400 shrink-0">
+                            <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 shrink-0">
                                 <Gift className="w-8 h-8" />
                             </div>
                             <div>
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
                                     🎁 Planilha de Prompts de IA para Finanças
                                 </h3>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <p className="text-slate-600 leading-relaxed">
                                     Uma planilha exclusiva com prompts de Inteligência Artificial
                                     para aplicar em finanças. Agilize análises, automatize tarefas
                                     e domine ferramentas de IA no seu dia a dia financeiro.
@@ -73,15 +73,15 @@ export function FundamentosBonus() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="p-7 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-cyan-500/20 transition-colors"
+                        className="p-7 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:border-teal-300 hover:shadow-md transition-all"
                     >
-                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-cyan-500/10 text-cyan-400">
+                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 text-teal-700">
                             <FileSpreadsheet className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-bold text-white mb-2">
+                        <h3 className="text-lg font-bold text-slate-800 mb-2">
                             Template de Modelo Integrado
                         </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <p className="text-slate-500 text-sm leading-relaxed">
                             Planilha pronta com o modelo financeiro dos três demonstrativos
                             integrados. Estude, adapte e pratique à vontade.
                         </p>
@@ -92,15 +92,15 @@ export function FundamentosBonus() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="p-7 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-cyan-500/20 transition-colors"
+                        className="p-7 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:border-teal-300 hover:shadow-md transition-all"
                     >
-                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-cyan-500/10 text-cyan-400">
+                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 text-teal-700">
                             <ClipboardCheck className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-bold text-white mb-2">
+                        <h3 className="text-lg font-bold text-slate-800 mb-2">
                             Checklist de Validação
                         </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <p className="text-slate-500 text-sm leading-relaxed">
                             O passo a passo para conferir se o seu modelo está fechando
                             corretamente. Nunca mais perca horas procurando erro.
                         </p>

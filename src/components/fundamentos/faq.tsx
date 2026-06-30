@@ -8,7 +8,7 @@ const faqs = [
     {
         question: "Este curso é completo / cobre nível avançado?",
         answer:
-            "Ele é focado: cobre os fundamentos — a estrutura do modelo e as conexões entre os demonstrativos — com profundidade. Não é um curso do zero ao avançado, e a proposta é exatamente essa: te entregar o que importa, direto ao ponto, para você construir uma base sólida sem perder tempo.",
+            "Ele é focado: cobre os fundamentos, a estrutura do modelo e as conexões entre os demonstrativos, com profundidade. Não é um curso do zero ao avançado, e a proposta é exatamente essa: te entregar o que importa, direto ao ponto, para você construir uma base sólida sem perder tempo.",
         id: "faq-nivel",
     },
     {
@@ -20,7 +20,7 @@ const faqs = [
     {
         question: "Preciso saber Excel?",
         answer:
-            "Conhecimento básico já é suficiente. A ferramenta é só o meio — o foco é a lógica do modelo.",
+            "Conhecimento básico já é suficiente. A ferramenta é só o meio. O foco é a lógica do modelo.",
         id: "faq-excel",
     },
     {
@@ -37,7 +37,7 @@ const faqs = [
     {
         question: "E se eu não gostar?",
         answer:
-            "Você tem 7 dias de garantia incondicional. Se em uma semana você sentir que o curso não é para você, é só pedir o reembolso pela própria Hotmart — sem perguntas, sem burocracia.",
+            "Você tem 7 dias de garantia incondicional. Se em uma semana você sentir que o curso não é para você, é só pedir o reembolso pela própria Hotmart. Sem perguntas, sem burocracia.",
         id: "faq-garantia",
     },
 ];
@@ -58,25 +58,25 @@ function FAQItem({
             viewport={{ once: true }}
             className={`border rounded-xl overflow-hidden transition-all duration-200 ${
                 isOpen
-                    ? "border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.1)]"
-                    : "border-white/10 hover:border-white/20"
+                    ? "border-teal-400 shadow-sm"
+                    : "border-slate-200 hover:border-slate-300"
             }`}
         >
             <button
                 id={faq.id}
                 onClick={onToggle}
-                className="w-full flex items-center justify-between gap-4 p-5 text-left bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
+                className="w-full flex items-center justify-between gap-4 p-5 text-left bg-white hover:bg-slate-50 transition-colors"
                 aria-expanded={isOpen}
             >
                 <span
                     className={`font-semibold text-sm md:text-base ${
-                        isOpen ? "text-cyan-400" : "text-white"
+                        isOpen ? "text-teal-700" : "text-slate-800"
                     }`}
                 >
                     {faq.question}
                 </span>
                 <ChevronDown
-                    className={`w-5 h-5 shrink-0 text-cyan-400 transition-transform duration-200 ${
+                    className={`w-5 h-5 shrink-0 text-teal-500 transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                     }`}
                 />
@@ -90,7 +90,7 @@ function FAQItem({
                         transition={{ duration: 0.25 }}
                         className="overflow-hidden"
                     >
-                        <p className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed">
+                        <p className="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
                             {faq.answer}
                         </p>
                     </motion.div>
@@ -104,7 +104,7 @@ export function FundamentosFAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section id="faq" className="py-24 bg-black relative overflow-hidden">
+        <section id="faq" className="py-24 bg-slate-50 relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -112,10 +112,10 @@ export function FundamentosFAQ() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <p className="text-cyan-400 font-semibold uppercase tracking-wider text-sm mb-3">
+                    <p className="text-teal-700 font-semibold uppercase tracking-wider text-sm mb-3">
                         Dúvidas Frequentes
                     </p>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                         Perguntas frequentes
                     </h2>
                 </motion.div>

@@ -8,12 +8,12 @@ const CHECKOUT_URL = "https://pay.hotmart.com/F106435738T";
 
 export function FundamentosCTAFinal() {
     return (
-        <section className="py-24 md:py-32 relative bg-black overflow-hidden">
-            {/* Dramatic background with cyan glow orbs */}
+        <section className="py-24 md:py-32 relative bg-gradient-to-b from-teal-600 to-teal-800 overflow-hidden">
+            {/* Background orbs */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/15 blur-[150px] rounded-full" />
-                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-cyan-600/10 blur-[120px] rounded-full" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-amber-500/8 blur-[100px] rounded-full" />
+                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/10 blur-[150px] rounded-full" />
+                <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-cyan-300/10 blur-[120px] rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/10 blur-[100px] rounded-full" />
             </div>
 
             {/* Subtle grid overlay */}
@@ -33,19 +33,19 @@ export function FundamentosCTAFinal() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 text-sm font-medium mb-8 border border-cyan-500/20">
+                    <p className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 text-white text-sm font-medium mb-8 border border-white/20">
                         🎯 Oferta por tempo limitado
                     </p>
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight leading-[1.1]">
-                        Aprenda os fundamentos —{" "}
+                        Aprenda os fundamentos.{" "}
                         <br className="hidden md:block" />
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500">
-                            direto ao ponto.
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-amber-200 to-amber-300">
+                            Direto ao ponto.
                         </span>
                     </h2>
 
-                    <p className="text-xl md:text-2xl text-slate-300 font-medium mb-12 max-w-2xl mx-auto">
+                    <p className="text-xl md:text-2xl text-teal-100 font-medium mb-12 max-w-2xl mx-auto">
                         Sem enrolação, sem curso interminável. O que importa, bem
                         explicado, para você entender a lógica do modelo e sair
                         aplicando.
@@ -53,12 +53,12 @@ export function FundamentosCTAFinal() {
 
                     {/* Price block */}
                     <div className="mb-10">
-                        <p className="text-lg text-slate-400 line-through mb-2">
+                        <p className="text-lg text-teal-300 line-through mb-2">
                             De R$ 297
                         </p>
                         <p className="text-5xl md:text-6xl font-black text-white tracking-tight">
                             por{" "}
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-amber-300">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-200">
                                 R$ 197
                             </span>
                         </p>
@@ -75,7 +75,7 @@ export function FundamentosCTAFinal() {
                             href={CHECKOUT_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative w-full sm:w-auto inline-flex justify-center items-center px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-500 to-cyan-400 text-black font-bold text-lg md:text-xl hover:from-cyan-400 hover:to-cyan-300 transition-all shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 overflow-hidden group"
+                            className="relative w-full sm:w-auto inline-flex justify-center items-center px-10 py-5 rounded-2xl bg-white text-teal-700 font-bold text-lg md:text-xl hover:bg-amber-50 transition-all shadow-xl overflow-hidden group"
                         >
                             <span className="relative z-10 flex items-center gap-3">
                                 QUERO COMEÇAR AGORA — R$ 197
@@ -87,17 +87,17 @@ export function FundamentosCTAFinal() {
                     </motion.div>
 
                     {/* Trust badges */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-slate-400 font-medium">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-teal-200 font-medium">
                         <span className="flex items-center gap-1.5">
-                            <Lock className="w-4 h-4 text-green-500" />
+                            <Lock className="w-4 h-4 text-teal-200" />
                             Compra segura
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <Zap className="w-4 h-4 text-amber-500" />
+                            <Zap className="w-4 h-4 text-teal-200" />
                             Acesso imediato
                         </span>
                         <span className="flex items-center gap-1.5">
-                            <ShieldCheck className="w-4 h-4 text-cyan-500" />
+                            <ShieldCheck className="w-4 h-4 text-teal-200" />
                             7 dias de garantia
                         </span>
                     </div>

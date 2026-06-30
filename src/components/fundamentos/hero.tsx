@@ -6,18 +6,18 @@ import Link from "next/link";
 
 export function FundamentosHero() {
     return (
-        <section className="relative overflow-hidden pt-32 pb-20 lg:pt-44 lg:pb-32 bg-black">
+        <section className="relative overflow-hidden pt-32 pb-20 lg:pt-44 lg:pb-32 bg-gradient-to-b from-slate-50 to-white">
             {/* Background Elements */}
             <div className="absolute inset-0 z-0 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-cyan-500/15 blur-[120px] rounded-full opacity-50 animate-pulse" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-amber-500/15 blur-[120px] rounded-full opacity-50 animate-pulse" style={{ animationDelay: "1s" }} />
-                <div className="absolute top-[30%] left-[50%] -translate-x-1/2 w-[600px] h-[400px] bg-cyan-500/8 blur-[100px] rounded-full opacity-40" />
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-teal-500/10 blur-[120px] rounded-full opacity-50 animate-pulse" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-amber-500/10 blur-[120px] rounded-full opacity-50 animate-pulse" style={{ animationDelay: "1s" }} />
+                <div className="absolute top-[30%] left-[50%] -translate-x-1/2 w-[600px] h-[400px] bg-teal-500/8 blur-[100px] rounded-full opacity-40" />
             </div>
 
             {/* Grid pattern */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+            <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
                 style={{
-                    backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                    backgroundImage: "linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)",
                     backgroundSize: "60px 60px",
                 }}
             />
@@ -28,7 +28,7 @@ export function FundamentosHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 backdrop-blur-sm"
+                    className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium rounded-full bg-teal-50 border border-teal-200 text-teal-700 backdrop-blur-sm"
                 >
                     <BookOpen className="w-4 h-4" />
                     <span>📚 Curso — Fundamentos da Modelagem Financeira</span>
@@ -39,11 +39,11 @@ export function FundamentosHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="max-w-5xl mx-auto mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1]"
+                    className="max-w-5xl mx-auto mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1] text-slate-900"
                 >
-                    Domine os fundamentos da modelagem financeira —{" "}
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-300">
-                        direto ao ponto.
+                    Domine os fundamentos da modelagem financeira.{" "}
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-cyan-500">
+                        Direto ao ponto.
                     </span>
                 </motion.h1>
 
@@ -52,7 +52,7 @@ export function FundamentosHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="max-w-3xl mx-auto mb-12 text-lg text-muted-foreground md:text-xl leading-relaxed"
+                    className="max-w-3xl mx-auto mb-12 text-lg text-slate-500 md:text-xl leading-relaxed"
                 >
                     Aprenda a estrutura de um modelo financeiro e a lógica que conecta os três demonstrativos. Sem enrolação, sem curso interminável: a base, bem explicada.
                 </motion.p>
@@ -66,7 +66,7 @@ export function FundamentosHero() {
                 >
                     <Link
                         href="https://pay.hotmart.com/F106435738T"
-                        className="relative inline-flex items-center justify-center h-14 px-8 text-lg font-bold text-black transition-all duration-300 rounded-full bg-gradient-to-r from-cyan-400 to-teal-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black overflow-hidden group"
+                        className="relative inline-flex items-center justify-center h-14 px-8 text-lg font-bold text-white transition-all duration-300 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(20,184,166,0.35)] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 overflow-hidden group"
                     >
                         <span className="relative z-10 flex items-center">
                             QUERO COMEÇAR AGORA — R$ 197
@@ -76,7 +76,7 @@ export function FundamentosHero() {
                     </Link>
                     <Link
                         href="#conteudo"
-                        className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium transition-colors rounded-full border border-white/10 hover:bg-white/5 hover:border-cyan-500/30 focus:outline-none focus:ring-2 focus:ring-white/20"
+                        className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium text-slate-700 transition-colors rounded-full border border-slate-200 hover:bg-slate-50 hover:border-teal-300 focus:outline-none focus:ring-2 focus:ring-slate-200"
                     >
                         Ver conteúdo do curso
                     </Link>
@@ -89,8 +89,8 @@ export function FundamentosHero() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="mt-6 flex items-center justify-center gap-3"
                 >
-                    <span className="text-muted-foreground line-through text-sm">De R$ 297</span>
-                    <span className="text-amber-400 font-semibold text-sm">por R$ 197 — oferta de lançamento</span>
+                    <span className="text-slate-400 line-through text-sm">De R$ 297</span>
+                    <span className="text-amber-600 font-semibold text-sm">por R$ 197, oferta de lançamento</span>
                 </motion.div>
 
                 {/* Stats Bar */}
@@ -106,9 +106,9 @@ export function FundamentosHero() {
                         { value: "✅", label: "Planilha Bônus" },
                         { value: "7 dias", label: "Garantia" },
                     ].map((stat, index) => (
-                        <div key={index} className="text-center p-4 rounded-xl bg-white/5 border border-white/5 backdrop-blur-sm">
-                            <div className="text-2xl md:text-3xl font-bold text-cyan-400">{stat.value}</div>
-                            <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                        <div key={index} className="text-center p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div className="text-2xl md:text-3xl font-bold text-teal-700">{stat.value}</div>
+                            <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
                         </div>
                     ))}
                 </motion.div>
