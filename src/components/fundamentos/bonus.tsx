@@ -73,15 +73,15 @@ export function FundamentosBonus() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="p-7 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:border-teal-300 hover:shadow-md transition-all"
+                        className="p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:border-teal-400 hover:shadow-md transition-all"
                     >
-                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 text-teal-700">
+                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 border border-teal-100 text-teal-700">
                             <FileSpreadsheet className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-bold text-slate-800 mb-2">
+                        <h3 className="text-lg font-bold text-slate-900 mb-2">
                             Template de Modelo Integrado
                         </h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">
+                        <p className="text-slate-600 text-sm leading-relaxed">
                             Planilha pronta com o modelo financeiro dos três demonstrativos
                             integrados. Estude, adapte e pratique à vontade.
                         </p>
@@ -92,15 +92,15 @@ export function FundamentosBonus() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="p-7 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm hover:border-teal-300 hover:shadow-md transition-all"
+                        className="p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:border-teal-400 hover:shadow-md transition-all"
                     >
-                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 text-teal-700">
+                        <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 border border-teal-100 text-teal-700">
                             <ClipboardCheck className="w-6 h-6" />
                         </div>
-                        <h3 className="text-lg font-bold text-slate-800 mb-2">
+                        <h3 className="text-lg font-bold text-slate-900 mb-2">
                             Checklist de Validação
                         </h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">
+                        <p className="text-slate-600 text-sm leading-relaxed">
                             O passo a passo para conferir se o seu modelo está fechando
                             corretamente. Nunca mais perca horas procurando erro.
                         </p>

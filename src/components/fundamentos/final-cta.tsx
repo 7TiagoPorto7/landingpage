@@ -1,16 +1,20 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight, Lock, Zap, ShieldCheck, TrendingUp } from "lucide-react";
-import { gtagEvent } from "@/components/analytics";
-
-const CHECKOUT_URL = "https://pay.hotmart.com/F106435738T";
+import { getDecoratedCheckoutUrl, trackCheckout } from "@/lib/tracking";
 
 export function FundamentosCTAFinal() {
+    const [checkoutUrl, setCheckoutUrl] = useState("https://pay.hotmart.com/F106435738T");
+
+    useEffect(() => {
+        setCheckoutUrl(getDecoratedCheckoutUrl());
+    }, []);
+
     return (
-        <section className="py-24 md:py-32 relative bg-gradient-to-b from-[#070D1B] via-[#0B1528] to-[#081020] text-white overflow-hidden">
-            {/* Wave grid lines overlay inspired by design sample */}
+        <section className="py-24 md:py-32 relative bg-gradient-to-b from-[#070D1B] via-[#0B1528] to-[#081020] text-white overflow-hidden border-t border-slate-800">
+            {/* Wave grid lines overlay */}
             <svg
                 className="absolute inset-0 w-full h-full pointer-events-none opacity-20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +41,7 @@ export function FundamentosCTAFinal() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    {/* Badge container inspired by design sample */}
+                    {/* Badge container */}
                     <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white text-slate-900 shadow-xl mb-8 border border-slate-100">
                         <span className="text-xs font-extrabold uppercase tracking-wider text-slate-800">
                             Curso Prático
@@ -63,7 +67,7 @@ export function FundamentosCTAFinal() {
                     </p>
 
                     {/* Price block */}
-                    <div className="mb-10">
+                    <div className="mb-8">
                         <p className="text-lg text-slate-400 line-through mb-2">
                             De R$ 297
                         </p>
@@ -73,30 +77,37 @@ export function FundamentosCTAFinal() {
                                 R$ 197
                             </span>
                         </p>
+                        <p className="text-sm text-teal-300 font-medium mt-2">
+                            ou 12x de R$ 19,70
+                        </p>
                     </div>
 
-                    {/* CTA Button with shimmer */}
+                    {/* CTA Button */}
                     <motion.div
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                         transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="mb-10"
+                        className="mb-8"
                     >
-                        <Link
-                            href={CHECKOUT_URL}
+                        <a
+                            href={checkoutUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative w-full sm:w-auto inline-flex justify-center items-center px-10 py-5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-black text-lg md:text-xl hover:brightness-110 transition-all shadow-xl shadow-amber-500/20 overflow-hidden group"
-                            onClick={() => gtagEvent("begin_checkout", { label: "Quero Começar Agora", value: 197, currency: "BRL", page: "fundamentos", section: "final_cta" })}
+                            onClick={() => trackCheckout("final_cta", 197)}
                         >
                             <span className="relative z-10 flex items-center gap-3">
-                                QUERO COMEÇAR AGORA | R$ 197
+                                QUERO COMEÇAR AGORA — R$ 197
                                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                             </span>
-                            {/* Shimmer effect */}
                             <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
-                        </Link>
+                        </a>
                     </motion.div>
+
+                    {/* Subtext */}
+                    <p className="text-xs text-slate-400 mb-8">
+                        🔒 Compra segura via Hotmart · Acesso imediato e vitalício
+                    </p>
 
                     {/* Trust badges */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-slate-400 font-medium">

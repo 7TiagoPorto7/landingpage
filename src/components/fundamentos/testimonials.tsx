@@ -1,9 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Users, TrendingUp, Award } from "lucide-react";
+import { Star, MessageSquare } from "lucide-react";
+import Image from "next/image";
 
-const testimonials = [
+// TODO: [PREENCHER: MANTER TODOS / ou colar os depoimentos reais que substituem]
+interface Testimonial {
+    name: string;
+    role: string;
+    content: string;
+    rating: number;
+    highlight: string;
+    image?: string; // Support for WhatsApp/Hotmart screenshot or avatar image
+}
+
+const testimonials: Testimonial[] = [
     {
         name: "Ana Beatriz F.",
         role: "Recém-formada em Administração",
@@ -52,80 +63,18 @@ const testimonials = [
         rating: 5,
         highlight: "Mais que um semestre inteiro",
     },
-    {
-        name: "Débora N.",
-        role: "Auxiliar Administrativo",
-        content:
-            "Queria entender finanças para crescer na empresa. O curso é simples sem ser superficial. Consegui apresentar uma análise de resultados para meu gestor e recebi elogios.",
-        rating: 5,
-        highlight: "Recebi elogios do gestor",
-    },
-    {
-        name: "Marcos P.",
-        role: "Empreendedor Digital",
-        content:
-            "Montei a projeção financeira do meu negócio usando a estrutura das aulas. Ficou profissional o suficiente para apresentar em uma reunião com investidor-anjo. Valeu cada centavo.",
-        rating: 5,
-        highlight: "Apresentei para investidor-anjo",
-    },
-];
-
-const socialProofStats = [
-    {
-        icon: Users,
-        value: "+500",
-        label: "Alunos matriculados",
-        color: "text-teal-700",
-        bgColor: "bg-teal-50",
-        borderColor: "border-teal-200",
-    },
-    {
-        icon: Star,
-        value: "4.9",
-        label: "Avaliação média",
-        color: "text-amber-600",
-        bgColor: "bg-amber-50",
-        borderColor: "border-amber-200",
-    },
-    {
-        icon: TrendingUp,
-        value: "97%",
-        label: "Recomendam o curso",
-        color: "text-emerald-600",
-        bgColor: "bg-emerald-50",
-        borderColor: "border-emerald-200",
-    },
-    {
-        icon: Award,
-        value: "7 dias",
-        label: "Garantia total",
-        color: "text-violet-600",
-        bgColor: "bg-violet-50",
-        borderColor: "border-violet-200",
-    },
 ];
 
 export function FundamentosTestimonials() {
     const allTestimonials = [...testimonials, ...testimonials];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden" id="depoimentos">
+        <section className="py-24 bg-[#0B1528] text-white relative overflow-hidden border-t border-slate-800/80" id="depoimentos">
             {/* Background elements */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal-500/6 blur-[120px] rounded-full" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-amber-500/6 blur-[100px] rounded-full" />
-                <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-teal-500/6 blur-[100px] rounded-full" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal-500/10 blur-[150px] rounded-full" />
+                <div className="absolute bottom-0 right-0 w-[400px] h-[300px] bg-amber-500/10 blur-[120px] rounded-full" />
             </div>
-
-            {/* Grid pattern */}
-            <div
-                className="absolute inset-0 opacity-[0.03] pointer-events-none"
-                style={{
-                    backgroundImage:
-                        "linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)",
-                    backgroundSize: "60px 60px",
-                }}
-            />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 {/* Section header */}
@@ -134,62 +83,37 @@ export function FundamentosTestimonials() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-14"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-amber-50 border border-amber-200 text-amber-700 backdrop-blur-sm">
-                        <Star className="w-4 h-4 fill-current" />
-                        <span>Quem já passou por aqui</span>
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs font-semibold rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300">
+                        <MessageSquare className="w-3.5 h-3.5" />
+                        <span>Quem já viveu essa transformação</span>
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
                         Alunos que saíram da{" "}
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-cyan-500">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-cyan-300 to-teal-300">
                             confusão para a clareza
                         </span>
                     </h2>
 
-                    <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                        Veja o que dizem quem investiu R$ 197 e finalmente entendeu como os
-                        três demonstrativos financeiros se conectam.
+                    <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                        Veja o relato de quem aplicou a lógica do curso na prática profissional.
                     </p>
-                </motion.div>
-
-                {/* Stats */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 max-w-4xl mx-auto"
-                >
-                    {socialProofStats.map((stat, index) => (
-                        <div
-                            key={index}
-                            className={`flex flex-col items-center text-center p-5 rounded-2xl bg-slate-50 border ${stat.borderColor}`}
-                        >
-                            <div className={`w-10 h-10 rounded-full ${stat.bgColor} border ${stat.borderColor} flex items-center justify-center mb-3`}>
-                                <stat.icon className={`w-5 h-5 ${stat.color}`} />
-                            </div>
-                            <div className={`text-2xl md:text-3xl font-black ${stat.color} mb-1`}>
-                                {stat.value}
-                            </div>
-                            <div className="text-xs text-slate-500 leading-tight">{stat.label}</div>
-                        </div>
-                    ))}
                 </motion.div>
             </div>
 
             {/* Scrolling testimonials */}
             <div className="relative w-full">
                 {/* Fade masks */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#0B1528] to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#0B1528] to-transparent z-10 pointer-events-none" />
 
                 <motion.div
                     className="flex gap-6 w-max"
                     animate={{ x: "-50%" }}
                     transition={{
-                        duration: 60,
+                        duration: 50,
                         repeat: Infinity,
                         ease: "linear",
                         repeatType: "loop",
@@ -198,7 +122,7 @@ export function FundamentosTestimonials() {
                     {allTestimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="w-[340px] md:w-[380px] p-7 rounded-2xl border border-slate-200 bg-white shadow-sm flex-shrink-0 hover:border-teal-300 hover:shadow-md transition-all duration-300 group"
+                            className="w-[320px] md:w-[360px] p-7 rounded-3xl border border-slate-700/80 bg-[#111F3D] shadow-xl flex-shrink-0 hover:border-teal-400/50 transition-all duration-300 group"
                         >
                             {/* Stars */}
                             <div className="flex gap-1 mb-4">
@@ -211,23 +135,34 @@ export function FundamentosTestimonials() {
                             </div>
 
                             {/* Highlight badge */}
-                            <div className="inline-flex items-center gap-1.5 px-3 py-1 mb-4 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-semibold">
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 mb-4 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-xs font-semibold">
                                 <span>✦</span>
                                 <span>{testimonial.highlight}</span>
                             </div>
 
                             {/* Content */}
-                            <p className="mb-6 text-sm md:text-base text-slate-600 leading-relaxed line-clamp-4 italic">
+                            <p className="mb-6 text-sm text-slate-300 leading-relaxed line-clamp-4 italic">
                                 &ldquo;{testimonial.content}&rdquo;
                             </p>
 
                             {/* Author */}
-                            <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-teal-100 to-cyan-100 border border-teal-200 flex items-center justify-center text-teal-700 font-bold text-sm flex-shrink-0">
-                                    {testimonial.name.charAt(0)}
-                                </div>
+                            <div className="flex items-center gap-3 pt-4 border-t border-slate-800">
+                                {testimonial.image ? (
+                                    <div className="relative w-10 h-10 rounded-full overflow-hidden border border-teal-500/40">
+                                        <Image
+                                            src={testimonial.image}
+                                            alt={testimonial.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="w-10 h-10 rounded-full bg-teal-500/20 border border-teal-400/30 flex items-center justify-center text-teal-300 font-bold text-sm shrink-0">
+                                        {testimonial.name.charAt(0)}
+                                    </div>
+                                )}
                                 <div>
-                                    <p className="font-semibold text-slate-800 text-sm">
+                                    <p className="font-bold text-white text-sm">
                                         {testimonial.name}
                                     </p>
                                     <p className="text-xs text-slate-400">{testimonial.role}</p>
@@ -239,16 +174,10 @@ export function FundamentosTestimonials() {
             </div>
 
             {/* Bottom social proof note */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-12">
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center text-sm text-slate-400"
-                >
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-10">
+                <p className="text-center text-xs text-slate-400">
                     Depoimentos reais de alunos do curso Fundamentos da Modelagem Financeira.
-                </motion.p>
+                </p>
             </div>
         </section>
     );

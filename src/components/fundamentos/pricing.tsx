@@ -1,44 +1,50 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Check, Shield, Zap, CreditCard } from "lucide-react";
-import Link from "next/link";
-import { gtagEvent } from "@/components/analytics";
+import { Check, ArrowRight, ShieldCheck, Zap, Lock, Flame } from "lucide-react";
+import { getDecoratedCheckoutUrl, trackCheckout } from "@/lib/tracking";
 
-const CHECKOUT_URL = "https://pay.hotmart.com/F106435738T";
-
-const included = [
-    "7 aulas diretas e objetivas",
-    "Planilha de modelo integrado",
-    "Planilha de Prompts de IA para Finanças (BÔNUS)",
-    "Checklist de validação",
-    "Acesso imediato",
+const includes = [
+    "Acesso a todas as 7 aulas do curso",
+    "Template de Modelo Integrado em Excel (DRE, Balanço e DFC)",
+    "Planilha de Prompts de IA para Finanças (Bônus)",
+    "Checklist de Validação de Modelos (Bônus)",
+    "Acesso imediato e vitalício",
     "Garantia incondicional de 7 dias",
 ];
 
 export function FundamentosPricing() {
+    const [checkoutUrl, setCheckoutUrl] = useState("https://pay.hotmart.com/F106435738T");
+
+    useEffect(() => {
+        setCheckoutUrl(getDecoratedCheckoutUrl());
+    }, []);
+
     return (
-        <section id="oferta" className="py-24 relative overflow-hidden bg-slate-50">
+        <section id="oferta" className="py-24 relative overflow-hidden bg-[#0B1528] text-white border-t border-slate-800/80">
             {/* Background */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-500/6 blur-[150px] rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-teal-500/15 blur-[160px] rounded-full" />
+                <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/10 blur-[140px] rounded-full" />
             </div>
 
             <div className="container px-4 mx-auto relative z-10">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-sm font-semibold text-teal-700 uppercase tracking-wider mb-3"
+                        className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3"
                     >
-                        Oferta de Lançamento
-                    </motion.p>
+                        <Flame className="w-4 h-4 text-amber-400 fill-amber-500" />
+                        <span>Investimento Acessível</span>
+                    </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-4 text-3xl font-bold tracking-tight md:text-4xl text-slate-900"
+                        className="mb-4 text-3xl font-bold tracking-tight md:text-4xl text-white"
                     >
                         Aprenda os fundamentos da modelagem financeira
                     </motion.h2>
@@ -47,123 +53,111 @@ export function FundamentosPricing() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-slate-500"
+                        className="text-lg text-slate-300"
                     >
                         Direto ao ponto. A base que importa, bem explicada.
                     </motion.p>
-                </div>
 
-                <div className="relative max-w-lg mx-auto">
-                    {/* Pulsing glow border */}
-                    <div className="absolute -inset-[2px] bg-gradient-to-r from-teal-400 via-cyan-400 to-teal-400 rounded-[26px] opacity-75 blur-sm animate-pulse" />
-
+                    {/* TAREFA 7 — BLOCO DE COMPARAÇÃO / ANCORAGEM DE VALOR */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="relative overflow-hidden border rounded-3xl bg-white border-slate-200 shadow-xl"
+                        transition={{ delay: 0.15 }}
+                        className="mt-10 p-6 md:p-8 rounded-3xl bg-[#111F3D]/90 backdrop-blur-md border border-slate-700/80 shadow-xl max-w-xl mx-auto text-left"
                     >
-                        <div className="absolute top-0 right-0 px-5 py-1.5 bg-gradient-to-r from-teal-500 to-cyan-400 text-white text-xs font-bold rounded-bl-xl z-20 uppercase tracking-wider">
-                            Oferta de Lançamento
-                        </div>
-
-                        <div className="p-8 md:p-12 relative z-10">
-                            <h3 className="mb-2 text-2xl font-bold text-teal-700">
-                                Fundamentos da Modelagem Financeira
-                            </h3>
-                            <p className="mb-8 text-slate-500">
-                                Curso completo + bônus exclusivos
-                            </p>
-
-                            <div className="flex flex-col items-center mb-8">
-                                <div className="text-red-400 font-semibold text-lg mb-1 line-through decoration-2">
-                                    R$ 297
-                                </div>
-                                <div className="flex items-baseline gap-2">
-                                    <span className="text-xl text-slate-900 font-medium">R$</span>
-                                    <span className="text-6xl md:text-7xl font-bold tracking-tighter text-slate-900">
-                                        197
-                                    </span>
-                                </div>
-                                <p className="text-sm text-teal-600 mt-2 font-medium">
-                                    ou em até 12x no cartão
-                                </p>
+                        <p className="text-sm font-extrabold text-teal-400 mb-4 text-center leading-relaxed">
+                            Cursos completos de modelagem custam de R$ 1.500 a R$ 3.000 e exigem 40+ horas. Este curso entrega a base essencial por R$ 197.
+                        </p>
+                        <div className="space-y-2.5 text-sm">
+                            <div className="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 text-slate-300 border border-slate-800">
+                                <span>Cursos longos / MBA tradicional de 40+ horas</span>
+                                <span className="font-semibold text-slate-500 line-through">R$ 1.500 – R$ 3.000</span>
                             </div>
-
-                            <Link
-                                href={CHECKOUT_URL}
-                                id="pricing-cta"
-                                className="relative flex items-center justify-center w-full h-16 mb-4 text-lg font-bold text-white transition-all rounded-xl bg-gradient-to-r from-teal-600 to-cyan-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(20,184,166,0.35)] overflow-hidden group"
-                                onClick={() => gtagEvent("begin_checkout", { label: "Quero Começar Agora", value: 197, currency: "BRL", page: "fundamentos", section: "pricing" })}
-                            >
-                                <span className="relative z-10 flex items-center gap-2">
-                                    QUERO COMEÇAR AGORA
-                                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                            <div className="flex items-center justify-between p-3 rounded-xl bg-teal-500/15 border border-teal-500/40 text-white font-bold">
+                                <span className="flex items-center gap-1.5 text-teal-300">
+                                    <Check className="w-4 h-4 text-teal-400 stroke-[3]" />
+                                    Fundamentos da Modelagem Financeira + Bônus
                                 </span>
-                                <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent z-0" />
-                            </Link>
-
-                            {/* Guarantee */}
-                            <p className="text-center text-slate-500 text-sm mb-8 flex items-center justify-center gap-2">
-                                <Shield className="w-4 h-4 text-teal-500" />
-                                🔒 Garantia de 7 dias: não gostou, devolvemos 100%
-                            </p>
-
-                            {/* Included */}
-                            <div className="space-y-4">
-                                <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">
-                                    O que está incluso:
-                                </p>
-                                <ul className="space-y-3 text-left">
-                                    {included.map((item, index) => (
-                                        <li key={index} className="flex items-start gap-3 group/item">
-                                            <div className="flex items-center justify-center w-6 h-6 mt-0.5 rounded-full bg-teal-50 text-teal-600 shrink-0 group-hover/item:bg-teal-600 group-hover/item:text-white transition-colors">
-                                                <Check className="w-4 h-4" />
-                                            </div>
-                                            <span className="text-slate-600 text-sm group-hover/item:text-slate-900 transition-colors">
-                                                {item}
-                                            </span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* Payment methods */}
-                        <div className="border-t border-slate-100 px-8 py-4 bg-slate-50 flex items-center justify-center gap-6 flex-wrap">
-                            <div className="flex items-center gap-2 text-slate-500 text-xs">
-                                <Zap className="w-4 h-4 text-teal-500" />
-                                Pix
-                            </div>
-                            <div className="flex items-center gap-2 text-slate-500 text-xs">
-                                <CreditCard className="w-4 h-4 text-teal-500" />
-                                Cartão de crédito
-                            </div>
-                            <div className="flex items-center gap-2 text-slate-500 text-xs">
-                                <CreditCard className="w-4 h-4 text-teal-500" aria-hidden />
-                                Boleto
+                                <span className="text-amber-400 text-base font-extrabold">R$ 197</span>
                             </div>
                         </div>
                     </motion.div>
                 </div>
 
-                {/* Trust badges */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    className="max-w-lg mx-auto mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-500"
-                >
-                    <div className="flex items-center gap-2">
-                        <Shield className="w-4 h-4 text-teal-500" />
-                        <span>Compra segura</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <Zap className="w-4 h-4 text-teal-500" />
-                        <span>Acesso imediato</span>
-                    </div>
-                </motion.div>
+                <div className="relative max-w-xl mx-auto">
+                    {/* Pulsing glow border */}
+                    <div className="absolute -inset-[2px] bg-gradient-to-r from-teal-500 via-amber-400 to-cyan-500 rounded-[26px] opacity-75 blur-sm animate-pulse" />
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="relative overflow-hidden border rounded-3xl bg-white text-slate-900 border-slate-200 shadow-2xl"
+                    >
+                        <div className="p-8 md:p-12 relative z-10">
+                            <h3 className="mb-2 text-2xl md:text-3xl font-extrabold text-slate-900">
+                                Fundamentos da Modelagem Financeira
+                            </h3>
+                            <p className="mb-8 text-slate-500 text-base">
+                                Curso completo + bônus exclusivos inclusos
+                            </p>
+
+                            {/* Massive Price Display */}
+                            <div className="flex flex-col items-center mb-8 p-6 rounded-2xl bg-slate-50 border border-slate-200">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <span className="text-slate-400 font-bold text-xl line-through decoration-red-500 decoration-2">
+                                        De R$ 297
+                                    </span>
+                                </div>
+
+                                <div className="flex items-baseline justify-center gap-1 my-1">
+                                    <span className="text-2xl md:text-3xl font-black text-slate-900 self-start mt-2">R$</span>
+                                    <span className="text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-slate-950 leading-none">
+                                        197
+                                    </span>
+                                </div>
+
+                                <p className="text-sm md:text-base text-teal-700 font-bold mt-2">
+                                    ou 12x de R$ 19,70 no cartão
+                                </p>
+                            </div>
+
+                            <a
+                                href={checkoutUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="relative flex items-center justify-center w-full h-16 md:h-18 mb-5 text-lg md:text-xl font-black text-white transition-all rounded-2xl bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-500 hover:scale-[1.02] overflow-hidden group shadow-xl"
+                                onClick={() => trackCheckout("pricing_main", 197)}
+                            >
+                                <span className="relative z-10 flex items-center gap-2">
+                                    QUERO COMEÇAR AGORA — R$ 197
+                                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                                <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
+                            </a>
+
+                            <p className="text-center text-xs text-slate-500 font-medium mb-8">
+                                🔒 Compra segura via Hotmart · Acesso imediato e vitalício
+                            </p>
+
+                            {/* Checklist */}
+                            <div className="space-y-3.5 pt-6 border-t border-slate-100">
+                                <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                                    O que está incluído:
+                                </p>
+                                {includes.map((item, index) => (
+                                    <div key={index} className="flex items-start gap-3 text-sm">
+                                        <div className="flex items-center justify-center w-5 h-5 rounded-full bg-teal-100 text-teal-700 shrink-0 mt-0.5 font-bold">
+                                            ✓
+                                        </div>
+                                        <span className="text-slate-700 font-medium">{item}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

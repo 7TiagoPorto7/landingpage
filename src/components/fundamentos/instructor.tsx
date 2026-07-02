@@ -2,33 +2,32 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Award, Briefcase, GraduationCap, Quote } from "lucide-react";
+import { Linkedin, Award, GraduationCap, Briefcase } from "lucide-react";
 
 export function FundamentosInstrutor() {
     return (
-        <section className="py-24 bg-white relative overflow-hidden border-t border-slate-100">
-            {/* Background Accent Gradients */}
+        <section id="instrutor" className="py-24 bg-[#070D1B] text-white relative overflow-hidden border-t border-slate-800/80">
+            {/* Background Accent Orbs */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-teal-500/5 blur-[120px] rounded-full" />
-                <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/5 blur-[120px] rounded-full" />
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[550px] h-[550px] bg-teal-500/10 blur-[150px] rounded-full" />
+                <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-cyan-500/10 blur-[150px] rounded-full" />
             </div>
 
             <div className="container px-4 mx-auto relative z-10 max-w-5xl">
-                <div className="text-center mb-16">
-                    <motion.p
+                <div className="text-center mb-14">
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-sm font-semibold text-teal-700 uppercase tracking-wider mb-3"
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/15 text-teal-300 text-xs font-semibold uppercase tracking-wider border border-teal-500/30 mb-3"
                     >
-                        Seu Instrutor
-                    </motion.p>
+                        <span>Quem vai te ensinar</span>
+                    </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900"
+                        className="text-3xl md:text-4xl font-bold tracking-tight text-white"
                     >
                         Aprenda com quem vive a modelagem no dia a dia
                     </motion.h2>
@@ -39,64 +38,59 @@ export function FundamentosInstrutor() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="bg-gradient-to-br from-slate-50 to-slate-100/70 rounded-3xl border border-slate-200/80 p-8 md:p-12 shadow-sm relative overflow-hidden"
+                    className="relative rounded-3xl p-[1px] bg-gradient-to-br from-teal-500/40 via-slate-700 to-cyan-500/40 shadow-2xl overflow-hidden"
                 >
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-                        {/* Photo Column */}
-                        <div className="lg:col-span-5 flex flex-col items-center text-center">
-                            <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-xl border-4 border-white mb-6 group">
-                                <Image
-                                    src="/tiago-porto.png"
-                                    alt="Tiago Porto, Analista de M&A e Instrutor"
-                                    fill
-                                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                    priority
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-60" />
+                    <div className="bg-[#0D1935] rounded-[23px] p-8 md:p-12 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                            {/* Photo Column (Left) */}
+                            <div className="lg:col-span-5 flex flex-col items-center text-center">
+                                <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700 mb-6 group ring-2 ring-teal-500/30">
+                                    {/* TODO: [PREENCHER: caminho da foto profissional se houver nova foto] */}
+                                    <Image
+                                        src="/tiago-porto.png"
+                                        alt="Tiago Porto — Analista de M&A e Instrutor"
+                                        fill
+                                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-40" />
+                                </div>
+
+                                <h3 className="text-2xl md:text-3xl font-extrabold text-white">Tiago Porto</h3>
+                                <p className="text-teal-400 font-semibold text-sm mt-1 mb-4">
+                                    Analista de M&A | MBA em Modelagem Financeira, Valuation e M&A (PUC Minas)
+                                </p>
+
+                                {/* LinkedIn button */}
+                                <a
+                                    href="https://www.linkedin.com/in/portotiago/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600/20 border border-sky-500/40 text-sky-300 text-xs font-semibold hover:bg-sky-600/30 transition-colors mb-4"
+                                >
+                                    <Linkedin className="w-4 h-4" />
+                                    <span>Perfil no LinkedIn</span>
+                                </a>
+
+                                {/* Credibility Badges */}
+                                <div className="flex flex-wrap justify-center gap-2">
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-medium">
+                                        <Briefcase className="w-3.5 h-3.5 text-teal-400" />
+                                        M&A & FP&A Prático
+                                    </span>
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-medium">
+                                        <GraduationCap className="w-3.5 h-3.5 text-teal-400" />
+                                        MBA PUC Minas
+                                    </span>
+                                </div>
                             </div>
 
-                            <h3 className="text-2xl font-bold text-slate-900">Tiago Porto</h3>
-                            <p className="text-teal-700 font-medium text-sm mt-1 mb-4">
-                                Analista de M&A | MBA em Modelagem Financeira, Valuation e M&A (PUC Minas)
-                            </p>
-
-                            {/* Credibility Badges */}
-                            <div className="flex flex-wrap justify-center gap-2 mt-2">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs">
-                                    <Briefcase className="w-3.5 h-3.5 text-teal-600" />
-                                    M&A & FP&A
-                                </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs">
-                                    <GraduationCap className="w-3.5 h-3.5 text-teal-600" />
-                                    MBA PUC Minas
-                                </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 text-xs font-semibold shadow-2xs">
-                                    <Award className="w-3.5 h-3.5 text-teal-600" />
-                                    Prática de Mercado
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Bio Text Column */}
-                        <div className="lg:col-span-7 space-y-5 text-slate-600 text-base md:text-lg leading-relaxed">
-                            <div className="relative pl-6 border-l-4 border-teal-500 bg-teal-50/50 p-4 rounded-r-xl">
-                                <Quote className="w-8 h-8 text-teal-500/30 absolute -top-2 -left-2 -z-10" />
-                                <p className="font-semibold text-slate-900 text-lg italic">
-                                    "Modelagem financeira é o meu trabalho, não só o meu curso."
+                            {/* Bio Text Column (Right) */}
+                            <div className="lg:col-span-7 space-y-5 text-slate-300 text-base md:text-lg leading-relaxed">
+                                <p className="italic text-teal-200 font-medium bg-teal-500/10 p-5 rounded-2xl border border-teal-500/30 text-lg leading-relaxed">
+                                    "Modelagem financeira é o meu trabalho, não só o meu curso. Atuo em M&A construindo modelos e materiais que vão para a mesa de investidores, depois de anos em FP&A planejando e analisando as finanças de empresas de diferentes setores — de grupos com múltiplas unidades de negócio a consultorias de planejamento financeiro. Nessa trajetória, percebi que quase todo mundo trava no mesmo ponto: ninguém explica direito a lógica que conecta DRE, Balanço e Fluxo de Caixa. Criei este curso para resolver exatamente isso — do jeito que eu gostaria de ter aprendido: direto, sem enrolação e com profundidade onde importa."
                                 </p>
                             </div>
-
-                            <p>
-                                Atuo em M&A construindo modelos e materiais que vão para a mesa de investidores, depois de anos em FP&A planejando e analisando as finanças de empresas de diferentes setores, desde grupos com múltiplas unidades de negócio até consultorias de planejamento financeiro.
-                            </p>
-
-                            <p>
-                                Nessa trajetória, percebi que quase todo mundo trava no mesmo ponto: <strong className="text-slate-900 font-semibold">ninguém explica direito a lógica que conecta DRE, Balanço e Fluxo de Caixa.</strong>
-                            </p>
-
-                            <p className="text-slate-800 font-medium bg-white p-4 rounded-xl border border-slate-200/70 shadow-2xs">
-                                Criei este curso para resolver exatamente isso, do jeito que eu gostaria de ter aprendido: <span className="text-teal-700 font-bold">direto, sem enrolação e com profundidade onde importa.</span>
-                            </p>
                         </div>
                     </div>
                 </motion.div>

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
     {
@@ -42,95 +42,70 @@ const faqs = [
     },
 ];
 
-function FAQItem({
-    faq,
-    isOpen,
-    onToggle,
-}: {
-    faq: (typeof faqs)[0];
-    isOpen: boolean;
-    onToggle: () => void;
-}) {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className={`border rounded-xl overflow-hidden transition-all duration-200 ${
-                isOpen
-                    ? "border-teal-400 shadow-sm"
-                    : "border-slate-200 hover:border-slate-300"
-            }`}
-        >
-            <button
-                id={faq.id}
-                onClick={onToggle}
-                className="w-full flex items-center justify-between gap-4 p-5 text-left bg-white hover:bg-slate-50 transition-colors"
-                aria-expanded={isOpen}
-            >
-                <span
-                    className={`font-semibold text-sm md:text-base ${
-                        isOpen ? "text-teal-700" : "text-slate-800"
-                    }`}
-                >
-                    {faq.question}
-                </span>
-                <ChevronDown
-                    className={`w-5 h-5 shrink-0 text-teal-500 transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                    }`}
-                />
-            </button>
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="overflow-hidden"
-                    >
-                        <p className="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
-                            {faq.answer}
-                        </p>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.div>
-    );
-}
-
 export function FundamentosFAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section id="faq" className="py-24 bg-slate-50 relative overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section id="faq" className="py-24 bg-[#0B1528] text-white relative overflow-hidden border-t border-slate-800/80">
+            {/* Ambient Accent Glow */}
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-500/10 blur-[150px] rounded-full" />
+            </div>
+
+            <div className="container mx-auto px-4 max-w-4xl relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-12"
+                    className="text-center mb-14"
                 >
-                    <p className="text-teal-700 font-semibold uppercase tracking-wider text-sm mb-3">
-                        Dúvidas Frequentes
-                    </p>
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/15 text-teal-300 text-xs font-semibold uppercase tracking-wider border border-teal-500/30 mb-3">
+                        <HelpCircle className="w-3.5 h-3.5" />
+                        <span>Dúvidas Frequentes</span>
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">
                         Perguntas frequentes
                     </h2>
                 </motion.div>
 
-                <div className="max-w-3xl mx-auto space-y-3">
-                    {faqs.map((faq, i) => (
-                        <FAQItem
-                            key={faq.id}
-                            faq={faq}
-                            isOpen={openIndex === i}
-                            onToggle={() =>
-                                setOpenIndex(openIndex === i ? null : i)
-                            }
-                        />
-                    ))}
+                <div className="space-y-4">
+                    {faqs.map((faq, i) => {
+                        const isOpen = openIndex === i;
+                        return (
+                            <div
+                                key={faq.id}
+                                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
+                                    isOpen
+                                        ? "border-teal-500/50 bg-[#111F3D] shadow-xl"
+                                        : "border-slate-800 bg-[#0D1935] hover:border-slate-700"
+                                }`}
+                            >
+                                <button
+                                    id={faq.id}
+                                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                                    className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left focus:outline-none"
+                                    aria-expanded={isOpen}
+                                >
+                                    <span
+                                        className={`font-bold text-base md:text-lg ${
+                                            isOpen ? "text-teal-300" : "text-white"
+                                        }`}
+                                    >
+                                        {faq.question}
+                                    </span>
+                                    <ChevronDown
+                                        className={`w-5 h-5 shrink-0 text-teal-400 transition-transform duration-300 ${
+                                            isOpen ? "rotate-180" : ""
+                                        }`}
+                                    />
+                                </button>
+                                {/* Static HTML rendering for SEO crawlers with CSS toggle */}
+                                <div className={`px-5 pb-6 md:px-6 text-slate-300 text-sm md:text-base leading-relaxed border-t border-slate-800/80 pt-4 ${isOpen ? "block" : "hidden"}`}>
+                                    <p>{faq.answer}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
