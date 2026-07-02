@@ -5,6 +5,7 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
 import { MazeGrid } from "@/components/ui/maze-grid";
+import { gtagEvent } from "@/components/analytics";
 
 export function Hero() {
     return (
@@ -80,6 +81,7 @@ export function Hero() {
                     <Link
                         href="#pricing"
                         className="relative inline-flex items-center justify-center h-14 px-8 text-lg font-bold text-black transition-all duration-300 rounded-full bg-primary hover:bg-primary/90 hover:scale-105 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background overflow-hidden group"
+                        onClick={() => gtagEvent("click_cta", { label: "Começar Agora", section: "hero" })}
                     >
                         <span className="relative z-10 flex items-center">
                             Começar Agora
@@ -90,6 +92,7 @@ export function Hero() {
                     <Link
                         href="#curriculum"
                         className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium transition-colors rounded-full border border-white/10 hover:bg-white/5 hover:border-primary/30 focus:outline-none focus:ring-2 focus:ring-white/20"
+                        onClick={() => gtagEvent("click_cta", { label: "Ver Grade Curricular", section: "hero" })}
                     >
                         Ver Grade Curricular
                     </Link>
@@ -107,7 +110,10 @@ export function Hero() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 opacity-50" />
 
                         {/* Play Button */}
-                        <div className="relative z-10 w-20 h-20 flex items-center justify-center rounded-full bg-primary/90 text-black shadow-[0_0_30px_rgba(245,158,11,0.5)] group-hover:scale-110 transition-transform cursor-pointer">
+                        <div
+                            className="relative z-10 w-20 h-20 flex items-center justify-center rounded-full bg-primary/90 text-black shadow-[0_0_30px_rgba(245,158,11,0.5)] group-hover:scale-110 transition-transform cursor-pointer"
+                            onClick={() => gtagEvent("click_video", { label: "Trailer do Curso", section: "hero" })}
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 ml-1">
                                 <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
                             </svg>

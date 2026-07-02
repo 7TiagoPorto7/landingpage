@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { TrendingUp } from "lucide-react";
+import { gtagEvent } from "@/components/analytics";
 
 export function Footer() {
     return (
@@ -12,9 +15,27 @@ export function Footer() {
                     </div>
 
                     <div className="flex gap-8 text-sm text-muted-foreground">
-                        <Link href="/legal#terms" className="hover:text-white transition-colors">Termos de Uso</Link>
-                        <Link href="/legal#privacy" className="hover:text-white transition-colors">Privacidade</Link>
-                        <Link href="/legal#contact" className="hover:text-white transition-colors">Contato</Link>
+                        <Link
+                            href="/legal#terms"
+                            className="hover:text-white transition-colors"
+                            onClick={() => gtagEvent("click_footer_link", { label: "Termos de Uso" })}
+                        >
+                            Termos de Uso
+                        </Link>
+                        <Link
+                            href="/legal#privacy"
+                            className="hover:text-white transition-colors"
+                            onClick={() => gtagEvent("click_footer_link", { label: "Privacidade" })}
+                        >
+                            Privacidade
+                        </Link>
+                        <Link
+                            href="/legal#contact"
+                            className="hover:text-white transition-colors"
+                            onClick={() => gtagEvent("click_footer_link", { label: "Contato" })}
+                        >
+                            Contato
+                        </Link>
                     </div>
                 </div>
 
@@ -25,4 +46,3 @@ export function Footer() {
         </footer>
     );
 }
-

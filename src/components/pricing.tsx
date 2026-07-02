@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
+import { gtagEvent } from "@/components/analytics";
 
 export function Pricing() {
     return (
@@ -65,6 +66,7 @@ export function Pricing() {
                             <Link
                                 href="#"
                                 className="relative flex items-center justify-center w-full h-16 mb-10 text-lg font-bold text-black transition-all rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] overflow-hidden group"
+                                onClick={() => gtagEvent("begin_checkout", { label: "Garantir Minha Vaga", value: 697.90, currency: "BRL" })}
                             >
                                 <span className="relative z-10 flex items-center gap-2">
                                     Garantir Minha Vaga

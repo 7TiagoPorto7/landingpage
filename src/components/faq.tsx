@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { gtagEvent } from "@/components/analytics";
 
 const faqs = [
     {
@@ -50,7 +51,13 @@ export function FAQ() {
                             className="overflow-hidden border rounded-xl bg-card border-white/5 hover:border-primary/20 transition-colors"
                         >
                             <button
-                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                onClick={() => {
+                                    const isOpening = openIndex !== index;
+                                    setOpenIndex(isOpening ? index : null);
+                                    if (isOpening) {
+                                        gtagEvent("faq_open", { question: faq.question });
+                                    }
+                                }}
                                 className="flex items-center justify-between w-full p-6 text-left"
                             >
                                 <span className="text-lg font-semibold pr-8">{faq.question}</span>
