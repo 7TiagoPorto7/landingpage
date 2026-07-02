@@ -47,7 +47,7 @@ export function FundamentosInstrutor() {
                             <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl overflow-hidden shadow-xl border-4 border-white mb-6 group">
                                 <Image
                                     src="/tiago-porto.png"
-                                    alt="Tiago Porto — Analista de M&A e Instrutor"
+                                    alt="Tiago Porto, Analista de M&A e Instrutor"
                                     fill
                                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                                     priority
@@ -87,7 +87,7 @@ export function FundamentosInstrutor() {
                             </div>
 
                             <p>
-                                Atuo em M&A construindo modelos e materiais que vão para a mesa de investidores, depois de anos em FP&A planejando e analisando as finanças de empresas de diferentes setores — de grupos com múltiplas unidades de negócio a consultorias de planejamento financeiro.
+                                Atuo em M&A construindo modelos e materiais que vão para a mesa de investidores, depois de anos em FP&A planejando e analisando as finanças de empresas de diferentes setores, desde grupos com múltiplas unidades de negócio até consultorias de planejamento financeiro.
                             </p>
 
                             <p>
@@ -95,7 +95,7 @@ export function FundamentosInstrutor() {
                             </p>
 
                             <p className="text-slate-800 font-medium bg-white p-4 rounded-xl border border-slate-200/70 shadow-2xs">
-                                Criei este curso para resolver exatamente isso — do jeito que eu gostaria de ter aprendido: <span className="text-teal-700 font-bold">direto, sem enrolação e com profundidade onde importa.</span>
+                                Criei este curso para resolver exatamente isso, do jeito que eu gostaria de ter aprendido: <span className="text-teal-700 font-bold">direto, sem enrolação e com profundidade onde importa.</span>
                             </p>
                         </div>
                     </div>
