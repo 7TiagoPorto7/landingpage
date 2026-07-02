@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Sparkles, Bot, TrendingUp, Brain } from "lucide-react";
+import { gtagEvent } from "@/components/analytics";
 
 export function CFHero() {
     const [email, setEmail] = useState("");
@@ -21,6 +22,7 @@ export function CFHero() {
             if (res.ok) {
                 setStatus("success");
                 setEmail("");
+                gtagEvent("generate_lead", { source: "claude-financas", method: "hero_form" });
             } else {
                 setStatus("error");
             }

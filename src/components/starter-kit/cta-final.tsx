@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { gtagEvent } from "@/components/analytics";
 
 const SK_BUY_URL = "#preco";
 
@@ -52,6 +53,7 @@ export function SKCTAFinal() {
                             href={SK_BUY_URL}
                             id="final-cta"
                             className="inline-flex items-center justify-center px-10 py-5 bg-white text-[#548235] hover:bg-[#F2F2F2] font-bold text-xl rounded-xl transition-all duration-200 shadow-xl"
+                            onClick={() => gtagEvent("click_cta", { label: "Quero Meu Starter Kit", section: "final_cta", page: "starter-kit" })}
                         >
                             QUERO MEU STARTER KIT →
                         </Link>

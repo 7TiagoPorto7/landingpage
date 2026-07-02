@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { gtagEvent } from "@/components/analytics";
 
 const container = {
     hidden: { opacity: 0 },
@@ -46,6 +47,7 @@ function BannerCard({ href, image, title, description, badge, gradient, glowColo
                 rel="noopener noreferrer"
                 className="group relative block w-full overflow-hidden rounded-2xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:border-white/20"
                 style={{ boxShadow: `0 0 0px ${glowColor}` }}
+                onClick={() => gtagEvent("click_links_page", { label: title, destination: href })}
                 onMouseEnter={(e) => {
                     (e.currentTarget as HTMLElement).style.boxShadow = `0 0 30px ${glowColor}`;
                 }}
@@ -105,6 +107,7 @@ function LinkButton({ href, icon, label, external = false }: LinkButtonProps) {
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
                 className="group flex items-center gap-4 w-full px-5 py-4 rounded-xl bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => gtagEvent("click_links_page", { label, destination: href })}
             >
                 <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/[0.06] text-primary group-hover:bg-primary/20 transition-colors">
                     {icon}

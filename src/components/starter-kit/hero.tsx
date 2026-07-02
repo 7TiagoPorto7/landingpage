@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, Building2, BarChart3, CheckCircle } from "lucide-react";
+import { gtagEvent } from "@/components/analytics";
 
 const SK_BUY_URL = "#preco";
 
@@ -85,6 +86,7 @@ export function SKHero() {
                             href={SK_BUY_URL}
                             id="hero-cta"
                             className="inline-flex items-center justify-center px-10 py-5 bg-[#548235] hover:bg-[#4a7230] text-white font-bold text-xl rounded-xl transition-all duration-200 shadow-lg shadow-[#548235]/30 hover:shadow-[#548235]/50 hover:scale-105 group"
+                            onClick={() => gtagEvent("click_cta", { label: "Quero Meu Starter Kit", section: "hero", page: "starter-kit" })}
                         >
                             QUERO MEU STARTER KIT
                             <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -92,6 +94,7 @@ export function SKHero() {
                         <a
                             href="#o-que-inclui"
                             className="inline-flex items-center justify-center gap-2 px-8 py-5 text-white hover:bg-white/10 font-medium rounded-xl transition-colors"
+                            onClick={() => gtagEvent("click_cta", { label: "Veja o que está incluso", section: "hero", page: "starter-kit" })}
                         >
                             Veja o que está incluso
                             <ArrowDown className="w-4 h-4 animate-bounce" />

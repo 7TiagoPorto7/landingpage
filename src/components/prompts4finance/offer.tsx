@@ -1,5 +1,8 @@
+"use client";
+
 import { CheckCircle2, ShieldCheck, Zap, Download } from 'lucide-react';
 import Link from 'next/link';
+import { gtagEvent } from '@/components/analytics';
 
 export function Offer() {
     return (
@@ -77,6 +80,7 @@ export function Offer() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full flex justify-center items-center px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-1 mb-6"
+                                onClick={() => gtagEvent("begin_checkout", { label: "Quero Meu Guia Agora", value: 29.90, currency: "BRL", page: "prompts4finance", section: "offer" })}
                             >
                                 QUERO MEU GUIA AGORA
                             </Link>

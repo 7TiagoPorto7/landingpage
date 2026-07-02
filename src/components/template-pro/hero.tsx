@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, FileSpreadsheet } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { gtagEvent } from "@/components/analytics";
 
 export function TemplateProHero() {
     return (
@@ -65,6 +66,7 @@ export function TemplateProHero() {
                     <Link
                         href="https://pay.hotmart.com/N105779312S"
                         className="relative inline-flex items-center justify-center h-14 px-8 text-lg font-bold text-black transition-all duration-300 rounded-full bg-gradient-to-r from-emerald-400 to-teal-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-black overflow-hidden group"
+                        onClick={() => gtagEvent("begin_checkout", { label: "Quero o Modelo Completo", value: 97, currency: "BRL", page: "template-pro", section: "hero" })}
                     >
                         <span className="relative z-10 flex items-center">
                             Quero o Modelo Completo
@@ -75,6 +77,7 @@ export function TemplateProHero() {
                     <Link
                         href="#modules"
                         className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium transition-colors rounded-full border border-white/10 hover:bg-white/5 hover:border-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-white/20"
+                        onClick={() => gtagEvent("click_cta", { label: "Ver Conteúdo Completo", section: "hero", page: "template-pro" })}
                     >
                         Ver Conteúdo Completo
                     </Link>

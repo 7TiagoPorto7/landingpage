@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { gtagEvent } from "@/components/analytics";
 
 const SK_BUY_URL = "#preco";
 
@@ -26,6 +27,7 @@ export function SKStickyMobileCTA() {
                     href={SK_BUY_URL}
                     id="sticky-mobile-cta"
                     className="block w-full text-center py-4 bg-[#548235] hover:bg-[#4a7230] text-white font-bold text-base rounded-xl transition-all"
+                    onClick={() => gtagEvent("click_cta", { label: "Quero Meu Starter Kit", section: "sticky_mobile", page: "starter-kit" })}
                 >
                     QUERO MEU STARTER KIT →
                 </Link>

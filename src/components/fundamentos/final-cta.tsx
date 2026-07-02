@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Lock, Zap, ShieldCheck } from "lucide-react";
+import { gtagEvent } from "@/components/analytics";
 
 const CHECKOUT_URL = "https://pay.hotmart.com/F106435738T";
 
@@ -76,6 +77,7 @@ export function FundamentosCTAFinal() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative w-full sm:w-auto inline-flex justify-center items-center px-10 py-5 rounded-2xl bg-white text-teal-700 font-bold text-lg md:text-xl hover:bg-amber-50 transition-all shadow-xl overflow-hidden group"
+                            onClick={() => gtagEvent("begin_checkout", { label: "Quero Começar Agora", value: 197, currency: "BRL", page: "fundamentos", section: "final_cta" })}
                         >
                             <span className="relative z-10 flex items-center gap-3">
                                 QUERO COMEÇAR AGORA — R$ 197

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
+import { gtagEvent } from "@/components/analytics";
 
 export function FundamentosHero() {
     return (
@@ -67,6 +68,7 @@ export function FundamentosHero() {
                     <Link
                         href="https://pay.hotmart.com/F106435738T"
                         className="relative inline-flex items-center justify-center h-14 px-8 text-lg font-bold text-white transition-all duration-300 rounded-full bg-gradient-to-r from-teal-600 to-cyan-500 hover:scale-105 hover:shadow-[0_0_25px_rgba(20,184,166,0.35)] focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 overflow-hidden group"
+                        onClick={() => gtagEvent("begin_checkout", { label: "Quero Começar Agora", value: 197, currency: "BRL", page: "fundamentos", section: "hero" })}
                     >
                         <span className="relative z-10 flex items-center">
                             QUERO COMEÇAR AGORA — R$ 197
@@ -77,6 +79,7 @@ export function FundamentosHero() {
                     <Link
                         href="#conteudo"
                         className="inline-flex items-center justify-center h-14 px-8 text-lg font-medium text-slate-700 transition-colors rounded-full border border-slate-200 hover:bg-slate-50 hover:border-teal-300 focus:outline-none focus:ring-2 focus:ring-slate-200"
+                        onClick={() => gtagEvent("click_cta", { label: "Ver conteúdo do curso", section: "hero", page: "fundamentos" })}
                     >
                         Ver conteúdo do curso
                     </Link>

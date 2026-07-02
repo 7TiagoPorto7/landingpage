@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Check, Shield, Zap, CreditCard } from "lucide-react";
+import { gtagEvent } from "@/components/analytics";
 
 const SK_BUY_URL = "https://pay.hotmart.com/B104777770W?off=fwpjg9hw";
 
@@ -80,6 +81,7 @@ export function SKPricing() {
                                 href={SK_BUY_URL}
                                 id="pricing-cta"
                                 className="block w-full text-center py-5 bg-[#548235] hover:bg-[#4a7230] text-white font-bold text-xl rounded-xl transition-all duration-200 shadow-lg shadow-[#548235]/40 hover:shadow-[#548235]/60 hover:scale-[1.02] mb-4"
+                                onClick={() => gtagEvent("begin_checkout", { label: "Garantir Meu Starter Kit", value: 67.90, currency: "BRL", page: "starter-kit" })}
                             >
                                 GARANTIR MEU STARTER KIT →
                             </Link>

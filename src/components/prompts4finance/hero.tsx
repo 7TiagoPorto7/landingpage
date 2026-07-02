@@ -1,5 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
+import { gtagEvent } from '@/components/analytics';
 
 export function Hero() {
     return (
@@ -33,6 +36,7 @@ export function Hero() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex justify-center items-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 group"
+                                onClick={() => gtagEvent("begin_checkout", { label: "Quero Meu Guia", value: 29.90, currency: "BRL", page: "prompts4finance", section: "hero" })}
                             >
                                 QUERO MEU GUIA — R$ 29,90
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

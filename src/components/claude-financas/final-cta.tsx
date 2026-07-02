@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, Lock, CheckCircle2 } from "lucide-react";
+import { gtagEvent } from "@/components/analytics";
 
 export function CFFinalCTA() {
     const [email, setEmail] = useState("");
@@ -23,6 +24,7 @@ export function CFFinalCTA() {
             if (res.ok) {
                 setStatus("success");
                 setEmail("");
+                gtagEvent("generate_lead", { source: "claude-financas", method: "final_cta_form" });
             } else {
                 setStatus("error");
             }

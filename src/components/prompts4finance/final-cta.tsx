@@ -1,5 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import { ArrowRight, Lock } from 'lucide-react';
+import { gtagEvent } from '@/components/analytics';
 
 export function FinalCTA() {
     return (
@@ -24,6 +27,7 @@ export function FinalCTA() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-5 rounded-2xl bg-primary text-primary-foreground font-bold text-xl md:text-2xl hover:bg-primary/90 transition-all shadow-xl hover:shadow-primary/30 hover:scale-105 group"
+                        onClick={() => gtagEvent("begin_checkout", { label: "Quero Parar de Perder Tempo", value: 29.90, currency: "BRL", page: "prompts4finance", section: "final_cta" })}
                     >
                         QUERO PARAR DE PERDER TEMPO
                         <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
