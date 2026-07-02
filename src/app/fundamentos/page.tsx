@@ -35,11 +35,11 @@ export default function FundamentosPage() {
             <FundamentosHero />
             <FundamentosProblema />
             <FundamentosSolucao />
-            <FundamentosAudiencia />
-            <FundamentosInstrutor />
-            <FundamentosTestimonials />
             <FundamentosCurriculo />
+            <FundamentosInstrutor />
+            <FundamentosAudiencia />
             <FundamentosBonus />
+            <FundamentosTestimonials />
             <FundamentosPricing />
             <FundamentosGarantia />
             <FundamentosFAQ />
