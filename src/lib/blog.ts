@@ -6,6 +6,12 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
+export interface HeadingItem {
+    text: string;
+    id: string;
+    level: number;
+}
+
 export interface PostData {
     slug: string;
     title: string;
@@ -15,7 +21,9 @@ export interface PostData {
     image: string;
     excerpt: string;
     contentHtml?: string;
+    headings?: HeadingItem[];
 }
+
 
 export function getSortedPostsData(): PostData[] {
     // Get file names under /posts
@@ -82,12 +90,64 @@ export async function getPostData(slug: string): Promise<PostData> {
     const processedContent = await remark()
         .use(html)
         .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    let contentHtml = processedContent.toString();
+
+    // Extrair cabeçalhos (h2 e h3) e injetar ID para âncoras (TOC)
+    const headings: HeadingItem[] = [];
+    const slugify = (text: string) => {
+        return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^\w\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .replace(/-+/g, "-")
+            .trim();
+    };
+
+    contentHtml = contentHtml.replace(/<h(2|3)>([^<]+)<\/h\1>/g, (match, level, text) => {
+        const id = slugify(text);
+        headings.push({ text, id, level: parseInt(level) });
+        return `<h${level} id="${id}">${text}</h${level}>`;
+    });
 
     // Combine the data with the id and contentHtml
     return {
         slug,
         contentHtml,
-        ...(matterResult.data as Omit<PostData, "slug" | "contentHtml">),
+        headings,
+        ...(matterResult.data as Omit<PostData, "slug" | "contentHtml" | "headings">),
     };
 }
+
+
+export interface AdjacentPosts {
+    prev: { slug: string; title: string } | null;
+    next: { slug: string; title: string } | null;
+}
+
+export function getAdjacentPosts(slug: string): AdjacentPosts {
+    const posts = getSortedPostsData();
+    const index = posts.findIndex((post) => post.slug === slug);
+
+    if (index === -1) {
+        return { prev: null, next: null };
+    }
+
+    // Ordenados por data decrescente (mais recente primeiro)
+    // O post mais novo (next) estará no índice anterior (index - 1)
+    // O post mais antigo (prev) estará no índice posterior (index + 1)
+    const nextPost = index > 0 ? posts[index - 1] : null;
+    const prevPost = index < posts.length - 1 ? posts[index + 1] : null;
+
+    return {
+        next: nextPost ? { slug: nextPost.slug, title: nextPost.title } : null,
+        prev: prevPost ? { slug: prevPost.slug, title: prevPost.title } : null,
+    };
+}
+
+export function getRelatedPosts(currentSlug: string, limit = 3): PostData[] {
+    const posts = getSortedPostsData();
+    return posts.filter((post) => post.slug !== currentSlug).slice(0, limit);
+}
+

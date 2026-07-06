@@ -58,7 +58,7 @@ export function FundamentosInstrutor() {
 
                                 <h3 className="text-2xl md:text-3xl font-extrabold text-white">Tiago Porto</h3>
                                 <p className="text-teal-400 font-semibold text-sm mt-1 mb-4">
-                                    Analista de M&A | MBA em Modelagem Financeira, Valuation e M&A (PUC Minas)
+                                    Especialista em modelagem financeira
                                 </p>
 
                                 {/* LinkedIn button */}
@@ -80,7 +80,7 @@ export function FundamentosInstrutor() {
                                     </span>
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-medium">
                                         <GraduationCap className="w-3.5 h-3.5 text-teal-400" />
-                                        MBA PUC Minas
+                                        Especialista em Finanças
                                     </span>
                                 </div>
                             </div>

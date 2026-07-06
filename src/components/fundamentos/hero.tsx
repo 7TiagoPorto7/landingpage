@@ -49,7 +49,7 @@ export function FundamentosHero() {
                     transition={{ duration: 0.4 }}
                     className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs sm:text-sm font-semibold rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 backdrop-blur-md"
                 >
-                    <span>Com Tiago Porto — Analista de M&A · MBA em Modelagem Financeira, Valuation e M&A (PUC Minas)</span>
+                    <span>Tiago Porto - Especialista em modelagem financeira</span>
                 </motion.div>
 
                 {/* H1 */}
