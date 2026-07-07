@@ -7,9 +7,9 @@ import { getDecoratedCheckoutUrl, trackCheckout } from "@/lib/tracking";
 
 const includes = [
     "Acesso a todas as 7 aulas do curso",
-    "Template de Modelo Integrado em Excel (DRE, Balanço e DFC)",
-    "Planilha de Prompts de IA para Finanças (Bônus)",
-    "Checklist de Validação de Modelos (Bônus)",
+    "Bônus: Template Pro (Modelo Financeiro de 3 Demonstrativos)",
+    "Bônus: Starter Kit de Finanças",
+    "Bônus: Planilha de Prompts de IA para Finanças",
     "Acesso imediato e vitalício",
     "Garantia incondicional de 7 dias",
 ];

@@ -29,7 +29,7 @@ export function FundamentosBonus() {
                     </motion.h2>
                 </div>
 
-                {/* Main Bonus — AI Prompts */}
+                {/* Main Bonus — Template Pro */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -44,24 +44,22 @@ export function FundamentosBonus() {
                         <div className="absolute top-0 right-0 px-5 py-1.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-extrabold rounded-bl-xl rounded-tr-[20px] uppercase tracking-wider">
                             <span className="flex items-center gap-1.5">
                                 <Sparkles className="w-3.5 h-3.5" />
-                                Exclusivo
+                                Incluso
                             </span>
                         </div>
 
                         <div className="flex flex-col md:flex-row items-start gap-6">
                             <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-50 border border-amber-200 text-amber-600 shrink-0">
-                                <Gift className="w-8 h-8" />
+                                <FileSpreadsheet className="w-8 h-8" />
                             </div>
                             <div>
                                 <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
-                                    🎁 Planilha de Prompts de IA para Finanças
+                                    🎁 Bônus 1: Template Pro (Modelo Financeiro de 3 Demonstrativos)
                                 </h3>
                                 <p className="text-slate-600 leading-relaxed">
-                                    Uma planilha exclusiva com prompts de Inteligência Artificial
-                                    para aplicar em finanças. Agilize análises, automatize tarefas
-                                    e domine ferramentas de IA no seu dia a dia financeiro.
+                                    O modelo financeiro profissional completo e automatizado com DRE, Balanço Patrimonial e DFC integrados no Excel. Utilizado no dia a dia do mercado para projeções e valuation. (Valor original: R$ 97,00 — 100% grátis).
                                 </p>
-                            </div>
+                             </div>
                         </div>
                     </div>
                 </motion.div>
@@ -76,14 +74,13 @@ export function FundamentosBonus() {
                         className="p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:border-teal-400 hover:shadow-md transition-all"
                     >
                         <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 border border-teal-100 text-teal-700">
-                            <FileSpreadsheet className="w-6 h-6" />
+                            <Sparkles className="w-6 h-6" />
                         </div>
                         <h3 className="text-lg font-bold text-slate-900 mb-2">
-                            Template de Modelo Integrado
+                            Bônus 2: Starter Kit de Finanças
                         </h3>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                            Planilha pronta com o modelo financeiro dos três demonstrativos
-                            integrados. Estude, adapte e pratique à vontade.
+                            O kit essencial de aceleração de carreira com manual de atalhos rápidos do Excel, planilhas de exercícios práticos e guias de modelagem ágil. (Valor original: R$ 67,90 — 100% grátis).
                         </p>
                     </motion.div>
 
@@ -95,14 +92,13 @@ export function FundamentosBonus() {
                         className="p-7 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:border-teal-400 hover:shadow-md transition-all"
                     >
                         <div className="flex items-center justify-center w-12 h-12 mb-5 rounded-xl bg-teal-50 border border-teal-100 text-teal-700">
-                            <ClipboardCheck className="w-6 h-6" />
+                            <Gift className="w-6 h-6" />
                         </div>
                         <h3 className="text-lg font-bold text-slate-900 mb-2">
-                            Checklist de Validação
+                            Bônus 3: Planilha de Prompts de IA
                         </h3>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                            O passo a passo para conferir se o seu modelo está fechando
-                            corretamente. Nunca mais perca horas procurando erro.
+                            Nossa planilha de comandos avançados de Inteligência Artificial para agilizar pesquisas setoriais, automatizar tarefas contábeis e criar relatórios em minutos.
                         </p>
                     </motion.div>
                 </div>
