@@ -3,7 +3,9 @@ import Link from "next/link";
 import { TrendingUp, Eye, Clock, MessageSquare, ChevronRight, ArrowLeft } from "lucide-react";
 import { getSession } from "@/lib/auth";
 import { TAG_COLORS } from "@/lib/forum-constants";
+import { UserAvatar } from "@/components/forum/forum-ui";
 import { AnswerSection } from "@/components/forum/answer-section";
+
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -32,16 +34,70 @@ function getAvatarColor(name: string): string {
     return colors[idx];
 }
 
+import { getDb, ensureForumTables } from "@/lib/db";
+
 export default async function QuestionPage({ params }: PageProps) {
     const { id } = await params;
+    const questionId = parseInt(id);
+
+    if (isNaN(questionId)) {
+        notFound();
+    }
+
     const session = await getSession();
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/forum/questions/${id}`, { cache: "no-store" });
+    let question: any = null;
+    let answers: any[] = [];
 
-    if (!res.ok) notFound();
 
-    const { question, answers } = await res.json();
+    try {
+        await ensureForumTables();
+        const sql = getDb();
+
+        // Incrementar view_count
+        await sql`UPDATE forum_questions SET view_count = view_count + 1 WHERE id = ${questionId}`;
+
+        // Buscar a pergunta
+        const [dbQuestion] = await sql`
+            SELECT q.id, q.title, q.body, q.tags, q.view_count, q.is_solved, q.created_at,
+                   u.id AS author_id, u.name AS author_name, u.avatar_url AS author_avatar
+            FROM forum_questions q
+            JOIN forum_users u ON u.id = q.user_id
+            WHERE q.id = ${questionId}
+        `;
+
+        if (!dbQuestion) {
+            notFound();
+        }
+
+        // Buscar respostas ordenadas: aceita primeiro, depois por curtidas
+        const dbAnswers = await sql`
+            SELECT a.id, a.body, a.is_accepted, a.like_count, a.created_at,
+                   u.id AS author_id, u.name AS author_name, u.avatar_url AS author_avatar,
+                   ${session ? sql`EXISTS(
+                       SELECT 1 FROM forum_likes l
+                       WHERE l.answer_id = a.id AND l.user_id = ${session.userId}
+                   )` : sql`FALSE`} AS user_liked
+            FROM forum_answers a
+            JOIN forum_users u ON u.id = a.user_id
+            WHERE a.question_id = ${questionId}
+            ORDER BY a.is_accepted DESC, a.like_count DESC, a.created_at ASC
+        `;
+
+        question = {
+            ...dbQuestion,
+            isAuthor: session ? session.userId === dbQuestion.author_id : false,
+        };
+
+        answers = dbAnswers.map((a) => ({
+            ...a,
+            isAuthor: session ? session.userId === a.author_id : false,
+        }));
+    } catch (err) {
+        console.error("Erro ao carregar pergunta no component:", err);
+        notFound();
+    }
+
 
     return (
         <div className="min-h-screen bg-[#0a0f1a] text-slate-200">
@@ -78,12 +134,10 @@ export default async function QuestionPage({ params }: PageProps) {
 
                     <div className="ml-auto flex items-center gap-2 shrink-0">
                         {session ? (
-                            <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
-                                <div className={`w-5 h-5 rounded-full ${getAvatarColor(session.name)} flex items-center justify-center text-[9px] font-black text-slate-950`}>
-                                    {getInitials(session.name)}
-                                </div>
+                            <Link href="/forum/perfil" className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 hover:border-slate-600 transition-colors">
+                                <UserAvatar name={session.name} avatarUrl={session.avatarUrl} size="sm" />
                                 <span className="text-xs font-medium text-slate-200">{session.name.split(" ")[0]}</span>
-                            </div>
+                            </Link>
                         ) : (
                             <div className="flex items-center gap-2">
                                 <Link href="/auth/login" className="text-xs font-semibold text-slate-400 hover:text-white">Entrar</Link>
@@ -91,6 +145,7 @@ export default async function QuestionPage({ params }: PageProps) {
                             </div>
                         )}
                     </div>
+
                 </div>
             </header>
 
@@ -102,10 +157,8 @@ export default async function QuestionPage({ params }: PageProps) {
                         {/* Header da pergunta */}
                         <div className="px-6 py-5 border-b border-slate-800">
                             <div className="flex items-start gap-4">
-                                {/* Avatar grande */}
-                                <div className={`w-10 h-10 rounded-full ${getAvatarColor(question.author_name)} flex items-center justify-center text-sm font-black text-slate-950 shrink-0`}>
-                                    {getInitials(question.author_name)}
-                                </div>
+                                <UserAvatar name={question.author_name} avatarUrl={question.author_avatar} size="lg" />
+
 
                                 <div className="flex-1 min-w-0">
                                     {/* Status + Tags */}

@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import Link from "next/link";
 import { ThumbsUp, CheckCircle2, Clock, AlertCircle, MessageSquare, Trophy, ChevronUp } from "lucide-react";
 import { TAG_COLORS } from "@/lib/forum-constants";
+import { UserAvatar } from "./forum-ui";
 
 interface Answer {
     id: number;
@@ -13,6 +14,7 @@ interface Answer {
     created_at: string;
     author_id: number;
     author_name: string;
+    author_avatar?: string | null;
     user_liked: boolean;
     isAuthor: boolean;
 }
@@ -20,6 +22,7 @@ interface Answer {
 interface Session {
     userId: number;
     name: string;
+    avatarUrl?: string | null;
 }
 
 interface AnswerSectionProps {
@@ -28,6 +31,7 @@ interface AnswerSectionProps {
     initialAnswers: Answer[];
     session: Session | null;
 }
+
 
 function timeAgo(dateStr: string): string {
     const now = new Date();
@@ -169,9 +173,7 @@ export function AnswerSection({ questionId, questionAuthorId, initialAnswers, se
                         <div className="flex-1 min-w-0 p-5">
                             {/* Autor */}
                             <div className="flex items-center gap-2 mb-4">
-                                <div className={`w-8 h-8 rounded-full ${getAvatarColor(answer.author_name)} flex items-center justify-center text-xs font-black text-slate-950 shrink-0`}>
-                                    {getInitials(answer.author_name)}
-                                </div>
+                                <UserAvatar name={answer.author_name} avatarUrl={answer.author_avatar} size="sm" />
                                 <div>
                                     <span className="text-xs font-bold text-slate-200">{answer.author_name}</span>
                                     <div className="flex items-center gap-1 text-[10px] text-slate-600">
@@ -203,10 +205,9 @@ export function AnswerSection({ questionId, questionAuthorId, initialAnswers, se
                 {session ? (
                     <div className="p-5">
                         <div className="flex items-start gap-3">
-                            <div className={`w-8 h-8 rounded-full ${getAvatarColor(session.name)} flex items-center justify-center text-xs font-black text-slate-950 shrink-0 mt-1`}>
-                                {getInitials(session.name)}
-                            </div>
+                            <UserAvatar name={session.name} avatarUrl={session.avatarUrl} size="sm" />
                             <form onSubmit={handleSubmitAnswer} className="flex-1 space-y-3">
+
                                 <textarea
                                     id="answer-body"
                                     rows={7}

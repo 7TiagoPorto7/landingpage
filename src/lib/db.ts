@@ -62,9 +62,17 @@ export async function ensureForumTables() {
             email         TEXT UNIQUE NOT NULL,
             password_hash TEXT NOT NULL,
             role          TEXT NOT NULL DEFAULT 'member',
+            avatar_url    TEXT,
             created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
         )
     `;
+
+    try {
+        await sql`ALTER TABLE forum_users ADD COLUMN IF NOT EXISTS avatar_url TEXT`;
+    } catch (e) {
+        console.error("Erro ao adicionar avatar_url:", e);
+    }
+
 
     await sql`
         CREATE TABLE IF NOT EXISTS forum_questions (

@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
         const sql = getDb();
 
         const [user] = await sql`
-            SELECT id, name, email, password_hash, role
+            SELECT id, name, email, password_hash, role, avatar_url
             FROM forum_users
             WHERE email = ${email.toLowerCase().trim()}
         `;
@@ -33,7 +33,9 @@ export async function POST(req: NextRequest) {
             email: user.email,
             name: user.name,
             role: user.role,
+            avatarUrl: user.avatar_url,
         });
+
 
         return NextResponse.json({ success: true, user: { id: user.id, name: user.name, email: user.email } });
     } catch (err) {

@@ -14,7 +14,9 @@ export interface SessionPayload {
     email: string;
     name: string;
     role: string;
+    avatarUrl?: string | null;
 }
+
 
 // ─── Senha ─────────────────────────────────────────────────────────────────
 

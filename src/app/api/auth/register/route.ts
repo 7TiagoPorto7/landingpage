@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
         const [user] = await sql`
             INSERT INTO forum_users (name, email, password_hash)
             VALUES (${name.trim()}, ${email.toLowerCase().trim()}, ${passwordHash})
-            RETURNING id, name, email, role
+            RETURNING id, name, email, role, avatar_url
         `;
 
         await createSession({
@@ -36,7 +36,9 @@ export async function POST(req: NextRequest) {
             email: user.email,
             name: user.name,
             role: user.role,
+            avatarUrl: user.avatar_url,
         });
+
 
         return NextResponse.json({ success: true, user: { id: user.id, name: user.name, email: user.email } });
     } catch (err) {

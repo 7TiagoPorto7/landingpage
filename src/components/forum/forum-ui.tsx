@@ -6,10 +6,11 @@ export { FORUM_TAGS };
 
 interface UserAvatarProps {
     name: string;
+    avatarUrl?: string | null;
     size?: "sm" | "md" | "lg";
 }
 
-export function UserAvatar({ name, size = "md" }: UserAvatarProps) {
+export function UserAvatar({ name, avatarUrl, size = "md" }: UserAvatarProps) {
     const initials = name
         .split(" ")
         .slice(0, 2)
@@ -22,7 +23,22 @@ export function UserAvatar({ name, size = "md" }: UserAvatarProps) {
         lg: "w-12 h-12 text-sm",
     };
 
-    // Gerar cor determinística baseada no nome
+    if (avatarUrl) {
+        return (
+            <div className={`${sizeClasses[size]} rounded-full overflow-hidden shrink-0 shadow-sm border border-slate-700 bg-slate-800`}>
+                <img
+                    src={avatarUrl}
+                    alt={`Foto de ${name}`}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                        // Se falhar ao carregar a imagem, remover para mostrar as iniciais
+                        (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                />
+            </div>
+        );
+    }
+
     const colors = [
         "from-amber-400 to-orange-500",
         "from-violet-400 to-purple-600",
@@ -42,6 +58,7 @@ export function UserAvatar({ name, size = "md" }: UserAvatarProps) {
         </div>
     );
 }
+
 
 interface TagBadgeProps {
     tag: string;
