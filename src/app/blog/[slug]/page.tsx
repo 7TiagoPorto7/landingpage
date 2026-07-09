@@ -196,10 +196,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {/* Banner do Fórum no fim do post */}
                 <div className="mt-16 p-6 sm:p-8 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent max-w-3xl relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 blur-2xl rounded-full pointer-events-none" />
-                    <h3 className="text-lg font-black text-white mb-2">
+                    <h3 className="text-lg font-black text-slate-900 dark:text-white mb-2">
                         💬 Dúvidas ou comentários?
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed font-light">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed font-light">
                         Abra uma discussão ou faça uma pergunta sobre este tema no nosso **Fórum de Finanças**. Participe com outros profissionais e tire suas dúvidas!
                     </p>
                     <Link
