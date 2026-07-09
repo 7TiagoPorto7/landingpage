@@ -101,6 +101,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
                         <Link
+                            href="/forum"
+                            className="inline-flex items-center text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors border border-blue-400/20 px-2.5 py-1 rounded-md bg-blue-500/5 hover:bg-blue-500/10"
+                        >
+                            Acessar Fórum
+                        </Link>
+                        <Link
                             href="/blog"
                             className="inline-flex items-center text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
                         >
@@ -185,6 +191,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             </div>
                         </aside>
                     )}
+                </div>
+
+                {/* Banner do Fórum no fim do post */}
+                <div className="mt-16 p-6 sm:p-8 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent max-w-3xl relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 blur-2xl rounded-full pointer-events-none" />
+                    <h3 className="text-lg font-black text-white mb-2">
+                        💬 Dúvidas ou comentários?
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-400 mb-4 leading-relaxed font-light">
+                        Abra uma discussão ou faça uma pergunta sobre este tema no nosso **Fórum de Finanças**. Participe com outros profissionais e tire suas dúvidas!
+                    </p>
+                    <Link
+                        href="/forum"
+                        className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-500 hover:bg-blue-400 text-white rounded-lg text-xs font-black transition-all hover:scale-102 shadow-lg shadow-blue-500/15"
+                    >
+                        Participar no Fórum &rarr;
+                    </Link>
                 </div>
 
                 {/* Post Footer Divider */}
