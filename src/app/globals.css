@@ -392,4 +392,35 @@ html {
     background-color: #f1f5f9 !important;
     border-color: #cbd5e1 !important;
   }
+
+  /* Sub-nav com categorias rápidas */
+  .bg-\[\#0a0f1a\]\/50 {
+    background-color: #f1f5f9 !important; /* cinza mais claro */
+    border-color: #e2e8f0 !important; /* slate-200 */
+  }
+  
+  /* Cores de categorias e botões ativos no modo claro */
+  .text-amber-400 {
+    color: #1e3a8a !important; /* azul marinho */
+  }
+  .border-amber-400 {
+    border-color: #1e3a8a !important; /* azul marinho */
+  }
+  .hover\:text-slate-200:hover {
+    color: #1e3a8a !important; /* azul marinho no hover */
+  }
+  
+  /* Barra de pesquisa do fórum */
+  .bg-slate-800\/60 {
+    background-color: #f1f5f9 !important; /* cinza bem claro */
+    border-color: #cbd5e1 !important; /* slate-300 */
+    color: #1e3a8a !important; /* letras em azul marinho */
+  }
+  .focus\:bg-slate-800:focus {
+    background-color: #ffffff !important;
+    border-color: #1e3a8a !important; /* borda azul marinho no foco */
+  }
+  .placeholder-slate-500::placeholder {
+    color: #64748b !important;
+  }
 }
