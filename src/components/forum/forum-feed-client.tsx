@@ -66,10 +66,11 @@ const TAG_COLORS: Record<string, string> = {
 function FeedContent({ isLoggedIn }: { isLoggedIn: boolean }) {
     const searchParams = useSearchParams();
     const tagParam = searchParams.get("tag") || "";
+    const searchParam = searchParams.get("search") || "";
 
     const [questions, setQuestions] = useState<Question[]>([]);
     const [loading, setLoading] = useState(true);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(searchParam);
     const [selectedTag, setSelectedTag] = useState(tagParam);
     const [sort, setSort] = useState<"recent" | "popular" | "unanswered">("recent");
     const [showTagPicker, setShowTagPicker] = useState(false);
@@ -90,6 +91,10 @@ function FeedContent({ isLoggedIn }: { isLoggedIn: boolean }) {
     }, [tagParam]);
 
     useEffect(() => {
+        setSearch(searchParam);
+    }, [searchParam]);
+
+    useEffect(() => {
         const t = setTimeout(fetchQuestions, 300);
         return () => clearTimeout(t);
     }, [fetchQuestions]);
@@ -97,20 +102,7 @@ function FeedContent({ isLoggedIn }: { isLoggedIn: boolean }) {
     return (
         <div>
             {/* Toolbar */}
-            <div className="flex items-center gap-2 mb-3">
-                {/* Busca */}
-                <div className="relative flex-1">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-500" />
-                    <input
-                        id="forum-search"
-                        type="text"
-                        placeholder="Buscar discussões..."
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        className="w-full pl-9 pr-4 py-2 text-xs bg-[#0d1322] border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500/50 transition-all"
-                    />
-                </div>
-
+            <div className="flex items-center justify-between gap-2 mb-3">
                 {/* Sort tabs */}
                 <div className="flex items-center bg-[#0d1322] border border-slate-700 rounded-lg overflow-hidden">
                     {(["recent", "popular", "unanswered"] as const).map((s) => (
@@ -141,6 +133,7 @@ function FeedContent({ isLoggedIn }: { isLoggedIn: boolean }) {
                     {selectedTag || "Categoria"}
                 </button>
             </div>
+
 
             {/* Tag picker */}
             {showTagPicker && (

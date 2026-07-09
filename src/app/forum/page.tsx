@@ -6,6 +6,8 @@ import { FORUM_TAGS } from "@/lib/forum-constants";
 import { ForumFeedClient } from "@/components/forum/forum-feed-client";
 import { UserAvatar } from "@/components/forum/forum-ui";
 import { Logo } from "@/components/logo";
+import { HeaderSearch } from "@/components/forum/header-search";
+
 
 
 export const metadata: Metadata = {
@@ -46,14 +48,8 @@ export default async function ForumPage() {
 
 
                     {/* Barra de busca */}
-                    <div className="flex-1 max-w-xl mx-auto relative">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-500" />
-                        <input
-                            type="text"
-                            placeholder="Buscar discussões, tópicos..."
-                            className="w-full pl-9 pr-4 py-2 text-sm bg-slate-800/60 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500/50 focus:bg-slate-800 transition-all"
-                        />
-                    </div>
+                    <HeaderSearch />
+
 
                     {/* Actions */}
                     <div className="flex items-center gap-2 shrink-0">
