@@ -39,7 +39,7 @@ export default async function ForumPage() {
     const session = await getSession();
 
     return (
-        <div className="min-h-screen bg-[#0a0f1a] text-slate-200">
+        <div className="min-h-screen bg-[#0a0f1a] text-slate-200 forum-layout">
             {/* ── TOP NAV ─────────────────────────────────────────────── */}
             <header className="border-b border-slate-800 bg-[#0d1322] sticky top-0 z-50">
                 <div className="max-w-[1280px] mx-auto px-4 h-14 flex items-center gap-4">

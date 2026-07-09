@@ -53,7 +53,7 @@ export default function NovaPage() {
     }
 
     return (
-        <main className="min-h-screen bg-background text-foreground">
+        <main className="min-h-screen bg-background text-foreground forum-layout">
             {/* Nav */}
             <nav className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="container max-w-3xl px-4 mx-auto h-16 flex items-center justify-between">
