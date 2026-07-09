@@ -107,4 +107,16 @@ export async function ensureForumTables() {
             UNIQUE(user_id, answer_id)
         )
     `;
+
+    await sql`
+        CREATE TABLE IF NOT EXISTS forum_notifications (
+            id            SERIAL PRIMARY KEY,
+            user_id       INT NOT NULL REFERENCES forum_users(id) ON DELETE CASCADE,
+            type          TEXT NOT NULL,
+            sender_name   TEXT NOT NULL,
+            question_id   INT REFERENCES forum_questions(id) ON DELETE CASCADE,
+            is_read       BOOLEAN NOT NULL DEFAULT FALSE,
+            created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+    `;
 }

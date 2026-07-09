@@ -7,6 +7,8 @@ import { UserAvatar } from "@/components/forum/forum-ui";
 import { AnswerSection } from "@/components/forum/answer-section";
 import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { BellNotification } from "@/components/forum/bell-notification";
+import { getDb, ensureForumTables } from "@/lib/db";
 
 
 
@@ -37,7 +39,7 @@ function getAvatarColor(name: string): string {
     return colors[idx];
 }
 
-import { getDb, ensureForumTables } from "@/lib/db";
+
 
 export default async function QuestionPage({ params }: PageProps) {
     const { id } = await params;
@@ -51,10 +53,21 @@ export default async function QuestionPage({ params }: PageProps) {
 
     let dbQuestion;
     let dbAnswers;
+    let unreadCount = 0;
 
     try {
         await ensureForumTables();
         const sql = getDb();
+
+        // Buscar contagem de notificações não lidas
+        if (session) {
+            const [row] = await sql`
+                SELECT COUNT(*)::int as count 
+                FROM forum_notifications 
+                WHERE user_id = ${session.userId} AND is_read = false
+            `;
+            unreadCount = row?.count || 0;
+        }
 
         // Incrementar view_count
         await sql`UPDATE forum_questions SET view_count = view_count + 1 WHERE id = ${questionId}`;
@@ -134,6 +147,7 @@ export default async function QuestionPage({ params }: PageProps) {
 
                     <div className="ml-auto flex items-center gap-2 shrink-0">
                         <ThemeToggle />
+                        {session && <BellNotification initialCount={unreadCount} />}
                         {session ? (
                             <Link href="/forum/perfil" className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 hover:border-slate-600 transition-colors">
                                 <UserAvatar name={session.name} avatarUrl={session.avatarUrl} size="sm" />

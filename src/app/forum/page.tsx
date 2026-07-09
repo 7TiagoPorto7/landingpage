@@ -8,6 +8,8 @@ import { UserAvatar } from "@/components/forum/forum-ui";
 import { Logo } from "@/components/logo";
 import { HeaderSearch } from "@/components/forum/header-search";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { BellNotification } from "@/components/forum/bell-notification";
+import { getDb, ensureForumTables } from "@/lib/db";
 
 
 
@@ -38,6 +40,22 @@ const CATEGORY_META: Record<string, { icon: string; description: string }> = {
 export default async function ForumPage() {
     const session = await getSession();
 
+    let unreadCount = 0;
+    if (session) {
+        try {
+            await ensureForumTables();
+            const sql = getDb();
+            const [row] = await sql`
+                SELECT COUNT(*)::int as count 
+                FROM forum_notifications 
+                WHERE user_id = ${session.userId} AND is_read = false
+            `;
+            unreadCount = row?.count || 0;
+        } catch (err) {
+            console.error("Erro ao buscar contagem de notificações:", err);
+        }
+    }
+
     return (
         <div className="min-h-screen bg-[#0a0f1a] text-slate-200 forum-layout">
             {/* ── TOP NAV ─────────────────────────────────────────────── */}
@@ -58,9 +76,7 @@ export default async function ForumPage() {
                         <ThemeToggle />
                         {session ? (
                             <>
-                                <button className="p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors">
-                                    <Bell className="w-4 h-4" />
-                                </button>
+                                <BellNotification initialCount={unreadCount} />
                                 <Link href="/forum/perfil" className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 hover:border-slate-600 transition-colors">
                                     <UserAvatar name={session.name} avatarUrl={session.avatarUrl} size="sm" />
                                     <span className="text-xs font-medium text-slate-200">{session.name.split(" ")[0]}</span>

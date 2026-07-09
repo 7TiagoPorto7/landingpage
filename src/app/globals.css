@@ -423,4 +423,18 @@ html {
   .placeholder-slate-500::placeholder {
     color: #64748b !important;
   }
+
+  /* Notificações Bell */
+  .bg-slate-800\/50 {
+    background-color: #f1f5f9 !important;
+  }
+  .hover\:bg-slate-800\/50:hover {
+    background-color: #e2e8f0 !important;
+  }
+  .hover\:bg-slate-800\/40:hover {
+    background-color: #f1f5f9 !important;
+  }
+  .divide-slate-800\/40 > :not([hidden]) ~ :not([hidden]) {
+    border-color: #e2e8f0 !important;
+  }
 }

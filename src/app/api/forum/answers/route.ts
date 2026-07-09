@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
         const sql = getDb();
 
         // Verificar que a pergunta existe
-        const [question] = await sql`SELECT id FROM forum_questions WHERE id = ${questionId}`;
+        const [question] = await sql`SELECT id, user_id FROM forum_questions WHERE id = ${questionId}`;
         if (!question) {
             return NextResponse.json({ error: "Pergunta não encontrada." }, { status: 404 });
         }
@@ -30,6 +30,14 @@ export async function POST(req: NextRequest) {
             VALUES (${questionId}, ${session.userId}, ${body.trim()})
             RETURNING id, body, is_accepted, like_count, created_at
         `;
+
+        // Notificar o autor da pergunta se outra pessoa responder
+        if (question.user_id !== session.userId) {
+            await sql`
+                INSERT INTO forum_notifications (user_id, type, sender_name, question_id)
+                VALUES (${question.user_id}, 'answer', ${session.name}, ${questionId})
+            `;
+        }
 
         return NextResponse.json({
             success: true,

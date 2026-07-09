@@ -37,6 +37,15 @@ export async function POST(
             await sql`INSERT INTO forum_likes (user_id, answer_id) VALUES (${session.userId}, ${answerId})`;
             await sql`UPDATE forum_answers SET like_count = like_count + 1 WHERE id = ${answerId}`;
             liked = true;
+
+            // Notificar o autor da resposta se outra pessoa curtir
+            const [answerInfo] = await sql`SELECT user_id, question_id FROM forum_answers WHERE id = ${answerId}`;
+            if (answerInfo && answerInfo.user_id !== session.userId) {
+                await sql`
+                    INSERT INTO forum_notifications (user_id, type, sender_name, question_id)
+                    VALUES (${answerInfo.user_id}, 'like', ${session.name}, ${answerInfo.question_id})
+                `;
+            }
         }
 
         const [{ like_count }] = await sql`SELECT like_count FROM forum_answers WHERE id = ${answerId}`;

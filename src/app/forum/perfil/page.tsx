@@ -7,6 +7,7 @@ import { ProfileClient } from "@/components/forum/profile-client";
 import { ChevronRight, MessageSquare, Clock, ArrowLeft, TrendingUp, CheckCircle2 } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { BellNotification } from "@/components/forum/bell-notification";
 
 
 interface Question {
@@ -39,10 +40,18 @@ export default async function PerfilPage() {
     }
 
     let userQuestions: Question[] = [];
+    let unreadCount = 0;
 
     try {
         await ensureForumTables();
         const sql = getDb();
+
+        const [row] = await sql`
+            SELECT COUNT(*)::int as count 
+            FROM forum_notifications 
+            WHERE user_id = ${session.userId} AND is_read = false
+        `;
+        unreadCount = row?.count || 0;
 
         // Buscar perguntas do usuário
         userQuestions = await sql`
@@ -70,6 +79,7 @@ export default async function PerfilPage() {
 
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
+                        <BellNotification initialCount={unreadCount} />
                         <Link href="/forum" className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition-colors">
                             <ArrowLeft className="w-3.5 h-3.5" />
                             Voltar ao Fórum
