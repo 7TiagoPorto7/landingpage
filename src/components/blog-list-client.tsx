@@ -87,7 +87,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                                         {post.readTime}
                                                     </span>
                                                 </div>
-                                                <h4 className="text-base font-extrabold text-foreground group-hover:text-primary transition-colors leading-snug">
+                                                <h4 className="text-base font-extrabold text-foreground group-hover:text-blue-400 transition-colors leading-snug">
                                                     {post.title}
                                                 </h4>
                                                 <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
@@ -95,7 +95,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                                 </p>
                                             </div>
 
-                                            <div className="text-xs font-bold text-primary group-hover:text-amber-500 flex items-center gap-0.5 whitespace-nowrap self-end sm:self-center">
+                                            <div className="text-xs font-bold text-blue-400 group-hover:text-blue-300 flex items-center gap-0.5 whitespace-nowrap self-end sm:self-center">
                                                 <span>Ler artigo</span>
                                                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                                             </div>
@@ -138,7 +138,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                             </Link>
                                             <div className="p-5 flex-1 flex flex-col">
                                                 <div className="flex items-center justify-between mb-3.5">
-                                                    <span className="inline-flex items-center text-[10px] font-bold text-primary bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                                                    <span className="inline-flex items-center text-[10px] font-bold text-blue-400 bg-blue-500/10 border border-blue-500/20 px-2 py-0.5 rounded-md uppercase tracking-wider">
                                                         {category}
                                                     </span>
                                                     <span className="text-[10px] text-muted-foreground flex items-center gap-1 font-semibold">
@@ -147,21 +147,21 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                                     </span>
                                                 </div>
                                                 <Link href={`/blog/${post.slug}`} className="block mb-2">
-                                                    <h4 className="text-base font-extrabold text-foreground group-hover:text-primary transition-colors leading-snug line-clamp-2">
+                                                    <h4 className="text-base font-extrabold text-foreground group-hover:text-blue-400 transition-colors leading-snug line-clamp-2">
                                                         {post.title}
                                                     </h4>
                                                 </Link>
                                                 <p className="text-muted-foreground text-xs leading-relaxed line-clamp-3 mb-5">
                                                     {post.excerpt}
                                                 </p>
-                                                <div className="mt-auto pt-3 border-t border-border flex items-center justify-between text-xs font-bold text-primary">
+                                                <div className="mt-auto pt-3 border-t border-border flex items-center justify-between text-xs font-bold text-blue-400">
                                                     <span className="flex items-center gap-1 text-[10px] text-muted-foreground font-semibold">
                                                         <Clock className="w-3.5 h-3.5" />
                                                         {post.readTime}
                                                     </span>
                                                     <Link
                                                         href={`/blog/${post.slug}`}
-                                                        className="inline-flex items-center gap-0.5 hover:text-amber-500 transition-colors group/link"
+                                                        className="inline-flex items-center gap-0.5 hover:text-blue-300 transition-colors group/link"
                                                     >
                                                         <span>Ler artigo</span>
                                                         <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
@@ -193,7 +193,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                                 <div className="space-y-2 flex-1">
                                                     <div className="flex items-center gap-3 text-[10px] font-semibold text-muted-foreground">
-                                                        <span className="text-primary bg-primary/5 px-2 py-0.5 rounded uppercase tracking-wider text-[9px] font-bold border border-primary/10">
+                                                        <span className="text-blue-400 bg-blue-500/5 px-2 py-0.5 rounded uppercase tracking-wider text-[9px] font-bold border border-blue-500/10">
                                                             {category}
                                                         </span>
                                                         <span className="flex items-center gap-1">
@@ -206,7 +206,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                                             {post.readTime}
                                                         </span>
                                                     </div>
-                                                    <h4 className="text-base font-extrabold text-foreground group-hover:text-primary transition-colors leading-snug">
+                                                    <h4 className="text-base font-extrabold text-foreground group-hover:text-blue-400 transition-colors leading-snug">
                                                         {post.title}
                                                     </h4>
                                                     <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
@@ -214,7 +214,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                                     </p>
                                                 </div>
 
-                                                <div className="text-xs font-bold text-primary group-hover:text-amber-500 flex items-center gap-0.5 whitespace-nowrap self-end sm:self-center">
+                                                <div className="text-xs font-bold text-blue-400 group-hover:text-blue-300 flex items-center gap-0.5 whitespace-nowrap self-end sm:self-center">
                                                     <span>Ler artigo</span>
                                                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                                                 </div>

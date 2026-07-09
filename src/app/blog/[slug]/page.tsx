@@ -71,7 +71,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         return (
             <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center text-center px-4">
                 <h1 className="text-4xl font-bold mb-4">Artigo não encontrado</h1>
-                <Link href="/blog" className="text-primary hover:underline inline-flex items-center">
+                <Link href="/blog" className="text-blue-400 hover:underline inline-flex items-center">
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Voltar para o Blog
                 </Link>
@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     const postUrl = `https://www.mfnapratica.com.br/blog/${slug}`;
 
     return (
-        <main className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-black transition-colors duration-200">
+        <main className="min-h-screen bg-background text-foreground selection:bg-blue-500 selection:text-black transition-colors duration-200">
             {/* Structured Data (JSON-LD) */}
             <BlogJsonLd post={post} url={postUrl} />
 
@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </div>
 
                     {/* Excerpt Summary */}
-                    <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-light italic border-l-2 border-primary/45 pl-4">
+                    <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6 font-light italic border-l-2 border-blue-500/45 pl-4">
                         {post.excerpt}
                     </p>
 
@@ -172,7 +172,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                         <a
                                             key={heading.id}
                                             href={`#${heading.id}`}
-                                            className={`block transition-colors hover:text-primary ${
+                                            className={`block transition-colors hover:text-blue-400 ${
                                                 heading.level === 3
                                                     ? "pl-3 text-xs text-muted-foreground"
                                                     : "font-medium text-foreground/80"
@@ -195,12 +195,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     {prev ? (
                         <Link
                             href={`/blog/${prev.slug}`}
-                            className="group flex flex-col p-6 rounded-2xl border border-border bg-card hover:border-primary/20 transition-all text-left"
+                            className="group flex flex-col p-6 rounded-2xl border border-border bg-card hover:border-blue-500/20 transition-all text-left"
                         >
                             <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center">
                                 &larr; Artigo Anterior
                             </span>
-                            <span className="text-base font-bold text-foreground/80 group-hover:text-primary transition-colors line-clamp-2">
+                            <span className="text-base font-bold text-foreground/80 group-hover:text-blue-400 transition-colors line-clamp-2">
                                 {prev.title}
                             </span>
                         </Link>
@@ -211,12 +211,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     {next ? (
                         <Link
                             href={`/blog/${next.slug}`}
-                            className="group flex flex-col p-6 rounded-2xl border border-border bg-card hover:border-primary/20 transition-all text-right items-end"
+                            className="group flex flex-col p-6 rounded-2xl border border-border bg-card hover:border-blue-500/20 transition-all text-right items-end"
                         >
                             <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center">
                                 Próximo Artigo &rarr;
                             </span>
-                            <span className="text-base font-bold text-foreground/80 group-hover:text-primary transition-colors line-clamp-2">
+                            <span className="text-base font-bold text-foreground/80 group-hover:text-blue-400 transition-colors line-clamp-2">
                                 {next.title}
                             </span>
                         </Link>
@@ -232,21 +232,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             Mais Conteúdos para Você
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {relatedPosts.map((related) => (
+                             {relatedPosts.map((related) => (
                                 <Link
                                     key={related.slug}
                                     href={`/blog/${related.slug}`}
-                                    className="group flex flex-col p-5 rounded-2xl border border-border hover:border-primary/20 transition-all bg-card/40"
+                                    className="group flex flex-col p-5 rounded-2xl border border-border hover:border-blue-500/20 transition-all bg-card/40"
                                 >
                                     <span className="text-xs font-semibold text-muted-foreground mb-2">
                                         {related.date}
                                     </span>
-                                    <h4 className="text-base font-bold text-foreground/80 group-hover:text-primary transition-colors line-clamp-2 mb-3 leading-snug">
+                                    <h4 className="text-base font-bold text-foreground/80 group-hover:text-blue-400 transition-colors line-clamp-2 mb-3 leading-snug">
                                         {related.title}
                                     </h4>
-                                    <span className="mt-auto text-xs font-bold text-primary inline-flex items-center gap-0.5">
+                                    <span className="mt-auto text-xs font-bold text-blue-400 inline-flex items-center gap-0.5">
                                         <span>Ler mais</span>
-                                        <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                                     </span>
                                 </Link>
                             ))}

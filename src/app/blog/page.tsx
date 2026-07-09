@@ -70,10 +70,10 @@ export default function BlogPage() {
 
                 {/* Newsletter Box */}
                 <div className="mt-20 p-6 sm:p-10 rounded-2xl border border-border bg-card relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent pointer-events-none" />
 
                     <div className="relative z-10 max-w-xl">
-                        <span className="text-xs font-bold text-primary uppercase tracking-widest">
+                        <span className="text-xs font-bold text-blue-400 uppercase tracking-widest">
                             Insights por E-mail
                         </span>
                         <h3 className="text-xl font-extrabold text-foreground mt-1 mb-2">
