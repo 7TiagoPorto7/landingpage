@@ -1,10 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowLeft, TrendingUp } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { getSortedPostsData } from "@/lib/blog";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { BlogListClient } from "@/components/blog-list-client";
+import { Logo } from "@/components/logo";
+
 
 export const metadata: Metadata = {
     title: "Blog & Insights | MFP Education",
@@ -34,14 +36,10 @@ export default function BlogPage() {
             {/* Top Navigation */}
             <nav className="border-b border-border bg-background/70 backdrop-blur-md sticky top-0 z-50">
                 <div className="container max-w-5xl px-6 mx-auto h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-slate-950 font-black shadow-md group-hover:scale-105 transition-transform">
-                            <TrendingUp className="w-4 h-4" />
-                        </div>
-                        <span className="text-sm font-bold tracking-tight text-foreground/95 group-hover:text-foreground transition-colors">
-                            MFP Education
-                        </span>
+                    <Link href="/" className="flex items-center shrink-0 group">
+                        <Logo className="h-6 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
+
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
                         <Link

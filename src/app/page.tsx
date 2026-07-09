@@ -35,17 +35,16 @@ export default function Home() {
             {/* Header Brand Navbar */}
             <header className="border-b border-white/5 bg-[#050a15]/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="container max-w-5xl px-6 mx-auto h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2.5 group">
-                        <Logo className="w-6 h-6 text-white group-hover:scale-105 transition-transform" />
-                        <span className="text-base font-black tracking-tight text-white">
-                            MFP Education
-                        </span>
+                    <Link href="/" className="flex items-center shrink-0 group">
+                        <Logo className="h-6 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
 
                     <nav className="hidden sm:flex items-center gap-8 text-sm font-semibold text-neutral-400">
                         <a href="#cursos" className="hover:text-white transition-colors">Cursos</a>
                         <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+                        <Link href="/forum" className="hover:text-white transition-colors">Fórum</Link>
                     </nav>
+
 
                     <a
                         href="#cursos"

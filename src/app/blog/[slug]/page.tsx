@@ -94,12 +94,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* Sticky Navigation Header */}
             <nav className="border-b border-border bg-background/70 backdrop-blur-md sticky top-0 z-50">
                 <div className="container max-w-5xl px-6 mx-auto h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <Logo className="w-6 h-6 text-white group-hover:scale-105 transition-transform" />
-                        <span className="text-sm font-bold tracking-tight text-foreground/95 group-hover:text-foreground transition-colors">
-                            MFP Education
-                        </span>
+                    <Link href="/" className="flex items-center shrink-0 group">
+                        <Logo className="h-6 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
+
                     <div className="flex items-center gap-4">
                         <ThemeToggle />
                         <Link
