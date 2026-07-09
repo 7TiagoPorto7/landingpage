@@ -6,6 +6,7 @@ import { TAG_COLORS } from "@/lib/forum-constants";
 import { UserAvatar } from "@/components/forum/forum-ui";
 import { AnswerSection } from "@/components/forum/answer-section";
 import { Logo } from "@/components/logo";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 
 
@@ -132,6 +133,7 @@ export default async function QuestionPage({ params }: PageProps) {
                     </div>
 
                     <div className="ml-auto flex items-center gap-2 shrink-0">
+                        <ThemeToggle />
                         {session ? (
                             <Link href="/forum/perfil" className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700 hover:border-slate-600 transition-colors">
                                 <UserAvatar name={session.name} avatarUrl={session.avatarUrl} size="sm" />

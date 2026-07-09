@@ -7,6 +7,8 @@ import { ForumFeedClient } from "@/components/forum/forum-feed-client";
 import { UserAvatar } from "@/components/forum/forum-ui";
 import { Logo } from "@/components/logo";
 import { HeaderSearch } from "@/components/forum/header-search";
+import { ThemeToggle } from "@/components/theme-toggle";
+
 
 
 
@@ -53,6 +55,7 @@ export default async function ForumPage() {
 
                     {/* Actions */}
                     <div className="flex items-center gap-2 shrink-0">
+                        <ThemeToggle />
                         {session ? (
                             <>
                                 <button className="p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors">

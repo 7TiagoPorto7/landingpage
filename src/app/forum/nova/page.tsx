@@ -3,9 +3,12 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { TrendingUp, ArrowLeft, AlertCircle, HelpCircle } from "lucide-react";
+import { ArrowLeft, AlertCircle, HelpCircle } from "lucide-react";
 import { FORUM_TAGS } from "@/lib/forum-constants";
 import { TagBadge } from "@/components/forum/forum-ui";
+import { Logo } from "@/components/logo";
+import { ThemeToggle } from "@/components/theme-toggle";
+
 
 export default function NovaPage() {
     const router = useRouter();
@@ -54,19 +57,19 @@ export default function NovaPage() {
             {/* Nav */}
             <nav className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
                 <div className="container max-w-3xl px-4 mx-auto h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-slate-950 shadow-md group-hover:scale-105 transition-transform">
-                            <TrendingUp className="w-4 h-4" />
-                        </div>
-                        <span className="text-sm font-black tracking-tight">MFP Education</span>
+                    <Link href="/" className="flex items-center shrink-0 group">
+                        <Logo className="h-8 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
-                    <Link
-                        href="/forum"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        <ArrowLeft className="w-3.5 h-3.5" />
-                        Voltar ao fórum
-                    </Link>
+                    <div className="flex items-center gap-4">
+                        <ThemeToggle />
+                        <Link
+                            href="/forum"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                            <ArrowLeft className="w-3.5 h-3.5" />
+                            Voltar ao fórum
+                        </Link>
+                    </div>
                 </div>
             </nav>
 

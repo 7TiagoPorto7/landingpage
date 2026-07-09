@@ -6,6 +6,7 @@ import { UserAvatar } from "@/components/forum/forum-ui";
 import { ProfileClient } from "@/components/forum/profile-client";
 import { ChevronRight, MessageSquare, Clock, ArrowLeft, TrendingUp, CheckCircle2 } from "lucide-react";
 import { Logo } from "@/components/logo";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 
 interface Question {
@@ -67,10 +68,13 @@ export default async function PerfilPage() {
                     </Link>
 
 
-                    <Link href="/forum" className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition-colors">
-                        <ArrowLeft className="w-3.5 h-3.5" />
-                        Voltar ao Fórum
-                    </Link>
+                    <div className="flex items-center gap-4">
+                        <ThemeToggle />
+                        <Link href="/forum" className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition-colors">
+                            <ArrowLeft className="w-3.5 h-3.5" />
+                            Voltar ao Fórum
+                        </Link>
+                    </div>
                 </div>
             </header>
 
