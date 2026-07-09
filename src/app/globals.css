@@ -317,6 +317,9 @@ html {
 
 /* ─── Light Mode Forum Styles ─── */
 .light .forum-layout {
+  background-color: #f8fafc !important; /* slate-50 */
+  color: #1e293b !important; /* slate-800 */
+
   /* Substituir fundo principal */
   .bg-\[\#0a0f1a\] {
     background-color: #f8fafc !important; /* slate-50 */
