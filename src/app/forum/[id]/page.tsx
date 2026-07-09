@@ -46,9 +46,8 @@ export default async function QuestionPage({ params }: PageProps) {
 
     const session = await getSession();
 
-    let question: any = null;
-    let answers: any[] = [];
-
+    let dbQuestion;
+    let dbAnswers;
 
     try {
         await ensureForumTables();
@@ -58,20 +57,17 @@ export default async function QuestionPage({ params }: PageProps) {
         await sql`UPDATE forum_questions SET view_count = view_count + 1 WHERE id = ${questionId}`;
 
         // Buscar a pergunta
-        const [dbQuestion] = await sql`
+        const rows = await sql`
             SELECT q.id, q.title, q.body, q.tags, q.view_count, q.is_solved, q.created_at,
                    u.id AS author_id, u.name AS author_name, u.avatar_url AS author_avatar
             FROM forum_questions q
             JOIN forum_users u ON u.id = q.user_id
             WHERE q.id = ${questionId}
         `;
-
-        if (!dbQuestion) {
-            notFound();
-        }
+        dbQuestion = rows[0];
 
         // Buscar respostas ordenadas: aceita primeiro, depois por curtidas
-        const dbAnswers = await sql`
+        dbAnswers = await sql`
             SELECT a.id, a.body, a.is_accepted, a.like_count, a.created_at,
                    u.id AS author_id, u.name AS author_name, u.avatar_url AS author_avatar,
                    ${session ? sql`EXISTS(
@@ -83,20 +79,26 @@ export default async function QuestionPage({ params }: PageProps) {
             WHERE a.question_id = ${questionId}
             ORDER BY a.is_accepted DESC, a.like_count DESC, a.created_at ASC
         `;
-
-        question = {
-            ...dbQuestion,
-            isAuthor: session ? session.userId === dbQuestion.author_id : false,
-        };
-
-        answers = dbAnswers.map((a) => ({
-            ...a,
-            isAuthor: session ? session.userId === a.author_id : false,
-        }));
     } catch (err) {
-        console.error("Erro ao carregar pergunta no component:", err);
+        console.error("Erro ao carregar pergunta no banco:", err);
         notFound();
     }
+
+    if (!dbQuestion) {
+        notFound();
+    }
+
+    const question: any = {
+        ...dbQuestion,
+        isAuthor: session ? session.userId === dbQuestion.author_id : false,
+    };
+
+
+    const answers = dbAnswers.map((a: any) => ({
+        ...a,
+        isAuthor: session ? session.userId === a.author_id : false,
+    }));
+
 
 
     return (
