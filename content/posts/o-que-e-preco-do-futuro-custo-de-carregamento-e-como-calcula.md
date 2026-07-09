@@ -3,7 +3,7 @@ title: "O que é Preço do Futuro (Custo de Carregamento) e como calcular na pr�
 date: "15 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Preço do Futuro, também conhecido como Custo de Carregamento, é um conceito fundamental em finanças que ajuda a determinar o valor justo de um contrato futuro. Este artigo explora em detalhes a fórmula, o cálculo e as implicações práticas do Preço do Futuro, além de armadilhas comuns e termos relacionados."
 ---
 

@@ -3,7 +3,7 @@ title: "O que é Grau de Alavancagem Total (GAT) e como calcular na prática"
 date: "14 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Grau de Alavancagem Total (GAT), também conhecido como Combined Leverage (DCL), é um conceito fundamental em finanças corporativas que mede o efeito combinado das alavancagens operacional e financeira sobre o Lucro por Ação (EPS). Ele é essencial para gestores e investidores avaliarem o risco e o potencial de crescimento de uma empresa."
 ---
 

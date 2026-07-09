@@ -3,7 +3,7 @@ title: "O que é Razão Capital/Produto Incremental e como calcular na prática"
 date: "18 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Razão Capital/Produto Incremental (ICOR) é uma métrica fundamental para avaliar a eficiência do crescimento de uma empresa, indicando o capital necessário para gerar receita adicional. Entenda como calcular e interpretar essa importante ferramenta de gestão financeira."
 ---
 

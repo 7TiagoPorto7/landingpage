@@ -3,7 +3,7 @@ title: "Como construir um Modelo Financeiro do Zero"
 date: "15 Dez 2025"
 readTime: "5 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200"
 excerpt: "Um guia passo a passo para iniciantes que desejam criar projeções financeiras robustas e confiáveis."
 ---
 

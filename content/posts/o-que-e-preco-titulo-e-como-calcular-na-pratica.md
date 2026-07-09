@@ -3,7 +3,7 @@ title: "O que é PREÇO (Título) e como calcular na prática"
 date: "05 Jul 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O PREÇO (Título) é um conceito fundamental na renda fixa que permite calcular o valor atual de um título com cupom periódico, considerando fatores como a taxa de juros, prazo de vencimento e frequência de pagamento. Este artigo explora em detalhes a fórmula, exemplos práticos e armadilhas comuns associadas ao cálculo do PREÇO (Título)."
 ---
 

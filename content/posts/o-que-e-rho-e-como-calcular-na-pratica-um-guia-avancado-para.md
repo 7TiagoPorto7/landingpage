@@ -3,7 +3,7 @@ title: "O que é Rho e como calcular na prática: Um guia avançado para profiss
 date: "27 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Rho é um conceito fundamental nas finanças que mede a sensibilidade de uma opção ou um derivativo à taxa de juros, desempenhando um papel crucial na gestão de risco e na tomada de decisões financeiras. Neste artigo, exploraremos em detalhes o que é o Rho, sua fórmula, exemplos práticos e armadilhas comuns."
 ---
 

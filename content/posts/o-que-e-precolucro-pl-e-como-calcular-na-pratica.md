@@ -3,7 +3,7 @@ title: "O que é Preço/Lucro (P/L) e como calcular na prática"
 date: "22 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Preço/Lucro (P/L), também conhecido como Price-to-Earnings (P/E), é um dos múltiplos mais populares e amplamente utilizados no mercado financeiro para avaliar o valor das ações. Ele indica quanto o mercado está disposto a pagar por cada unidade de lucro de uma empresa, sendo fundamental para investidores e gestores financeiros."
 ---
 

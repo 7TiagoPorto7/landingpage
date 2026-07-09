@@ -3,7 +3,7 @@ title: "O que é Giro do Ativo e como calcular na prática"
 date: "03 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Giro do Ativo é um indicador financeiro fundamental que mede a eficiência com que uma empresa utiliza seus ativos para gerar receita. Entender como calcular e interpretar esse indicador é essencial para gestores e investidores que buscam avaliar o desempenho de uma empresa."
 ---
 

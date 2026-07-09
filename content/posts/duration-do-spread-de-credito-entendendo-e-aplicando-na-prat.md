@@ -3,7 +3,7 @@ title: "Duration do Spread de Crédito: Entendendo e Aplicando na Prática"
 date: "05 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Duration do Spread de Crédito é um conceito fundamental em finanças corporativas que mede a sensibilidade de um título a mudanças no spread de crédito. Compreender e aplicar esse conceito é crucial para investidores e gestores de carteira que buscam otimizar seus investimentos em renda fixa."
 ---
 

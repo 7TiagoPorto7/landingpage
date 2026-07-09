@@ -3,7 +3,7 @@ title: "O que é Covariância e como calcular na prática"
 date: "29 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A covariância é uma medida essencial para avaliar o co-movimento entre dois ativos financeiros, permitindo que investidores e gestores de portfólio tomem decisões informadas sobre a diversificação e o gerenciamento de risco. Neste artigo, exploraremos o conceito de covariância, sua fórmula, exemplos práticos e armadilhas comuns."
 ---
 

@@ -3,7 +3,7 @@ title: "O que é Modelo 3 Demos: Projeção DRE e como calcular na prática"
 date: "05 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Modelo 3 Demos: Projeção DRE é uma ferramenta fundamental para a modelagem financeira, permitindo que as empresas projatem seu desempenho futuro com base em premissas de crescimento e margens. Essencial para a tomada de decisões estratégicas, este modelo pode ser uma poderosa aliada para os profissionais de finanças."
 ---
 

@@ -3,7 +3,7 @@ title: "O que é Modelo Black-Scholes (Call) e como calcular na prática"
 date: "07 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Modelo Black-Scholes (Call) é uma ferramenta fundamental para a precificação de opções europeias, amplamente utilizada por investidores e gestores de carteira. Entenda como calcular e aplicar esse modelo na prática, evitando armadilhas comuns."
 ---
 

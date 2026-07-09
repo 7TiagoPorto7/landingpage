@@ -3,7 +3,7 @@ title: "O que é R² (Coeficiente de Determinação) e como calcular na prática
 date: "21 Jun 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O R², ou Coeficiente de Determinação, é uma medida estatística fundamental para avaliar a qualidade de um modelo de regressão, indicando a porcentagem de variância de uma variável dependente explicada pelas variáveis independentes. Ele é essencial para profissionais de finanças e gestores que buscam entender a relação entre diferentes variáveis e tomar decisões informadas."
 ---
 

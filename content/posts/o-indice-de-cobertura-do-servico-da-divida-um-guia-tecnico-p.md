@@ -3,7 +3,7 @@ title: "O Índice de Cobertura do Serviço da Dívida: Um Guia Técnico para Fin
 date: "04 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Índice de Cobertura do Serviço da Dívida (DSCR) é uma métrica fundamental para avaliar a capacidade de uma empresa pagar seus débitos, sendo essencial para projetos de financiamento e investimentos. Neste artigo, exploraremos em detalhes o conceito, a fórmula, exemplos práticos e armadilhas comuns associadas ao DSCR."
 ---
 

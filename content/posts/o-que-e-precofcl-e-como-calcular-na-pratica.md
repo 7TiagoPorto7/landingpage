@@ -3,7 +3,7 @@ title: "O que é Preço/FCL e como calcular na prática"
 date: "07 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Preço/FCL, também conhecido como Price-to-Free Cash Flow (P/FCF), é uma métrica fundamental para avaliar o valor de uma empresa em relação à sua capacidade de gerar caixa livre. Ele é especialmente popular entre investidores de valor, que buscam empresas subvalorizadas com potencial de crescimento."
 ---
 

@@ -3,7 +3,7 @@ title: "O que é Margem de Contribuição e como calcular na prática"
 date: "02 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Margem de Contribuição é um conceito fundamental em finanças corporativas que ajuda a entender como cada unidade vendida contribui para cobrir os custos fixos de uma empresa. Ela é essencial para tomar decisões informadas sobre preços, custos e produção."
 ---
 

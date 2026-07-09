@@ -3,7 +3,7 @@ title: "O que é Duration de Macaulay e como calcular na prática"
 date: "30 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Duration de Macaulay é um conceito fundamental na gestão de renda fixa, permitindo que investidores e gestores avaliem o risco de uma carteira de títulos. Ele fornece uma medida do prazo médio ponderado dos fluxos de caixa de um investimento, ajudando a entender como mudanças nas taxas de juros afetam o valor de um título."
 ---
 

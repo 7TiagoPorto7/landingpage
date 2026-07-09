@@ -3,7 +3,7 @@ title: "O que é Ativo Total e como calcular na prática"
 date: "25 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Ativo Total é um conceito fundamental na contabilidade e finanças corporativas, representando a soma de todos os recursos controlados pela empresa. Entender como calcular e interpretar o Ativo Total é essencial para gestores e investidores, pois serve como base para vários índices de rentabilidade e tomada de decisões estratégicas."
 ---
 

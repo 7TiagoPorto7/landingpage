@@ -3,7 +3,7 @@ title: "O que é Dívida sobre Ativos e como calcular na prática"
 date: "05 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Dívida sobre Ativos, também conhecida como Debt-to-Assets Ratio, é uma métrica fundamental para avaliar o nível de endividamento de uma empresa, oferecendo insights sobre a capacidade de pagamento de dívidas e a estrutura de financiamento. Ela é essencial para investidores, gestores financeiros e analistas de crédito."
 ---
 

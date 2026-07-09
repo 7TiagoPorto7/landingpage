@@ -3,7 +3,7 @@ title: "O que é Sinergias (Receita e Custo) e como calcular na prática"
 date: "27 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "As sinergias de receita e custo são fundamentais para o sucesso de fusões e aquisições, permitindo que as empresas criem valor através da combinação de recursos e eliminação de custos redundantes. No entanto, é crucial entender como calcular e interpretar essas sinergias para evitar armadilhas comuns."
 ---
 

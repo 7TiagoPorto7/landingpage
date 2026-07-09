@@ -3,7 +3,7 @@ title: "O que é Spread Ajustado por Opção e como calcular na prática"
 date: "16 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Spread Ajustado por Opção (OAS) é uma medida fundamental para avaliar o desempenho de títulos com opções embutidas, permitindo uma comparação justa entre diferentes tipos de títulos. Este conceito é essencial para investidores e gestores de portfólio que buscam otimizar suas estratégias de investimento."
 ---
 

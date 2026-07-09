@@ -3,7 +3,7 @@ title: "O que é Inflação Implícita (Breakeven) e como calcular na prática"
 date: "22 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Inflação Implícita (Breakeven) é um conceito fundamental em finanças que mede a expectativa de inflação implícita nos preços de mercado, permitindo que investidores e gestores tomem decisões informadas sobre investimentos em renda fixa. Este artigo explora em detalhes o conceito, sua fórmula, exemplos práticos e armadilhas comuns."
 ---
 

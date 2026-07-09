@@ -3,7 +3,7 @@ title: "O que é Lucro por Funcionário e como calcular na prática"
 date: "06 Jul 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Lucro por Funcionário é uma métrica fundamental para avaliar a eficiência de uma empresa em gerar lucro por funcionário, variando significativamente entre setores. Compreender essa métrica é crucial para os gestores e profissionais de finanças para tomar decisões informadas sobre alocação de recursos e estratégias de crescimento."
 ---
 

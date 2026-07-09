@@ -3,7 +3,7 @@ title: "O que é Dívida sobre Capital Total e como calcular na prática"
 date: "26 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Dívida sobre Capital Total é uma métrica fundamental para avaliar a estrutura de capital de uma empresa, permitindo que gestores e investidores entendam a proporção de financiamento por dívida e equity. Este conceito é crucial para a tomada de decisões financeiras informadas."
 ---
 

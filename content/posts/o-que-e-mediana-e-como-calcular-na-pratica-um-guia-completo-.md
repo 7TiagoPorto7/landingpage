@@ -3,7 +3,7 @@ title: "O que é Mediana e como calcular na prática: Um Guia Completo para Fina
 date: "21 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A mediana é uma medida estatística fundamental que oferece uma visão mais precisa dos dados, especialmente quando há outliers. Ela é essencial para análises financeiras, permitindo que gestores e profissionais tomem decisões informadas com base em dados mais realistas."
 ---
 

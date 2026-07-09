@@ -3,7 +3,7 @@ title: "O que é Custo Médio Ponderado da Dívida e como calcular na prática"
 date: "03 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Custo Médio Ponderado da Dívida (WACD) é uma métrica fundamental para avaliar o custo total da dívida de uma empresa, considerando taxas de juros variáveis e prazos de vencimento diferentes. Entender e calcular o WACD é essencial para gestores financeiros e investidores, pois ajuda a tomar decisões informadas sobre endividamento e alocação de recursos."
 ---
 

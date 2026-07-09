@@ -3,7 +3,7 @@ title: "O que é Razão de Troca (Deal em Ações) e como calcular na prática"
 date: "02 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Razão de Troca (Deal em Ações) é um conceito fundamental em fusões e aquisições (M&A) que define a proporção de ações do comprador que serão trocadas por ações do target. Entender essa métrica é crucial para profissionais de finanças, gestores e estudantes que desejam navegar com sucesso no complexo mundo das operações de M&A."
 ---
 

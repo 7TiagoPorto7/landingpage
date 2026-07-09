@@ -3,7 +3,7 @@ title: "O que é Drawdown Máximo e como calcular na prática"
 date: "24 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Drawdown Máximo é uma medida fundamental para avaliar o risco de um investimento, calculando a maior queda de valor entre um pico e um vale. É essencial para investidores e gestores financeiros entenderem essa métrica para tomar decisões informadas."
 ---
 

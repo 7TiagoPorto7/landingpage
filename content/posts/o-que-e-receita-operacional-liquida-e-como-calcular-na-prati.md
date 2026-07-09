@@ -3,7 +3,7 @@ title: "O que é Receita Operacional Líquida e como calcular na prática"
 date: "06 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Receita Operacional Líquida (NOI) é um indicador fundamental para avaliar a rentabilidade de uma propriedade imobiliária, considerando apenas as receitas e despesas operacionais. É essencial entender como calcular e interpretar o NOI para tomar decisões informadas em investimentos imobiliários."
 ---
 

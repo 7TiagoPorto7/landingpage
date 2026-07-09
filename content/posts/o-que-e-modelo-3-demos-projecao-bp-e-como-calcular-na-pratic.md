@@ -3,7 +3,7 @@ title: "O que é Modelo 3 Demos: Projeção BP e como calcular na prática"
 date: "28 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Modelo 3 Demos: Projeção BP é uma ferramenta fundamental na modelagem financeira que permite projetar o balanço patrimonial de uma empresa com base em indicadores de eficiência e cronograma de dívida. É essencial para gestores e financeiros entenderem como calcular e interpretar este modelo para tomar decisões informadas."
 ---
 

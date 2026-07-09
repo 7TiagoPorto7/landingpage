@@ -3,7 +3,7 @@ title: "O que é Duration Efetiva e como calcular na prática"
 date: "26 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"
+image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Duration Efetiva é um conceito fundamental na gestão de risco de renda fixa, especialmente para bonds com opções embutidas, permitindo aos investidores e gestores avaliar a sensibilidade de seus investimentos a mudanças nas taxas de juros. Este artigo explora em detalhes o conceito, sua fórmula, exemplos práticos e armadilhas comuns, além de sua relação com outros termos importantes na análise financeira."
 ---
 
