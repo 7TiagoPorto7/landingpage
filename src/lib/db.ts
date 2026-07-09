@@ -47,3 +47,56 @@ export async function ensureLeadsTable() {
         )
     `;
 }
+
+/**
+ * Garante que todas as tabelas do fórum existem.
+ * Chamado automaticamente no primeiro request de cada rota do fórum.
+ */
+export async function ensureForumTables() {
+    const sql = getDb();
+
+    await sql`
+        CREATE TABLE IF NOT EXISTS forum_users (
+            id            SERIAL PRIMARY KEY,
+            name          TEXT NOT NULL,
+            email         TEXT UNIQUE NOT NULL,
+            password_hash TEXT NOT NULL,
+            role          TEXT NOT NULL DEFAULT 'member',
+            created_at    TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+    `;
+
+    await sql`
+        CREATE TABLE IF NOT EXISTS forum_questions (
+            id          SERIAL PRIMARY KEY,
+            user_id     INT NOT NULL REFERENCES forum_users(id) ON DELETE CASCADE,
+            title       TEXT NOT NULL,
+            body        TEXT NOT NULL,
+            tags        TEXT[] NOT NULL DEFAULT '{}',
+            view_count  INT NOT NULL DEFAULT 0,
+            is_solved   BOOLEAN NOT NULL DEFAULT FALSE,
+            created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+    `;
+
+    await sql`
+        CREATE TABLE IF NOT EXISTS forum_answers (
+            id          SERIAL PRIMARY KEY,
+            question_id INT NOT NULL REFERENCES forum_questions(id) ON DELETE CASCADE,
+            user_id     INT NOT NULL REFERENCES forum_users(id) ON DELETE CASCADE,
+            body        TEXT NOT NULL,
+            is_accepted BOOLEAN NOT NULL DEFAULT FALSE,
+            like_count  INT NOT NULL DEFAULT 0,
+            created_at  TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+    `;
+
+    await sql`
+        CREATE TABLE IF NOT EXISTS forum_likes (
+            id        SERIAL PRIMARY KEY,
+            user_id   INT NOT NULL REFERENCES forum_users(id) ON DELETE CASCADE,
+            answer_id INT NOT NULL REFERENCES forum_answers(id) ON DELETE CASCADE,
+            UNIQUE(user_id, answer_id)
+        )
+    `;
+}

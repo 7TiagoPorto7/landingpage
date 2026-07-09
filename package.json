@@ -9,10 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "gray-matter": "^4.0.3",
     "jimp": "^1.6.0",
+    "jose": "^6.2.3",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
     "postgres": "^3.4.8",
