@@ -49,10 +49,8 @@ export function Footer() {
                     <div>
                         &copy; {new Date().getFullYear()} MFP Education. Todos os direitos reservados.
                     </div>
-                    <div className="space-x-3">
+                    <div>
                         <span>CNPJ: 57.349.352/0001-74</span>
-                        <span>·</span>
-                        <span>E-mail: tl.araujoporto@gmail.com</span>
                     </div>
                 </div>
             </div>
