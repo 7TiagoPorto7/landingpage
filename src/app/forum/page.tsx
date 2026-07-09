@@ -1,127 +1,252 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { TrendingUp, Plus, MessageSquare, Eye, CheckCircle2, Clock } from "lucide-react";
+import { TrendingUp, Plus, Search, Bell, ChevronRight, Users, MessageSquare, Flame } from "lucide-react";
 import { getSession } from "@/lib/auth";
 import { FORUM_TAGS } from "@/lib/forum-constants";
-import { TagBadge, UserAvatar } from "@/components/forum/forum-ui";
 import { ForumFeedClient } from "@/components/forum/forum-feed-client";
 
 export const metadata: Metadata = {
-    title: "Fórum de Finanças | MFP Education",
-    description: "Tire suas dúvidas sobre modelagem financeira, valuation e finanças corporativas com a comunidade MFP.",
-    robots: { index: false, follow: false }, // Não indexar fórum no Google
+    title: "Fórum de Finanças Corporativas | MFP Education",
+    description: "Tire dúvidas sobre modelagem financeira, valuation e finanças corporativas com a comunidade MFP Education.",
+    robots: { index: false, follow: false },
+};
+
+const CATEGORY_META: Record<string, { icon: string; description: string }> = {
+    "Valuation":        { icon: "📊", description: "DCF, Múltiplos, P/E, EV/EBITDA" },
+    "Modelagem":        { icon: "📐", description: "Modelo 3 Demos, LBO, M&A" },
+    "DRE":              { icon: "📋", description: "Receita, Margens, EBITDA" },
+    "Balanço":          { icon: "⚖️",  description: "Ativos, Passivos, PL" },
+    "Fluxo de Caixa":  { icon: "💰", description: "FCO, FCI, FCF, FCFE, FCFF" },
+    "Endividamento":    { icon: "🏦", description: "D/E, Covenants, Dívida Líquida" },
+    "Eficiência":       { icon: "⚙️",  description: "Giro, ROIC, ROE, Ciclos" },
+    "Risco & Retorno":  { icon: "📈", description: "Sharpe, VaR, Beta, Drawdown" },
+    "Renda Fixa":       { icon: "🔒", description: "Duration, Yield, Títulos" },
+    "Derivativos":      { icon: "🔀", description: "Opções, Futuros, Swaps" },
+    "Real Estate":      { icon: "🏢", description: "FII, Cap Rate, NOI, LTV" },
+    "Banking":          { icon: "🏛️", description: "Basileia, Tier 1, NIM" },
+    "Estatística":      { icon: "📉", description: "Regressão, Correlação, Std Dev" },
+    "Excel":            { icon: "📗", description: "Fórmulas, VBA, Power Query" },
 };
 
 export default async function ForumPage() {
     const session = await getSession();
 
     return (
-        <main className="min-h-screen bg-background text-foreground">
-            {/* Nav */}
-            <nav className="border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-50">
-                <div className="container max-w-6xl px-4 mx-auto h-16 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-slate-950 font-black shadow-md group-hover:scale-105 transition-transform">
-                            <TrendingUp className="w-4 h-4" />
+        <div className="min-h-screen bg-[#0a0f1a] text-slate-200">
+            {/* ── TOP NAV ─────────────────────────────────────────────── */}
+            <header className="border-b border-slate-800 bg-[#0d1322] sticky top-0 z-50">
+                <div className="max-w-[1280px] mx-auto px-4 h-14 flex items-center gap-4">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center gap-2 shrink-0 group">
+                        <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center shadow-lg group-hover:bg-amber-400 transition-colors">
+                            <TrendingUp className="w-4 h-4 text-slate-950 stroke-[2.5]" />
                         </div>
-                        <span className="text-sm font-black tracking-tight">MFP Education</span>
+                        <div className="hidden sm:block">
+                            <span className="text-sm font-black text-white tracking-tight leading-none block">MFP Education</span>
+                            <span className="text-[10px] text-slate-500 font-medium leading-none">Finance Forum</span>
+                        </div>
                     </Link>
 
-                    <div className="flex items-center gap-3">
+                    {/* Barra de busca */}
+                    <div className="flex-1 max-w-xl mx-auto relative">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-500" />
+                        <input
+                            type="text"
+                            placeholder="Buscar discussões, tópicos..."
+                            className="w-full pl-9 pr-4 py-2 text-sm bg-slate-800/60 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-500/50 focus:bg-slate-800 transition-all"
+                        />
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex items-center gap-2 shrink-0">
                         {session ? (
                             <>
-                                <div className="hidden sm:flex items-center gap-2">
-                                    <UserAvatar name={session.name} size="sm" />
-                                    <span className="text-sm font-medium text-foreground">{session.name.split(" ")[0]}</span>
+                                <button className="p-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors">
+                                    <Bell className="w-4 h-4" />
+                                </button>
+                                <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 border border-slate-700">
+                                    <div className="w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center text-[9px] font-black text-slate-950">
+                                        {session.name.charAt(0).toUpperCase()}
+                                    </div>
+                                    <span className="text-xs font-medium text-slate-200">{session.name.split(" ")[0]}</span>
                                 </div>
                                 <Link
                                     href="/forum/nova"
                                     id="forum-new-question-btn"
-                                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-bold text-xs hover:from-amber-300 hover:to-orange-400 transition-all shadow-md hover:shadow-amber-500/20"
+                                    className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition-colors shadow-lg shadow-amber-500/20"
                                 >
-                                    <Plus className="w-3.5 h-3.5" />
-                                    Fazer Pergunta
+                                    <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+                                    <span className="hidden sm:inline">Nova Discussão</span>
+                                    <span className="sm:hidden">Post</span>
                                 </Link>
                             </>
                         ) : (
-                            <div className="flex items-center gap-2">
-                                <Link
-                                    href="/auth/login"
-                                    id="forum-login-btn"
-                                    className="text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
-                                >
+                            <>
+                                <Link href="/auth/login" id="forum-login-btn" className="px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors">
                                     Entrar
                                 </Link>
-                                <Link
-                                    href="/auth/cadastro"
-                                    id="forum-register-btn"
-                                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-bold text-xs hover:from-amber-300 hover:to-orange-400 transition-all shadow-md"
-                                >
+                                <Link href="/auth/cadastro" id="forum-register-btn" className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs transition-colors shadow-lg shadow-amber-500/20">
+                                    <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
                                     Criar conta
                                 </Link>
-                            </div>
+                            </>
                         )}
                     </div>
                 </div>
-            </nav>
 
-            <div className="container max-w-6xl px-4 mx-auto py-10">
-                {/* Header */}
-                <div className="mb-8">
-                    <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-bold text-primary uppercase tracking-widest">Comunidade</span>
-                    </div>
-                    <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-foreground mb-3">
-                        Fórum de Finanças
-                    </h1>
-                    <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-                        Tire suas dúvidas sobre modelagem financeira, valuation, Excel avançado e finanças corporativas.
-                        As melhores respostas são votadas pela comunidade.
-                    </p>
-                </div>
-
-                {/* Stats rápidas */}
-                <div className="grid grid-cols-3 gap-3 mb-8">
-                    {[
-                        { icon: MessageSquare, label: "Perguntas", color: "text-amber-400" },
-                        { icon: CheckCircle2, label: "Resolvidas", color: "text-green-400" },
-                        { icon: Clock, label: "Esta semana", color: "text-blue-400" },
-                    ].map(({ icon: Icon, label, color }) => (
-                        <div key={label} className="bg-card border border-border rounded-xl p-4 text-center">
-                            <Icon className={`w-5 h-5 mx-auto mb-1.5 ${color}`} />
-                            <p className="text-xs text-muted-foreground font-medium">{label}</p>
+                {/* Sub-nav com categorias rápidas */}
+                <div className="border-t border-slate-800/80 bg-[#0a0f1a]/50">
+                    <div className="max-w-[1280px] mx-auto px-4">
+                        <div className="flex items-center gap-0 overflow-x-auto scrollbar-none">
+                            <Link href="/forum" className="px-4 py-2.5 text-xs font-bold text-amber-400 border-b-2 border-amber-400 whitespace-nowrap">
+                                Todos os Posts
+                            </Link>
+                            {["Valuation", "Modelagem", "DRE", "Fluxo de Caixa", "Risco & Retorno", "Excel"].map((tag) => (
+                                <Link
+                                    key={tag}
+                                    href={`/forum?tag=${encodeURIComponent(tag)}`}
+                                    className="px-4 py-2.5 text-xs font-medium text-slate-400 hover:text-slate-200 whitespace-nowrap border-b-2 border-transparent hover:border-slate-600 transition-all"
+                                >
+                                    {tag}
+                                </Link>
+                            ))}
                         </div>
-                    ))}
-                </div>
-
-                <div className="flex flex-col lg:flex-row gap-6">
-                    {/* Sidebar: Tags */}
-                    <aside className="lg:w-52 shrink-0">
-                        <div className="bg-card border border-border rounded-xl p-4 sticky top-24">
-                            <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">Filtrar por tema</p>
-                            <ForumTagFilter tags={[...FORUM_TAGS]} />
-                        </div>
-                    </aside>
-
-                    {/* Feed principal */}
-                    <div className="flex-1 min-w-0">
-                        <ForumFeedClient isLoggedIn={!!session} />
                     </div>
                 </div>
+            </header>
+
+            {/* ── BODY 3 COLUNAS ──────────────────────────────────────── */}
+            <div className="max-w-[1280px] mx-auto px-4 py-6 flex gap-5">
+
+                {/* ── SIDEBAR ESQUERDA: Categorias ───────────────────── */}
+                <aside className="hidden lg:block w-56 shrink-0">
+                    <div className="bg-[#0d1322] border border-slate-800 rounded-xl overflow-hidden sticky top-[97px]">
+                        <div className="px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+                            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Categorias</span>
+                        </div>
+                        <nav className="py-1">
+                            <Link
+                                href="/forum"
+                                className="flex items-center justify-between px-4 py-2.5 hover:bg-slate-800/50 group transition-colors"
+                            >
+                                <div className="flex items-center gap-2.5">
+                                    <span className="text-base leading-none">🏠</span>
+                                    <span className="text-xs font-semibold text-slate-300 group-hover:text-white">Todos os Posts</span>
+                                </div>
+                                <ChevronRight className="w-3 h-3 text-slate-600 group-hover:text-slate-400" />
+                            </Link>
+                            {FORUM_TAGS.map((tag) => (
+                                <Link
+                                    key={tag}
+                                    href={`/forum?tag=${encodeURIComponent(tag)}`}
+                                    className="flex items-center justify-between px-4 py-2.5 hover:bg-slate-800/50 group transition-colors"
+                                >
+                                    <div className="flex items-center gap-2.5 min-w-0">
+                                        <span className="text-sm leading-none shrink-0">{CATEGORY_META[tag]?.icon || "📌"}</span>
+                                        <span className="text-xs font-medium text-slate-400 group-hover:text-slate-200 truncate">{tag}</span>
+                                    </div>
+                                    <ChevronRight className="w-3 h-3 text-slate-700 group-hover:text-slate-500 shrink-0" />
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
+                </aside>
+
+                {/* ── FEED PRINCIPAL ───────────────────────────────────── */}
+                <main className="flex-1 min-w-0">
+                    {/* Header do feed */}
+                    <div className="flex items-center justify-between mb-4">
+                        <h1 className="text-base font-black text-white">Discussões Recentes</h1>
+                        <div className="flex items-center gap-1 text-xs text-slate-500">
+                            <Flame className="w-3.5 h-3.5 text-amber-500" />
+                            <span>Atualizado em tempo real</span>
+                        </div>
+                    </div>
+
+                    <ForumFeedClient isLoggedIn={!!session} />
+                </main>
+
+                {/* ── SIDEBAR DIREITA: Stats + Recursos ───────────────── */}
+                <aside className="hidden xl:block w-64 shrink-0">
+                    <div className="space-y-4 sticky top-[97px]">
+                        {/* Stats da comunidade */}
+                        <div className="bg-[#0d1322] border border-slate-800 rounded-xl overflow-hidden">
+                            <div className="px-4 py-3 border-b border-slate-800">
+                                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Comunidade</span>
+                            </div>
+                            <div className="p-4 space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2 text-slate-400">
+                                        <Users className="w-3.5 h-3.5" />
+                                        <span className="text-xs">Membros</span>
+                                    </div>
+                                    <span className="text-xs font-bold text-slate-200">—</span>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2 text-slate-400">
+                                        <MessageSquare className="w-3.5 h-3.5" />
+                                        <span className="text-xs">Discussões</span>
+                                    </div>
+                                    <span className="text-xs font-bold text-slate-200">—</span>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2 text-slate-400">
+                                        <TrendingUp className="w-3.5 h-3.5" />
+                                        <span className="text-xs">Respostas</span>
+                                    </div>
+                                    <span className="text-xs font-bold text-slate-200">—</span>
+                                </div>
+                            </div>
+                            {!session && (
+                                <div className="px-4 pb-4">
+                                    <Link
+                                        href="/auth/cadastro"
+                                        className="block w-full text-center py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black transition-colors"
+                                    >
+                                        Participar da comunidade →
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Categorias populares */}
+                        <div className="bg-[#0d1322] border border-slate-800 rounded-xl overflow-hidden">
+                            <div className="px-4 py-3 border-b border-slate-800">
+                                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Tópicos em destaque</span>
+                            </div>
+                            <div className="py-1">
+                                {["Valuation", "Modelagem", "Risco & Retorno", "Excel", "Renda Fixa"].map((tag, i) => (
+                                    <Link
+                                        key={tag}
+                                        href={`/forum?tag=${encodeURIComponent(tag)}`}
+                                        className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-800/50 group transition-colors"
+                                    >
+                                        <span className="text-xs font-bold text-slate-600 w-4">{i + 1}</span>
+                                        <div className="flex-1 min-w-0">
+                                            <span className="text-xs font-semibold text-slate-300 group-hover:text-amber-400 transition-colors">{tag}</span>
+                                            <p className="text-[10px] text-slate-600 truncate">{CATEGORY_META[tag]?.description}</p>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* CTA Blog */}
+                        <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/5 border border-amber-500/20 rounded-xl p-4">
+                            <p className="text-xs font-black text-white mb-1">📚 Blog de Finanças</p>
+                            <p className="text-[11px] text-slate-400 mb-3 leading-relaxed">
+                                +120 artigos técnicos sobre modelagem financeira, valuation e derivativos.
+                            </p>
+                            <Link
+                                href="/blog"
+                                className="block text-center py-2 rounded-lg border border-amber-500/40 text-amber-400 text-xs font-semibold hover:bg-amber-500/10 transition-colors"
+                            >
+                                Ver artigos →
+                            </Link>
+                        </div>
+                    </div>
+                </aside>
             </div>
-        </main>
-    );
-}
-
-function ForumTagFilter({ tags }: { tags: string[] }) {
-    // Este é um componente server-side placeholder; a filtragem real é feita no ForumFeedClient
-    return (
-        <div className="flex flex-col gap-1.5">
-            {tags.map((tag) => (
-                <span key={tag}>
-                    <TagBadge tag={tag} />
-                </span>
-            ))}
         </div>
     );
 }
