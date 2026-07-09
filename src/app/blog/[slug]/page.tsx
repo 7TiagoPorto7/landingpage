@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <nav className="border-b border-border bg-background/70 backdrop-blur-md sticky top-0 z-50">
                 <div className="container max-w-5xl px-6 mx-auto h-16 flex items-center justify-between">
                     <Link href="/" className="flex items-center shrink-0 group">
-                        <Logo className="h-6 w-auto hover:opacity-95 transition-opacity" />
+                        <Logo className="h-8 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
 
                     <div className="flex items-center gap-4">
