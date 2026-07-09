@@ -5,6 +5,8 @@ import { getDb, ensureForumTables } from "@/lib/db";
 import { UserAvatar } from "@/components/forum/forum-ui";
 import { ProfileClient } from "@/components/forum/profile-client";
 import { ChevronRight, MessageSquare, Clock, ArrowLeft, TrendingUp, CheckCircle2 } from "lucide-react";
+import { Logo } from "@/components/logo";
+
 
 interface Question {
     id: number;
@@ -60,15 +62,10 @@ export default async function PerfilPage() {
             {/* Topbar */}
             <header className="border-b border-slate-800 bg-[#0d1322] sticky top-0 z-50">
                 <div className="max-w-[1280px] mx-auto px-4 h-14 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center group-hover:bg-amber-400 transition-colors">
-                            <TrendingUp className="w-4 h-4 text-slate-950 stroke-[2.5]" />
-                        </div>
-                        <div className="hidden sm:block">
-                            <span className="text-sm font-black text-white tracking-tight leading-none block">MFP Education</span>
-                            <span className="text-[10px] text-slate-500 font-medium leading-none">Finance Forum</span>
-                        </div>
+                    <Link href="/" className="flex items-center shrink-0 group">
+                        <Logo className="h-8 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
+
 
                     <Link href="/forum" className="flex items-center gap-1 text-xs text-slate-400 hover:text-white transition-colors">
                         <ArrowLeft className="w-3.5 h-3.5" />

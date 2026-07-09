@@ -5,6 +5,8 @@ import { getSession } from "@/lib/auth";
 import { FORUM_TAGS } from "@/lib/forum-constants";
 import { ForumFeedClient } from "@/components/forum/forum-feed-client";
 import { UserAvatar } from "@/components/forum/forum-ui";
+import { Logo } from "@/components/logo";
+
 
 export const metadata: Metadata = {
     title: "Fórum de Finanças Corporativas | MFP Education",
@@ -38,15 +40,10 @@ export default async function ForumPage() {
             <header className="border-b border-slate-800 bg-[#0d1322] sticky top-0 z-50">
                 <div className="max-w-[1280px] mx-auto px-4 h-14 flex items-center gap-4">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2 shrink-0 group">
-                        <div className="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center shadow-lg group-hover:bg-amber-400 transition-colors">
-                            <TrendingUp className="w-4 h-4 text-slate-950 stroke-[2.5]" />
-                        </div>
-                        <div className="hidden sm:block">
-                            <span className="text-sm font-black text-white tracking-tight leading-none block">MFP Education</span>
-                            <span className="text-[10px] text-slate-500 font-medium leading-none">Finance Forum</span>
-                        </div>
+                    <Link href="/" className="flex items-center shrink-0 group">
+                        <Logo className="h-8 w-auto hover:opacity-95 transition-opacity" />
                     </Link>
+
 
                     {/* Barra de busca */}
                     <div className="flex-1 max-w-xl mx-auto relative">
