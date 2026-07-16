@@ -18,10 +18,16 @@ export function FundamentosLeadCapture() {
         // TODO: [PREENCHER: Mailchimp/Brevo/ConvertKit + form action ou API key]
         try {
             // Simulate / send to lead API endpoint
-            await fetch("/api/leads", {
+            
+            let utmData = {};
+            try {
+                const utmStr = sessionStorage.getItem("utm_data");
+                if (utmStr) utmData = JSON.parse(utmStr);
+            } catch (e) {}
+            const res = await fetch("/api/leads", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, page: "fundamentos", type: "lead_magnet" }),
+                body: JSON.stringify({ email, page: "fundamentos", type: "lead_magnet" , ...utmData}),
             });
         } catch (err) {
             console.error("Lead submission endpoint error:", err);

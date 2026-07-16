@@ -3,8 +3,10 @@
 import { CheckCircle2, ShieldCheck, Zap, Download } from 'lucide-react';
 import Link from 'next/link';
 import { gtagEvent } from '@/components/analytics';
+import { useUtmLink } from "@/hooks/use-utm-link";
 
 export function Offer() {
+    const checkoutUrl = useUtmLink("https://pay.hotmart.com/P104814631L?off=8b3uxx2o");
     return (
         <section id="pricing" className="py-24 relative bg-slate-900/80 overflow-hidden">
             {/* Decorative Glow */}
@@ -76,7 +78,7 @@ export function Offer() {
                             </p>
 
                             <Link
-                                href="https://pay.hotmart.com/P104814631L?off=8b3uxx2o"
+                                href={checkoutUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full flex justify-center items-center px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-1 mb-6"

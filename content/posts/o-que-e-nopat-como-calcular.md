@@ -24,7 +24,7 @@ A falta de apuração regular do NOPAT deixa os executivos e acionistas sem clar
 Para modelar o NOPAT de forma profissional nas suas planilhas de finanças, você deve seguir estritamente as regras contábeis aceitas. O cálculo é expresso pela seguinte equação:
 
 ```
-NOPAT = [EBIT](/blog/o-que-e-ebit-como-calcular) * (1 - Alíquota de Impostos)
+NOPAT = EBIT * (1 - Alíquota de Impostos)
 ```
 
 Cada variável dessa fórmula é extraída diretamente das três demonstrações contábeis primárias: a [[DRE](/blog/o-que-e-dre-como-calcular) (Demonstração do Resultado do Exercício)](/blog/o-que-e-dre-como-calcular), o [Balanço Patrimonial](/blog/o-que-e-bp-como-calcular) e a [[DFC](/blog/o-que-e-dfc-como-calcular) (Demonstração do Fluxo de Caixa)](/blog/o-que-e-dfc-como-calcular). O analista não deve introduzir termos de receita não-recorrentes ou despesas extraordinárias de forma a não distorcer o resultado projetado.
@@ -37,7 +37,7 @@ A Cia. de Alimentos apresentou os seguintes dados em suas demonstrações:
 
 **Cálculo Passo a Passo**:
 1. Localize o saldo inicial e final nas linhas correspondentes.
-2. Aplique os dados na equação: `NOPAT = [EBIT](/blog/o-que-e-ebit-como-calcular) * (1 - Alíquota de Impostos)`.
+2. Aplique os dados na equação: `NOPAT = EBIT * (1 - Alíquota de Impostos)`.
 3. Verifique o percentual ou montante resultante para planejar os próximos fluxos de caixa.
 
 ### Erros Críticos e Armadilhas do Analista

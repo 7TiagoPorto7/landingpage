@@ -24,7 +24,7 @@ A falta de apuração regular do ARR deixa os executivos e acionistas sem clarez
 Para modelar o ARR de forma profissional nas suas planilhas de finanças, você deve seguir estritamente as regras contábeis aceitas. O cálculo é expresso pela seguinte equação:
 
 ```
-ARR = [MRR](/blog/o-que-e-mrr-monthly-recurring-revenue) * 12
+ARR = MRR * 12
 ```
 
 Cada variável dessa fórmula é extraída diretamente das três demonstrações contábeis primárias: a [[DRE](/blog/o-que-e-dre-como-calcular) (Demonstração do Resultado do Exercício)](/blog/o-que-e-dre-como-calcular), o [Balanço Patrimonial](/blog/o-que-e-bp-como-calcular) e a [[DFC](/blog/o-que-e-dfc-como-calcular) (Demonstração do Fluxo de Caixa)](/blog/o-que-e-dfc-como-calcular). O analista não deve introduzir termos de receita não-recorrentes ou despesas extraordinárias de forma a não distorcer o resultado projetado.

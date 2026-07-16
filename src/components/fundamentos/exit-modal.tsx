@@ -55,10 +55,16 @@ export function FundamentosExitModal() {
 
         setLoading(true);
         try {
-            await fetch("/api/leads", {
+            
+            let utmData = {};
+            try {
+                const utmStr = sessionStorage.getItem("utm_data");
+                if (utmStr) utmData = JSON.parse(utmStr);
+            } catch (e) {}
+            const res = await fetch("/api/leads", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, page: "fundamentos", type: "exit_modal" }),
+                body: JSON.stringify({ email, page: "fundamentos", type: "exit_modal" , ...utmData}),
             });
         } catch (err) {
             console.error("Lead submission endpoint error:", err);

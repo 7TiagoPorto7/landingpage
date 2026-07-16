@@ -16,10 +16,15 @@ export function CFFinalCTA() {
 
         setStatus("loading");
         try {
+            let utmData = {};
+            try {
+                const utmStr = sessionStorage.getItem("utm_data");
+                if (utmStr) utmData = JSON.parse(utmStr);
+            } catch (e) {}
             const res = await fetch("/api/leads", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, fileId: "claude-financas-guia" }),
+                body: JSON.stringify({ email, fileId: "claude-financas-guia" , ...utmData}),
             });
             if (res.ok) {
                 setStatus("success");

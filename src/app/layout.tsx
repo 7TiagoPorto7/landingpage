@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { JsonLd } from "@/components/json-ld";
 import { Analytics } from "@/components/analytics";
 import { ScrollTracker } from "@/components/scroll-tracker";
+import { UtmTracker } from "@/components/utm-tracker";
 
 
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <JsonLd />
         <Analytics />
         <ScrollTracker />
+        <UtmTracker />
         {children}
       </body>
     </html>
