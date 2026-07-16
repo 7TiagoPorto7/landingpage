@@ -3,7 +3,7 @@ import { getDb, ensureLeadsTable } from "@/lib/db";
 
 export async function POST(req: NextRequest) {
     try {
-        const { email, fileId } = await req.json();
+        const { email, fileId, utm_source, utm_medium, utm_campaign, utm_term, utm_content } = await req.json();
 
         if (!email || !fileId) {
             return NextResponse.json(
@@ -17,10 +17,10 @@ export async function POST(req: NextRequest) {
 
         const sql = getDb();
 
-        // Salva o lead
+        // Salva o lead com UTMs
         await sql`
-            INSERT INTO leads (email, file_id)
-            VALUES (${email}, ${fileId})
+            INSERT INTO leads (email, file_id, utm_source, utm_medium, utm_campaign, utm_term, utm_content)
+            VALUES (${email}, ${fileId}, ${utm_source || null}, ${utm_medium || null}, ${utm_campaign || null}, ${utm_term || null}, ${utm_content || null})
         `;
 
         return NextResponse.json({ success: true });

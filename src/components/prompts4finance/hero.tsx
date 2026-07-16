@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
 import { gtagEvent } from '@/components/analytics';
+import { useUtmLink } from "@/hooks/use-utm-link";
 
 export function Hero() {
+    const checkoutUrl = useUtmLink("https://pay.hotmart.com/P104814631L?off=8b3uxx2o");
     return (
         <section className="relative overflow-hidden bg-background pt-24 pb-16 md:pt-32 md:pb-24">
             {/* Background gradients */}
@@ -32,7 +34,7 @@ export function Hero() {
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10">
                             <Link
-                                href="https://pay.hotmart.com/P104814631L?off=8b3uxx2o"
+                                href={checkoutUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex justify-center items-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-primary/25 group"

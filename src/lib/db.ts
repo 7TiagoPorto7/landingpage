@@ -46,6 +46,13 @@ export async function ensureLeadsTable() {
             created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         )
     `;
+
+    // Adiciona as colunas UTM caso a tabela já exista
+    try { await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS utm_source TEXT`; } catch (e) { }
+    try { await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS utm_medium TEXT`; } catch (e) { }
+    try { await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS utm_campaign TEXT`; } catch (e) { }
+    try { await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS utm_term TEXT`; } catch (e) { }
+    try { await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS utm_content TEXT`; } catch (e) { }
 }
 
 /**

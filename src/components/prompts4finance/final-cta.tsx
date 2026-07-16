@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import { ArrowRight, Lock } from 'lucide-react';
 import { gtagEvent } from '@/components/analytics';
+import { useUtmLink } from "@/hooks/use-utm-link";
 
 export function FinalCTA() {
+    const checkoutUrl = useUtmLink("https://pay.hotmart.com/P104814631L?off=8b3uxx2o");
     return (
         <section className="py-24 relative bg-background overflow-hidden border-t border-white/5">
             {/* Background glow */}
@@ -23,7 +25,7 @@ export function FinalCTA() {
 
                 <div className="flex flex-col items-center gap-6">
                     <Link
-                        href="https://pay.hotmart.com/P104814631L?off=8b3uxx2o"
+                        href={checkoutUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto inline-flex justify-center items-center px-10 py-5 rounded-2xl bg-primary text-primary-foreground font-bold text-xl md:text-2xl hover:bg-primary/90 transition-all shadow-xl hover:shadow-primary/30 hover:scale-105 group"

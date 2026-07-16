@@ -94,10 +94,15 @@ function EmailModal({ file, onClose }: EmailModalProps) {
         setError("");
 
         try {
+            let utmData = {};
+            try {
+                const utmStr = sessionStorage.getItem("utm_data");
+                if (utmStr) utmData = JSON.parse(utmStr);
+            } catch (e) {}
             const res = await fetch("/api/leads", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, fileId: file.id }),
+                body: JSON.stringify({ email, fileId: file.id , ...utmData}),
             });
 
             if (!res.ok) {

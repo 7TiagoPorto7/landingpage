@@ -1,9 +1,11 @@
+import { useUtmLink } from "@/hooks/use-utm-link";
 "use client"
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export function StickyCTA() {
+    const checkoutUrl = useUtmLink("https://pay.hotmart.com/P104814631L?off=8b3uxx2o");
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -26,7 +28,7 @@ export function StickyCTA() {
     return (
         <div className="fixed bottom-0 left-0 right-0 p-4 md:hidden z-50 bg-background/90 backdrop-blur-lg border-t border-white/10 shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.5)] animate-in slide-in-from-bottom-5">
             <Link
-                href="https://pay.hotmart.com/P104814631L?off=8b3uxx2o"
+                href={checkoutUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex justify-center items-center px-6 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg shadow-lg active:scale-95 transition-transform"
