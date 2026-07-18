@@ -1,5 +1,5 @@
-import { useUtmLink } from "@/hooks/use-utm-link";
 "use client"
+import { useUtmLink } from "@/hooks/use-utm-link";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
