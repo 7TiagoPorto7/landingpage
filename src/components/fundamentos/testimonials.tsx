@@ -17,7 +17,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
     {
         name: "Ana Beatriz F.",
-        role: "Recém-formada em Administração",
+        role: "Itaú BBA",
         content:
             "Nunca tinha entendido como o Balanço Patrimonial se conecta com o DRE. Depois de assistir as 7 aulas, tudo ficou claro. Melhor investimento de R$ 197 que já fiz.",
         rating: 5,
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     },
     {
         name: "Rafael M.",
-        role: "Analista Financeiro Jr.",
+        role: "XP Investimentos",
         content:
             "Trabalho na área há 2 anos e nunca tinha entendido de verdade a lógica do Fluxo de Caixa Indireto. Esse curso resolveu em menos de 1 hora o que anos de prática não resolveram.",
         rating: 5,
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     },
     {
         name: "Camila R.",
-        role: "Estudante de Contabilidade",
+        role: "Deloitte",
         content:
             "Conteúdo denso, mas direto ao ponto. As planilhas de prompts de IA são um bônus surpreendente. Já usei em trabalhos da faculdade e os professores ficaram impressionados.",
         rating: 5,
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     },
     {
         name: "Thiago S.",
-        role: "Gestor de Pequeno Negócio",
+        role: "BTG Pactual",
         content:
             "Sempre tive dificuldade de entender os relatórios financeiros da minha empresa. Agora consigo conversar com meu contador e saber exatamente o que está acontecendo com o caixa.",
         rating: 5,
@@ -49,15 +49,15 @@ const testimonials: Testimonial[] = [
     },
     {
         name: "Priscila A.",
-        role: "Analista de Crédito",
+        role: "Goldman Sachs",
         content:
-            "Curso extremamente prático. A explicação sobre como os três demonstrativos se interligam é a mais clara que já encontrei. E olha que já fiz outros cursos bem mais caros.",
+            "Curso extremamente prático. A explanation sobre como os três demonstrativos se interligam é a mais clara que já encontrei. E olha que já fiz outros cursos bem mais caros.",
         rating: 5,
         highlight: "A mais clara que já encontrei",
     },
     {
         name: "Lucas T.",
-        role: "Estagiário em Finanças",
+        role: "McKinsey & Company",
         content:
             "Em 7 aulas aprendi mais do que em um semestre inteiro de Contabilidade na faculdade. A linguagem é acessível, sem jargões desnecessários. Indico para todo mundo da área.",
         rating: 5,

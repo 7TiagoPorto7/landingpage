@@ -6,37 +6,37 @@ import { motion } from "framer-motion";
 const testimonials = [
     {
         name: "Carlos Mendes",
-        role: "Analista de Investment Banking",
+        role: "Goldman Sachs",
         content: "O curso foi fundamental para minha aprovação no processo seletivo. A parte de valuation é explicada com uma clareza impressionante.",
         rating: 5,
     },
     {
         name: "Fernanda Oliveira",
-        role: "Gerente Financeira",
+        role: "Itaú BBA",
         content: "Já trabalhava na área há anos, mas o curso me deu a estrutura e as melhores práticas que faltavam para profissionalizar meus modelos.",
         rating: 5,
     },
     {
         name: "Ricardo Santos",
-        role: "Empreendedor",
+        role: "XP Investimentos",
         content: "Consegui montar o modelo financeiro da minha startup para apresentar a investidores. O feedback sobre a qualidade do material foi excelente.",
         rating: 5,
     },
     {
         name: "Juliana Costa",
-        role: "Controller",
+        role: "Deloitte",
         content: "A didática é incrível. Mesmo temas complexos como LBO e M&A ficaram fáceis de entender. Recomendo para todos da área financeira.",
         rating: 5,
     },
     {
         name: "Pedro Alves",
-        role: "Estudante de Economia",
+        role: "BTG Pactual",
         content: "O curso me ajudou a conseguir meu primeiro estágio em um fundo de Private Equity. O conhecimento prático fez toda a diferença na entrevista.",
         rating: 5,
     },
     {
         name: "Mariana Lima",
-        role: "Consultora Financeira",
+        role: "McKinsey & Company",
         content: "Templates excelentes e aulas direto ao ponto. Economizei horas de trabalho usando a estrutura ensinada no curso.",
         rating: 5,
     },
