@@ -1,11 +1,10 @@
 import { MetadataRoute } from "next";
 import { getAllPostSlugs } from "@/lib/blog";
 
-const BASE_URL = "https://www.mfnapratica.com.br";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
 
 // ─────────────────────────────────────────────
 // Páginas estáticas do site
-// Ao criar uma nova página, adicione-a aqui.
 // ─────────────────────────────────────────────
 const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -21,6 +20,18 @@ const staticRoutes: MetadataRoute.Sitemap = [
         priority: 0.9,
     },
     {
+        url: `${BASE_URL}/forum`,
+        lastModified: new Date(),
+        changeFrequency: "daily",
+        priority: 0.9,
+    },
+    {
+        url: `${BASE_URL}/fundamentos`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.9,
+    },
+    {
         url: `${BASE_URL}/starter-kit`,
         lastModified: new Date(),
         changeFrequency: "monthly",
@@ -30,10 +41,22 @@ const staticRoutes: MetadataRoute.Sitemap = [
         url: `${BASE_URL}/template-pro`,
         lastModified: new Date(),
         changeFrequency: "monthly",
-        priority: 0.8,
+        priority: 0.9,
     },
     {
         url: `${BASE_URL}/prompts4finance`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        url: `${BASE_URL}/claude-financas`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        url: `${BASE_URL}/fluxograma`,
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.8,
@@ -57,10 +80,16 @@ const staticRoutes: MetadataRoute.Sitemap = [
         priority: 0.3,
     },
     {
-        url: `${BASE_URL}/fundamentos`,
+        url: `${BASE_URL}/llms.txt`,
         lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.9,
+        changeFrequency: "weekly",
+        priority: 0.5,
+    },
+    {
+        url: `${BASE_URL}/llms-full.txt`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.5,
     },
 ];
 

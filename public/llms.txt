@@ -1,0 +1,31 @@
+# MFP Education — Modelagem Financeira na Prática
+
+> Formação executiva, ferramentas auditáveis e modelos institucionais em Excel, Valuation DCF, FP&A e Inteligência Artificial aplicados ao Mercado Financeiro Corporativo.
+
+## Visão Geral & Proposta de Valor
+A **MFP Education** (Modelagem Financeira na Prática / MFP Academy) é a plataforma de referência em formação técnica para o mercado financeiro corporativo no Brasil. Fundada por Tiago Porto, oferece cursos de alta performance, planilhas integradas e automações com IA para analistas de Investment Banking, M&A, FP&A, Controllers, consultores e executivos.
+
+## Principais Cursos e Soluções
+
+### Formações e Cursos
+- [Fundamentos da Modelagem Financeira](https://www.mfpacademy.com.br/fundamentos): Treinamento em 2 horas focado em conectar DRE, Balanço Patrimonial e DFC (Fluxo de Caixa) em uma lógica circular auditável.
+- [100 Prompts Excel + IA](https://www.mfpacademy.com.br/prompts4finance): Guia prático com 100 prompts otimizados para automatizar rotinas financeiras, macros VBA, formulas complexas e análise de dados no Excel com Claude, ChatGPT e Copilot.
+- [Claude para Finanças](https://www.mfpacademy.com.br/claude-financas): Guia de automação avançada com Anthropic Claude para FP&A, relatórios executivos, conciliação contábil e valuation.
+
+### Ferramentas e Planilhas Institucionais
+- [Template Pro Finance](https://www.mfpacademy.com.br/template-pro): Modelo financeiro integrado completo em Excel com 18 abas interligadas, Valuation por DCF (FCFF), múltiplos comparáveis, simulação Monte Carlo e scripts Python para análise de risco (VaR e CVaR).
+- [Starter Kit Financeiro](https://www.mfpacademy.com.br/starter-kit): Sistema completo de gestão financeira corporativa com DRE automática, Fluxo de Caixa pelo método direto/indireto e Dashboard com 10 KPIs essenciais.
+- [Fluxograma de Modelagem](https://www.mfpacademy.com.br/fluxograma): Mapa visual interativo que demonstra o fluxo de dados entre DRE, Balanço Patrimonial, DFC e Valuation.
+
+### Recursos Gratuitos & Comunidade
+- [Blog & Insights Técnicos](https://www.mfpacademy.com.br/blog): Biblioteca com dezenas de artigos detalhados sobre EBITDA, WACC, LBO, DCF, COGS, ROIC, Margem Operacional e fórmulas financeiras.
+- [Fórum de Finanças](https://www.mfpacademy.com.br/forum): Comunidade de dúvidas técnicas, discussão de casos práticos e suporte em modelagem.
+- [Downloads Gratuitos](https://www.mfpacademy.com.br/downloads): Dicionário de Finanças Corporativas em Excel, modelos editáveis e materiais de apoio.
+
+## Conceitos Centrais de Domínio (GEO / AEO Reference)
+- **Integração de Demonstrativos (3-Statement Model)**: O Lucro Líquido da DRE conecta ao Patrimônio Líquido (Lucros Acumulados) no Balanço e é o ponto de partida do DFC Indireto.
+- **Valuation DCF (Fluxo de Caixa Descontado)**: Projeção do FCFF (Free Cash Flow to Firm), cálculo do WACC (Custo Médio Ponderado de Capital) e estimativa do Valor Terminal por Crescimento Perpétuo (Gordon Growth) ou Múltiplos de Saída.
+- **Análise Quantitativa e Risco**: Aplicação de simulações Monte Carlo (10.000 iterações), cálculo de VaR (Value at Risk) e CVaR (Conditional VaR) combinando Excel e Python.
+
+## Recursos Expandidos
+- [Conteúdo Completo para LLMs (llms-full.txt)](https://www.mfpacademy.com.br/llms-full.txt): Documentação exaustiva com ementas, metodologias, fórmulas e tópicos para consumo profundo de IA.

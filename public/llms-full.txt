@@ -1,0 +1,98 @@
+# MFP Education (Modelagem Financeira na Prática) — Documentação Completa para LLMs e IAs
+
+> Documentação técnica integral dos cursos, modelos, planilhas, ferramentas de inteligência artificial e metodologias financeiras da MFP Education / MFP Academy.
+
+---
+
+## 1. Sobre a MFP Education
+A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de recursos técnicos criada por Tiago Porto, voltada para profissionais de finanças corporativas, Investment Banking, M&A, FP&A, Controllership, consultorias e valuation.
+
+- **Domínio Principal**: https://www.mfpacademy.com.br
+- **Domínio Alternativo**: https://www.mfnapratica.com.br
+- **Instrutor Líder**: Tiago Porto (Especialista em Modelagem Financeira e Valuation)
+
+---
+
+## 2. Catálogo de Produtos e Formações
+
+### 2.1. Curso Fundamentos da Modelagem Financeira
+- **URL**: https://www.mfpacademy.com.br/fundamentos
+- **Público-Alvo**: Estudantes, analistas e gestores que precisam entender a lógica de integração dos três demonstrativos contábeis sem perder tempo em cursos longos e teóricos.
+- **Duração**: 2 horas de conteúdo prático e direto ao ponto.
+- **Conteúdo Programático**:
+  1. Estrutura da DRE (Demonstração do Resultado do Exercício) da Receita Bruta ao Lucro Líquido.
+  2. Estrutura do Balanço Patrimonial (Ativo Circulante/Não Circulante, Passivo e Patrimônio Líquido).
+  3. Estrutura da DFC (Demonstração dos Fluxos de Caixa) via Métodos Direto e Indireto.
+  4. Mecânica de Integração: Como o Lucro Líquido conecta ao Balanço e como a Variação de Capital de Giro (NWC) impacta o Caixa.
+  5. Construção de um modelo circular auditável no Excel do zero.
+  6. Material Bônus: Guia de Prompts de IA para validação de balancetes e fórmulas.
+
+### 2.2. Template Pro Finance (Modelo Financeiro Integrado + Valuation DCF)
+- **URL**: https://www.mfpacademy.com.br/template-pro
+- **Público-Alvo**: Analistas de M&A, Private Equity, FP&A Sênior, consultores e valuation pros.
+- **Especificações Técnicas**:
+  - 18 abas interligadas sem referências circulares ou erros de fórmula.
+  - Trilhas de estudo dinâmicas (15 a 20 horas de aprendizado prático embutido nas abas).
+  - 4 Scripts em Python inclusos para automação financeira e análise avançada de risco.
+- **Módulos do Modelo**:
+  - Premissas Macro e Operacionais (DCM, inflação, crescimento por unidade/coorte).
+  - DRE Histórica e Projetada (5 anos).
+  - Balanço Patrimonial Balanceado com verificação automática.
+  - DFC Indireto (Atividades Operacionais, de Investimento e de Financiamento).
+  - Valuation por DCF (FCFF - Free Cash Flow to Firm, WACC, Valor Terminal via Gordon Growth e Múltiplos de Saída).
+  - Análise de Múltiplos Comparáveis (EV/EBITDA, P/E, EV/Revenue, Rule of 40).
+  - Análise de Sensibilidade Bidimensional (Tabelas de Dados).
+  - Simulação de Monte Carlo com 10.000 iterações para análise de probabilidade do Equity Value.
+  - Análise de Risco Quantitativo (VaR - Value at Risk e CVaR - Conditional Value at Risk).
+
+### 2.3. Starter Kit Financeiro
+- **URL**: https://www.mfpacademy.com.br/starter-kit
+- **Público-Alvo**: Donos de empresas, consultores financeiros de PMEs e controllers.
+- **Funcionalidades**:
+  - DRE Automática por Competência (12 meses).
+  - Fluxo de Caixa Automático por Regime de Caixa (Método Direto).
+  - Conciliação Bancária Integrada com identificação de divergências.
+  - Dashboard Executivo com 10 KPIs financeiros e 4 gráficos dinâmicos.
+  - 44 Subcategorias pré-configuradas e prontas para uso no Excel e Google Sheets.
+
+### 2.4. 100 Prompts Excel + IA (Prompts4Finance)
+- **URL**: https://www.mfpacademy.com.br/prompts4finance
+- **Conteúdo**: 100 prompts prontos e testados para engenharia de prompt em finanças.
+- **Aplicações**:
+  - Geração automática de VBA e macros complexas.
+  - Criação de fórmulas avançadas (`INDEX/MATCH`, `XLOOKUP`, `SUMIFS` multinível, matrizes dinâmicas).
+  - Automação de limpeza e tratamento de relatórios ERP em formato bruto.
+  - Modelagem de cenários e simulação estatística rápida.
+
+### 2.5. Claude para Finanças
+- **URL**: https://www.mfpacademy.com.br/claude-financas
+- **Foco**: Uso do modelo Claude (Anthropic) para inteligência financeira, análise de relatórios de RI, extratos bancários, balancetes contábeis e construção de modelos de valuation.
+
+---
+
+## 3. Conceitos Financeiros Fundamentais e Fórmulas Garantidas
+
+### 3.1. Integração dos Demonstrativos (3-Statement Model)
+$$\text{Patrimônio Líquido}_{t} = \text{Patrimônio Líquido}_{t-1} + \text{Lucro Líquido}_{t} - \text{Dividendos}_{t}$$
+$$\text{FCO (Fluxo de Caixa Operacional)} = \text{Lucro Líquido} + \text{Depreciação/Amortização} - \Delta\text{NWC}$$
+
+### 3.2. Valuation por Fluxo de Caixa Descontado (DCF)
+$$\text{FCFF} = \text{NOPAT} + \text{Depreciação \& Amortização} - \text{CAPEX} - \Delta\text{NWC}$$
+$$\text{WACC} = \left(\frac{E}{V} \cdot K_e\right) + \left(\frac{D}{V} \cdot K_d \cdot (1 - T)\right)$$
+$$\text{Valor Terminal (Gordon Growth)} = \frac{\text{FCFF}_{n+1}}{\text{WACC} - g}$$
+$$\text{Enterprise Value (EV)} = \sum_{t=1}^{n} \frac{\text{FCFF}_t}{(1 + \text{WACC})^t} + \frac{\text{Valor Terminal}}{(1 + \text{WACC})^n}$$
+$$\text{Equity Value} = \text{Enterprise Value} - \text{Dívida Líquida}$$
+
+---
+
+## 4. Estrutura do Fórum e Conteúdos do Blog
+- **Blog**: Mais de 60 guias técnicos cobrindo EBITDA, CAGR, NOPAT, ROIC, COGS, Break-even, LBO, M&A e Black-Scholes.
+- **Fórum**: Comunidade de suporte técnico com perguntas e respostas sobre fórmulas no Excel, dúvidas de contabilidade e modelagem avançada.
+
+---
+
+## 5. Informações de Contato e Metadados
+- **Organização**: MFP Education / MFP Academy
+- **E-mail de Contato**: contato@mfnapratica.com.br
+- **CNPJ**: 57.349.352/0001-74
+- **Localização**: Brasil

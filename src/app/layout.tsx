@@ -11,21 +11,72 @@ import { UtmTracker } from "@/components/utm-tracker";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
+
 export const metadata: Metadata = {
-  title: "Modelagem Financeira na Prática | Premium Course for Finance Professionals",
-  description: "Elevate your career with our comprehensive Financial Modeling course. Learn to build robust, institutional-grade models from scratch.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "MFP Education | Modelagem Financeira na Prática, Valuation & FP&A",
+    template: "%s | MFP Education",
+  },
+  description: "Formação executiva e modelos institucionais em Excel, Valuation DCF, DRE, Balanço Patrimonial, DFC e automações de finanças com Inteligência Artificial.",
+  keywords: [
+    "modelagem financeira",
+    "valuation",
+    "dcf",
+    "dre",
+    "balanço patrimonial",
+    "fluxo de caixa",
+    "fp&a",
+    "excel financeiro",
+    "mfp education",
+    "mfp academy",
+    "tiago porto",
+    "prompts excel ia",
+    "claude finanças",
+    "investment banking",
+    "m&a",
+  ],
+  authors: [{ name: "Tiago Porto", url: siteUrl }],
+  creator: "MFP Education",
+  publisher: "MFP Education",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://financialmodeling.course", // Placeholder
-    title: "Modelagem Financeira na Prática | Premium Course",
-    description: "Elevate your career with our comprehensive Financial Modeling course.",
-    siteName: "Modelagem Financeira na Prática",
+    url: siteUrl,
+    title: "MFP Education | Modelagem Financeira na Prática, Valuation & FP&A",
+    description: "Formação executiva e modelos institucionais em Excel, Valuation DCF, DRE, Balanço Patrimonial, DFC e automações com IA.",
+    siteName: "MFP Education — Modelagem Financeira na Prática",
+    images: [
+      {
+        url: "/logo-mfp.png",
+        width: 1200,
+        height: 630,
+        alt: "MFP Education — Modelagem Financeira na Prática",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Modelagem Financeira na Prática",
-    description: "Elevate your career with our comprehensive Financial Modeling course.",
+    title: "MFP Education | Modelagem Financeira na Prática",
+    description: "Formação executiva e modelos institucionais em Excel, Valuation DCF e IA para finanças.",
+    images: ["/logo-mfp.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

@@ -1,12 +1,32 @@
 import { MetadataRoute } from "next";
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
+
 export default function robots(): MetadataRoute.Robots {
     return {
-        rules: {
-            userAgent: "*",
-            allow: "/",
-            disallow: "/api/", // bloqueia rotas de API do rastreamento
-        },
-        sitemap: "https://www.mfnapratica.com.br/sitemap.xml",
+        rules: [
+            {
+                userAgent: "*",
+                allow: "/",
+                disallow: ["/api/", "/auth/"],
+            },
+            {
+                userAgent: [
+                    "GPTBot",
+                    "ChatGPT-User",
+                    "PerplexityBot",
+                    "ClaudeBot",
+                    "Claude-Web",
+                    "Google-Extended",
+                    "CCBot",
+                    "cohere-ai",
+                    "Bytespider",
+                    "Applebot-Extended",
+                ],
+                allow: "/",
+                disallow: ["/api/", "/auth/"],
+            },
+        ],
+        sitemap: `${BASE_URL}/sitemap.xml`,
     };
 }
