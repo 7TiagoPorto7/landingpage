@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 140" width="380" height="140">
+  <defs>
+    <linearGradient id="mfpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="50%" stop-color="#2DD4BF" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+  </defs>
+  <g fill="url(#mfpGrad)">
+    <path d="M 12 12 L 175 12 C 218 12 228 34 188 74 L 115 138 L 80 138 L 158 60 C 182 36 170 27 136 27 L 12 27 Z" />
+    <path d="M 202 12 C 245 12 255 34 215 74 L 142 138 L 107 138 L 185 60 C 209 36 197 27 163 27 L 154 27 L 167 12 Z" />
+    <path d="M 262 12 C 305 12 315 34 275 74 L 202 138 L 167 138 L 245 60 C 269 36 257 27 223 27 L 214 27 L 227 12 Z" />
+  </g>
+</svg>
