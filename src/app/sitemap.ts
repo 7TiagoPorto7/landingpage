@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugs } from "@/lib/blog";
+import { getSortedPostsData } from "@/lib/blog";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
+const BASE_URL = SITE_URL;
 
 // ─────────────────────────────────────────────
 // Páginas estáticas do site
@@ -15,12 +16,6 @@ const staticRoutes: MetadataRoute.Sitemap = [
     },
     {
         url: `${BASE_URL}/blog`,
-        lastModified: new Date(),
-        changeFrequency: "daily",
-        priority: 0.9,
-    },
-    {
-        url: `${BASE_URL}/forum`,
         lastModified: new Date(),
         changeFrequency: "daily",
         priority: 0.9,
@@ -95,10 +90,9 @@ const staticRoutes: MetadataRoute.Sitemap = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // Posts do blog — gerados automaticamente a partir de content/posts/
-    const postSlugs = getAllPostSlugs();
-    const postRoutes: MetadataRoute.Sitemap = postSlugs.map(({ params }) => ({
-        url: `${BASE_URL}/blog/${params.slug}`,
-        lastModified: new Date(),
+    const postRoutes: MetadataRoute.Sitemap = getSortedPostsData().map((post) => ({
+        url: `${BASE_URL}/blog/${post.slug}`,
+        lastModified: new Date(post.isoDate),
         changeFrequency: "monthly",
         priority: 0.7,
     }));

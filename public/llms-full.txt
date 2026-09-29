@@ -7,8 +7,7 @@
 ## 1. Sobre a MFP Education
 A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de recursos técnicos criada por Tiago Porto, voltada para profissionais de finanças corporativas, Investment Banking, M&A, FP&A, Controllership, consultorias e valuation.
 
-- **Domínio Principal**: https://www.mfpacademy.com.br
-- **Domínio Alternativo**: https://www.mfnapratica.com.br
+- **Domínio Principal**: https://www.mfnapratica.com.br
 - **Instrutor Líder**: Tiago Porto (Especialista em Modelagem Financeira e Valuation)
 
 ---
@@ -16,7 +15,7 @@ A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de
 ## 2. Catálogo de Produtos e Formações
 
 ### 2.1. Curso Fundamentos da Modelagem Financeira
-- **URL**: https://www.mfpacademy.com.br/fundamentos
+- **URL**: https://www.mfnapratica.com.br/fundamentos
 - **Público-Alvo**: Estudantes, analistas e gestores que precisam entender a lógica de integração dos três demonstrativos contábeis sem perder tempo em cursos longos e teóricos.
 - **Duração**: 2 horas de conteúdo prático e direto ao ponto.
 - **Conteúdo Programático**:
@@ -28,7 +27,7 @@ A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de
   6. Material Bônus: Guia de Prompts de IA para validação de balancetes e fórmulas.
 
 ### 2.2. Template Pro Finance (Modelo Financeiro Integrado + Valuation DCF)
-- **URL**: https://www.mfpacademy.com.br/template-pro
+- **URL**: https://www.mfnapratica.com.br/template-pro
 - **Público-Alvo**: Analistas de M&A, Private Equity, FP&A Sênior, consultores e valuation pros.
 - **Especificações Técnicas**:
   - 18 abas interligadas sem referências circulares ou erros de fórmula.
@@ -46,7 +45,7 @@ A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de
   - Análise de Risco Quantitativo (VaR - Value at Risk e CVaR - Conditional Value at Risk).
 
 ### 2.3. Starter Kit Financeiro
-- **URL**: https://www.mfpacademy.com.br/starter-kit
+- **URL**: https://www.mfnapratica.com.br/starter-kit
 - **Público-Alvo**: Donos de empresas, consultores financeiros de PMEs e controllers.
 - **Funcionalidades**:
   - DRE Automática por Competência (12 meses).
@@ -56,7 +55,7 @@ A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de
   - 44 Subcategorias pré-configuradas e prontas para uso no Excel e Google Sheets.
 
 ### 2.4. 100 Prompts Excel + IA (Prompts4Finance)
-- **URL**: https://www.mfpacademy.com.br/prompts4finance
+- **URL**: https://www.mfnapratica.com.br/prompts4finance
 - **Conteúdo**: 100 prompts prontos e testados para engenharia de prompt em finanças.
 - **Aplicações**:
   - Geração automática de VBA e macros complexas.
@@ -65,7 +64,7 @@ A MFP Education (Modelagem Financeira na Prática) é uma edtech e plataforma de
   - Modelagem de cenários e simulação estatística rápida.
 
 ### 2.5. Claude para Finanças
-- **URL**: https://www.mfpacademy.com.br/claude-financas
+- **URL**: https://www.mfnapratica.com.br/claude-financas
 - **Foco**: Uso do modelo Claude (Anthropic) para inteligência financeira, análise de relatórios de RI, extratos bancários, balancetes contábeis e construção de modelos de valuation.
 
 ---
@@ -85,9 +84,8 @@ $$\text{Equity Value} = \text{Enterprise Value} - \text{Dívida Líquida}$$
 
 ---
 
-## 4. Estrutura do Fórum e Conteúdos do Blog
-- **Blog**: Mais de 60 guias técnicos cobrindo EBITDA, CAGR, NOPAT, ROIC, COGS, Break-even, LBO, M&A e Black-Scholes.
-- **Fórum**: Comunidade de suporte técnico com perguntas e respostas sobre fórmulas no Excel, dúvidas de contabilidade e modelagem avançada.
+## 4. Conteúdos do Blog
+- **Blog**: Mais de 100 guias técnicos cobrindo EBITDA, CAGR, NOPAT, ROIC, COGS, Break-even, LBO, M&A e Black-Scholes.
 
 ---
 

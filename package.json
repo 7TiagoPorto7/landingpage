@@ -9,21 +9,25 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "gray-matter": "^4.0.3",
     "jimp": "^1.6.0",
-    "jose": "^6.2.3",
+    "katex": "^0.18.9",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
     "postgres": "^3.4.8",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "rehype-katex": "^7.0.1",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
-    "tailwind-merge": "^3.4.0"
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "tailwind-merge": "^3.4.0",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

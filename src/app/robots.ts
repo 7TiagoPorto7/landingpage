@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
+const BASE_URL = SITE_URL;
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -8,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: "*",
                 allow: "/",
-                disallow: ["/api/", "/auth/"],
+                disallow: ["/api/"],
             },
             {
                 userAgent: [
@@ -24,7 +25,7 @@ export default function robots(): MetadataRoute.Robots {
                     "Applebot-Extended",
                 ],
                 allow: "/",
-                disallow: ["/api/", "/auth/"],
+                disallow: ["/api/"],
             },
         ],
         sitemap: `${BASE_URL}/sitemap.xml`,

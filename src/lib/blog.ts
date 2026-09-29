@@ -1,8 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import remarkRehype from "remark-rehype";
+import rehypeKatex from "rehype-katex";
+import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -16,110 +21,131 @@ export interface PostData {
     slug: string;
     title: string;
     date: string;
+    /** Data em ISO (YYYY-MM-DD), derivada de `date` */
+    isoDate: string;
     readTime: string;
     author: string;
-    image: string;
     excerpt: string;
     contentHtml?: string;
     headings?: HeadingItem[];
 }
 
+const MONTHS: Record<string, string> = {
+    jan: "01", fev: "02", mar: "03", abr: "04", mai: "05", jun: "06",
+    jul: "07", ago: "08", set: "09", out: "10", nov: "11", dez: "12",
+};
+
+// "07 Jul 2026" -> "2026-07-07"
+export function parseDateToISO(dateStr: string): string {
+    const [day, month, year] = dateStr.trim().split(/\s+/);
+    const mm = MONTHS[month?.toLowerCase().slice(0, 3)];
+    if (!day || !mm || !year) return "1970-01-01";
+    return `${year}-${mm}-${day.padStart(2, "0")}`;
+}
+
+function readingTime(markdown: string): string {
+    const words = markdown.split(/\s+/).filter(Boolean).length;
+    return `${Math.max(1, Math.round(words / 200))} min`;
+}
+
+// Os posts escrevem fórmulas como \[ ... \] e \( ... \). O remark trata "\[" como colchete escapado,
+// então convertemos para a sintaxe $$ do remark-math. Cifrão simples fica desligado por causa do "R$".
+function normalizeMath(markdown: string): string {
+    return markdown
+        .replace(/^[ \t]*\\\[\s*([\s\S]+?)\s*\\\][ \t]*$/gm, (_, expr) => `\n$$\n${expr}\n$$\n`)
+        .replace(/\\\(\s*(.+?)\s*\\\)/g, (_, expr) => `$$${expr}$$`);
+}
+
+function readPostFile(fileName: string) {
+    const slug = fileName.replace(/\.md$/, "");
+    const fileContents = fs.readFileSync(path.join(postsDirectory, fileName), "utf8");
+    const { data, content } = matter(fileContents);
+    return {
+        slug,
+        content,
+        meta: {
+            slug,
+            title: data.title as string,
+            date: data.date as string,
+            isoDate: parseDateToISO(data.date as string),
+            readTime: readingTime(content),
+            author: data.author as string,
+            excerpt: data.excerpt as string,
+        } satisfies PostData,
+    };
+}
+
+function isPublished(isoDate: string): boolean {
+    return isoDate <= new Date().toISOString().slice(0, 10);
+}
+
+function listPostFiles(): string[] {
+    if (!fs.existsSync(postsDirectory)) return [];
+    return fs.readdirSync(postsDirectory).filter((f) => f.endsWith(".md"));
+}
 
 export function getSortedPostsData(): PostData[] {
-    // Get file names under /posts
-    if (!fs.existsSync(postsDirectory)) {
-        return [];
-    }
-
-    const fileNames = fs.readdirSync(postsDirectory);
-    const allPostsData = fileNames.map((fileName) => {
-        // Remove ".md" from file name to get id
-        const slug = fileName.replace(/\.md$/, "");
-
-        // Read markdown file as string
-        const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = fs.readFileSync(fullPath, "utf8");
-
-        // Use gray-matter to parse the post metadata section
-        const matterResult = matter(fileContents);
-
-        // Combine the data with the id
-        return {
-            slug,
-            ...(matterResult.data as Omit<PostData, "slug" | "contentHtml">),
-        };
-    });
-
-    // Sort posts by date
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1;
-        } else {
-            return -1;
-        }
-    });
+    return listPostFiles()
+        .map((f) => readPostFile(f).meta)
+        .filter((post) => isPublished(post.isoDate))
+        .sort((a, b) => b.isoDate.localeCompare(a.isoDate) || a.title.localeCompare(b.title));
 }
 
 export function getAllPostSlugs() {
-    if (!fs.existsSync(postsDirectory)) {
-        return [];
-    }
-    const fileNames = fs.readdirSync(postsDirectory);
-    return fileNames.map((fileName) => {
-        return {
-            params: {
-                slug: fileName.replace(/\.md$/, ""),
-            },
-        };
-    });
+    return getSortedPostsData().map((post) => ({ params: { slug: post.slug } }));
 }
 
-export async function getPostData(slug: string): Promise<PostData> {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
+export function postExists(slug: string): boolean {
+    return getSortedPostsData().some((post) => post.slug === slug);
+}
 
-    if (!fs.existsSync(fullPath)) {
-        throw new Error(`Post not found: ${slug}`);
-    }
+const decodeEntities = (s: string) =>
+    s
+        .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+        .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+        .replace(/&quot;/g, '"')
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&amp;/g, "&");
 
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+const slugify = (text: string) =>
+    text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .replace(/[^\w\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-");
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+export async function getPostData(slug: string): Promise<PostData | null> {
+    const fileName = `${slug}.md`;
+    if (!fs.existsSync(path.join(postsDirectory, fileName))) return null;
 
-    // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
-    let contentHtml = processedContent.toString();
+    const { content, meta } = readPostFile(fileName);
+    if (!isPublished(meta.isoDate)) return null;
+
+    const processed = await unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkMath, { singleDollarTextMath: false })
+        .use(remarkRehype)
+        .use(rehypeKatex)
+        .use(rehypeStringify)
+        .process(normalizeMath(content));
+    let contentHtml = processed.toString();
 
     // Extrair cabeçalhos (h2 e h3) e injetar ID para âncoras (TOC)
     const headings: HeadingItem[] = [];
-    const slugify = (text: string) => {
-        return text
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^\w\s-]/g, "")
-            .replace(/\s+/g, "-")
-            .replace(/-+/g, "-")
-            .trim();
-    };
-
-    contentHtml = contentHtml.replace(/<h(2|3)>([^<]+)<\/h\1>/g, (match, level, text) => {
+    contentHtml = contentHtml.replace(/<h(2|3)>([^<]+)<\/h\1>/g, (_, level, raw) => {
+        const text = decodeEntities(raw);
         const id = slugify(text);
         headings.push({ text, id, level: parseInt(level) });
-        return `<h${level} id="${id}">${text}</h${level}>`;
+        return `<h${level} id="${id}">${raw}</h${level}>`;
     });
 
-    // Combine the data with the id and contentHtml
-    return {
-        slug,
-        contentHtml,
-        headings,
-        ...(matterResult.data as Omit<PostData, "slug" | "contentHtml" | "headings">),
-    };
+    return { ...meta, contentHtml, headings };
 }
-
 
 export interface AdjacentPosts {
     prev: { slug: string; title: string } | null;
@@ -134,9 +160,7 @@ export function getAdjacentPosts(slug: string): AdjacentPosts {
         return { prev: null, next: null };
     }
 
-    // Ordenados por data decrescente (mais recente primeiro)
-    // O post mais novo (next) estará no índice anterior (index - 1)
-    // O post mais antigo (prev) estará no índice posterior (index + 1)
+    // Ordenados por data decrescente: o mais novo (next) fica antes, o mais antigo (prev) depois
     const nextPost = index > 0 ? posts[index - 1] : null;
     const prevPost = index < posts.length - 1 ? posts[index + 1] : null;
 
@@ -146,8 +170,33 @@ export function getAdjacentPosts(slug: string): AdjacentPosts {
     };
 }
 
+const STOPWORDS = new Set(
+    "o a os as e de do da dos das que como um uma para por na no nas nos em com sobre calcular pratica guia entender e é ao".split(" ")
+);
+
+const keywords = (post: PostData) =>
+    new Set(
+        slugify(`${post.title} ${post.excerpt}`)
+            .split("-")
+            .filter((w) => w.length > 2 && !STOPWORDS.has(w))
+    );
+
+// Relacionados por sobreposição de palavras-chave de título e resumo
 export function getRelatedPosts(currentSlug: string, limit = 3): PostData[] {
     const posts = getSortedPostsData();
-    return posts.filter((post) => post.slug !== currentSlug).slice(0, limit);
-}
+    const current = posts.find((p) => p.slug === currentSlug);
+    if (!current) return posts.slice(0, limit);
 
+    const base = keywords(current);
+    return posts
+        .filter((p) => p.slug !== currentSlug)
+        .map((p) => {
+            const kw = keywords(p);
+            let shared = 0;
+            kw.forEach((w) => base.has(w) && shared++);
+            return { p, score: shared / Math.sqrt(kw.size * base.size || 1) };
+        })
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit)
+        .map(({ p }) => p);
+}

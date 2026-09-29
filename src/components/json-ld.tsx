@@ -1,5 +1,6 @@
+import { SITE_URL } from "@/lib/site";
 export function JsonLd() {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
+    const siteUrl = SITE_URL;
 
     const jsonLd = {
         "@context": "https://schema.org",
@@ -8,7 +9,7 @@ export function JsonLd() {
                 "@type": "WebSite",
                 "@id": `${siteUrl}/#website`,
                 "url": siteUrl,
-                "name": "MFP Education — Modelagem Financeira na Prática",
+                "name": "Modelagem Financeira na Prática",
                 "alternateName": ["MFP Academy", "MFP Education", "Modelagem Financeira na Prática"],
                 "description": "Formação executiva e modelos institucionais em Excel, Valuation DCF, DRE, Balanço Patrimonial, DFC e automações com Inteligência Artificial.",
                 "inLanguage": "pt-BR",
@@ -19,7 +20,7 @@ export function JsonLd() {
             {
                 "@type": "EducationalOrganization",
                 "@id": `${siteUrl}/#organization`,
-                "name": "MFP Education",
+                "name": "Modelagem Financeira na Prática",
                 "alternateName": "MFP Academy",
                 "url": siteUrl,
                 "logo": `${siteUrl}/logo-mfp.png`,

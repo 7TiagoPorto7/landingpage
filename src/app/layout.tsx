@@ -6,18 +6,19 @@ import { JsonLd } from "@/components/json-ld";
 import { Analytics } from "@/components/analytics";
 import { ScrollTracker } from "@/components/scroll-tracker";
 import { UtmTracker } from "@/components/utm-tracker";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.mfpacademy.com.br";
+const siteUrl = SITE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "MFP Education | Modelagem Financeira na Prática, Valuation & FP&A",
-    template: "%s | MFP Education",
+    default: "Modelagem Financeira na Prática | Valuation, DRE e FP&A com Tiago Porto",
+    template: `%s | ${SITE_NAME}`,
   },
   description: "Formação executiva e modelos institucionais em Excel, Valuation DCF, DRE, Balanço Patrimonial, DFC e automações de finanças com Inteligência Artificial.",
   keywords: [
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
     "m&a",
   ],
   authors: [{ name: "Tiago Porto", url: siteUrl }],
-  creator: "MFP Education",
-  publisher: "MFP Education",
+  creator: "Tiago Porto",
+  publisher: SITE_NAME,
   formatDetection: {
     email: false,
     address: false,
@@ -49,23 +50,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    title: "MFP Education | Modelagem Financeira na Prática, Valuation & FP&A",
+    title: "Modelagem Financeira na Prática | Valuation, DRE e FP&A com Tiago Porto",
     description: "Formação executiva e modelos institucionais em Excel, Valuation DCF, DRE, Balanço Patrimonial, DFC e automações com IA.",
-    siteName: "MFP Education — Modelagem Financeira na Prática",
-    images: [
-      {
-        url: "/logo-mfp.png",
-        width: 1200,
-        height: 630,
-        alt: "MFP Education — Modelagem Financeira na Prática",
-      },
-    ],
+    siteName: SITE_NAME,
   },
   twitter: {
     card: "summary_large_image",
-    title: "MFP Education | Modelagem Financeira na Prática",
+    title: SITE_NAME,
     description: "Formação executiva e modelos institucionais em Excel, Valuation DCF e IA para finanças.",
-    images: ["/logo-mfp.png"],
   },
   robots: {
     index: true,
