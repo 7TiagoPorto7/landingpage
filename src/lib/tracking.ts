@@ -1,120 +1,80 @@
 "use client";
 
-// Tracking IDs with TODO fallbacks if not provided in env
-export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || ""; // TODO: [PREENCHER: ID do Pixel do Meta]
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-V70VJ88N4V";
-
 export const BASE_CHECKOUT_URL = "https://pay.hotmart.com/F106435738T";
 
-/**
- * Capture and store UTM parameters from URL into sessionStorage
- */
-export function initUtmTracking() {
-    if (typeof window === "undefined") return;
+const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"] as const;
 
+type Fbq = (command: "track", event: string, params?: Record<string, unknown>) => void;
+const fbq = (): Fbq | undefined => (window as unknown as { fbq?: Fbq }).fbq;
+
+/**
+ * UTMs da visita: URL atual > sessionStorage "utm_data" (gravado pelo UtmTracker) > chaves soltas legadas.
+ */
+function getStoredUtms(): Record<string, string> {
+    const utms: Record<string, string> = {};
     try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-        
-        utmKeys.forEach((key) => {
-            const val = urlParams.get(key);
-            if (val) {
-                sessionStorage.setItem(key, val);
-            }
-        });
-    } catch (e) {
-        console.error("Failed to store UTM parameters:", e);
-    }
+        const current = new URLSearchParams(window.location.search);
+        const saved = JSON.parse(sessionStorage.getItem("utm_data") || "{}") as Record<string, string>;
+        for (const key of UTM_KEYS) {
+            const val = current.get(key) || saved[key] || sessionStorage.getItem(key);
+            if (val) utms[key] = val;
+        }
+    } catch {}
+    return utms;
 }
 
 /**
- * Decorates checkout URL with stored UTMs and Hotmart `sck` parameter
+ * Adiciona as UTMs da visita e o parâmetro `sck` da Hotmart ao link de checkout.
  */
 export function getDecoratedCheckoutUrl(baseUrl: string = BASE_CHECKOUT_URL): string {
     if (typeof window === "undefined") return baseUrl;
 
     try {
         const url = new URL(baseUrl);
-        const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-        
-        const storedUtms: Record<string, string> = {};
-        const currentParams = new URLSearchParams(window.location.search);
+        const utms = getStoredUtms();
+        Object.entries(utms).forEach(([key, val]) => url.searchParams.set(key, val));
 
-        utmKeys.forEach((key) => {
-            const val = currentParams.get(key) || sessionStorage.getItem(key);
-            if (val) {
-                storedUtms[key] = val;
-                url.searchParams.set(key, val);
-            }
-        });
-
-        // Format Hotmart sck parameter: utm_source|utm_medium|utm_campaign|utm_content
-        const sckParts = [
-            storedUtms["utm_source"] || "",
-            storedUtms["utm_medium"] || "",
-            storedUtms["utm_campaign"] || "",
-            storedUtms["utm_content"] || "",
-        ].join("|");
-
-        if (sckParts !== "|||") {
-            url.searchParams.set("sck", sckParts);
-        }
+        // sck da Hotmart: utm_source|utm_medium|utm_campaign|utm_content
+        const sck = [utms.utm_source, utms.utm_medium, utms.utm_campaign, utms.utm_content].map((v) => v || "").join("|");
+        if (sck !== "|||") url.searchParams.set("sck", sck);
 
         return url.toString();
-    } catch (e) {
+    } catch {
         return baseUrl;
     }
 }
 
 /**
- * Trigger InitiateCheckout on Meta Pixel and begin_checkout on GA4 before redirect
+ * Dispara begin_checkout (GA4) e InitiateCheckout (Meta) antes de ir para a Hotmart.
  */
-export function trackCheckout(sectionName: string, value: number = 197) {
-    if (typeof window !== "undefined") {
-        try {
-            localStorage.setItem("has_clicked_checkout", "true");
-        } catch (e) {}
+export function trackCheckout(sectionName: string, value: number = 197, productName = "Fundamentos da Modelagem Financeira") {
+    if (typeof window === "undefined") return;
 
-        // GA4 Event
-        if (typeof window.gtag !== "undefined") {
-            (window as any).gtag("event", "begin_checkout", {
-                currency: "BRL",
-                value: value,
-                item_name: "Fundamentos da Modelagem Financeira",
-                section: sectionName,
-            });
-        }
+    try {
+        localStorage.setItem("has_clicked_checkout", "true");
+    } catch {}
 
-        // Meta Pixel Event
-        if (typeof (window as any).fbq !== "undefined") {
-            (window as any).fbq("track", "InitiateCheckout", {
-                value: value,
-                currency: "BRL",
-                content_name: "Fundamentos da Modelagem Financeira",
-                section: sectionName,
-            });
-        }
-    }
+    window.gtag?.("event", "begin_checkout", {
+        currency: "BRL",
+        value,
+        item_name: productName,
+        section: sectionName,
+    });
+
+    fbq()?.("track", "InitiateCheckout", {
+        value,
+        currency: "BRL",
+        content_name: productName,
+        section: sectionName,
+    });
 }
 
 /**
- * Trigger Lead event on Meta Pixel and generate_lead on GA4
+ * Dispara generate_lead (GA4) e Lead (Meta).
  */
 export function trackLead(formSource: string = "fundamentos_page") {
-    if (typeof window !== "undefined") {
-        // GA4 Event
-        if (typeof (window as any).gtag !== "undefined") {
-            (window as any).gtag("event", "generate_lead", {
-                source: formSource,
-            });
-        }
+    if (typeof window === "undefined") return;
 
-        // Meta Pixel Event
-        if (typeof (window as any).fbq !== "undefined") {
-            (window as any).fbq("track", "Lead", {
-                content_name: "Captura de Lead Fundamentos",
-                source: formSource,
-            });
-        }
-    }
+    window.gtag?.("event", "generate_lead", { source: formSource });
+    fbq()?.("track", "Lead", { source: formSource });
 }

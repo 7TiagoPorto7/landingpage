@@ -1,6 +1,12 @@
-"use client";
-
 import Link from "next/link";
+import type { Metadata } from "next";
+import { ContactForm } from "./contact-form";
+
+export const metadata: Metadata = {
+    title: "Termos, Privacidade e Contato",
+    description: "Termos de uso, política de privacidade e canais de contato da Modelagem Financeira na Prática.",
+    alternates: { canonical: "/legal" },
+};
 import { ArrowLeft, Mail, MapPin, Phone } from "lucide-react";
 
 export default function LegalPage() {
@@ -93,41 +99,7 @@ export default function LegalPage() {
                             </div>
                         </div>
 
-                        <form className="space-y-4 p-6 border rounded-2xl bg-card border-white/10">
-                            <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-medium">Nome</label>
-                                <input
-                                    id="name"
-                                    type="text"
-                                    placeholder="Seu nome"
-                                    className="w-full px-3 py-2 rounded-md bg-secondary border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium">E-mail</label>
-                                <input
-                                    id="email"
-                                    type="email"
-                                    placeholder="seu@email.com"
-                                    className="w-full px-3 py-2 rounded-md bg-secondary border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-medium">Mensagem</label>
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    placeholder="Como podemos ajudar?"
-                                    className="w-full px-3 py-2 rounded-md bg-secondary border border-white/10 focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                className="w-full py-3 font-bold text-black rounded-lg bg-primary hover:bg-primary/90 transition-colors"
-                            >
-                                Enviar Mensagem
-                            </button>
-                        </form>
+                        <ContactForm />
                     </div>
                 </section>
             </div>
