@@ -14,7 +14,11 @@ O EBITDA é uma versão mais branda de lucratividade, pois não considera as des
 
 ## A Fórmula e Componentes do Cobertura de Juros por EBITDA
 A fórmula para calcular a Cobertura de Juros por EBITDA é relativamente simples:
-\[ \text{Cobertura de Juros por EBITDA} = \frac{\text{EBITDA}}{\text{Despesa com Juros}} \]
+
+$$
+\text{Cobertura de Juros por EBITDA} = \frac{\text{EBITDA}}{\text{Despesa com Juros}}
+$$
+
 Onde:
 - **EBITDA** é o lucro antes de juros, impostos, depreciação e amortização.
 - **Despesa com Juros** é a soma das despesas com juros pagos pela empresa durante um período específico.
@@ -34,11 +38,20 @@ Vamos considerar uma empresa fictícia, a "Indústria XYZ", que deseja avaliar s
 | Impostos | 80.000 |
 
 Primeiro, calculamos o EBITDA:
-\[ \text{EBITDA} = \text{Receita Líquida} - \text{Custo dos Produtos Vendidos} - \text{Despesas Operacionais} \]
-\[ \text{EBITDA} = 1.000.000 - 600.000 - 150.000 = 250.000 \]
+
+$$
+\text{EBITDA} = \text{Receita Líquida} - \text{Custo dos Produtos Vendidos} - \text{Despesas Operacionais}
+$$
+
+$$
+\text{EBITDA} = 1.000.000 - 600.000 - 150.000 = 250.000
+$$
 
 Em seguida, calculamos a Cobertura de Juros por EBITDA:
-\[ \text{Cobertura de Juros por EBITDA} = \frac{250.000}{40.000} = 6,25 \times \]
+
+$$
+\text{Cobertura de Juros por EBITDA} = \frac{250.000}{40.000} = 6{,}25 \times
+$$
 
 Isso significa que a Indústria XYZ tem uma cobertura de juros por EBITDA de 6,25 vezes, indicando uma boa capacidade de cobrir suas despesas com juros com base em sua lucratividade operacional.
 

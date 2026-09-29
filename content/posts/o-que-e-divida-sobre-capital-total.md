@@ -12,7 +12,11 @@ A Dívida sobre Capital Total, também conhecida como Debt-to-Capital Ratio, é 
 
 ## A Fórmula e Componentes do Dívida sobre Capital Total
 A fórmula para calcular a Dívida sobre Capital Total é:
-\[ D/C = \frac{Total\ Debt}{Total\ Debt + Total\ Equity} \]
+
+$$
+D/C = \frac{\text{Total Debt}}{\text{Total Debt} + \text{Total Equity}}
+$$
+
 Nesta fórmula, os principais componentes são:
 - **Total Debt**: Refere-se ao valor total da dívida da empresa, incluindo tanto dívidas de curto prazo quanto de longo prazo. Isso pode incluir empréstimos bancários, notas promissórias, e qualquer outra obrigação de pagamento que a empresa tenha.
 - **Total Equity**: Representa o valor total do equity da empresa, que inclui o capital social, as reservas e os lucros acumulados. O equity reflete o valor líquido da empresa após a dedução de todas as suas dívidas.
@@ -31,7 +35,11 @@ Vamos considerar uma empresa fictícia, a "Indústria XYZ S.A.", que está avali
 | Total Equity | 800.000,00 |
 
 Para calcular a Dívida sobre Capital Total, aplicamos a fórmula:
-\[ D/C = \frac{600.000,00}{600.000,00 + 800.000,00} = \frac{600.000,00}{1.400.000,00} = 0,4286 \]
+
+$$
+D/C = \frac{600.000{,}00}{600.000{,}00 + 800.000{,}00} = \frac{600.000{,}00}{1.400.000{,}00} = 0{,}4286
+$$
+
 ou 42,86% quando expresso como porcentagem.
 
 Isso significa que 42,86% do capital total da Indústria XYZ S.A. é financiado por dívida. Essa informação é crucial para os gestores, pois pode indicar se a empresa está assumindo um nível de risco excessivo com sua estratégia de endividamento.

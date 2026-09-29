@@ -14,7 +14,10 @@ O Índice de Liquidez Imediata é particularmente útil em situações de crise 
 
 ## A Fórmula e Componentes do Índice de Liquidez Imediata
 A fórmula para calcular o Índice de Liquidez Imediata é:
-\[ Cash Ratio = \frac{Caixa + Equivalentes de Caixa}{Passivo Circulante} \]
+
+$$
+\text{Cash Ratio} = \frac{\text{Caixa} + \text{Equivalentes de Caixa}}{\text{Passivo Circulante}}
+$$
 
 Desmembrando os componentes da fórmula:
 
@@ -34,7 +37,10 @@ Vamos considerar uma empresa fictícia, a "Tecnologia S.A.", que está passando 
 | Passivo Circulante | 400.000,00 |
 
 Para calcular o Índice de Liquidez Imediata, seguiremos a fórmula:
-\[ Cash Ratio = \frac{150.000 + 50.000}{400.000} = \frac{200.000}{400.000} = 0,5 \]
+
+$$
+\text{Cash Ratio} = \frac{150.000 + 50.000}{400.000} = \frac{200.000}{400.000} = 0{,}5
+$$
 
 Isso significa que a Tecnologia S.A. tem recursos suficientes para pagar 50% de suas dívidas de curto prazo apenas com seus recursos em caixa e equivalentes de caixa. Este resultado pode ser interpretado de várias maneiras, dependendo do contexto e da indústria em que a empresa atua. Para empresas de tecnologia, um Cash Ratio de 0,5 pode ser considerado razoável, indicando uma gestão prudente de caixa. No entanto, para empresas em setores mais tradicionais, este mesmo valor pode ser considerado baixo, sugerindo uma possível vulnerabilidade financeira.
 

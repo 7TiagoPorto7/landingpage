@@ -14,13 +14,20 @@ Os gestores e investidores utilizam o GAT para avaliar o risco e o potencial de 
 
 ## A Fórmula e Componentes do Grau de Alavancagem Total (GAT)
 A fórmula para calcular o GAT é:
-\[ DCL = DOL \times DFL \]
+
+$$
+\text{DCL} = \text{DOL} \times \text{DFL}
+$$
+
 ou
-\[ DCL = \frac{\% \text{ Change in EPS}}{\% \text{ Change in Revenue}} \]
+
+$$
+\text{DCL} = \frac{\% \text{ Change in EPS}}{\% \text{ Change in Revenue}}
+$$
 
 Onde:
-- \( DOL \) é o Grau de Alavancagem Operacional (Degree of Operating Leverage), que mede a sensibilidade do lucro operacional em relação às mudanças na receita.
-- \( DFL \) é o Grau de Alavancagem Financeira (Degree of Financial Leverage), que mede a sensibilidade do Lucro por Ação (EPS) em relação às mudanças no lucro operacional.
+- $$\text{DOL}$$ é o Grau de Alavancagem Operacional (Degree of Operating Leverage), que mede a sensibilidade do lucro operacional em relação às mudanças na receita.
+- $$\text{DFL}$$ é o Grau de Alavancagem Financeira (Degree of Financial Leverage), que mede a sensibilidade do Lucro por Ação (EPS) em relação às mudanças no lucro operacional.
 
 A fórmula mostra que o GAT é o produto da alavancagem operacional e da alavancagem financeira. Isso significa que empresas com alta alavancagem operacional e financeira terão um GAT mais alto, indicando que pequenas variações na receita podem levar a variações significativas no EPS.
 
@@ -35,22 +42,40 @@ Vamos considerar uma empresa fictícia, a "Empresa X", que opera no setor de tec
 Com base nos dados acima, podemos calcular o DOL e o DFL para a Empresa X.
 
 - **DOL**: Considerando a variação no lucro operacional em relação à variação na receita:
-\[ DOL = \frac{\% \text{ Change in Lucro Operacional}}{\% \text{ Change in Receita}} \]
-\[ DOL = \frac{(22.000 - 20.000) / 20.000}{(110.000 - 100.000) / 100.000} = \frac{0,10}{0,10} = 1 \]
+
+$$
+\text{DOL} = \frac{\% \text{ Change in Lucro Operacional}}{\% \text{ Change in Receita}}
+$$
+
+$$
+\text{DOL} = \frac{(22.000 - 20.000) / 20.000}{(110.000 - 100.000) / 100.000} = \frac{0{,}10}{0{,}10} = 1
+$$
 
 - **DFL**: Considerando a variação no EPS em relação à variação no lucro operacional:
-\[ DFL = \frac{\% \text{ Change in EPS}}{\% \text{ Change in Lucro Operacional}} \]
-\[ DFL = \frac{(1,70 - 1,50) / 1,50}{(22.000 - 20.000) / 20.000} = \frac{0,1333}{0,10} = 1,333 \]
+
+$$
+\text{DFL} = \frac{\% \text{ Change in EPS}}{\% \text{ Change in Lucro Operacional}}
+$$
+
+$$
+\text{DFL} = \frac{(1{,}70 - 1{,}50) / 1{,}50}{(22.000 - 20.000) / 20.000} = \frac{0{,}1333}{0{,}10} = 1{,}333
+$$
 
 - **GAT**:
-\[ GAT = DOL \times DFL = 1 \times 1,333 = 1,333 \]
+
+$$
+\text{GAT} = \text{DOL} \times \text{DFL} = 1 \times 1{,}333 = 1{,}333
+$$
 
 Isso significa que para cada 1% de aumento na receita, o EPS da Empresa X aumenta em 1,333%. Essa informação é crucial para os gestores da Empresa X, pois lhes permite entender melhor o impacto potencial de suas decisões de investimento e expansão no desempenho financeiro da empresa.
 
 ## Armadilhas e Sinais de Alerta (Red Flags)
 Um dos principais sinais de alerta relacionados ao GAT é quando o valor é muito alto, indicando que a empresa está muito alavancada. Por exemplo, se o GAT for maior que 5, isso significa que uma queda de 10% na receita pode resultar em uma queda de 50% ou mais no EPS. Isso sinaliza um alto nível de risco financeiro, pois pequenas flutuações na receita podem ter impactos significativos e potencialmente desastrosos no lucro da empresa.
 
-\[ DCL > 5x \]
+$$
+\text{DCL} > 5x
+$$
+
 é considerado um sinal de alerta. Além disso, é importante considerar o ciclo do setor e as condições econômicas gerais, pois esses fatores podem afetar a estabilidade da receita e, consequentemente, o GAT.
 
 ## Termos Relacionados e Conclusão

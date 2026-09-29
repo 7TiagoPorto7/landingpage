@@ -33,7 +33,7 @@ Suponha que você comprou uma opção de compra (Call) sobre ações da empresa 
 | --- | --- | --- |
 | Call XYZ | R$ 55,00 | R$ 50,00 |
 
-Para calcular o Valor Intrínseco da opção de compra, usamos a fórmula: `Max(S - K, 0) = Max(55 - 50, 0) = Max(5, 0) = 5`
+Para calcular o Valor Intrínseco da opção de compra, usamos a fórmula: $$\max(S - K,\ 0) = \max(55 - 50,\ 0) = 5$$
 
 Isso significa que o Valor Intrínseco da opção de compra é de R$ 5,00. Isso indica que, se a opção for exercida imediatamente, você pode comprar a ação por R$ 50,00 e vendê-la por R$ 55,00, obtendo um lucro de R$ 5,00 por ação.
 

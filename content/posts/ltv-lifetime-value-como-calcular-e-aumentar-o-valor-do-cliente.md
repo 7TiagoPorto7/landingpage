@@ -23,11 +23,11 @@ A falta de apuração regular do LTV deixa os executivos e acionistas sem clarez
 
 Para modelar o LTV de forma profissional nas suas planilhas de finanças, você deve seguir estritamente as regras contábeis aceitas. O cálculo é expresso pela seguinte equação:
 
-```
-LTV = Receita Média Mensal (ARPU) / Taxa de Cancelamento Mensal (Churn)
-```
+$$
+\text{LTV} = \dfrac{\text{ARPU mensal}}{\text{Churn mensal}}
+$$
 
-Cada variável dessa fórmula é extraída diretamente das três demonstrações contábeis primárias: a [[DRE](/blog/o-que-e-dre-como-calcular) (Demonstração do Resultado do Exercício)](/blog/o-que-e-dre-como-calcular), o [Balanço Patrimonial](/blog/o-que-e-bp-como-calcular) e a [[DFC](/blog/o-que-e-dfc-como-calcular) (Demonstração do Fluxo de Caixa)](/blog/o-que-e-dfc-como-calcular). O analista não deve introduzir termos de receita não-recorrentes ou despesas extraordinárias de forma a não distorcer o resultado projetado.
+Cada variável dessa fórmula é extraída diretamente das três demonstrações contábeis primárias: a [DRE (Demonstração do Resultado do Exercício)](/blog/o-que-e-dre-como-calcular), o [Balanço Patrimonial](/blog/o-que-e-bp-como-calcular) e a [DFC (Demonstração do Fluxo de Caixa)](/blog/o-que-e-dfc-como-calcular). O analista não deve introduzir termos de receita não-recorrentes ou despesas extraordinárias de forma a não distorcer o resultado projetado.
 
 ### Exemplo Numérico Passo a Passo
 
@@ -45,7 +45,7 @@ Jovens analistas frequentemente falham em deduzir taxas de impostos locais ou mi
 
 ### Conexão e Comparativos com Outras Métricas
 
-É fundamental interpretar o LTV sob uma ótica integrada. Analisar esse dado isoladamente é um erro clássico de diagnóstico de valuation. Recomenda-se comparar este indicador com o custo ponderado de capital ([[WACC](/blog/wacc-weighted-average-cost-of-capital-o-guia-definitivo)](/blog/wacc-weighted-average-cost-of-capital-o-guia-definitivo)), o retorno sobre o capital investido ([[ROIC](/blog/o-que-e-roic-como-calcular)](/blog/o-que-e-roic-como-calcular)) e as variações do [Capital de Giro](/blog/o-que-e-capital-de-giro-como-calcular) para entender se a empresa de fato gera valor econômico sustentável.
+É fundamental interpretar o LTV sob uma ótica integrada. Analisar esse dado isoladamente é um erro clássico de diagnóstico de valuation. Recomenda-se comparar este indicador com o custo ponderado de capital ([WACC](/blog/wacc-weighted-average-cost-of-capital-o-guia-definitivo)), o retorno sobre o capital investido ([ROIC](/blog/o-que-e-roic-como-calcular)) e as variações do [Capital de Giro](/blog/o-que-e-capital-de-giro-como-calcular) para entender se a empresa de fato gera valor econômico sustentável.
 
 ### Boas Práticas de Modelagem em Excel
 

@@ -14,7 +14,10 @@ A Dívida sobre Ativos é particularmente útil para entender como as empresas f
 
 ## A Fórmula e Componentes do Dívida sobre Ativos
 A fórmula para calcular a Dívida sobre Ativos é:
-\[ D/A = \frac{Total\ Debt}{Total\ Assets} \]
+
+$$
+D/A = \frac{\text{Total Debt}}{\text{Total Assets}}
+$$
 
 Nesta fórmula:
 - **Total Debt** refere-se ao total da dívida da empresa, incluindo tanto a dívida onerosa (como empréstimos bancários e títulos de dívida) quanto a dívida não onerosa (como contas a pagar a fornecedores).
@@ -31,7 +34,10 @@ Vamos considerar uma empresa fictícia, a "Indústria XYZ", que tem os seguintes
 | Total Assets | 2.000.000 |
 
 Para calcular a Dívida sobre Ativos da Indústria XYZ, aplicamos a fórmula:
-\[ D/A = \frac{600.000}{2.000.000} = 0,30 \]
+
+$$
+D/A = \frac{600.000}{2.000.000} = 0{,}30
+$$
 
 Isso significa que 30% dos ativos da Indústria XYZ são financiados por dívida. Esta informação é crucial para investidores e credores, pois indica o nível de alavancagem financeira da empresa e seu potencial risco de inadimplência.
 

@@ -14,7 +14,10 @@ O LDR é amplamente utilizado por instituições financeiras, reguladores e inve
 
 ## A Fórmula e Componentes do Empréstimos / Depósitos
 A fórmula para calcular o LDR é simples e direta:
-\[ LDR = \frac{Total\ de\ Empréstimos}{Total\ de\ Depósitos} \times 100 \]
+
+$$
+\text{LDR} = \frac{\text{Total de Empréstimos}}{\text{Total de Depósitos}} \times 100
+$$
 
 Desmembrando os componentes:
 - **Total de Empréstimos**: Refere-se ao valor total dos empréstimos concedidos pela instituição financeira. Isso inclui todos os tipos de empréstimos, como empréstimos pessoais, hipotecas, empréstimos para empresas, etc.
@@ -31,7 +34,10 @@ Vamos considerar um exemplo prático de uma instituição financeira fictícia, 
 | Total de Depósitos | 7.500.000 |
 
 Para calcular o LDR do Banco Verde, aplicamos a fórmula:
-\[ LDR = \frac{6.000.000}{7.500.000} \times 100 = 80\% \]
+
+$$
+\text{LDR} = \frac{6.000.000}{7.500.000} \times 100 = 80\%
+$$
 
 Isso significa que o Banco Verde tem um LDR de 80%, o que é considerado equilibrado. A instituição tem depósitos suficientes para cobrir 80% dos empréstimos concedidos, indicando uma boa gestão da liquidez.
 

@@ -14,7 +14,10 @@ O propósito da Construção Receita (Bottom-Up) é fornecer uma base sólida pa
 
 ## A Fórmula e Componentes do Construção Receita (Bottom-Up)
 A fórmula por trás da Construção Receita (Bottom-Up) é relativamente direta, mas requer uma compreensão profunda dos componentes envolvidos:
-\[ \text{Receita} = \Sigma(\text{Unidades} \times \text{Preço}) \text{ por produto/segmento} \]
+
+$$
+\text{Receita} = \Sigma(\text{Unidades} \times \text{Preço}) \text{ por produto/segmento}
+$$
 
 Nesta fórmula:
 - **Unidades** se refere ao volume de produtos ou serviços que uma empresa espera vender.

@@ -12,7 +12,11 @@ O EBITDA (Lucro Antes dos Juros, Impostos, Depreciação e Amortização) é uma
 
 ## O que é EBITDA?
 O EBITDA é calculado adicionando a depreciação e a amortização ao lucro líquido de uma empresa, e então subtraindo os juros e impostos. A fórmula para calcular o EBITDA é a seguinte:
-\[ EBITDA = Lucro Líquido + Juros + Impostos + Depreciação + Amortização \]
+
+$$
+\text{EBITDA} = \text{Lucro Líquido} + \text{Juros} + \text{Impostos} + \text{Depreciação} + \text{Amortização}
+$$
+
 Essa métrica é útil porque remove os efeitos da estrutura de capital e das políticas de tributação de uma empresa, permitindo uma comparação mais direta entre empresas diferentes.
 
 ## Por que o EBITDA é Importante?

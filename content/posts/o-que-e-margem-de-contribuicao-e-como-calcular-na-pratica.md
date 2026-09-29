@@ -14,7 +14,10 @@ A Margem de Contribuição é amplamente utilizada por gestores, Controllers e e
 
 ## A Fórmula e Componentes do Margem de Contribuição
 A fórmula para calcular a Margem de Contribuição é simples, mas requer uma compreensão clara dos seus componentes:
-\[ \text{Margem de Contribuição} = \text{Receita} - \text{Custos Variáveis} \]
+
+$$
+\text{Margem de Contribuição} = \text{Receita} - \text{Custos Variáveis}
+$$
 
 - **Receita**: É o valor total gerado pela venda de um produto ou serviço. Isso inclui todas as receitas provenientes da venda, independentemente de serem em dinheiro ou crédito.
 - **Custos Variáveis**: São os custos que variam diretamente com a quantidade produzida ou vendida. Exemplos incluem matéria-prima, mão de obra direta, embalagens, comissões de vendas e outros custos que aumentam ou diminuem proporcionalmente à produção ou vendas.
@@ -32,10 +35,22 @@ Vamos considerar a empresa "BemBom", que produz e vende barras de chocolate. Os 
 | Outros Custos Variáveis (embalagem, etc.) | R$ 1,00 |
 
 Para calcular a Margem de Contribuição por unidade, utilizamos a fórmula:
-\[ \text{Margem de Contribuição} = \text{Preço de Venda} - (\text{Custo de Matéria-Prima} + \text{Custo de Mão de Obra Direta} + \text{Outros Custos Variáveis}) \]
-\[ \text{Margem de Contribuição} = R\$ 10,00 - (R\$ 3,00 + R\$ 2,00 + R\$ 1,00) \]
-\[ \text{Margem de Contribuição} = R\$ 10,00 - R\$ 6,00 \]
-\[ \text{Margem de Contribuição} = R\$ 4,00 \]
+
+$$
+\text{Margem de Contribuição} = \text{Preço de Venda} - (\text{Custo de Matéria-Prima} + \text{Custo de Mão de Obra Direta} + \text{Outros Custos Variáveis})
+$$
+
+$$
+\text{Margem de Contribuição} = R\$ 10{,}00 - (R\$ 3{,}00 + R\$ 2{,}00 + R\$ 1{,}00)
+$$
+
+$$
+\text{Margem de Contribuição} = R\$ 10{,}00 - R\$ 6{,}00
+$$
+
+$$
+\text{Margem de Contribuição} = R\$ 4{,}00
+$$
 
 Isso significa que cada barra de chocolate vendida contribui com R$ 4,00 para cobrir os custos fixos e gerar lucro.
 

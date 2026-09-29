@@ -14,10 +14,14 @@ O RWA é calculado multiplicando o valor de cada ativo pelo seu respectivo peso 
 
 ## A Fórmula e Componentes do Ativos Ponderados pelo Risco
 A fórmula para calcular o RWA é:
-\[ RWA = \sum (Asset_i \times Risk\_Weight_i) \]
+
+$$
+\text{RWA} = \sum (\text{Asset}_i \times \text{Risk}\_\text{Weight}_i)
+$$
+
 Onde:
-- \( Asset_i \) é o valor do i-ésimo ativo,
-- \( Risk\_Weight_i \) é o peso de risco atribuído ao i-ésimo ativo.
+- $$\text{Asset}_i$$ é o valor do i-ésimo ativo,
+- $$\text{Risk}\_\text{Weight}_i$$ é o peso de risco atribuído ao i-ésimo ativo.
 
 O peso de risco é uma medida que varia de 0% a 100% e reflete o nível de risco associado a cada tipo de ativo. Por exemplo, ativos considerados de baixo risco, como títulos do governo, recebem um peso de risco de 0%, enquanto ativos de alto risco, como empréstimos a empresas, podem receber um peso de risco de 100%.
 
@@ -34,9 +38,17 @@ Vamos considerar um exemplo prático de como calcular o RWA para uma instituiç�
 
 Para calcular o RWA, multiplicamos o valor de cada ativo pelo seu peso de risco e somamos esses valores:
 
-\[ RWA = (R\$ 10.000.000 \times 0\%) + (R\$ 50.000.000 \times 35\%) + (R\$ 20.000.000 \times 100\%) \]
-\[ RWA = R\$ 0 + R\$ 17.500.000 + R\$ 20.000.000 \]
-\[ RWA = R\$ 37.500.000 \]
+$$
+\text{RWA} = (R\$ 10.000.000 \times 0\%) + (R\$ 50.000.000 \times 35\%) + (R\$ 20.000.000 \times 100\%)
+$$
+
+$$
+\text{RWA} = R\$ 0 + R\$ 17.500.000 + R\$ 20.000.000
+$$
+
+$$
+\text{RWA} = R\$ 37.500.000
+$$
 
 Isso significa que a instituição financeira precisa manter R$ 37.500.000 em capital para cobrir a exposição ao risco de seus ativos.
 

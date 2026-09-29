@@ -14,7 +14,10 @@ O Custo do Capital Próprio é uma variável crítica para os gestores financeir
 
 ## A Fórmula e Componentes do Custo do Capital Próprio
 A fórmula para calcular o Custo do Capital Próprio é a seguinte:
-\[ Ke = Rf + \beta \times (Rm - Rf) + Size\ Premium + Country\ Risk \]
+
+$$
+\text{Ke} = \text{Rf} + \beta \times (\text{Rm} - \text{Rf}) + \text{Size Premium} + \text{Country Risk}
+$$
 
 - **Rf (Taxa de Juros Livre de Risco):** Representa a taxa de juros que um investidor pode obter em um investimento livre de risco, como títulos do tesouro. É o ponto de partida para o cálculo do Custo do Capital Próprio, pois reflete o retorno que os investidores poderiam obter sem correr riscos.
   
@@ -38,10 +41,22 @@ Vamos considerar uma empresa fictícia, a "TecnoSolutions", que opera no setor d
 | Country Risk | 2,5% (devido ao risco político e econômico do país onde opera) |
 
 Substituindo esses valores na fórmula, obtemos:
-\[ Ke = 4,5\% + 1,2 \times (10,5\% - 4,5\%) + 0\% + 2,5\% \]
-\[ Ke = 4,5\% + 1,2 \times 6\% + 2,5\% \]
-\[ Ke = 4,5\% + 7,2\% + 2,5\% \]
-\[ Ke = 14,2\% \]
+
+$$
+\text{Ke} = 4{,}5\% + 1{,}2 \times (10{,}5\% - 4{,}5\%) + 0\% + 2{,}5\%
+$$
+
+$$
+\text{Ke} = 4{,}5\% + 1{,}2 \times 6\% + 2{,}5\%
+$$
+
+$$
+\text{Ke} = 4{,}5\% + 7{,}2\% + 2{,}5\%
+$$
+
+$$
+\text{Ke} = 14{,}2\%
+$$
 
 Portanto, o Custo do Capital Próprio da TecnoSolutions é de 14,2%. Isso significa que os acionistas exigem um retorno mínimo de 14,2% para investir na empresa, considerando o risco associado.
 

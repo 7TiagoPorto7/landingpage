@@ -14,45 +14,76 @@ O Modelo Black-Scholes (Call) assume que o preço do ativo subjacente segue um m
 
 ## A Fórmula e Componentes do Modelo Black-Scholes (Call)
 A fórmula do Modelo Black-Scholes (Call) é dada por:
-\[C = S \times N(d_1) - K \times e^{(-rT)} \times N(d_2)\]
-onde:
-- \(C\) é o valor da opção call;
-- \(S\) é o preço atual do ativo subjacente;
-- \(K\) é o preço de exercício da opção;
-- \(r\) é a taxa de juros livre de risco;
-- \(T\) é o tempo até o vencimento da opção, expresso em anos;
-- \(N(d_1)\) e \(N(d_2)\) são as funções de distribuição acumulada da variável padrão normal, avaliadas em \(d_1\) e \(d_2\), respectivamente;
-- \(d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)T}{\sigma \sqrt{T}}\);
-- \(d_2 = d_1 - \sigma \sqrt{T}\);
-- \(\sigma\) é a volatilidade do ativo subjacente.
 
-Cada componente da fórmula desempenha um papel crucial no cálculo do valor da opção call. A volatilidade (\(\sigma\)) é um dos principais fatores que afetam o valor da opção, pois reflete a incerteza do preço do ativo subjacente. A taxa de juros (\(r\)) também é importante, pois influencia o valor presente do preço de exercício.
+$$
+C = S \times N(d_1) - K \times e^{(-\text{rT})} \times N(d_2)
+$$
+
+onde:
+- $$C$$ é o valor da opção call;
+- $$S$$ é o preço atual do ativo subjacente;
+- $$K$$ é o preço de exercício da opção;
+- $$r$$ é a taxa de juros livre de risco;
+- $$T$$ é o tempo até o vencimento da opção, expresso em anos;
+- $$N(d_1)$$ e $$N(d_2)$$ são as funções de distribuição acumulada da variável padrão normal, avaliadas em $$d_1$$ e $$d_2$$, respectivamente;
+- $$d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)T}{\sigma \sqrt{T}}$$;
+- $$d_2 = d_1 - \sigma \sqrt{T}$$;
+- $$\sigma$$ é a volatilidade do ativo subjacente.
+
+Cada componente da fórmula desempenha um papel crucial no cálculo do valor da opção call. A volatilidade ($$\sigma$$) é um dos principais fatores que afetam o valor da opção, pois reflete a incerteza do preço do ativo subjacente. A taxa de juros ($$r$$) também é importante, pois influencia o valor presente do preço de exercício.
 
 ## Exemplo Prático de Aplicação
 Vamos considerar um exemplo prático para ilustrar a aplicação do Modelo Black-Scholes (Call). Suponha que uma empresa, chamada "Empresa X", tem um preço de ação atual de R$ 50,00. Uma opção call sobre a ação da Empresa X está disponível, com um preço de exercício de R$ 50,00 e um tempo até o vencimento de 1 ano. A taxa de juros livre de risco é de 5% ao ano, e a volatilidade histórica da ação da Empresa X é de 20% ao ano.
 
 | Parâmetro | Valor |
 | --- | --- |
-| Preço atual (\(S\)) | R$ 50,00 |
-| Preço de exercício (\(K\)) | R$ 50,00 |
-| Taxa de juros (\(r\)) | 5% |
-| Tempo até o vencimento (\(T\)) | 1 ano |
-| Volatilidade (\(\sigma\)) | 20% |
+| Preço atual ($$S$$) | R$ 50,00 |
+| Preço de exercício ($$K$$) | R$ 50,00 |
+| Taxa de juros ($$r$$) | 5% |
+| Tempo até o vencimento ($$T$$) | 1 ano |
+| Volatilidade ($$\sigma$$) | 20% |
 
 Usando a fórmula do Modelo Black-Scholes (Call), podemos calcular o valor da opção call da seguinte forma:
-\[d_1 = \frac{\ln(50/50) + (0,05 + 0,20^2/2) \times 1}{0,20 \times \sqrt{1}} = \frac{0 + (0,05 + 0,02) \times 1}{0,20} = \frac{0,07}{0,20} = 0,35\]
-\[d_2 = d_1 - \sigma \sqrt{T} = 0,35 - 0,20 \times \sqrt{1} = 0,35 - 0,20 = 0,15\]
 
-Com os valores de \(d_1\) e \(d_2\), podemos calcular as funções de distribuição acumulada da variável padrão normal:
-\[N(d_1) = N(0,35) = 0,6368\]
-\[N(d_2) = N(0,15) = 0,5596\]
+$$
+d_1 = \frac{\ln(50/50) + (0{,}05 + 0{,}20^2/2) \times 1}{0{,}20 \times \sqrt{1}} = \frac{0 + (0{,}05 + 0{,}02) \times 1}{0{,}20} = \frac{0{,}07}{0{,}20} = 0{,}35
+$$
+
+$$
+d_2 = d_1 - \sigma \sqrt{T} = 0{,}35 - 0{,}20 \times \sqrt{1} = 0{,}35 - 0{,}20 = 0{,}15
+$$
+
+Com os valores de $$d_1$$ e $$d_2$$, podemos calcular as funções de distribuição acumulada da variável padrão normal:
+
+$$
+N(d_1) = N(0{,}35) = 0{,}6368
+$$
+
+$$
+N(d_2) = N(0{,}15) = 0{,}5596
+$$
 
 Finalmente, podemos calcular o valor da opção call:
-\[C = S \times N(d_1) - K \times e^{(-rT)} \times N(d_2)\]
-\[C = 50 \times 0,6368 - 50 \times e^{(-0,05 \times 1)} \times 0,5596\]
-\[C = 31,84 - 50 \times 0,9512 \times 0,5596\]
-\[C = 31,84 - 26,48\]
-\[C = 5,36\]
+
+$$
+C = S \times N(d_1) - K \times e^{(-\text{rT})} \times N(d_2)
+$$
+
+$$
+C = 50 \times 0{,}6368 - 50 \times e^{(-0{,}05 \times 1)} \times 0{,}5596
+$$
+
+$$
+C = 31{,}84 - 50 \times 0{,}9512 \times 0{,}5596
+$$
+
+$$
+C = 31{,}84 - 26{,}48
+$$
+
+$$
+C = 5{,}36
+$$
 
 Portanto, o valor da opção call é de aproximadamente R$ 5,36.
 

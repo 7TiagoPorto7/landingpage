@@ -14,18 +14,25 @@ A imunização é baseada no conceito de que a duração de um investimento é u
 
 ## A Fórmula e Componentes do Imunização
 A fórmula básica para a imunização é:
-\[ Duration(Assets) = Duration(Liabilities) \]
+
+$$
+\text{Duration}(\text{Assets}) = \text{Duration}(\text{Liabilities})
+$$
 
 Nesta equação:
-- \( Duration(Assets) \) representa a duração dos ativos do portfólio.
-- \( Duration(Liabilities) \) representa a duração dos passivos do portfólio.
+- $$\text{Duration}(\text{Assets})$$ representa a duração dos ativos do portfólio.
+- $$\text{Duration}(\text{Liabilities})$$ representa a duração dos passivos do portfólio.
 
 A duração é calculada com base no peso dos fluxos de caixa futuros dos ativos ou passivos, considerando o tempo até que cada fluxo ocorra e o valor presente desses fluxos. A fórmula de duração para um título, por exemplo, pode ser simplificada como:
-\[ Duration = \frac{\sum_{t=1}^{n} t \cdot \frac{CF_t}{(1 + y)^t}}{\sum_{t=1}^{n} \frac{CF_t}{(1 + y)^t}} \]
+
+$$
+\text{Duration} = \frac{\sum_{t=1}^{n} t \cdot \frac{\text{CF}_t}{(1 + y)^t}}{\sum_{t=1}^{n} \frac{\text{CF}_t}{(1 + y)^t}}
+$$
+
 onde:
-- \( CF_t \) é o fluxo de caixa no período \( t \),
-- \( y \) é a taxa de juros,
-- \( n \) é o número de períodos.
+- $$\text{CF}_t$$ é o fluxo de caixa no período $$t$$,
+- $$y$$ é a taxa de juros,
+- $$n$$ é o número de períodos.
 
 ## Exemplo Prático de Aplicação
 Vamos considerar uma empresa que tem um passivo com duração de 7,5 anos. Para imunizar seu portfólio, a empresa precisa construir um portfolio de bonds com a mesma duração.
@@ -37,20 +44,43 @@ Vamos considerar uma empresa que tem um passivo com duração de 7,5 anos. Para 
 
 Para alcançar uma duração de 7,5 anos, a empresa pode combinar os títulos A e B de forma a obter a duração desejada. Vamos calcular a proporção necessária de cada título:
 
-Suponha que a duração do portfólio seja uma combinação linear das durações dos títulos A e B, com pesos baseados nos valores investidos. Seja \( x \) a proporção do valor investido no Título A e \( (1-x) \) a proporção no Título B.
+Suponha que a duração do portfólio seja uma combinação linear das durações dos títulos A e B, com pesos baseados nos valores investidos. Seja $$x$$ a proporção do valor investido no Título A e $$(1-x)$$ a proporção no Título B.
 
-A duração do portfólio (\( D_p \)) pode ser expressa como:
-\[ D_p = x \cdot D_A + (1-x) \cdot D_B \]
-onde \( D_A = 5 \) anos e \( D_B = 10 \) anos.
+A duração do portfólio ($$D_p$$) pode ser expressa como:
 
-Substituindo \( D_p = 7,5 \) anos, temos:
-\[ 7,5 = x \cdot 5 + (1-x) \cdot 10 \]
+$$
+D_p = x \cdot D_A + (1-x) \cdot D_B
+$$
+
+onde $$D_A = 5$$ anos e $$D_B = 10$$ anos.
+
+Substituindo $$D_p = 7{,}5$$ anos, temos:
+
+$$
+7{,}5 = x \cdot 5 + (1-x) \cdot 10
+$$
+
 Simplificando, encontramos:
-\[ 7,5 = 5x + 10 - 10x \]
-\[ 7,5 = -5x + 10 \]
-\[ 5x = 10 - 7,5 \]
-\[ 5x = 2,5 \]
-\[ x = 0,5 \]
+
+$$
+7{,}5 = 5x + 10 - 10x
+$$
+
+$$
+7{,}5 = -5x + 10
+$$
+
+$$
+5x = 10 - 7{,}5
+$$
+
+$$
+5x = 2{,}5
+$$
+
+$$
+x = 0{,}5
+$$
 
 Isso significa que 50% do valor do portfólio deve ser investido no Título A e 50% no Título B para alcançar uma duração de 7,5 anos.
 

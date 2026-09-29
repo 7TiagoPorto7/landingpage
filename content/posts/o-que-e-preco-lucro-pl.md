@@ -14,9 +14,16 @@ O P/L é um indicador importante porque ajuda a entender quanto o mercado está 
 
 ## A Fórmula e Componentes do Preço/Lucro (P/L)
 A fórmula para calcular o Preço/Lucro (P/L) é:
-\[ P/E = \frac{Share Price}{EPS} \]
+
+$$
+P/E = \frac{\text{Share Price}}{\text{EPS}}
+$$
+
 ou
-\[ P/E = \frac{Market Cap}{Net Income} \]
+
+$$
+P/E = \frac{\text{Market Cap}}{\text{Net Income}}
+$$
 
 - **Share Price**: É o preço atual de uma ação da empresa no mercado.
 - **EPS (Earnings Per Share)**: É o lucro líquido por ação, calculado dividindo o lucro líquido da empresa pelo número total de ações em circulação.
@@ -27,7 +34,10 @@ A matemática por trás do P/L é relativamente simples, mas sua interpretação
 
 ## Exemplo Prático de Aplicação
 Vamos considerar a empresa fictícia "Tecnologia S.A.", que tem um preço de ação atual de R$ 30,00 e um EPS (lucro por ação) de R$ 2,00. Para calcular o P/L, podemos usar a fórmula:
-\[ P/E = \frac{R\$ 30,00}{R\$ 2,00} = 15,0x \]
+
+$$
+P/E = \frac{R\$ 30{,}00}{R\$ 2{,}00} = 15{,}0x
+$$
 
 Isso significa que o mercado está disposto a pagar R$ 15,00 por cada R$ 1,00 de lucro da empresa "Tecnologia S.A.". Se a empresa tiver um P/L de 15x e o setor como um todo tem um P/L médio de 20x, podemos inferir que a "Tecnologia S.A." está sendo negociada a um desconto em relação ao seu setor.
 

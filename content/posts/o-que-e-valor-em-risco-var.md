@@ -14,14 +14,18 @@ O propósito do VaR é oferecer uma medida simplificada e compreensível do risc
 
 ## A Fórmula e Componentes do Valor em Risco (VaR)
 A fórmula paramétrica para calcular o VaR é dada por:
-\[ VaR = Portfolio Value \times z \times \sigma \times \sqrt{t} \]
-onde:
-- \( Portfolio Value \) é o valor atual do portfólio.
-- \( z \) é o valor z-escore correspondente ao nível de confiança desejado, obtido a partir de uma distribuição normal padrão.
-- \( \sigma \) é a volatilidade (desvio padrão) dos retornos do portfólio.
-- \( t \) é o horizonte de tempo, expresso em anos.
 
-Cada componente desta fórmula desempenha um papel crítico no cálculo do VaR. O valor z-escore (\( z \)) é determinado pelo nível de confiança escolhido, por exemplo, para um nível de confiança de 95%, \( z \) é aproximadamente 1,645. A volatilidade (\( \sigma \)) do portfólio é uma medida da variabilidade dos seus retornos e pode ser estimada historicamente ou por meio de modelos financeiros.
+$$
+\text{VaR} = \text{Portfolio Value} \times z \times \sigma \times \sqrt{t}
+$$
+
+onde:
+- $$\text{Portfolio Value}$$ é o valor atual do portfólio.
+- $$z$$ é o valor z-escore correspondente ao nível de confiança desejado, obtido a partir de uma distribuição normal padrão.
+- $$\sigma$$ é a volatilidade (desvio padrão) dos retornos do portfólio.
+- $$t$$ é o horizonte de tempo, expresso em anos.
+
+Cada componente desta fórmula desempenha um papel crítico no cálculo do VaR. O valor z-escore ($$z$$) é determinado pelo nível de confiança escolhido, por exemplo, para um nível de confiança de 95%, $$z$$ é aproximadamente 1,645. A volatilidade ($$\sigma$$) do portfólio é uma medida da variabilidade dos seus retornos e pode ser estimada historicamente ou por meio de modelos financeiros.
 
 ## Exemplo Prático de Aplicação
 Vamos considerar um exemplo de uma empresa fictícia, a "InvestTech", que gerencia um portfólio de ações no valor de R$ 10 milhões. A InvestTech deseja calcular o VaR para um nível de confiança de 95% e um horizonte de tempo de 1 dia, sabendo que a volatilidade diária do portfólio é de 2%.
@@ -31,14 +35,26 @@ Vamos considerar um exemplo de uma empresa fictícia, a "InvestTech", que gerenc
 | Portfolio Value | R$ 10.000.000 |
 | Nível de Confiança | 95% |
 | z-escore (95% confiança) | 1,645 |
-| Volatilidade (\( \sigma \)) | 2% ou 0,02 |
-| Horizonte de Tempo (\( t \)) | 1 dia |
+| Volatilidade ($$\sigma$$) | 2% ou 0,02 |
+| Horizonte de Tempo ($$t$$) | 1 dia |
 
 Substituindo estes valores na fórmula do VaR:
-\[ VaR = 10.000.000 \times 1,645 \times 0,02 \times \sqrt{1} \]
-\[ VaR = 10.000.000 \times 1,645 \times 0,02 \]
-\[ VaR = 10.000.000 \times 0,0329 \]
-\[ VaR = R$ 329.000 \]
+
+$$
+\text{VaR} = 10.000.000 \times 1{,}645 \times 0{,}02 \times \sqrt{1}
+$$
+
+$$
+\text{VaR} = 10.000.000 \times 1{,}645 \times 0{,}02
+$$
+
+$$
+\text{VaR} = 10.000.000 \times 0{,}0329
+$$
+
+$$
+\text{VaR} = R\$ 329.000
+$$
 
 Isso significa que, com um nível de confiança de 95%, a InvestTech pode esperar uma perda máxima de R$ 329.000 em um dia.
 

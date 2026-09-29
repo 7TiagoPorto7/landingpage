@@ -14,16 +14,19 @@ O Drawdown Máximo é calculado como a diferença entre o pico (o maior valor al
 
 ## A Fórmula e Componentes do Drawdown Máximo
 A fórmula para calcular o Drawdown Máximo é:
-\[ MDD = \frac{(Trough - Peak)}{Peak} \times 100 \]
+
+$$
+\text{MDD} = \frac{(\text{Trough} - \text{Peak})}{\text{Peak}} \times 100
+$$
 
 onde:
-- \( Trough \) é o valor mais baixo alcançado pelo investimento após o pico.
-- \( Peak \) é o valor mais alto alcançado pelo investimento antes do drawdown.
+- $$\text{Trough}$$ é o valor mais baixo alcançado pelo investimento após o pico.
+- $$\text{Peak}$$ é o valor mais alto alcançado pelo investimento antes do drawdown.
 
 Vamos desmembrar a fórmula:
-- \( Trough - Peak \) calcula a diferença entre o pico e o vale, mostrando a magnitude da perda.
-- \( \frac{(Trough - Peak)}{Peak} \) divide essa diferença pelo pico, para entender a perda como uma porcentagem do valor máximo.
-- \( \times 100 \) converte o resultado em porcentagem, facilitando a interpretação.
+- $$\text{Trough} - \text{Peak}$$ calcula a diferença entre o pico e o vale, mostrando a magnitude da perda.
+- $$\frac{(\text{Trough} - \text{Peak})}{\text{Peak}}$$ divide essa diferença pelo pico, para entender a perda como uma porcentagem do valor máximo.
+- $$\times 100$$ converte o resultado em porcentagem, facilitando a interpretação.
 
 ## Exemplo Prático de Aplicação
 Vamos considerar um exemplo de uma empresa fictícia, a "InvestTech", que lançou um fundo de investimento. O valor do fundo variou ao longo de um ano, com os seguintes valores mensais:
@@ -44,7 +47,10 @@ Vamos considerar um exemplo de uma empresa fictícia, a "InvestTech", que lanço
 | Dezembro | 1.200 |
 
 Neste exemplo, o pico ocorreu em Março, com um valor de 1.200, e o vale ocorreu em Agosto, com um valor de 700. Para calcular o Drawdown Máximo, usamos a fórmula:
-\[ MDD = \frac{(700 - 1.200)}{1.200} \times 100 = \frac{-500}{1.200} \times 100 \approx -41,67\% \]
+
+$$
+\text{MDD} = \frac{(700 - 1.200)}{1.200} \times 100 = \frac{-500}{1.200} \times 100 \approx -41{,}67\%
+$$
 
 Isso significa que o investimento teve uma perda máxima de aproximadamente 41,67% de seu valor, desde o pico em Março até o vale em Agosto. Essa informação é crucial para os investidores, pois indica o nível de risco associado ao investimento e ajuda a decidir se o investimento está alinhado com sua tolerância ao risco.
 

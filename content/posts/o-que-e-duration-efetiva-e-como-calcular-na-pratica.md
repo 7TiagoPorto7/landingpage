@@ -12,33 +12,46 @@ A Duration Efetiva, também conhecida como Effective Duration, é um conceito fi
 
 ## A Fórmula e Componentes do Duration Efetiva
 A fórmula para calcular a Duration Efetiva é dada por:
-\[ EffD = \frac{P_{-} - P_{+}}{2 \times P_{0} \times \Delta y} \]
-Onde:
-- \(P_{-}\) é o preço do bond após uma redução de 1% (ou 100 bps) na taxa de juros,
-- \(P_{+}\) é o preço do bond após um aumento de 1% (ou 100 bps) na taxa de juros,
-- \(P_{0}\) é o preço atual do bond,
-- \(\Delta y\) é a mudança na taxa de juros (1% ou 100 bps).
 
-Cada componente desta fórmula é crucial para entender como a Duration Efetiva é calculada. \(P_{-}\) e \(P_{+}\) são obtidos através de modelos de precificação de bonds que levam em conta as características do bond, incluindo as opções embutidas. A diferença entre esses preços reflete a sensibilidade do bond às mudanças nas taxas de juros. \(P_{0}\) é o preço de mercado atual do bond, e \(\Delta y\) é a magnitude da mudança nas taxas de juros usada para calcular a sensibilidade.
+$$
+\text{EffD} = \frac{P_{-} - P_{+}}{2 \times P_{0} \times \Delta y}
+$$
+
+Onde:
+- $$P_{-}$$ é o preço do bond após uma redução de 1% (ou 100 bps) na taxa de juros,
+- $$P_{+}$$ é o preço do bond após um aumento de 1% (ou 100 bps) na taxa de juros,
+- $$P_{0}$$ é o preço atual do bond,
+- $$\Delta y$$ é a mudança na taxa de juros (1% ou 100 bps).
+
+Cada componente desta fórmula é crucial para entender como a Duration Efetiva é calculada. $$P_{-}$$ e $$P_{+}$$ são obtidos através de modelos de precificação de bonds que levam em conta as características do bond, incluindo as opções embutidas. A diferença entre esses preços reflete a sensibilidade do bond às mudanças nas taxas de juros. $$P_{0}$$ é o preço de mercado atual do bond, e $$\Delta y$$ é a magnitude da mudança nas taxas de juros usada para calcular a sensibilidade.
 
 ## Exemplo Prático de Aplicação
 Vamos considerar um exemplo prático para ilustrar o cálculo da Duration Efetiva. Suponha que estamos analisando um bond com as seguintes características:
-- Preço atual (\(P_{0}\)): R$ 1.044
-- Preço após uma redução de 50 bps na taxa de juros (\(P_{-}\)): R$ 1.068
-- Preço após um aumento de 50 bps na taxa de juros (\(P_{+}\)): R$ 1.022
-- Mudança na taxa de juros (\(\Delta y\)): 50 bps (ou 0,5%)
+- Preço atual ($$P_{0}$$): R$ 1.044
+- Preço após uma redução de 50 bps na taxa de juros ($$P_{-}$$): R$ 1.068
+- Preço após um aumento de 50 bps na taxa de juros ($$P_{+}$$): R$ 1.022
+- Mudança na taxa de juros ($$\Delta y$$): 50 bps (ou 0,5%)
 
 | Parâmetro | Valor |
 | --- | --- |
-| \(P_{0}\) | R$ 1.044 |
-| \(P_{-}\) | R$ 1.068 |
-| \(P_{+}\) | R$ 1.022 |
-| \(\Delta y\) | 0,5% |
+| $$P_{0}$$ | R$ 1.044 |
+| $$P_{-}$$ | R$ 1.068 |
+| $$P_{+}$$ | R$ 1.022 |
+| $$\Delta y$$ | 0,5% |
 
 Substituindo esses valores na fórmula:
-\[ EffD = \frac{1.068 - 1.022}{2 \times 1.044 \times 0.005} \]
-\[ EffD = \frac{0.046}{0.01044} \]
-\[ EffD \approx 4.41 \]
+
+$$
+\text{EffD} = \frac{1.068 - 1.022}{2 \times 1.044 \times 0.005}
+$$
+
+$$
+\text{EffD} = \frac{0.046}{0.01044}
+$$
+
+$$
+\text{EffD} \approx 4.41
+$$
 
 Isso significa que para cada 1% de mudança nas taxas de juros, o preço do bond pode variar aproximadamente 4.41%.
 

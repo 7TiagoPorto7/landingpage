@@ -12,7 +12,11 @@ A Razão de Troca, também conhecida como Exchange Ratio ou Deal em Ações, é 
 
 ## A Fórmula e Componentes do Razão de Troca (Deal em Ações)
 A fórmula para calcular a Razão de Troca é:
-\[ \text{Exchange Ratio} = \frac{\text{Offer Price per Target Share}}{\text{Acquirer Share Price}} \]
+
+$$
+\text{Exchange Ratio} = \frac{\text{Offer Price per Target Share}}{\text{Acquirer Share Price}}
+$$
+
 Onde:
 - **Offer Price per Target Share** é o preço que o comprador está disposto a pagar por cada ação do target.
 - **Acquirer Share Price** é o preço atual de cada ação do comprador no mercado.
@@ -25,7 +29,11 @@ Cada componente dessa fórmula desempenha um papel crucial:
 Vamos considerar um exemplo para ilustrar como a Razão de Troca é calculada e interpretada:
 Suponha que a empresa **Alpha S.A.** está interessada em adquirir a **Beta Ltda.**. A **Alpha S.A.** oferece R$ 42 por ação da **Beta Ltda.**, e o preço atual das ações da **Alpha S.A.** é de R$ 60.
 A Razão de Troca seria calculada da seguinte maneira:
-\[ \text{Exchange Ratio} = \frac{R\$ 42}{R\$ 60} = 0,70 \]
+
+$$
+\text{Exchange Ratio} = \frac{R\$ 42}{R\$ 60} = 0{,}70
+$$
+
 Isso significa que por cada ação da **Beta Ltda.**, os acionistas receberiam 0,70 ações da **Alpha S.A.**.
 
 | Empresa | Preço por Ação | Quantidade de Ações |

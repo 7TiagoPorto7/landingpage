@@ -14,20 +14,24 @@ O propósito do Preço do Futuro é fornecer uma estimativa justa do valor de um
 
 ## A Fórmula e Componentes do Preço do Futuro (Custo de Carregamento)
 A fórmula para calcular o Preço do Futuro é a seguinte:
-\[ F = S \times e^{((r-q) \times T)} \]
+
+$$
+F = S \times e^{((r-q) \times T)}
+$$
+
 Onde:
-- \( F \) é o Preço do Futuro,
-- \( S \) é o preço spot do ativo,
-- \( r \) é a taxa de juros sem risco,
-- \( q \) é a taxa de dividendos ou rendimentos do ativo,
-- \( T \) é o tempo até a expiração do contrato futuro, expresso em anos,
-- \( e \) é a base do logaritmo natural, aproximadamente igual a 2,71828.
+- $$F$$ é o Preço do Futuro,
+- $$S$$ é o preço spot do ativo,
+- $$r$$ é a taxa de juros sem risco,
+- $$q$$ é a taxa de dividendos ou rendimentos do ativo,
+- $$T$$ é o tempo até a expiração do contrato futuro, expresso em anos,
+- $$e$$ é a base do logaritmo natural, aproximadamente igual a 2,71828.
 
 Desmembrando cada componente, temos:
-- \( S \): O preço spot do ativo é o valor atual do ativo no mercado.
-- \( r \): A taxa de juros sem risco é a taxa de juros que um investidor pode obter em um investimento sem risco, como um título do tesouro.
-- \( q \): A taxa de dividendos ou rendimentos do ativo é a renda que o ativo gera, como dividendos pagos por ações.
-- \( T \): O tempo até a expiração do contrato futuro é o período de tempo restante até que o contrato expire.
+- $$S$$: O preço spot do ativo é o valor atual do ativo no mercado.
+- $$r$$: A taxa de juros sem risco é a taxa de juros que um investidor pode obter em um investimento sem risco, como um título do tesouro.
+- $$q$$: A taxa de dividendos ou rendimentos do ativo é a renda que o ativo gera, como dividendos pagos por ações.
+- $$T$$: O tempo até a expiração do contrato futuro é o período de tempo restante até que o contrato expire.
 
 ## Exemplo Prático de Aplicação
 Vamos considerar um exemplo prático para ilustrar o cálculo do Preço do Futuro.
@@ -42,18 +46,30 @@ Suponha que uma empresa, a "Empresa X", deseja comprar um contrato futuro de com
 | T (tempo até expiração) | 0,5 anos |
 
 Para calcular o Preço do Futuro, usamos a fórmula:
-\[ F = 100 \times e^{((0,05-0,02) \times 0,5)} \]
-\[ F = 100 \times e^{0,015} \]
-\[ F = 100 \times 1,0151 \]
-\[ F = R\$ 101,51 \]
+
+$$
+F = 100 \times e^{((0{,}05-0{,}02) \times 0{,}5)}
+$$
+
+$$
+F = 100 \times e^{0{,}015}
+$$
+
+$$
+F = 100 \times 1{,}0151
+$$
+
+$$
+F = R\$ 101{,}51
+$$
 
 Isso significa que o Preço do Futuro do Commodity Y é de R$ 101,51.
 
 ## Armadilhas e Sinais de Alerta (Red Flags)
 Existem algumas armadilhas e sinais de alerta que os investidores e traders devem estar cientes ao lidar com o Preço do Futuro.
 
-- **Contango**: Quando o Preço do Futuro é maior que o preço spot (\( F > S \)), o mercado está em contango. Isso é normal e reflete o custo de carregamento. No entanto, se o contango for muito alto, pode ser um sinal de que o mercado está sobre-avaliado.
-- **Backwardation**: Quando o Preço do Futuro é menor que o preço spot (\( F < S \)), o mercado está em backwardation. Isso pode ser um sinal de escassez ou falta de oferta do ativo.
+- **Contango**: Quando o Preço do Futuro é maior que o preço spot ($$F > S$$), o mercado está em contango. Isso é normal e reflete o custo de carregamento. No entanto, se o contango for muito alto, pode ser um sinal de que o mercado está sobre-avaliado.
+- **Backwardation**: Quando o Preço do Futuro é menor que o preço spot ($$F < S$$), o mercado está em backwardation. Isso pode ser um sinal de escassez ou falta de oferta do ativo.
 
 É importante estar atento a esses sinais de alerta e entender as razões por trás deles para tomar decisões informadas.
 

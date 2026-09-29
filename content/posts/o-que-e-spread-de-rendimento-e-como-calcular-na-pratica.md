@@ -12,7 +12,11 @@ O Spread de Rendimento é um conceito financeiro que representa a diferença ent
 
 ## A Fórmula e Componentes do Spread de Rendimento
 A fórmula para calcular o Spread de Rendimento é:
-\[ \text{Spread} = \text{YTM(Corporate)} - \text{YTM(Government)} \]
+
+$$
+\text{Spread} = \text{YTM(Corporate)} - \text{YTM(Government)}
+$$
+
 Onde:
 - YTM(Corporate) é o rendimento ao vencimento do título corporativo.
 - YTM(Government) é o rendimento ao vencimento do título soberano.
@@ -35,7 +39,10 @@ Para calcular o Spread de Rendimento, primeiro precisamos calcular o YTM de cada
 - YTM(Government) = 4,0%
 
 Agora, podemos calcular o Spread de Rendimento:
-\[ \text{Spread} = 6,5\% - 4,0\% = 2,5\% \text{ ou } 250 \text{ bps} \]
+
+$$
+\text{Spread} = 6{,}5\% - 4{,}0\% = 2{,}5\% \text{ ou } 250 \text{ bps}
+$$
 
 Isso significa que o investidor está exigindo um prêmio de risco de 250 bps para investir na Empresa X em vez de investir no título soberano.
 
