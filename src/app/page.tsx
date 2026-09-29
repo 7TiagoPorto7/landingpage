@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { mfpFonts } from "@/lib/fonts";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
+import { CoursePanel } from "@/components/mfp/course-panel";
 import { Logo } from "@/components/logo";
 import { PostCover } from "@/components/post-cover";
 import { getSortedPostsData } from "@/lib/blog";
@@ -98,22 +98,10 @@ export default function Home() {
 
             <main>
                 {/* Hero */}
-                <section className="relative overflow-hidden bg-[var(--navy)] pb-20 text-white sm:pb-28">
+                <section className="relative overflow-hidden bg-[var(--navy)] text-white">
                     <Backdrop tone="dark" />
-                    <div className="absolute inset-0 lg:left-auto lg:w-[48%]">
-                        <Image
-                            src="/tiago-porto.png"
-                            alt="Tiago Porto"
-                            fill
-                            priority
-                            sizes="(min-width: 1024px) 48vw, 100vw"
-                            className="object-cover object-[50%_20%] brightness-[0.8] saturate-[0.85]"
-                        />
-                        <div className="absolute inset-0 bg-[var(--navy)]/75 lg:bg-transparent lg:bg-gradient-to-r lg:from-[var(--navy)] lg:via-[var(--navy)]/55 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy)] via-transparent to-[var(--navy)]/30" />
-                    </div>
-                    <Container className="relative pt-16 sm:pt-24 lg:pt-28">
-                        <div className="max-w-xl">
+                    <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-12 lg:py-28 [&>*]:min-w-0">
+                        <div>
                             <h1 className="text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.035em] sm:text-[4rem]">
                                 Modelagem financeira <Accent>do jeito que o mercado usa.</Accent>
                             </h1>
@@ -128,6 +116,7 @@ export default function Home() {
                                 </LinkButton>
                             </div>
                         </div>
+                        <CoursePanel />
                     </Container>
                 </section>
 

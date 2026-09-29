@@ -352,3 +352,32 @@ html {
   background-size: 96px 32px;
 }
 
+
+/* Fórmulas do blog (KaTeX): centralizadas, com respiro e rolagem própria no celular */
+.blog-prose .katex-display {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  border-radius: 0.75rem;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  -webkit-overflow-scrolling: touch;
+}
+.blog-prose .katex-display > .katex {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.12em;
+}
+.blog-prose .katex {
+  font-size: 1.05em;
+}
+@media (max-width: 640px) {
+  .blog-prose .katex-display {
+    padding: 0.75rem 0.75rem;
+  }
+  .blog-prose .katex-display > .katex {
+    font-size: 0.95em;
+  }
+}
