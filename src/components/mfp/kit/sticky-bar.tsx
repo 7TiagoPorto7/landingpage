@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CheckoutButton } from "@/components/mfp/checkout-button";
-import { CHECKOUT_URL, INSTALLMENT_LABEL, PRICE, PRICE_LABEL, PRODUCT } from "./content";
 
-// Barra de compra fixa embaixo depois que a pessoa passa do topo (celular e desktop)
-export function FundamentosStickyCTA() {
+// Barra fixa embaixo que aparece depois do topo (celular e desktop)
+export function StickyBar({ name, shortName, price, action }: { name: string; shortName: string; price: string; action: React.ReactNode }) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -23,13 +21,13 @@ export function FundamentosStickyCTA() {
         >
             <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 sm:px-4">
                 <div className="leading-tight">
-                    <p className="text-sm font-semibold"><span className="sm:hidden">Curso Fundamentos</span><span className="hidden sm:inline">{PRODUCT}</span></p>
-                    <p className="text-xs text-white/65">{INSTALLMENT_LABEL} ou {PRICE_LABEL}</p>
+                    <p className="text-sm font-semibold">
+                        <span className="sm:hidden">{shortName}</span>
+                        <span className="hidden sm:inline">{name}</span>
+                    </p>
+                    <p className="text-xs text-white/65">{price}</p>
                 </div>
-                <CheckoutButton href={CHECKOUT_URL} section="sticky_mobile" value={PRICE} product={PRODUCT} size="sm">
-                    <span className="sm:hidden">Comprar</span>
-                    <span className="hidden sm:inline">Quero entrar no curso</span>
-                </CheckoutButton>
+                {action}
             </div>
         </div>
     );

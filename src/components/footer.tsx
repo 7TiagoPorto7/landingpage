@@ -13,7 +13,7 @@ export function Footer() {
                     <div className="flex flex-col items-center md:items-start gap-1">
                         <div className="flex items-center gap-2">
                             <Logo className="w-6 h-6 text-white" />
-                            <span className="text-lg font-bold text-white">MFP Education</span>
+                            <span className="text-lg font-bold text-white">Modelagem Financeira na Prática</span>
                         </div>
                         <span className="text-xs text-slate-500 flex items-center gap-1 mt-1">
                             <Lock className="w-3 h-3 text-teal-400" /> Pagamento processado pela Hotmart
@@ -47,7 +47,7 @@ export function Footer() {
 
                 <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 text-center sm:text-left">
                     <div>
-                        &copy; {new Date().getFullYear()} MFP Education. Todos os direitos reservados.
+                        &copy; {new Date().getFullYear()} Modelagem Financeira na Prática. Todos os direitos reservados.
                     </div>
                     <div>
                         <span>CNPJ: 57.349.352/0001-74</span>
