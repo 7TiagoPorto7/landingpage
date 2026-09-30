@@ -186,17 +186,20 @@ export default function FundamentosPage() {
                 {/* A lógica, interativa */}
                 <Band tone="deep">
                     <Container>
-                        <SectionTitle
-                            dark
-                            title={
-                                <>
-                                    Teste a lógica <Accent>com números</Accent>
-                                </>
+                        <ProfitVsCash
+                            intro={
+                                <SectionTitle
+                                    dark
+                                    title={
+                                        <>
+                                            Teste a lógica <Accent>com números</Accent>
+                                        </>
+                                    }
+                                    lead="Veja o prazo dos clientes encurtar de 120 dias até à vista. O lucro não muda, o caixa sim."
+                                    className="mb-10"
+                                />
                             }
-                            lead="Mude o prazo dos clientes e veja por que uma empresa com lucro pode ficar sem caixa."
-                            className="mb-10"
                         />
-                        <ProfitVsCash />
                     </Container>
                 </Band>
 
