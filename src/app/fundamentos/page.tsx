@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
+import { Certificate, CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle, fmt } from "@/components/mfp/ui";
@@ -73,6 +73,45 @@ const PriceLine = ({ className }: { className?: string }) => (
         <strong className="font-semibold text-white">{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL} à vista. Garantia de 7 dias.
     </p>
 );
+
+// Ilustração do certificado de conclusão (o nome é do aluno)
+function Certificado() {
+    return (
+        <figure
+            aria-label="Ilustração do certificado de conclusão do curso"
+            className="relative mx-auto w-full max-w-xl rotate-[-1.5deg] rounded-2xl bg-white p-2.5 text-[var(--ink)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.85)]"
+        >
+            <div className="relative overflow-hidden rounded-xl border border-[var(--amber)]/50 px-6 py-8 sm:px-10 sm:py-10">
+                <svg aria-hidden className="absolute inset-0 h-full w-full text-[var(--amber)] opacity-[0.12]" preserveAspectRatio="none" viewBox="0 0 400 260">
+                    {Array.from({ length: 14 }, (_, i) => (
+                        <path key={i} d={`M-20 ${40 + i * 14} C 100 ${10 + i * 14}, 300 ${80 + i * 14}, 420 ${40 + i * 14}`} fill="none" stroke="currentColor" strokeWidth="1" />
+                    ))}
+                </svg>
+                <div className="relative">
+                    <div className="flex items-center justify-between gap-4">
+                        <p className="text-sm font-semibold tracking-wide text-[var(--ink-2)]">Certificado de conclusão</p>
+                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--amber)] text-[var(--ink)] ring-4 ring-[var(--amber)]/25">
+                            <Certificate aria-hidden weight="fill" className="h-7 w-7" />
+                        </span>
+                    </div>
+                    <p className="mt-6 text-[15px] text-[var(--ink-2)]">Certificamos que</p>
+                    <p className="mt-1 border-b border-dashed border-[var(--ink-3)]/50 pb-2 text-2xl font-semibold tracking-[-0.02em] sm:text-3xl">Seu nome aqui</p>
+                    <p className="mt-4 text-[15px] leading-relaxed text-[var(--ink-2)]">concluiu o curso</p>
+                    <p className="text-xl font-semibold leading-snug sm:text-2xl">{PRODUCT}</p>
+                    <div className="mt-8 flex items-end justify-between gap-6">
+                        <div>
+                            <p className="font-semibold">Tiago Porto</p>
+                            <p className="border-t border-[var(--ink-3)]/40 pt-1 text-xs text-[var(--ink-3)]">Especialista em Modelagem Financeira</p>
+                        </div>
+                        <span className="shrink-0 rounded-lg bg-[var(--navy)] px-3 py-2">
+                            <Logo className="h-5 w-auto" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </figure>
+    );
+}
 
 export default function FundamentosPage() {
     return (
@@ -406,8 +445,34 @@ export default function FundamentosPage() {
                     </Container>
                 </Band>
 
-                {/* Perguntas: lista lado a lado, sem sanfona */}
+                {/* Certificado */}
                 <Band tone="deep">
+                    <Container className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16 [&>*]:min-w-0">
+                        <div>
+                            <SectionTitle
+                                dark
+                                title={
+                                    <>
+                                        Conclua o curso e receba <Accent>seu certificado</Accent>
+                                    </>
+                                }
+                                lead="Ao terminar as aulas, você emite o certificado de conclusão do Fundamentos da Modelagem Financeira, com o seu nome."
+                            />
+                            <ul className="mt-8 space-y-3">
+                                {["Emitido pela Hotmart, direto na área do aluno", "Em PDF, para baixar e imprimir", "Para colocar no LinkedIn e no currículo"].map((t) => (
+                                    <li key={t} className="flex gap-3 text-lg leading-snug">
+                                        <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-6 w-6 shrink-0 text-[var(--amber)]" />
+                                        {t}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <Certificado />
+                    </Container>
+                </Band>
+
+                {/* Perguntas: lista lado a lado, sem sanfona */}
+                <Band tone="dark">
                     <Container>
                         <SectionTitle dark title="Perguntas frequentes" className="mb-12" />
                         <dl className="grid gap-x-16 gap-y-10 md:grid-cols-2">
