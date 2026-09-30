@@ -345,8 +345,9 @@ html {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+/* Com "reduzir movimento" ligado, o letreiro continua, só que bem mais lento */
 @media (prefers-reduced-motion: reduce) {
-  .mfp .marquee-track { animation: none; }
+  .mfp .marquee-track { animation-duration: 60s; }
 }
 
 /* Grade de planilha discreta no fundo do topo claro */
