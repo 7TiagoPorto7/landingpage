@@ -7,11 +7,12 @@ import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle, fmt } from "@/components/mfp/ui";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
 import { ModelWorkbook } from "@/components/mfp/model-workbook";
-import { LogicExplorer } from "@/components/mfp/logic-explorer";
+import { ProfitVsCash } from "@/components/mfp/profit-vs-cash";
 import { SecureCheckout } from "@/components/mfp/secure-checkout";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
+import { BalanceCheck } from "@/components/mfp/balance-check";
 import { Logo } from "@/components/logo";
 import { projetar } from "@/components/mfp/projection";
 import { FundamentosLeadCapture } from "@/components/fundamentos/lead-capture";
@@ -115,24 +116,37 @@ export default function FundamentosPage() {
 
                 <Marquee items={MARQUEE} />
 
-                {/* Números do modelo, sem cartões */}
-                <Band tone="deep" className="py-16 sm:py-20">
-                    <Container>
-                        <dl className="grid gap-10 sm:grid-cols-3 sm:gap-6">
-                            {[
-                                [`R$ ${fmt(ano1.lucro)} mil`, "de lucro no ano 1 do modelo-exemplo"],
-                                [`R$ ${fmt(ano1.caixa)} mil`, "de caixa, depois do capital de giro e do investimento"],
-                                ["0", "de diferença entre ativo e passivo: o Balanço fecha"],
-                            ].map(([v, l]) => (
-                                <div key={l} className="border-l-2 border-[var(--amber)] pl-5">
-                                    <dt className="sr-only">{l}</dt>
-                                    <dd>
-                                        <span className="block text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">{v}</span>
-                                        <span className="mt-2 block max-w-[16rem] text-[15px] leading-snug text-[var(--fg-2)]">{l}</span>
-                                    </dd>
-                                </div>
-                            ))}
-                        </dl>
+                {/* O teste que todo modelo precisa passar */}
+                <Band tone="deep">
+                    <Container className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16 [&>*]:min-w-0">
+                        <div>
+                            <SectionTitle
+                                dark
+                                title={
+                                    <>
+                                        O teste que todo modelo <Accent>precisa passar</Accent>
+                                    </>
+                                }
+                                lead="Esqueça de levar o lucro para o patrimônio e o Balanço não fecha. No curso você aprende cada ligação até a checagem dar zero."
+                            />
+                            <dl className="mt-10 grid grid-cols-3 gap-4">
+                                {[
+                                    [`${fmt(ano1.lucro)}`, "lucro do ano"],
+                                    [`${fmt(ano1.caixa)}`, "caixa final"],
+                                    ["0", "diferença"],
+                                ].map(([v, l]) => (
+                                    <div key={l} className="border-l-2 border-[var(--amber)] pl-4">
+                                        <dt className="sr-only">{l}</dt>
+                                        <dd>
+                                            <span className="block text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">{v}</span>
+                                            <span className="mt-1 block text-sm text-[var(--fg-2)]">{l}</span>
+                                        </dd>
+                                    </div>
+                                ))}
+                            </dl>
+                            <p className="mt-3 text-xs text-[var(--fg-3)]">R$ mil, ano 1 do modelo-exemplo</p>
+                        </div>
+                        <BalanceCheck />
                     </Container>
                 </Band>
 
@@ -179,12 +193,10 @@ export default function FundamentosPage() {
                                     Teste a lógica <Accent>com números</Accent>
                                 </>
                             }
-                            lead="Veja onde cada ligação aparece nos três demonstrativos, ou por que uma empresa com lucro pode ficar sem caixa."
+                            lead="Mude o prazo dos clientes e veja por que uma empresa com lucro pode ficar sem caixa."
                             className="mb-10"
                         />
-                        <div className="rounded-3xl bg-[var(--snow)] p-4 text-[var(--ink)] sm:p-8">
-                            <LogicExplorer />
-                        </div>
+                        <ProfitVsCash />
                     </Container>
                 </Band>
 
