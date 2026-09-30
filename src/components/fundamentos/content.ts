@@ -11,7 +11,8 @@ export const INSTALLMENT_LABEL = "12x de R$ 19,70";
 export const INSTALLMENTS = `${INSTALLMENT_LABEL} no cartão`;
 
 export const MARQUEE = [
-    "7 aulas diretas ao ponto",
+    "Módulo das 3 demonstrações conectadas",
+    "Novas aulas com frequência",
     "Template do modelo integrado em Excel",
     "DRE, Balanço e Fluxo de Caixa conectados",
     "Checagem automática de fechamento",
@@ -22,18 +23,19 @@ export const MARQUEE = [
 ];
 
 export const DELIVERABLES = [
-    { icon: BookOpen, title: "7 aulas gravadas", text: "Cerca de 2 horas, na ordem do modelo" },
+    { icon: BookOpen, title: "Módulo principal", text: "DRE, Balanço e Fluxo de Caixa conectados" },
     { icon: FileSpreadsheet, title: "Template integrado", text: "DRE, Balanço e DFC ligados, com checagem" },
     { icon: TrendingUp, title: "Template Pro", text: "Modelo completo com valuation por DCF" },
     { icon: LayoutDashboard, title: "Starter Kit Financeiro", text: "DRE, fluxo de caixa e dashboard de KPIs" },
     { icon: Bot, title: "Prompts de IA", text: "Para análise de DRE e resumos executivos" },
     { icon: Award, title: "Certificado", text: "Emitido pela Hotmart ao concluir" },
-    { icon: InfinityIcon, title: "Acesso vitalício", text: "No computador e no celular" },
+    { icon: InfinityIcon, title: "Novas aulas incluídas", text: "Módulos complementares sempre atualizados" },
     { icon: ShieldCheck, title: "Garantia de 7 dias", text: "Reembolso integral pela Hotmart" },
 ];
 
 export const HERO_POINTS = [
-    "7 aulas gravadas, cerca de 2 horas no total",
+    "Módulo principal: as 3 demonstrações conectadas",
+    "Módulos complementares com novas aulas",
     "Template do modelo integrado em Excel",
     "Acesso vitalício, certificado e garantia de 7 dias",
 ];
@@ -116,8 +118,8 @@ export const PERSONAS = [
 
 // Números reais do produto (nada de contagem de alunos ou nota)
 export const STATS = [
-    { value: "7", label: "aulas diretas ao ponto" },
-    { value: "~2h", label: "de conteúdo no total" },
+    { value: "3", label: "demonstrações conectadas" },
+    { value: "+", label: "módulos com novas aulas" },
     { value: "3", label: "bônus inclusos" },
     { value: "7 dias", label: "de garantia" },
 ];
@@ -125,7 +127,7 @@ export const STATS = [
 export const FOR_WHO = [
     "Conhece os demonstrativos separados e quer entender como eles se ligam.",
     "Trabalha ou quer trabalhar com FP&A, M&A, crédito ou controladoria.",
-    "Prefere um curso curto e bem explicado a 40 horas de videoaula.",
+    "Quer ir direto ao que importa, sem 40 horas de teoria antes da prática.",
 ];
 
 export const NOT_FOR_WHO = [
@@ -135,7 +137,8 @@ export const NOT_FOR_WHO = [
 
 // Resumo da oferta dentro do cartão de preço
 export const CHECKLIST = [
-    "7 aulas gravadas, cerca de 2 horas",
+    "Módulo das 3 demonstrações conectadas",
+    "Módulos complementares com novas aulas",
     "Template do modelo integrado em Excel",
     "Bônus: Template Pro (vendido por R$ 97)",
     "Bônus: Starter Kit Financeiro (vendido por R$ 67,90)",
@@ -162,7 +165,7 @@ export const ACCESS_STEPS = [
 export const PREREQS = "Noção do que são DRE, Balanço e Fluxo de Caixa, e Excel básico.";
 
 export const INCLUDED = [
-    { item: "Curso Fundamentos da Modelagem Financeira", detail: "7 aulas gravadas, cerca de 2 horas, com certificado", value: "" },
+    { item: "Curso Fundamentos da Modelagem Financeira", detail: "Módulo principal e módulos complementares com novas aulas, com certificado", value: "" },
     { item: "Template do modelo integrado", detail: "Excel editável, com checagem de fechamento", value: "" },
     { item: "Bônus: Template Pro", detail: "Modelo de 3 demonstrativos com DCF", value: "R$ 97,00" },
     { item: "Bônus: Starter Kit Financeiro", detail: "DRE, fluxo de caixa e dashboard de KPIs", value: "R$ 67,90" },
@@ -194,8 +197,8 @@ export const FAQ = [
         a: "São gravadas. Você assiste quando quiser, no computador ou no celular, e o acesso não expira.",
     },
     {
-        q: "Por que um curso curto?",
-        a: "Porque a lacuna é específica: ligar DRE, Balanço e Fluxo de Caixa. Em vez de 40 horas passando por tudo, o curso vai direto nessa parte, com profundidade, e dá para concluir numa tarde.",
+        q: "O curso recebe novas aulas?",
+        a: "Sim. Além do módulo principal, que conecta DRE, Balanço e Fluxo de Caixa, o curso tem módulos complementares que recebem novas aulas com frequência. Tudo o que for adicionado entra no seu acesso.",
     },
     {
         q: "O curso tem certificado?",

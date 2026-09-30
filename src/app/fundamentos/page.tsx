@@ -37,7 +37,7 @@ import {
 
 const TITLE = "Fundamentos da Modelagem Financeira, com Tiago Porto";
 const DESCRIPTION =
-    "Aprenda a conectar DRE, Balanço e Fluxo de Caixa em um modelo que fecha. 7 aulas práticas, template em Excel, R$ 197 ou 12x, garantia de 7 dias.";
+    "Aprenda a conectar DRE, Balanço e Fluxo de Caixa em um modelo que fecha, com módulos complementares que recebem novas aulas. Template em Excel, R$ 197 ou 12x, garantia de 7 dias.";
 
 export const metadata: Metadata = {
     title: TITLE,
@@ -54,7 +54,7 @@ const jsonLdCourse = {
     description: DESCRIPTION,
     provider: { "@type": "Person", name: "Tiago Porto", url: "https://www.linkedin.com/in/portotiago/" },
     offers: { "@type": "Offer", price: "197.00", priceCurrency: "BRL", url: CHECKOUT_URL, category: "Paid" },
-    hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online", courseWorkload: "PT2H" },
+    hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online" },
 };
 
 const LESSON_ICONS = [BookOpen, Calculator, Scale, RefreshCw, Landmark, GitMerge, CheckCircle2];
@@ -112,8 +112,8 @@ export default function FundamentosPage() {
                                 Conecte DRE, Balanço e Fluxo de Caixa em um modelo <Accent>que fecha.</Accent>
                             </h1>
                             <p className="mt-7 max-w-lg text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-                                A base que falta para quem trabalha com FP&A, M&A, crédito ou controladoria. Em 7 aulas diretas,
-                                cerca de 2 horas no total.
+                                A base que falta para quem trabalha com FP&A, M&A, crédito ou controladoria. Começa pelo módulo
+                                que conecta as três demonstrações e segue com módulos que recebem novas aulas.
                             </p>
                             <div className="mt-10 flex flex-col items-start gap-4">
                                 <Buy section="hero" />
@@ -204,7 +204,7 @@ export default function FundamentosPage() {
                             center
                             title={
                                 <>
-                                    As 7 aulas, <Accent>na ordem do modelo</Accent>
+                                    O módulo principal: <Accent>as 3 demonstrações conectadas</Accent>
                                 </>
                             }
                             lead="Cada aula prepara a seguinte, até a checagem do Balanço dar zero."
@@ -219,7 +219,7 @@ export default function FundamentosPage() {
                                             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--navy)] text-[var(--amber)]">
                                                 <Icon className="h-5 w-5" aria-hidden />
                                             </span>
-                                            <span className="text-sm text-[var(--ink-3)]">Aula {i + 1}</span>
+                                            <span className="text-sm text-[var(--ink-3)]">Etapa {i + 1}</span>
                                         </div>
                                         <h3 className="mt-6 text-lg font-semibold leading-snug">{l.title}</h3>
                                         <p className="mt-2 text-[15px] leading-relaxed text-[var(--ink-2)]">{l.text}</p>
@@ -227,8 +227,8 @@ export default function FundamentosPage() {
                                 );
                             })}
                             <li className="flex flex-col justify-between rounded-2xl bg-[var(--amber)] p-6 text-[var(--ink)]">
-                                <p className="text-lg font-semibold leading-snug">Você termina com um modelo integrado que fecha, e sabe explicar cada linha.</p>
-                                <p className="mt-6 text-sm">+ template em Excel e 3 bônus</p>
+                                <p className="text-lg font-semibold leading-snug">E o curso continua: módulos complementares que recebem novas aulas com frequência.</p>
+                                <p className="mt-6 text-sm">Tudo o que for adicionado entra no seu acesso.</p>
                             </li>
                         </ol>
 
@@ -452,7 +452,7 @@ export default function FundamentosPage() {
                     <Container>
                         <div className="text-center">
                             <h2 className="mx-auto max-w-3xl text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-6xl">
-                                Daqui a duas horas, você olha um Balanço e <Accent>sabe de onde vem cada número.</Accent>
+                                Depois do módulo principal, você olha um Balanço e <Accent>sabe de onde vem cada número.</Accent>
                             </h2>
                             <div className="mt-12 flex flex-col items-center gap-4">
                                 <Buy section="final_cta" />

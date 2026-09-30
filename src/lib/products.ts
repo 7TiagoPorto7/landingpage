@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
         name: "Fundamentos da Modelagem Financeira",
         kind: "curso",
         summary: "Como DRE, Balanço e Fluxo de Caixa se conectam num modelo que fecha.",
-        includes: ["7 aulas gravadas, cerca de 2 horas", "Template do modelo integrado", "Template Pro e Starter Kit de bônus", "Certificado e garantia de 7 dias"],
+        includes: ["Módulo das 3 demonstrações conectadas", "Módulos complementares com novas aulas", "Template Pro e Starter Kit de bônus", "Certificado e garantia de 7 dias"],
         price: "12x de R$ 19,70",
         priceNote: "ou R$ 197 à vista",
         cta: "Conhecer o curso",
