@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@phosphor-icons/react";
 import { useUtmLink } from "@/hooks/use-utm-link";
 import { trackCheckout } from "@/lib/tracking";
 import { cn } from "@/lib/utils";
@@ -32,7 +32,7 @@ export function CheckoutButton({ href, section, value, product, size = "lg", cla
             )}
         >
             {children}
-            <ArrowRight aria-hidden className={cn("transition-transform group-hover:translate-x-0.5", size === "lg" ? "h-5 w-5" : "h-4 w-4")} />
+            <ArrowRight aria-hidden weight="bold" className={cn("transition-transform group-hover:translate-x-0.5", size === "lg" ? "h-5 w-5" : "h-4 w-4")} />
         </a>
     );
 }

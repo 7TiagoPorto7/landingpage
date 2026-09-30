@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
-import { CHECKOUT_URL, INSTALLMENT_LABEL, PRICE, PRICE_LABEL, PRODUCT } from "./content";
+import { BUY_LABEL, CHECKOUT_URL, INSTALLMENT_LABEL, PRICE, PRICE_LABEL, PRODUCT } from "./content";
 
 // Barra de compra fixa embaixo depois que a pessoa passa do topo (celular e desktop)
 export function FundamentosStickyCTA() {
@@ -27,8 +27,7 @@ export function FundamentosStickyCTA() {
                     <p className="text-xs text-white/65">{INSTALLMENT_LABEL} ou {PRICE_LABEL}</p>
                 </div>
                 <CheckoutButton href={CHECKOUT_URL} section="sticky_mobile" value={PRICE} product={PRODUCT} size="sm">
-                    <span className="sm:hidden">Comprar</span>
-                    <span className="hidden sm:inline">Quero entrar no curso</span>
+                    {BUY_LABEL}
                 </CheckoutButton>
             </div>
         </div>

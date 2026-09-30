@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { ArrowUpRight, Bot, FileSpreadsheet, GraduationCap, LayoutDashboard } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ArrowUpRight, ChartLineUp, GraduationCap, Robot, SquaresFour } from "@phosphor-icons/react/dist/ssr";
+import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import { PRODUCTS, KIND_LABEL } from "@/lib/products";
 import { cn } from "@/lib/utils";
 
 // Capa da home: os cursos e ferramentas em cartões, cada um na cor do seu produto
-const ICONS: Record<string, LucideIcon> = {
+const ICONS: Record<string, PhosphorIcon> = {
     fundamentos: GraduationCap,
-    "template-pro": FileSpreadsheet,
-    "starter-kit": LayoutDashboard,
-    prompts4finance: Bot,
+    "template-pro": ChartLineUp,
+    "starter-kit": SquaresFour,
+    prompts4finance: Robot,
 };
 
 const PAID = PRODUCTS.filter((p) => p.kind !== "gratuito");
@@ -40,9 +40,9 @@ function Card({ slug, className, big = false }: { slug: string; className?: stri
                     className="flex h-10 w-10 items-center justify-center rounded-xl"
                     style={{ color: p.accent, backgroundColor: `color-mix(in srgb, ${p.accent} 14%, white)` }}
                 >
-                    <Icon aria-hidden className="h-5 w-5" />
+                    <Icon aria-hidden weight="duotone" className="h-5 w-5" />
                 </span>
-                <ArrowUpRight aria-hidden className="h-4 w-4 text-[var(--ink-3)] transition-colors group-hover:text-[var(--ink)]" />
+                <ArrowUpRight aria-hidden weight="bold" className="h-4 w-4 text-[var(--ink-3)] transition-colors group-hover:text-[var(--ink)]" />
             </div>
             <p className="mt-4 text-xs font-semibold" style={{ color: p.accent }}>
                 {KIND_LABEL[p.kind]}

@@ -6,10 +6,11 @@ export function Container({ className, children }: { className?: string; childre
     return <div className={cn("mx-auto w-full max-w-6xl px-5 sm:px-8", className)}>{children}</div>;
 }
 
-type Tone = "dark" | "mist" | "snow" | "white";
+type Tone = "dark" | "deep" | "mist" | "snow" | "white";
 
 const TONES: Record<Tone, string> = {
     dark: "bg-[var(--navy)] text-white",
+    deep: "bg-[var(--navy-1)] text-white",
     mist: "bg-[var(--mist)] text-[var(--ink)]",
     snow: "bg-[var(--snow)] text-[var(--ink)]",
     white: "bg-white text-[var(--ink)]",

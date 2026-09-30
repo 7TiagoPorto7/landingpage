@@ -1,30 +1,32 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpen, Calculator, CheckCircle2, ChevronDown, GitMerge, Landmark, RefreshCw, Scale } from "lucide-react";
+import { CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
-import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
+import { cn } from "@/lib/utils";
+import { Accent, Band, Container, SectionTitle, fmt } from "@/components/mfp/ui";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
 import { ModelWorkbook } from "@/components/mfp/model-workbook";
 import { LogicExplorer } from "@/components/mfp/logic-explorer";
 import { SecureCheckout } from "@/components/mfp/secure-checkout";
 import { MfpFooter } from "@/components/mfp/footer";
-import { KpiCards } from "@/components/mfp/kpi-cards";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
 import { Logo } from "@/components/logo";
+import { projetar } from "@/components/mfp/projection";
 import { FundamentosLeadCapture } from "@/components/fundamentos/lead-capture";
 import { FundamentosStickyCTA } from "@/components/fundamentos/sticky-cta";
 import {
     ACCESS_STEPS,
     BONUS_TOTAL,
-    DELIVERABLES,
-    INCLUDED,
-    MARQUEE,
+    BUY_LABEL,
     CHECKOUT_URL,
+    DELIVERABLES,
     FAQ,
+    INCLUDED,
     INSTALLMENT_LABEL,
     LESSONS,
+    MARQUEE,
     NOT_FOR_WHO,
     OUTCOMES,
     PAINS,
@@ -57,186 +59,178 @@ const jsonLdCourse = {
     hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online" },
 };
 
-const LESSON_ICONS = [BookOpen, Calculator, Scale, RefreshCw, Landmark, GitMerge, CheckCircle2];
+const ano1 = projetar(1)[0];
 
-const Buy = ({ section, children = "Quero entrar no curso", size }: { section: string; children?: React.ReactNode; size?: "sm" | "lg" }) => (
+const Buy = ({ section, size }: { section: string; size?: "sm" | "lg" }) => (
     <CheckoutButton href={CHECKOUT_URL} section={section} value={PRICE} product={PRODUCT} size={size}>
-        {children}
+        {BUY_LABEL}
     </CheckoutButton>
 );
 
-function PriceNote({ dark = false }: { dark?: boolean }) {
-    return (
-        <p className={`text-[15px] ${dark ? "text-white/65" : "text-[var(--ink-2)]"}`}>
-            <strong className={dark ? "text-white" : "text-[var(--ink)]"}>{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL} à vista. Garantia de 7 dias.
-        </p>
-    );
-}
-
-const Check = ({ className = "text-[var(--ok)]" }: { className?: string }) => (
-    <svg aria-hidden viewBox="0 0 20 20" className={`mt-[3px] h-5 w-5 shrink-0 ${className}`} fill="none">
-        <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="1.6" />
-        <path d="M6 10.4l2.6 2.6L14 7.6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+const PriceLine = ({ className }: { className?: string }) => (
+    <p className={cn("text-[15px] text-[var(--fg-2)]", className)}>
+        <strong className="font-semibold text-white">{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL} à vista. Garantia de 7 dias.
+    </p>
 );
 
 export default function FundamentosPage() {
     return (
-        <div className={`mfp ${mfpFonts} min-h-screen`} style={{ "--product": "#f59e0b" } as React.CSSProperties}>
+        <div className={`mfp ${mfpFonts} min-h-screen bg-[var(--navy)]`} style={{ "--product": "#f59e0b" } as React.CSSProperties}>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCourse) }} />
 
-            {/* Topo fixo */}
-            <header className="sticky top-0 z-30 border-b border-[var(--grid)] bg-white/90 backdrop-blur-md">
+            <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[var(--navy)]/85 text-white backdrop-blur-md">
                 <Container className="flex h-16 items-center justify-between gap-4">
                     <Link href="/" aria-label="Página inicial">
                         <Logo className="h-7 w-auto" />
                     </Link>
                     <div className="flex items-center gap-5">
-                        <p className="hidden text-sm text-[var(--ink-2)] md:block">
-                            <strong className="font-semibold text-[var(--ink)]">{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL}
+                        <p className="hidden text-sm text-[var(--fg-2)] md:block">
+                            <strong className="font-semibold text-white">{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL}
                         </p>
-                        <Buy section="header" size="sm">
-                            Comprar
-                        </Buy>
+                        <Buy section="header" size="sm" />
                     </div>
                 </Container>
             </header>
 
-            <main>
-                {/* Hero claro com indicadores do modelo */}
-                <section className="product-tint relative overflow-hidden">
-                    <Backdrop tone="light" />
-                    <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:gap-10 lg:py-28 [&>*]:min-w-0">
+            <main className="text-white">
+                {/* Topo: promessa + o modelo funcionando */}
+                <section className="relative overflow-hidden">
+                    <Backdrop tone="dark" />
+                    <Container className="relative grid items-center gap-14 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1fr_1fr] lg:gap-12 lg:pb-28 lg:pt-20 [&>*]:min-w-0">
                         <div>
-                            <h1 className="text-[2.6rem] font-semibold leading-[1.03] tracking-[-0.035em] sm:text-[4rem]">
-                                Conecte DRE, Balanço e Fluxo de Caixa em um modelo <Accent>que fecha.</Accent>
+                            <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-5xl lg:text-[3.1rem] xl:text-[3.5rem]">
+                                DRE, Balanço e Caixa num modelo <Accent>que fecha.</Accent>
                             </h1>
-                            <p className="mt-7 max-w-lg text-lg leading-relaxed text-[var(--ink-2)] sm:text-xl">
-                                A base que falta para quem trabalha com FP&A, M&A, crédito ou controladoria. Começa pelo módulo
-                                que conecta as três demonstrações e segue com módulos que recebem novas aulas.
+                            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--fg-2)]">
+                                O curso que conecta as três demonstrações financeiras, com módulos que recebem novas aulas.
                             </p>
-                            <div className="mt-10 flex flex-col items-start gap-4">
+                            <div className="mt-9 flex flex-col items-start gap-4">
                                 <Buy section="hero" />
-                                <PriceNote />
+                                <PriceLine />
                             </div>
-                            <SecureCheckout className="mt-8" />
                         </div>
-                        <KpiCards />
+                        <ModelWorkbook className="shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)] ring-white/10" />
                     </Container>
                 </section>
 
                 <Marquee items={MARQUEE} />
 
-                {/* O modelo */}
-                <Band tone="mist">
+                {/* Números do modelo, sem cartões */}
+                <Band tone="deep" className="py-16 sm:py-20">
                     <Container>
-                        <SectionTitle
-                            center
-                            title={
-                                <>
-                                    Por dentro do <Accent>modelo integrado</Accent>
-                                </>
-                            }
-                            lead="Premissas, DRE, Balanço, Fluxo de Caixa e as checagens que mostram na hora quando algo não fecha. Clique nas abas e passe o mouse nas células."
-                            className="mb-12"
-                        />
-                        <div className="mx-auto max-w-4xl">
-                            <ModelWorkbook />
-                        </div>
+                        <dl className="grid gap-10 sm:grid-cols-3 sm:gap-6">
+                            {[
+                                [`R$ ${fmt(ano1.lucro)} mil`, "de lucro no ano 1 do modelo-exemplo"],
+                                [`R$ ${fmt(ano1.caixa)} mil`, "de caixa, depois do capital de giro e do investimento"],
+                                ["0", "de diferença entre ativo e passivo: o Balanço fecha"],
+                            ].map(([v, l]) => (
+                                <div key={l} className="border-l-2 border-[var(--amber)] pl-5">
+                                    <dt className="sr-only">{l}</dt>
+                                    <dd>
+                                        <span className="block text-4xl font-semibold tracking-[-0.03em] sm:text-5xl">{v}</span>
+                                        <span className="mt-2 block max-w-[16rem] text-[15px] leading-snug text-[var(--fg-2)]">{l}</span>
+                                    </dd>
+                                </div>
+                            ))}
+                        </dl>
                     </Container>
                 </Band>
 
-                {/* O que muda */}
+                {/* Antes e depois */}
                 <Band tone="dark">
-                    <Container className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
+                    <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
                         <div>
-                            <SectionTitle
-                                dark
-                                title={
-                                    <>
-                                        Do modelo que <Accent>não fecha</Accent> ao modelo que você sabe explicar
-                                    </>
-                                }
-                            />
-                            <ul className="mt-10 space-y-5">
+                            <SectionTitle dark title="Onde a maioria trava" className="mb-10" />
+                            <ul className="space-y-7">
+                                {PAINS.map((p) => (
+                                    <li key={p.title} className="flex gap-4">
+                                        <XCircle aria-hidden weight="duotone" className="mt-0.5 h-6 w-6 shrink-0 text-[#f08b73]" />
+                                        <div>
+                                            <p className="text-lg font-semibold">{p.title}</p>
+                                            <p className="mt-1 leading-relaxed text-[var(--fg-2)]">{p.text}</p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="rounded-3xl bg-[var(--surface)] p-8 ring-1 ring-[var(--line)] sm:p-10">
+                            <h2 className="text-2xl font-semibold tracking-[-0.02em] sm:text-3xl">
+                                Depois do curso, <Accent>você consegue</Accent>
+                            </h2>
+                            <ul className="mt-8 space-y-5">
                                 {OUTCOMES.map((o) => (
-                                    <li key={o} className="flex gap-3 text-lg leading-snug text-white/85">
-                                        <Check className="text-[var(--amber)]" />
+                                    <li key={o} className="flex gap-3 text-lg leading-snug">
+                                        <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-6 w-6 shrink-0 text-[var(--amber)]" />
                                         {o}
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="rounded-[1.75rem] border border-white/10 bg-[var(--navy-2)] p-7 sm:p-9">
-                            <p className="font-semibold text-white/80">Onde a maioria trava hoje</p>
-                            <ul className="mt-6 space-y-6">
-                                {PAINS.map((p) => (
-                                    <li key={p.title} className="border-l-2 border-[var(--pen)] pl-5">
-                                        <p className="text-lg font-semibold">{p.title}</p>
-                                        <p className="mt-1 leading-relaxed text-white/60">{p.text}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
                     </Container>
                 </Band>
 
-                {/* A lógica na prática */}
-                <Band tone="snow">
+                {/* A lógica, interativa */}
+                <Band tone="deep">
                     <Container>
                         <SectionTitle
+                            dark
                             title={
                                 <>
                                     Teste a lógica <Accent>com números</Accent>
                                 </>
                             }
-                            lead="Veja onde cada ligação aparece nos três demonstrativos, ou teste por que uma empresa com lucro pode ficar sem caixa."
+                            lead="Veja onde cada ligação aparece nos três demonstrativos, ou por que uma empresa com lucro pode ficar sem caixa."
                             className="mb-10"
                         />
-                        <LogicExplorer />
+                        <div className="rounded-3xl bg-[var(--snow)] p-4 text-[var(--ink)] sm:p-8">
+                            <LogicExplorer />
+                        </div>
                     </Container>
                 </Band>
 
-                {/* Aulas */}
-                <Band id="conteudo" tone="white">
-                    <Container>
-                        <SectionTitle
-                            center
-                            title={
-                                <>
-                                    O módulo principal: <Accent>as 3 demonstrações conectadas</Accent>
-                                </>
-                            }
-                            lead="Cada aula prepara a seguinte, até a checagem do Balanço dar zero."
-                            className="mb-14"
-                        />
-                        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                            {LESSONS.map((l, i) => {
-                                const Icon = LESSON_ICONS[i];
-                                return (
-                                    <li key={l.title} className="flex flex-col rounded-2xl bg-[var(--snow)] p-6 ring-1 ring-[var(--grid)]">
-                                        <div className="flex items-center justify-between">
-                                            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--navy)] text-[var(--amber)]">
-                                                <Icon className="h-5 w-5" aria-hidden />
-                                            </span>
-                                            <span className="text-sm text-[var(--ink-3)]">Etapa {i + 1}</span>
-                                        </div>
-                                        <h3 className="mt-6 text-lg font-semibold leading-snug">{l.title}</h3>
-                                        <p className="mt-2 text-[15px] leading-relaxed text-[var(--ink-2)]">{l.text}</p>
-                                    </li>
-                                );
-                            })}
-                            <li className="flex flex-col justify-between rounded-2xl bg-[var(--amber)] p-6 text-[var(--ink)]">
-                                <p className="text-lg font-semibold leading-snug">E o curso continua: módulos complementares que recebem novas aulas com frequência.</p>
-                                <p className="mt-6 text-sm">Tudo o que for adicionado entra no seu acesso.</p>
+                {/* Conteúdo em linha do tempo */}
+                <Band tone="dark" id="conteudo">
+                    <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+                        <div className="lg:sticky lg:top-28 lg:self-start">
+                            <SectionTitle
+                                dark
+                                title={
+                                    <>
+                                        O módulo principal: <Accent>as 3 demonstrações</Accent> conectadas
+                                    </>
+                                }
+                                lead="Na ordem em que um modelo é construído, até a checagem do Balanço dar zero."
+                            />
+                            <div className="mt-8">
+                                <Buy section="curriculum" />
+                            </div>
+                        </div>
+                        <ol className="relative border-l border-[var(--line)]">
+                            {LESSONS.map((l, i) => (
+                                <li key={l.title} className="relative pb-10 pl-10 last:pb-0">
+                                    <span className="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[var(--navy)] text-xs font-semibold text-[var(--amber)] ring-1 ring-[var(--amber)]/60">
+                                        {i + 1}
+                                    </span>
+                                    <h3 className="text-lg font-semibold">{l.title}</h3>
+                                    <p className="mt-1.5 leading-relaxed text-[var(--fg-2)]">{l.text}</p>
+                                    <p className="mt-2 text-sm text-[var(--fg-3)]">Você sai com {l.outcome}.</p>
+                                </li>
+                            ))}
+                            <li className="relative pl-10 pt-10">
+                                <span className="absolute -left-[13px] top-10 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[var(--amber)] text-sm font-bold text-[var(--ink)]">
+                                    +
+                                </span>
+                                <h3 className="text-lg font-semibold text-[var(--amber)]">Módulos complementares</h3>
+                                <p className="mt-1.5 leading-relaxed text-[var(--fg-2)]">
+                                    O curso continua com módulos que recebem novas aulas com frequência. Tudo o que for adicionado entra no seu acesso.
+                                </p>
                             </li>
                         </ol>
-
                     </Container>
                 </Band>
 
-                {/* Entregáveis */}
-                <Band tone="dark">
+                {/* Entregáveis em bento */}
+                <Band tone="deep">
                     <Container>
                         <SectionTitle
                             dark
@@ -245,229 +239,194 @@ export default function FundamentosPage() {
                                     Tudo o que <Accent>você recebe</Accent>
                                 </>
                             }
-                            lead="Curso, planilhas e materiais de apoio, com acesso vitalício."
                             className="mb-12"
                         />
-                        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-                            {DELIVERABLES.map(({ icon: Icon, title, text }) => (
-                                <li key={title} className="rounded-2xl bg-white p-5 text-[var(--ink)] sm:p-6">
-                                    <Icon aria-hidden className="h-6 w-6 text-[var(--blue-2)]" />
-                                    <p className="mt-4 font-semibold leading-snug">{title}</p>
-                                    <p className="mt-1 text-sm leading-relaxed text-[var(--ink-2)]">{text}</p>
+                        <ul className="grid auto-rows-[minmax(9.5rem,auto)] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+                            {DELIVERABLES.map(({ icon: Icon, title, text }, i) => (
+                                <li
+                                    key={title}
+                                    className={cn(
+                                        "flex flex-col justify-between rounded-2xl p-5 ring-1 ring-[var(--line)] sm:p-6",
+                                        i === 0 ? "col-span-2 row-span-2 bg-[var(--amber)] text-[var(--ink)] ring-0" : "bg-[var(--surface)]",
+                                        i === 1 && "col-span-2"
+                                    )}
+                                >
+                                    <Icon aria-hidden weight="duotone" className={cn(i === 0 ? "h-10 w-10" : "h-7 w-7 text-[var(--amber)]")} />
+                                    <div className="mt-6">
+                                        <p className={cn("font-semibold leading-snug", i === 0 ? "text-2xl sm:text-3xl" : "text-lg")}>{title}</p>
+                                        <p className={cn("mt-1 leading-relaxed", i === 0 ? "text-[var(--ink)]/75 sm:text-lg" : "text-sm text-[var(--fg-2)]")}>{text}</p>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-12 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
-                            <Buy section="deliverables" />
-                            <PriceNote dark />
-                        </div>
                     </Container>
                 </Band>
 
                 {/* Para quem */}
-                <Band tone="mist">
-                    <Container>
+                <Band tone="dark">
+                    <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                         <SectionTitle
-                            center
+                            dark
                             title={
                                 <>
                                     Feito para <Accent>quem trabalha com números</Accent>
                                 </>
                             }
                             lead={`Pré-requisitos: ${PREREQS}`}
-                            className="mb-14"
                         />
-                        <div className="grid gap-4 md:grid-cols-3">
-                            {PERSONAS.map((p) => (
-                                <div key={p.title} className="rounded-2xl bg-white p-7 ring-1 ring-[var(--grid)]">
-                                    <h3 className="text-xl font-semibold leading-snug">{p.title}</h3>
-                                    <p className="mt-3 leading-relaxed text-[var(--ink-2)]">{p.text}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="mt-6 rounded-2xl border border-[var(--ink)]/15 p-7">
-                            <h3 className="font-semibold">Não é para você se</h3>
-                            <ul className="mt-3 grid gap-3 md:grid-cols-2">
-                                {NOT_FOR_WHO.map((t) => (
-                                    <li key={t} className="flex gap-3 leading-snug text-[var(--ink-2)]">
-                                        <span aria-hidden className="mt-[3px] flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-[1.6px] border-[var(--ink-3)] text-[11px] font-bold text-[var(--ink-3)]">
-                                            ✕
-                                        </span>
-                                        {t}
+                        <div>
+                            <ul className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
+                                {PERSONAS.map((p) => (
+                                    <li key={p.title} className="grid gap-2 py-6 sm:grid-cols-[14rem_1fr] sm:gap-8">
+                                        <p className="text-lg font-semibold leading-snug">{p.title}</p>
+                                        <p className="leading-relaxed text-[var(--fg-2)]">{p.text}</p>
                                     </li>
                                 ))}
                             </ul>
+                            <div className="mt-8">
+                                <p className="font-semibold">Não é para você se</p>
+                                <ul className="mt-3 space-y-2">
+                                    {NOT_FOR_WHO.map((t) => (
+                                        <li key={t} className="flex gap-3 text-[var(--fg-2)]">
+                                            <XCircle aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-[var(--fg-3)]" />
+                                            {t}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                    </Container>
-                </Band>
-
-                {/* Como funciona o acesso */}
-                <Band tone="snow">
-                    <Container>
-                        <SectionTitle
-                            title={
-                                <>
-                                    Como funciona <Accent>depois da compra</Accent>
-                                </>
-                            }
-                            className="mb-12"
-                        />
-                        <ol className="grid gap-4 md:grid-cols-3">
-                            {ACCESS_STEPS.map((step, i) => (
-                                <li key={step.title} className="rounded-2xl bg-white p-7 ring-1 ring-[var(--grid)]">
-                                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--navy)] text-sm font-semibold text-white">
-                                        {i + 1}
-                                    </span>
-                                    <h3 className="mt-5 text-lg font-semibold">{step.title}</h3>
-                                    <p className="mt-2 leading-relaxed text-[var(--ink-2)]">{step.text}</p>
-                                </li>
-                            ))}
-                        </ol>
                     </Container>
                 </Band>
 
                 {/* Instrutor */}
-                <Band tone="white">
-                    <Container className="grid gap-12 lg:grid-cols-[340px_1fr] lg:items-center lg:gap-16">
+                <Band tone="deep">
+                    <Container className="grid items-center gap-12 lg:grid-cols-[340px_1fr] lg:gap-16">
+                        <div className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-3xl ring-1 ring-[var(--line)]">
+                            <Image src="/tiago-porto.png" alt="Tiago Porto" fill sizes="340px" className="object-cover" />
+                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--navy)]/90 to-transparent p-5 pt-16">
+                                <p className="font-semibold">Tiago Porto</p>
+                                <p className="text-sm text-[var(--fg-2)]">Especialista em Modelagem Financeira</p>
+                            </div>
+                        </div>
                         <div>
-                            <SectionTitle
-                                title={
-                                    <>
-                                        Quem ensina: <Accent>Tiago Porto</Accent>
-                                    </>
-                                }
-                            />
-                            <div className="mt-8 max-w-xl space-y-5 text-lg leading-relaxed text-[var(--ink-2)]">
+                            <SectionTitle dark title="Quem ensina" />
+                            <div className="mt-6 max-w-xl space-y-5 text-lg leading-relaxed text-[var(--fg-2)]">
                                 <p>
-                                    Eu sou o Tiago Porto, especialista em Modelagem Financeira. Modelagem é o meu trabalho, não só
-                                    o meu curso: monto modelos que vão para a mesa de investidores, depois de anos planejando e
-                                    analisando as finanças de empresas.
+                                    Modelagem financeira é o meu trabalho, não só o meu curso: monto modelos que vão para a mesa de
+                                    investidores, depois de anos planejando e analisando as finanças de empresas.
                                 </p>
                                 <p>
-                                    Nesse caminho, vi quase todo mundo travar no mesmo ponto. Ninguém explica direito como DRE,
-                                    Balanço e Fluxo de Caixa se ligam. Montei este curso do jeito que eu queria ter aprendido:
-                                    direto, sem enrolação e com profundidade onde importa.
+                                    Nesse caminho, vi quase todo mundo travar no mesmo ponto. Ninguém explica direito como DRE, Balanço e
+                                    Fluxo de Caixa se ligam. Montei este curso do jeito que eu queria ter aprendido.
                                 </p>
                             </div>
                             <a
                                 href="https://www.linkedin.com/in/portotiago/"
                                 target="_blank"
                                 rel="noopener"
-                                className="mt-8 inline-flex h-11 items-center rounded-full border border-[var(--ink)]/25 px-5 font-semibold transition-colors hover:bg-[var(--ink)] hover:text-white"
+                                className="mt-8 inline-flex items-center gap-1.5 font-semibold text-white underline decoration-[var(--amber)] decoration-2 underline-offset-4 hover:text-[var(--amber)]"
                             >
                                 Ver trajetória no LinkedIn
                             </a>
-                        </div>
-                        <div className="relative mx-auto aspect-square w-full max-w-[340px] overflow-hidden rounded-[1.75rem] lg:order-first">
-                            <Image src="/tiago-porto.png" alt="Tiago Porto" fill sizes="340px" className="object-cover" />
-                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-6 pt-20 text-white">
-                                <p className="font-semibold">Tiago Porto</p>
-                                <p className="text-white/75">Especialista em Modelagem Financeira</p>
-                            </div>
                         </div>
                     </Container>
                 </Band>
 
                 {/* Oferta */}
-                <Band id="oferta" tone="dark">
-                    <Container className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-start lg:gap-14">
-                        <div className="text-white">
+                <Band tone="dark" id="oferta">
+                    <Container className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-16">
+                        <div>
                             <SectionTitle
                                 dark
                                 title={
                                     <>
-                                        Tudo incluso <Accent>num só pagamento</Accent>
+                                        Tudo incluso, <Accent>num só pagamento</Accent>
                                     </>
                                 }
-                                lead="Os bônus também são vendidos separadamente no site. No curso, eles entram sem custo."
+                                lead={`Os bônus também são vendidos separadamente no site. Só os dois somam ${BONUS_TOTAL}.`}
                             />
-                            <ul className="mt-10 divide-y divide-white/10 border-y border-white/10">
+                            <ul className="mt-10 divide-y divide-[var(--line)] border-y border-[var(--line)]">
                                 {INCLUDED.map((r) => (
                                     <li key={r.item} className="flex items-start justify-between gap-6 py-4">
                                         <div className="flex gap-3">
-                                            <Check className="text-[var(--amber)]" />
+                                            <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-5 w-5 shrink-0 text-[var(--amber)]" />
                                             <div>
                                                 <p className="font-semibold">{r.item}</p>
-                                                <p className="text-[15px] text-white/55">{r.detail}</p>
+                                                <p className="text-[15px] text-[var(--fg-3)]">{r.detail}</p>
                                             </div>
                                         </div>
-                                        <span className="shrink-0 pt-0.5 text-right text-sm text-white/55">
-                                            {r.value ? (
-                                                <>
-                                                    <span className="block">vendido por</span>
-                                                    <span className="font-semibold text-white/80">{r.value}</span>
-                                                </>
-                                            ) : (
-                                                "incluso"
-                                            )}
+                                        <span className="shrink-0 text-right text-sm text-[var(--fg-3)]">
+                                            {r.value ? `vendido por ${r.value}` : "incluso"}
                                         </span>
                                     </li>
                                 ))}
                             </ul>
-                            <p className="mt-4 text-[15px] text-white/60">
-                                Só os dois bônus vendidos separadamente somam <strong className="text-white">{BONUS_TOTAL}</strong>.
-                            </p>
+                            <ol className="mt-10 grid gap-6 sm:grid-cols-3">
+                                {ACCESS_STEPS.map((s, i) => (
+                                    <li key={s.title}>
+                                        <p className="text-sm font-semibold text-[var(--amber)]">
+                                            {i + 1}. {s.title}
+                                        </p>
+                                        <p className="mt-1 text-sm leading-relaxed text-[var(--fg-2)]">{s.text}</p>
+                                    </li>
+                                ))}
+                            </ol>
                         </div>
 
-                        <div className="rounded-2xl bg-white p-7 text-[var(--ink)] sm:p-9 lg:sticky lg:top-24">
+                        <div className="rounded-3xl bg-white p-7 text-[var(--ink)] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] sm:p-9 lg:sticky lg:top-24">
                             <p className="text-lg font-semibold">{PRODUCT}</p>
                             <p className="mt-1 text-[15px] text-[var(--ink-2)]">Curso, template e 3 bônus</p>
-                            <div className="mt-7 rounded-xl bg-[var(--snow)] p-5">
-                                <p className="text-[15px] text-[var(--ink-2)]">Em até</p>
-                                <p className="text-5xl font-semibold tracking-[-0.03em]">{INSTALLMENT_LABEL}</p>
-                                <p className="mt-1 text-[var(--ink-2)]">ou {PRICE_LABEL} à vista</p>
-                            </div>
-                            <div className="mt-6 [&>a]:w-full">
+                            <p className="mt-8 text-[15px] text-[var(--ink-2)]">Em até</p>
+                            <p className="text-5xl font-semibold tracking-[-0.03em]">{INSTALLMENT_LABEL}</p>
+                            <p className="mt-1 text-[var(--ink-2)]">ou {PRICE_LABEL} à vista</p>
+                            <div className="mt-8 [&>a]:w-full">
                                 <Buy section="pricing_main" />
                             </div>
                             <SecureCheckout className="mt-5 justify-center" />
                             <p className="mt-6 border-t border-[var(--grid)] pt-5 text-sm leading-relaxed text-[var(--ink-2)]">
-                                <strong className="text-[var(--ink)]">Garantia de 7 dias.</strong> Você tem uma semana para assistir e
-                                decidir. Se não for para você, pede o reembolso na Hotmart e recebe 100% de volta.
+                                <strong className="text-[var(--ink)]">Garantia de 7 dias.</strong> Assista, abra o material e decida. Se não for
+                                para você, peça o reembolso na Hotmart e receba 100% de volta.
                             </p>
                         </div>
                     </Container>
                 </Band>
 
-                {/* FAQ */}
-                <Band tone="mist">
-                    <Container className="max-w-3xl">
-                        <SectionTitle center title="Perguntas frequentes" className="mb-12" />
-                        <div className="rounded-2xl bg-white px-6 ring-1 ring-[var(--grid)] sm:px-8">
+                {/* Perguntas: lista lado a lado, sem sanfona */}
+                <Band tone="deep">
+                    <Container>
+                        <SectionTitle dark title="Perguntas frequentes" className="mb-12" />
+                        <dl className="grid gap-x-16 gap-y-10 md:grid-cols-2">
                             {FAQ.map((f) => (
-                                <details key={f.q} className="group border-b border-[var(--grid)] last:border-b-0">
-                                    <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-[17px] font-semibold [&::-webkit-details-marker]:hidden">
-                                        {f.q}
-                                        <ChevronDown aria-hidden className="h-5 w-5 shrink-0 text-[var(--ink-3)] transition-transform group-open:rotate-180" />
-                                    </summary>
-                                    <p className="max-w-2xl pb-6 leading-relaxed text-[var(--ink-2)]">{f.a}</p>
-                                </details>
+                                <div key={f.q}>
+                                    <dt className="text-lg font-semibold">{f.q}</dt>
+                                    <dd className="mt-2 leading-relaxed text-[var(--fg-2)]">{f.a}</dd>
+                                </div>
                             ))}
-                        </div>
+                        </dl>
                     </Container>
                 </Band>
 
                 {/* Fechamento */}
-                <Band tone="dark">
-                    <Container>
+                <section className="relative overflow-hidden py-24 sm:py-32">
+                    <Backdrop tone="dark" />
+                    <Container className="relative">
                         <div className="text-center">
-                            <h2 className="mx-auto max-w-3xl text-[2.4rem] font-semibold leading-[1.05] tracking-[-0.035em] text-white sm:text-6xl">
-                                Depois do módulo principal, você olha um Balanço e <Accent>sabe de onde vem cada número.</Accent>
+                            <h2 className="mx-auto max-w-3xl text-balance text-[2.3rem] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-[3.3rem]">
+                                Olhe um Balanço e <Accent>saiba de onde vem cada número.</Accent>
                             </h2>
-                            <div className="mt-12 flex flex-col items-center gap-4">
+                            <div className="mt-10 flex flex-col items-center gap-4">
                                 <Buy section="final_cta" />
-                                <PriceNote dark />
+                                <PriceLine />
                             </div>
                         </div>
                         <div className="mt-24">
                             <FundamentosLeadCapture />
                         </div>
                     </Container>
-                </Band>
+                </section>
             </main>
 
             <MfpFooter />
-            {/* espaço para a barra fixa não cobrir o rodapé */}
             <div aria-hidden className="h-16 bg-[var(--navy)]" />
             <FundamentosStickyCTA />
         </div>

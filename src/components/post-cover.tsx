@@ -3,10 +3,12 @@ import { getCoverLabel } from "@/lib/blog-categories";
 interface PostCoverProps {
     title: string;
     category: string;
+    /** Versão pequena para listas: só o termo, sem categoria */
+    compact?: boolean;
 }
 
 // Capa tipográfica no lugar de foto de banco de imagens: fundo de planilha, categoria e o termo do post.
-export function PostCover({ title, category }: PostCoverProps) {
+export function PostCover({ title, category, compact = false }: PostCoverProps) {
     return (
         <div className="absolute inset-0 flex flex-col justify-between p-5 bg-[#0b1220] text-white overflow-hidden">
             <div
@@ -18,10 +20,8 @@ export function PostCover({ title, category }: PostCoverProps) {
                     backgroundSize: "64px 24px",
                 }}
             />
-            <span className="relative font-mono text-[10px] uppercase tracking-[0.18em] text-amber-300/90">
-                {category}
-            </span>
-            <span className="relative text-2xl font-extrabold leading-tight tracking-tight line-clamp-2">
+            {!compact && <span className="relative text-xs font-semibold text-amber-300/90">{category}</span>}
+            <span className={`relative font-extrabold leading-tight tracking-tight line-clamp-2 ${compact ? "mt-auto text-sm" : "text-2xl"}`}>
                 {getCoverLabel(title)}
             </span>
         </div>

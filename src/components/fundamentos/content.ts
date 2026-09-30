@@ -1,4 +1,4 @@
-import { Award, BookOpen, Bot, FileSpreadsheet, Infinity as InfinityIcon, LayoutDashboard, ShieldCheck, TrendingUp } from "lucide-react";
+import { Certificate, ChartLineUp, FileXls, Infinity as InfinityIcon, Robot, ShieldCheck, SquaresFour, TreeStructure } from "@phosphor-icons/react/dist/ssr";
 
 // Conteúdo da página /fundamentos. Tudo que for preço, prazo ou promessa fica aqui.
 // Regra: nada de depoimento, número de alunos, nota ou duração que não seja real.
@@ -9,6 +9,9 @@ export const PRICE = 197;
 export const PRICE_LABEL = "R$ 197";
 export const INSTALLMENT_LABEL = "12x de R$ 19,70";
 export const INSTALLMENTS = `${INSTALLMENT_LABEL} no cartão`;
+
+// Um único texto para a intenção de compra, em toda a página
+export const BUY_LABEL = "Quero entrar";
 
 export const MARQUEE = [
     "Módulo das 3 demonstrações conectadas",
@@ -23,12 +26,12 @@ export const MARQUEE = [
 ];
 
 export const DELIVERABLES = [
-    { icon: BookOpen, title: "Módulo principal", text: "DRE, Balanço e Fluxo de Caixa conectados" },
-    { icon: FileSpreadsheet, title: "Template integrado", text: "DRE, Balanço e DFC ligados, com checagem" },
-    { icon: TrendingUp, title: "Template Pro", text: "Modelo completo com valuation por DCF" },
-    { icon: LayoutDashboard, title: "Starter Kit Financeiro", text: "DRE, fluxo de caixa e dashboard de KPIs" },
-    { icon: Bot, title: "Prompts de IA", text: "Para análise de DRE e resumos executivos" },
-    { icon: Award, title: "Certificado", text: "Emitido pela Hotmart ao concluir" },
+    { icon: TreeStructure, title: "Módulo principal", text: "DRE, Balanço e Fluxo de Caixa conectados" },
+    { icon: FileXls, title: "Template integrado", text: "DRE, Balanço e DFC ligados, com checagem" },
+    { icon: ChartLineUp, title: "Template Pro", text: "Modelo completo com valuation por DCF" },
+    { icon: SquaresFour, title: "Starter Kit Financeiro", text: "DRE, fluxo de caixa e dashboard de KPIs" },
+    { icon: Robot, title: "Prompts de IA", text: "Para análise de DRE e resumos executivos" },
+    { icon: Certificate, title: "Certificado", text: "Emitido pela Hotmart ao concluir" },
     { icon: InfinityIcon, title: "Novas aulas incluídas", text: "Módulos complementares sempre atualizados" },
     { icon: ShieldCheck, title: "Garantia de 7 dias", text: "Reembolso integral pela Hotmart" },
 ];

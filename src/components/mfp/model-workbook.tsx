@@ -139,7 +139,7 @@ export function ModelWorkbook({ className }: { className?: string }) {
     return (
         <figure
             className={cn(
-                "overflow-hidden rounded-xl border border-[var(--grid)] bg-white text-[13px] shadow-[0_24px_48px_-24px_rgba(20,33,61,0.35)]",
+                "overflow-hidden rounded-xl border border-[var(--grid)] bg-white text-[13px] text-[var(--ink)] shadow-[0_24px_48px_-24px_rgba(20,33,61,0.35)]",
                 className
             )}
         >

@@ -1,4 +1,4 @@
-import { Barcode, CreditCard, Lock, QrCode } from "lucide-react";
+import { Barcode, CreditCard, LockSimple, QrCode } from "@phosphor-icons/react/dist/ssr";
 import { cn } from "@/lib/utils";
 
 // Sinais de compra segura, sempre perto do botão de compra
@@ -7,7 +7,7 @@ export function SecureCheckout({ dark = false, className }: { dark?: boolean; cl
     return (
         <div className={cn("flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px]", muted, className)}>
             <span className={cn("flex items-center gap-1.5 font-semibold", dark ? "text-white" : "text-[var(--ink)]")}>
-                <Lock className="h-4 w-4" aria-hidden />
+                <LockSimple className="h-4 w-4" weight="bold" aria-hidden />
                 Compra segura pela Hotmart
             </span>
             <span className="flex items-center gap-1.5">

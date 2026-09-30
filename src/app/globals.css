@@ -257,6 +257,11 @@ html {
   --navy: #070d24;
   --navy-2: #0f172a;
   --navy-3: #1e293b;
+  --navy-1: #0b1433;
+  --surface: #111c3e;
+  --line: rgba(255, 255, 255, 0.09);
+  --fg-2: rgba(232, 237, 247, 0.72);
+  --fg-3: rgba(232, 237, 247, 0.5);
   --mist: #e8edf5;
   --mist-2: #d8e0ec;
   --snow: #f5f7fb;
