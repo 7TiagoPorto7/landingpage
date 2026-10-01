@@ -398,7 +398,6 @@ export default function FundamentosPage() {
                             >
                                 Ver trajetória no LinkedIn
                             </a>
-                            <CtaRow section="instrutor" className="mt-10" />
                         </div>
                     </Container>
                 </Band>
