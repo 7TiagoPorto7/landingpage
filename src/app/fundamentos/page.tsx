@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
+import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, Plus, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
@@ -468,18 +468,25 @@ export default function FundamentosPage() {
                     </Container>
                 </Band>
 
-                {/* Perguntas: lista lado a lado, sem sanfona */}
+                {/* Perguntas: lista que expande ao clicar */}
                 <Band tone="dark">
-                    <Container>
-                        <SectionTitle dark title="Perguntas frequentes" className="mb-12" />
-                        <dl className="grid gap-x-16 gap-y-10 md:grid-cols-2">
-                            {FAQ.map((f) => (
-                                <div key={f.q}>
-                                    <dt className="text-lg font-semibold">{f.q}</dt>
-                                    <dd className="mt-2 leading-relaxed text-[var(--fg-2)]">{f.a}</dd>
-                                </div>
+                    <Container className="max-w-3xl">
+                        <SectionTitle dark center title="Perguntas frequentes" className="mb-12" />
+                        <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
+                            {FAQ.map((f, i) => (
+                                <details key={f.q} name="faq" open={i === 0} className="group">
+                                    <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left text-lg font-semibold transition-colors hover:text-[var(--amber)] [&::-webkit-details-marker]:hidden">
+                                        {f.q}
+                                        <Plus
+                                            aria-hidden
+                                            weight="bold"
+                                            className="h-5 w-5 shrink-0 text-[var(--amber)] transition-transform duration-200 group-open:rotate-45"
+                                        />
+                                    </summary>
+                                    <p className="max-w-2xl pb-6 pr-10 leading-relaxed text-[var(--fg-2)]">{f.a}</p>
+                                </details>
                             ))}
-                        </dl>
+                        </div>
                         <CtaRow section="faq" center className="mt-16" />
                     </Container>
                 </Band>
