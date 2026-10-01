@@ -28,7 +28,6 @@ import {
     NOT_FOR_WHO,
     OUTCOMES,
     PERSONAS,
-    PREREQS,
     PRICE,
     PRICE_LABEL,
     PRODUCT,
@@ -327,7 +326,6 @@ export default function FundamentosPage() {
                                     Feito para <Accent>quem trabalha com números</Accent>
                                 </>
                             }
-                            lead={`Pré-requisitos: ${PREREQS}`}
                         />
                         <div>
                             <ul className="divide-y divide-[var(--grid)] border-y border-[var(--grid)]">
