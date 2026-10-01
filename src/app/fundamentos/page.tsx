@@ -12,6 +12,7 @@ import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
 import { ShakeOnView } from "@/components/mfp/shake-on-view";
 import { BonusCatalog } from "@/components/fundamentos/bonus-catalog";
+import { Testimonials } from "@/components/fundamentos/testimonials";
 import { Logo } from "@/components/logo";
 import { FundamentosLeadCapture } from "@/components/fundamentos/lead-capture";
 import { FundamentosStickyCTA } from "@/components/fundamentos/sticky-cta";
@@ -403,6 +404,9 @@ export default function FundamentosPage() {
                         </div>
                     </Container>
                 </Band>
+
+                {/* Depoimentos (só aparece no site quando houver depoimentos reais) */}
+                <Testimonials />
 
                 {/* Oferta */}
                 <Band tone="deep" id="oferta">

@@ -222,3 +222,15 @@ export const FAQ = [
         a: "Você tem 7 dias de garantia. Se achar que o curso não é para você, pede o reembolso na própria Hotmart e recebe o valor integral, sem precisar justificar.",
     },
 ];
+
+// Depoimentos reais de alunos. Só entram aqui com autorização de quem escreveu.
+// "image" aceita print de WhatsApp, e-mail ou avaliação da Hotmart salvo em /public/depoimentos/.
+// Enquanto a lista estiver vazia, o bloco não aparece no site publicado.
+export interface Testimonial {
+    name: string;
+    role?: string;
+    text?: string;
+    image?: { src: string; width: number; height: number; alt: string };
+}
+
+export const TESTIMONIALS: Testimonial[] = [];
