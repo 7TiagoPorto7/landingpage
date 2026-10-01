@@ -29,7 +29,7 @@ function Card({ slug, className, big = false }: { slug: string; className?: stri
         <Link
             href={p.href}
             className={cn(
-                "group relative block overflow-hidden rounded-2xl bg-white p-5 text-[var(--ink)] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)] ring-1 ring-white/10 transition-transform duration-300 hover:-translate-y-1",
+                "group relative block overflow-hidden rounded-2xl bg-white p-5 text-[var(--ink)] shadow-[0_24px_48px_-28px_rgba(7,13,36,0.45)] ring-1 ring-[var(--grid)] transition-transform duration-300 hover:-translate-y-1",
                 big && "p-6",
                 className
             )}

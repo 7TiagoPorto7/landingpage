@@ -7,6 +7,7 @@ import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { CoursePanel } from "@/components/mfp/course-panel";
+import { Marquee } from "@/components/mfp/marquee";
 import { Logo } from "@/components/logo";
 import { PostCover } from "@/components/post-cover";
 import { getSortedPostsData } from "@/lib/blog";
@@ -28,6 +29,18 @@ export const metadata: Metadata = {
     twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
 
+// Faixa rolante entre a capa e os cursos
+const MARQUEE = [
+    "DRE, Balanço e Fluxo de Caixa conectados",
+    "Templates prontos em Excel",
+    "Valuation por DCF",
+    "Prompts de IA para finanças",
+    "Novas aulas com frequência",
+    "Certificado de conclusão",
+    "Garantia de 7 dias",
+    "Guias práticos no blog",
+];
+
 const ICONS: Record<string, Icon> = {
     fundamentos: GraduationCap,
     "template-pro": ChartLineUp,
@@ -35,13 +48,17 @@ const ICONS: Record<string, Icon> = {
     prompts4finance: Robot,
 };
 
-function LinkButton({ href, children, variant = "primary" }: { href: string; children: React.ReactNode; variant?: "primary" | "ghost" }) {
+function LinkButton({ href, children, variant = "primary" }: { href: string; children: React.ReactNode; variant?: "primary" | "ghost" | "outline" }) {
     return (
         <Link
             href={href}
             className={cn(
                 "group inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg px-5 font-semibold transition-colors",
-                variant === "primary" ? "bg-[var(--amber)] text-[var(--ink)] hover:bg-[#fbb32e]" : "text-white ring-1 ring-white/25 hover:bg-white/10"
+                variant === "primary"
+                    ? "bg-[var(--amber)] text-[var(--ink)] hover:bg-[#fbb32e]"
+                    : variant === "outline"
+                      ? "text-[var(--ink)] ring-1 ring-[var(--ink)]/25 hover:bg-[var(--ink)] hover:text-white"
+                      : "text-white ring-1 ring-white/25 hover:bg-white/10"
             )}
         >
             {children}
@@ -105,8 +122,8 @@ export default function Home() {
 
             <main className="text-white">
                 {/* Capa: painel dos cursos */}
-                <section className="relative overflow-hidden">
-                    <Backdrop tone="dark" />
+                <section className="relative overflow-hidden bg-white text-[var(--ink)]">
+                    <Backdrop tone="light" />
                     <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-12 [&>*]:min-w-0">
                         <div>
                             <h1 className="text-balance text-[3rem] font-semibold leading-[1.02] tracking-[-0.04em] sm:text-[4rem] lg:text-[4.6rem]">
@@ -114,7 +131,7 @@ export default function Home() {
                             </h1>
                             <div className="mt-9 flex flex-wrap gap-3">
                                 <LinkButton href="#cursos">Ver cursos</LinkButton>
-                                <LinkButton href="/blog" variant="ghost">
+                                <LinkButton href="/blog" variant="outline">
                                     Ler o blog
                                 </LinkButton>
                             </div>
@@ -122,6 +139,8 @@ export default function Home() {
                         <CoursePanel />
                     </Container>
                 </section>
+
+                <Marquee items={MARQUEE} tone="light" />
 
                 {/* Cursos em bento */}
                 <Band id="cursos" tone="deep">
