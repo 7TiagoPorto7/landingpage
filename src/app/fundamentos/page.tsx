@@ -328,10 +328,9 @@ export default function FundamentosPage() {
                 </Band>
 
                 {/* Para quem */}
-                <Band tone="deep">
+                <Band tone="white">
                     <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                         <SectionTitle
-                            dark
                             title={
                                 <>
                                     Feito para <Accent>quem trabalha com números</Accent>
@@ -340,11 +339,11 @@ export default function FundamentosPage() {
                             lead={`Pré-requisitos: ${PREREQS}`}
                         />
                         <div>
-                            <ul className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
+                            <ul className="divide-y divide-[var(--grid)] border-y border-[var(--grid)]">
                                 {PERSONAS.map((p) => (
                                     <li key={p.title} className="grid gap-2 py-6 sm:grid-cols-[14rem_1fr] sm:gap-8">
                                         <p className="text-lg font-semibold leading-snug">{p.title}</p>
-                                        <p className="leading-relaxed text-[var(--fg-2)]">{p.text}</p>
+                                        <p className="leading-relaxed text-[var(--ink-2)]">{p.text}</p>
                                     </li>
                                 ))}
                             </ul>
@@ -352,14 +351,14 @@ export default function FundamentosPage() {
                                 <p className="font-semibold">Não é para você se</p>
                                 <ul className="mt-3 space-y-2">
                                     {NOT_FOR_WHO.map((t) => (
-                                        <li key={t} className="flex gap-3 text-[var(--fg-2)]">
-                                            <XCircle aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-[var(--fg-3)]" />
+                                        <li key={t} className="flex gap-3 text-[var(--ink-2)]">
+                                            <XCircle aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-[var(--ink-3)]" />
                                             {t}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-                            <CtaRow section="para_quem" />
+                            <CtaRow section="para_quem" light />
                         </div>
                     </Container>
                 </Band>
@@ -369,13 +368,11 @@ export default function FundamentosPage() {
                     <Container className="grid items-center gap-12 lg:grid-cols-[340px_1fr] lg:gap-16">
                         <div className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-3xl ring-1 ring-[var(--line)]">
                             <Image src="/tiago-porto.png" alt="Tiago Porto" fill sizes="340px" className="object-cover" />
-                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--navy)]/90 to-transparent p-5 pt-16">
-                                <p className="font-semibold">Tiago Porto</p>
-                                <p className="text-sm text-[var(--fg-2)]">Especialista em Modelagem Financeira</p>
-                            </div>
                         </div>
                         <div>
                             <SectionTitle dark title="Quem ensina" />
+                            <p className="mt-6 text-2xl font-semibold">Tiago Porto</p>
+                            <p className="mt-1 font-semibold text-[var(--amber)]">Especialista em Modelagem Financeira</p>
                             <div className="mt-6 max-w-xl space-y-5 text-lg leading-relaxed text-[var(--fg-2)]">
                                 <p>
                                     Modelagem financeira é o meu trabalho, não só o meu curso: monto modelos que vão para a mesa de
