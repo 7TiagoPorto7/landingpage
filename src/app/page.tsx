@@ -121,7 +121,7 @@ export default function Home() {
             </header>
 
             <main className="text-white">
-                {/* Capa: painel dos cursos */}
+                {/* Capa: título e foto */}
                 <section className="relative overflow-hidden bg-white text-[var(--ink)]">
                     <Backdrop tone="light" />
                     <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-12 [&>*]:min-w-0">
@@ -229,43 +229,8 @@ export default function Home() {
                     </Container>
                 </Band>
 
-                {/* Trilha em linha */}
-                <Band tone="dark">
-                    <Container>
-                        <SectionTitle
-                            dark
-                            title={
-                                <>
-                                    Uma trilha, <Accent>não uma pilha</Accent> de produtos
-                                </>
-                            }
-                            lead="Cada produto resolve uma etapa. Se você está começando, esta é a ordem que faz sentido."
-                            className="mb-14"
-                        />
-                        <ol className="relative grid gap-10 md:grid-cols-3 md:gap-8">
-                            <span aria-hidden className="absolute left-0 right-0 top-[13px] hidden h-px bg-[var(--line)] md:block" />
-                            {[
-                                { step: "Entenda a lógica", text: "O Fundamentos mostra como os três demonstrativos se ligam e por que o modelo fecha.", href: "/fundamentos", label: "Fundamentos" },
-                                { step: "Modele com uma base pronta", text: "O Template Pro aplica essa lógica num modelo completo, com valuation.", href: "/template-pro", label: "Template Pro" },
-                                { step: "Leve para a rotina", text: "Starter Kit e Prompts aceleram a gestão financeira e as análises do dia a dia.", href: "/starter-kit", label: "Starter Kit" },
-                            ].map((s, i) => (
-                                <li key={s.step} className="relative">
-                                    <span className="relative z-10 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[var(--navy)] text-xs font-semibold text-[var(--amber)] ring-1 ring-[var(--amber)]/60">
-                                        {i + 1}
-                                    </span>
-                                    <h3 className="mt-6 text-xl font-semibold">{s.step}</h3>
-                                    <p className="mt-2 leading-relaxed text-[var(--fg-2)]">{s.text}</p>
-                                    <Link href={s.href} className="mt-4 inline-flex items-center gap-1.5 font-semibold underline decoration-[var(--amber)] decoration-2 underline-offset-4 hover:text-[var(--amber)]">
-                                        {s.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ol>
-                    </Container>
-                </Band>
-
                 {/* Blog em lista editorial */}
-                <Band tone="deep">
+                <Band tone="dark">
                     <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                         <div>
                             <SectionTitle
