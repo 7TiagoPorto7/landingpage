@@ -238,7 +238,7 @@ export default function Home() {
                                 <SectionTitle
                                     title={
                                         <>
-                                            Quem fez o Fundamentos, <Accent>recomenda</Accent>
+                                            Quem estudou, <Accent>recomenda</Accent>
                                         </>
                                     }
                                     lead="Mensagens de alunos do curso."
