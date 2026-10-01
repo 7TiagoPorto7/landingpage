@@ -55,7 +55,7 @@ export function Testimonials() {
                             Quem fez, <Accent>recomenda</Accent>
                         </>
                     }
-                    lead="Depoimentos de alunos do Fundamentos da Modelagem Financeira."
+                    lead="Mensagens que alunos do Fundamentos mandaram no WhatsApp."
                     className="mb-14"
                 />
                 <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">

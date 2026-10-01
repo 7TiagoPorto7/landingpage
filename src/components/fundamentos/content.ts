@@ -233,4 +233,31 @@ export interface Testimonial {
     image?: { src: string; width: number; height: number; alt: string };
 }
 
-export const TESTIMONIALS: Testimonial[] = [];
+// Mensagens recebidas no WhatsApp, transcritas como foram escritas
+export const TESTIMONIALS: Testimonial[] = [
+    {
+        name: "Henrique G.",
+        role: "FP&A",
+        text: "Cara, salvou demais. Eu tava travado num teste pra vaga de FP&A pq meu balanço nunca batia, sempre dava diferença na linha de caixa. Fiz a aula de amarração do balanço e matei a charada na hora. Simples e direto ao ponto, sem aquela enrolação teórica chata.",
+    },
+    {
+        name: "Vanessa Silveira",
+        role: "Analista de Controladoria",
+        text: "Entrei numa vaga nova semana passada e herdei um frankenstein de planilhas de DRE. Ninguém sabia de onde vinham os números ou quem tinha feito aquilo. Usei as dicas de formatação e separação de input/cálculo do curso pra refazer tudo do zero durante o fim de semana. Meu gerente até perguntou onde eu tinha aprendido a estruturar os blocos daquele jeito kkk. É muito bom pra quem precisa organizar a bagunça no dia a dia do corporativo.",
+    },
+    {
+        name: "Cássio M.",
+        role: "Estagiário de M&A",
+        text: "Confesso que comprei achando que ia ter LBO e umas coisas bem mais complexas de M&A, mas o curso foca bastante na fundação da modelagem. E quer saber? Ainda bem. Percebi que eu pulava um monte de etapa básica. Estruturar a aba de premissas do jeito que é ensinado deixou meu modelo de valuation muito mais limpo. Pra pegar a base real do negócio, não tem erro.",
+    },
+    {
+        name: "G. Freitas",
+        role: "Coordenador financeiro",
+        text: "mt bom pra quem trampa com fp&a. as aulas sao praticas e sem enrolacao. me ajudou mto a montar o budget desse ano de forma q a planilha nao quebre inteira toda vez q a diretoria pede pra gente mudar a projeção de vendas rs",
+    },
+    {
+        name: "Paula S. Castro",
+        role: "Analista de Negócios (Transição)",
+        text: "Sou formada em engenharia e tô tentando migrar de vez pra área financeira. A parte matemática do Excel eu tirava de letra, mas a lógica contábil de como o DRE impacta o caixa e consequentemente o balanço patrimonial não entrava na minha cabeça de jeito nenhum. O curso desenhou isso. Consegui montar meu primeiro modelo com as 3 demonstrações amarradas sozinha ontem à noite e tô me sentindo bem mais pronta pras entrevistas técnicas.",
+    },
+];
