@@ -245,8 +245,8 @@ export default function FundamentosPage() {
 
                 {/* Conteúdo: tabela de aulas que expande ao clicar */}
                 <Band tone="deep" id="conteudo">
-                    <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-                        <div className="lg:sticky lg:top-28 lg:self-start">
+                    <Container className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
+                        <div className="lg:sticky lg:top-28 lg:order-2 lg:self-start">
                             <SectionTitle
                                 dark
                                 title={
