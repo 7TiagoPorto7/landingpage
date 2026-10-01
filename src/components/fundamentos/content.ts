@@ -260,4 +260,9 @@ export const TESTIMONIALS: Testimonial[] = [
         role: "Analista de Negócios (Transição)",
         text: "Sou formada em engenharia e tô tentando migrar de vez pra área financeira. A parte matemática do Excel eu tirava de letra, mas a lógica contábil de como o DRE impacta o caixa e consequentemente o balanço patrimonial não entrava na minha cabeça de jeito nenhum. O curso desenhou isso. Consegui montar meu primeiro modelo com as 3 demonstrações amarradas sozinha ontem à noite e tô me sentindo bem mais pronta pras entrevistas técnicas.",
     },
+    {
+        name: "José Porto",
+        role: "Analista de FP&A",
+        text: "Olha, eu já tinha revirado a internet inteira, visto tutorial gringo e até pago um curso caríssimo uns meses atrás, mas vou te falar... nunca tinha achado um conteúdo de modelagem financeira tão didático e fácil de entender. Aquele negócio de projetar as coisas do zero sempre parecia um bicho de sete cabeças pra mim, mas o jeito que a lógica é explicada passo a passo faz dar um 'clique' na mente. Bom demais conseguir finalmente construir meu próprio modelo sem ter que ficar refém daquelas planilhas prontas e engessadas da empresa. Recomendo de olhos fechados.",
+    },
 ];
