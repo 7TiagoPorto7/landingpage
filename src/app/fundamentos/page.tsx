@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, Plus, ShieldCheck, XCircle } from "@phosphor-icons/react/dist/ssr";
+import { Bank, Briefcase, CaretDown, Certificate, ChartLineUp, ChatsCircle, CheckCircle, Plus, ShieldCheck, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
@@ -243,7 +243,7 @@ export default function FundamentosPage() {
                     </Container>
                 </section>
 
-                {/* Conteúdo em linha do tempo */}
+                {/* Conteúdo: tabela de aulas que expande ao clicar */}
                 <Band tone="deep" id="conteudo">
                     <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                         <div className="lg:sticky lg:top-28 lg:self-start">
@@ -254,34 +254,40 @@ export default function FundamentosPage() {
                                         O módulo principal: <Accent>as 3 demonstrações</Accent> conectadas
                                     </>
                                 }
-                                lead="Na ordem em que um modelo é construído, até a checagem do Balanço dar zero."
+                                lead="Na ordem em que um modelo é construído, até a checagem do Balanço dar zero. Clique em uma aula para ver o que ela cobre."
                             />
-                            <div className="mt-8">
-                                <Buy section="curriculum" />
-                            </div>
                         </div>
-                        <ol className="relative border-l border-[var(--line)]">
+                        <div className="overflow-hidden rounded-2xl bg-[var(--surface)] ring-1 ring-[var(--line)]">
+                            <div className="flex items-center justify-between border-b border-[var(--line)] px-5 py-3.5 text-sm text-[var(--fg-3)] sm:px-6">
+                                <span>Módulo principal</span>
+                                <span>com novas aulas nos complementares</span>
+                            </div>
                             {LESSONS.map((l, i) => (
-                                <li key={l.title} className="relative pb-10 pl-10 last:pb-0">
-                                    <span className="absolute -left-[13px] top-0 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[var(--navy)] text-xs font-semibold text-[var(--amber)] ring-1 ring-[var(--amber)]/60">
-                                        {i + 1}
-                                    </span>
-                                    <h3 className="text-lg font-semibold">{l.title}</h3>
-                                    <p className="mt-1.5 leading-relaxed text-[var(--fg-2)]">{l.text}</p>
-                                    <p className="mt-2 text-sm text-[var(--fg-3)]">Você sai com {l.outcome}.</p>
-                                </li>
+                                <details key={l.title} name="aulas" open={i === 0} className="group border-b border-[var(--line)]">
+                                    <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-4 transition-colors hover:bg-white/[0.03] sm:px-6 [&::-webkit-details-marker]:hidden">
+                                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--navy)] text-sm font-semibold text-[var(--amber)] ring-1 ring-[var(--amber)]/40">
+                                            {i + 1}
+                                        </span>
+                                        <h3 className="flex-1 text-[17px] font-semibold leading-snug">{l.title}</h3>
+                                        <CaretDown aria-hidden weight="bold" className="h-4 w-4 shrink-0 text-[var(--fg-3)] transition-transform duration-200 group-open:rotate-180 group-open:text-[var(--amber)]" />
+                                    </summary>
+                                    <div className="pb-5 pl-[4.25rem] pr-6 sm:pl-[4.75rem]">
+                                        <p className="leading-relaxed text-[var(--fg-2)]">{l.text}</p>
+                                        <p className="mt-2 text-sm text-[var(--fg-3)]">Você sai com {l.outcome}.</p>
+                                    </div>
+                                </details>
                             ))}
-                            <li className="relative pl-10 pt-10">
-                                <span className="absolute -left-[13px] top-10 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[var(--amber)] text-sm font-bold text-[var(--ink)]">
-                                    +
-                                </span>
-                                <h3 className="text-lg font-semibold text-[var(--amber)]">Módulos complementares</h3>
-                                <p className="mt-1.5 leading-relaxed text-[var(--fg-2)]">
+                            <details name="aulas" className="group">
+                                <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-4 transition-colors hover:bg-white/[0.03] sm:px-6 [&::-webkit-details-marker]:hidden">
+                                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--amber)] text-base font-bold text-[var(--ink)]">+</span>
+                                    <h3 className="flex-1 text-[17px] font-semibold leading-snug text-[var(--amber)]">Módulos complementares</h3>
+                                    <CaretDown aria-hidden weight="bold" className="h-4 w-4 shrink-0 text-[var(--fg-3)] transition-transform duration-200 group-open:rotate-180 group-open:text-[var(--amber)]" />
+                                </summary>
+                                <p className="pb-5 pl-[4.25rem] pr-6 leading-relaxed text-[var(--fg-2)] sm:pl-[4.75rem]">
                                     O curso continua com módulos que recebem novas aulas com frequência. Tudo o que for adicionado entra no seu acesso.
                                 </p>
-                            </li>
-                        </ol>
-                        <CtaRow section="curriculum_fim" className="mt-0 lg:hidden" />
+                            </details>
+                        </div>
                     </Container>
                 </Band>
 
