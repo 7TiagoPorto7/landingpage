@@ -27,7 +27,6 @@ import {
     MARQUEE,
     NOT_FOR_WHO,
     OUTCOMES,
-    PAINS,
     PERSONAS,
     PREREQS,
     PRICE,
@@ -291,39 +290,31 @@ export default function FundamentosPage() {
                     </Container>
                 </Band>
 
-                {/* Antes e depois */}
+                {/* O que a pessoa consegue fazer depois do curso */}
                 <Band tone="dark">
-                    <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+                    <Container className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
                         <div>
-                            <SectionTitle dark title="Onde a maioria trava" className="mb-10" />
-                            <ul className="space-y-7">
-                                {PAINS.map((p) => (
-                                    <li key={p.title} className="flex gap-4">
-                                        <XCircle aria-hidden weight="duotone" className="mt-0.5 h-6 w-6 shrink-0 text-[#f08b73]" />
-                                        <div>
-                                            <p className="text-lg font-semibold">{p.title}</p>
-                                            <p className="mt-1 leading-relaxed text-[var(--fg-2)]">{p.text}</p>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="rounded-3xl bg-[var(--surface)] p-8 ring-1 ring-[var(--line)] sm:p-10">
-                            <h2 className="text-2xl font-semibold tracking-[-0.02em] sm:text-3xl">
-                                Depois do curso, <Accent>você consegue</Accent>
-                            </h2>
-                            <ul className="mt-8 space-y-5">
-                                {OUTCOMES.map((o) => (
-                                    <li key={o} className="flex gap-3 text-lg leading-snug">
-                                        <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-6 w-6 shrink-0 text-[var(--amber)]" />
-                                        {o}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="mt-10 [&>a]:w-full">
+                            <SectionTitle
+                                dark
+                                title={
+                                    <>
+                                        Depois do curso, <Accent>você consegue</Accent>
+                                    </>
+                                }
+                                lead="O que muda no seu trabalho quando os três demonstrativos deixam de ser abas separadas."
+                            />
+                            <div className="mt-10">
                                 <Buy section="outcomes" />
                             </div>
                         </div>
+                        <ul className="space-y-5 rounded-3xl bg-[var(--surface)] p-8 ring-1 ring-[var(--line)] sm:p-10">
+                            {OUTCOMES.map((o) => (
+                                <li key={o} className="flex gap-3 text-lg leading-snug">
+                                    <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-6 w-6 shrink-0 text-[var(--amber)]" />
+                                    {o}
+                                </li>
+                            ))}
+                        </ul>
                     </Container>
                 </Band>
 
