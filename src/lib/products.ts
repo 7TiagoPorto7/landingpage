@@ -88,16 +88,6 @@ export const PRODUCTS: Product[] = [
         includes: ["Arquivo em Excel"],
         cta: "Baixar grátis",
     },
-    {
-        slug: "fluxograma",
-        accent: "#64748b",
-        href: "/fluxograma",
-        name: "Fluxograma dos demonstrativos",
-        kind: "gratuito",
-        summary: "Mapa interativo de como os números passam da DRE para o Balanço e o Caixa.",
-        includes: ["Online, sem cadastro"],
-        cta: "Abrir o fluxograma",
-    },
 ];
 
 export const KIND_LABEL: Record<ProductKind, string> = {

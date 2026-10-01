@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { source: "/forum", destination: "/blog", permanent: true },
       { source: "/forum/:path*", destination: "/blog", permanent: true },
       { source: "/auth/:path*", destination: "/", permanent: true },
+      { source: "/fluxograma", destination: "/fundamentos", permanent: true },
       // Posts duplicados consolidados e slugs corrigidos
       ...blogRedirects.map(({ from, to }) => ({
         source: `/blog/${from}`,

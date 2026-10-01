@@ -15,7 +15,6 @@ A **MFP Education** (Modelagem Financeira na Prática / MFP Academy) é a plataf
 ### Ferramentas e Planilhas Institucionais
 - [Template Pro Finance](https://www.mfnapratica.com.br/template-pro): Modelo financeiro integrado completo em Excel com 18 abas interligadas, Valuation por DCF (FCFF), múltiplos comparáveis, simulação Monte Carlo e scripts Python para análise de risco (VaR e CVaR).
 - [Starter Kit Financeiro](https://www.mfnapratica.com.br/starter-kit): Sistema completo de gestão financeira corporativa com DRE automática, Fluxo de Caixa pelo método direto/indireto e Dashboard com 10 KPIs essenciais.
-- [Fluxograma de Modelagem](https://www.mfnapratica.com.br/fluxograma): Mapa visual interativo que demonstra o fluxo de dados entre DRE, Balanço Patrimonial, DFC e Valuation.
 
 ### Recursos Gratuitos
 - [Blog & Insights Técnicos](https://www.mfnapratica.com.br/blog): Biblioteca com dezenas de artigos detalhados sobre EBITDA, WACC, LBO, DCF, COGS, ROIC, Margem Operacional e fórmulas financeiras.
