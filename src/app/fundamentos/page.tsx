@@ -11,6 +11,7 @@ import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
 import { ShakeOnView } from "@/components/mfp/shake-on-view";
+import { GuaranteeSeal } from "@/components/mfp/guarantee-seal";
 import { BonusCatalog } from "@/components/fundamentos/bonus-catalog";
 import { Testimonials } from "@/components/fundamentos/testimonials";
 import { Logo } from "@/components/logo";
@@ -464,6 +465,22 @@ export default function FundamentosPage() {
                             <p className="mt-6 border-t border-[var(--grid)] pt-5 text-sm leading-relaxed text-[var(--ink-2)]">
                                 <strong className="text-[var(--ink)]">Garantia de 7 dias.</strong> Assista, abra o material e decida. Se não for
                                 para você, peça o reembolso na Hotmart e receba 100% de volta.
+                            </p>
+                        </div>
+                    </Container>
+                </Band>
+
+                {/* Garantia */}
+                <Band tone="white">
+                    <Container className="flex max-w-4xl flex-col items-center gap-10 text-center sm:flex-row sm:text-left">
+                        <GuaranteeSeal className="h-52 w-52 shrink-0 sm:h-56 sm:w-56" />
+                        <div>
+                            <h2 className="text-[2rem] font-semibold leading-[1.1] tracking-[-0.025em] sm:text-[2.6rem]">
+                                Garantia de <Accent>7 dias</Accent>
+                            </h2>
+                            <p className="mt-4 max-w-xl text-lg leading-relaxed text-[var(--ink-2)]">
+                                Assista às aulas, abra as planilhas e decida com calma. Se não for para você, peça o reembolso na Hotmart em até 7
+                                dias e receba 100% do valor de volta, sem precisar justificar.
                             </p>
                         </div>
                     </Container>
