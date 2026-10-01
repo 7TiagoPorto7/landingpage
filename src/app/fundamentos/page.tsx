@@ -152,14 +152,14 @@ export default function FundamentosPage() {
         <div className={`mfp ${mfpFonts} min-h-screen bg-[var(--navy)]`} style={{ "--product": "#f59e0b" } as React.CSSProperties}>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCourse) }} />
 
-            <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[var(--navy)]/85 text-white backdrop-blur-md">
+            <header className="sticky top-0 z-30 border-b border-[var(--grid)] bg-white/95 text-[var(--ink)] shadow-[0_1px_12px_rgba(7,13,36,0.08)] backdrop-blur-md">
                 <Container className="flex h-16 items-center justify-between gap-4">
                     <Link href="/" aria-label="Página inicial">
-                        <Logo className="h-7 w-auto" />
+                        <Logo variant="dark" className="h-7 w-auto" />
                     </Link>
                     <div className="flex items-center gap-5">
-                        <p className="hidden text-sm text-[var(--fg-2)] md:block">
-                            <Installment className="text-white" /> ou {PRICE_LABEL}
+                        <p className="hidden text-sm text-[var(--ink-2)] md:block">
+                            <Installment className="text-[var(--ink)]" /> ou {PRICE_LABEL}
                         </p>
                         <Buy section="header" size="sm" />
                     </div>
