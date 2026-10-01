@@ -13,6 +13,8 @@ import { getSortedPostsData } from "@/lib/blog";
 import { getCategory } from "@/lib/blog-categories";
 import { KIND_LABEL, PRODUCTS, type Product } from "@/lib/products";
 import { cn } from "@/lib/utils";
+import { CheckoutButton } from "@/components/mfp/checkout-button";
+import { BUY_LABEL, CHECKOUT_URL as FUNDAMENTOS_CHECKOUT, PRICE as FUNDAMENTOS_PRICE, PRODUCT as FUNDAMENTOS } from "@/components/fundamentos/content";
 
 const TITLE = "Modelagem Financeira na Prática | Cursos e planilhas com Tiago Porto";
 const DESCRIPTION =
@@ -48,8 +50,15 @@ function LinkButton({ href, children, variant = "primary" }: { href: string; chi
     );
 }
 
-const MoreLink = ({ className }: { className?: string }) => (
-    <span className={cn("inline-flex items-center gap-1.5 font-semibold", className)}>
+// "Saiba mais" em formato de botão, na cor de cada produto
+const MoreLink = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
+    <span
+        className={cn(
+            "inline-flex h-11 items-center gap-2 self-start rounded-lg px-4 text-[15px] font-semibold shadow-[0_8px_20px_-10px_rgba(0,0,0,0.6)] transition-transform duration-150 group-hover:-translate-y-0.5",
+            className
+        )}
+        style={style}
+    >
         Saiba mais
         <ArrowUpRight aria-hidden weight="bold" className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
     </span>
@@ -64,8 +73,8 @@ function Tile({ p }: { p: Product }) {
                 {KIND_LABEL[p.kind]}
             </p>
             <h3 className="mt-1 text-xl font-semibold leading-snug">{p.name}</h3>
-            <p className="mt-2 leading-relaxed text-[var(--fg-2)]">{p.summary}</p>
-            <MoreLink className="mt-auto pt-8 text-white" />
+            <p className="mb-8 mt-2 leading-relaxed text-[var(--fg-2)]">{p.summary}</p>
+            <MoreLink className="mt-auto text-[var(--ink)]" style={{ backgroundColor: p.accent }} />
         </Link>
     );
 }
@@ -130,9 +139,8 @@ export default function Home() {
                             className="mb-12"
                         />
                         <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
-                            <Link
-                                href={featured.href}
-                                className="group relative flex flex-col overflow-hidden rounded-3xl bg-[var(--amber)] p-8 text-[var(--ink)] sm:p-10 lg:col-span-2 lg:row-span-2"
+                            <div
+                                className="relative flex flex-col overflow-hidden rounded-3xl bg-[var(--amber)] p-8 text-[var(--ink)] sm:p-10 lg:col-span-2 lg:row-span-2"
                             >
                                 <GraduationCap aria-hidden weight="duotone" className="h-11 w-11" />
                                 <p className="mt-10 text-sm font-semibold">{KIND_LABEL[featured.kind]}, o ponto de partida</p>
@@ -145,8 +153,26 @@ export default function Home() {
                                         </li>
                                     ))}
                                 </ul>
-                                <MoreLink className="mt-auto pt-10 text-lg" />
-                            </Link>
+                                <div className="mt-auto flex flex-wrap items-center gap-3 pt-10">
+                                    <CheckoutButton
+                                        href={FUNDAMENTOS_CHECKOUT}
+                                        section="home_por_onde_comecar"
+                                        value={FUNDAMENTOS_PRICE}
+                                        product={FUNDAMENTOS}
+                                        attention
+                                        className="bg-[var(--navy)] text-white hover:bg-[#13204a]"
+                                    >
+                                        {BUY_LABEL}
+                                    </CheckoutButton>
+                                    <Link
+                                        href={featured.href}
+                                        className="group inline-flex h-14 items-center gap-2 rounded-lg px-6 text-[17px] font-semibold text-[var(--ink)] ring-2 ring-[var(--ink)]/80 transition-colors hover:bg-[var(--ink)] hover:text-[var(--amber)]"
+                                    >
+                                        Saiba mais
+                                        <ArrowUpRight aria-hidden weight="bold" className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                                    </Link>
+                                </div>
+                            </div>
                             {paid.slice(0, 2).map((p) => (
                                 <Tile key={p.slug} p={p} />
                             ))}
