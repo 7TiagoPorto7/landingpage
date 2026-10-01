@@ -497,13 +497,13 @@ export default function FundamentosPage() {
                 </Band>
 
                 {/* Perguntas: lista que expande ao clicar */}
-                <Band tone="deep">
+                <Band tone="white">
                     <Container className="max-w-3xl">
-                        <SectionTitle dark center title="Perguntas frequentes" className="mb-12" />
-                        <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
+                        <SectionTitle center title="Perguntas frequentes" className="mb-12" />
+                        <div className="divide-y divide-[var(--grid)] border-y border-[var(--grid)]">
                             {FAQ.map((f, i) => (
                                 <details key={f.q} name="faq" open={i === 0} className="group">
-                                    <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left text-lg font-semibold transition-colors hover:text-[var(--amber)] [&::-webkit-details-marker]:hidden">
+                                    <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left text-lg font-semibold transition-colors hover:text-[#b45309] [&::-webkit-details-marker]:hidden">
                                         {f.q}
                                         <Plus
                                             aria-hidden
@@ -511,11 +511,11 @@ export default function FundamentosPage() {
                                             className="h-5 w-5 shrink-0 text-[var(--amber)] transition-transform duration-200 group-open:rotate-45"
                                         />
                                     </summary>
-                                    <p className="max-w-2xl pb-6 pr-10 leading-relaxed text-[var(--fg-2)]">{f.a}</p>
+                                    <p className="max-w-2xl pb-6 pr-10 leading-relaxed text-[var(--ink-2)]">{f.a}</p>
                                 </details>
                             ))}
                         </div>
-                        <CtaRow section="faq" center className="mt-16" />
+                        <CtaRow section="faq" light center className="mt-16" />
                     </Container>
                 </Band>
 
