@@ -217,6 +217,24 @@ export default function FundamentosPage() {
                     </Container>
                 </Band>
 
+                {/* Bônus em catálogo de streaming */}
+                <section className="overflow-hidden bg-[#03060f] py-20 sm:py-28">
+                    <Container>
+                        <SectionTitle
+                            dark
+                            title={
+                                <>
+                                    E ainda leva <Accent>estes bônus</Accent>
+                                </>
+                            }
+                            lead={`Além do curso, você recebe produtos que também são vendidos separadamente. Só o Template Pro e o Starter Kit somam ${BONUS_TOTAL}.`}
+                            className="mb-12"
+                        />
+                        <BonusCatalog />
+                        <CtaRow section="bonus" className="mt-6" />
+                    </Container>
+                </section>
+
                 {/* Antes e depois */}
                 <Band tone="dark">
                     <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
@@ -315,24 +333,6 @@ export default function FundamentosPage() {
                         <CtaRow section="curriculum_fim" className="mt-0 lg:hidden" />
                     </Container>
                 </Band>
-
-                {/* Bônus em catálogo de streaming */}
-                <section className="overflow-hidden bg-[#03060f] py-20 sm:py-28">
-                    <Container>
-                        <SectionTitle
-                            dark
-                            title={
-                                <>
-                                    E ainda leva <Accent>estes bônus</Accent>
-                                </>
-                            }
-                            lead={`Além do curso, você recebe produtos que também são vendidos separadamente. Só o Template Pro e o Starter Kit somam ${BONUS_TOTAL}.`}
-                            className="mb-12"
-                        />
-                        <BonusCatalog />
-                        <CtaRow section="bonus" className="mt-6" />
-                    </Container>
-                </section>
 
                 {/* Para quem */}
                 <Band tone="dark">
