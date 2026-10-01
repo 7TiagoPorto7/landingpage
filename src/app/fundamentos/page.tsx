@@ -490,7 +490,6 @@ export default function FundamentosPage() {
                                     </li>
                                 ))}
                             </ul>
-                            <CtaRow section="certificado" className="mt-10" />
                         </div>
                         <Certificado />
                     </Container>
