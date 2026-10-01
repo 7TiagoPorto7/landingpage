@@ -110,7 +110,7 @@ export default function Home() {
                     <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-12 [&>*]:min-w-0">
                         <div>
                             <h1 className="text-balance text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-5xl lg:text-[3.5rem]">
-                                Modelagem financeira <Accent>do jeito que o mercado usa.</Accent>
+                                Aprenda modelagem financeira <Accent>na prática</Accent>
                             </h1>
                             <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--fg-2)]">
                                 Cursos, planilhas e guias de Tiago Porto, especialista em Modelagem Financeira. Para usar no trabalho.
