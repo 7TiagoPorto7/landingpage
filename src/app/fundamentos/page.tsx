@@ -243,42 +243,6 @@ export default function FundamentosPage() {
                     </Container>
                 </section>
 
-                {/* Antes e depois */}
-                <Band tone="dark">
-                    <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
-                        <div>
-                            <SectionTitle dark title="Onde a maioria trava" className="mb-10" />
-                            <ul className="space-y-7">
-                                {PAINS.map((p) => (
-                                    <li key={p.title} className="flex gap-4">
-                                        <XCircle aria-hidden weight="duotone" className="mt-0.5 h-6 w-6 shrink-0 text-[#f08b73]" />
-                                        <div>
-                                            <p className="text-lg font-semibold">{p.title}</p>
-                                            <p className="mt-1 leading-relaxed text-[var(--fg-2)]">{p.text}</p>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="rounded-3xl bg-[var(--surface)] p-8 ring-1 ring-[var(--line)] sm:p-10">
-                            <h2 className="text-2xl font-semibold tracking-[-0.02em] sm:text-3xl">
-                                Depois do curso, <Accent>você consegue</Accent>
-                            </h2>
-                            <ul className="mt-8 space-y-5">
-                                {OUTCOMES.map((o) => (
-                                    <li key={o} className="flex gap-3 text-lg leading-snug">
-                                        <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-6 w-6 shrink-0 text-[var(--amber)]" />
-                                        {o}
-                                    </li>
-                                ))}
-                            </ul>
-                            <div className="mt-10 [&>a]:w-full">
-                                <Buy section="outcomes" />
-                            </div>
-                        </div>
-                    </Container>
-                </Band>
-
                 {/* Conteúdo em linha do tempo */}
                 <Band tone="deep" id="conteudo">
                     <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -321,8 +285,44 @@ export default function FundamentosPage() {
                     </Container>
                 </Band>
 
-                {/* Para quem */}
+                {/* Antes e depois */}
                 <Band tone="dark">
+                    <Container className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+                        <div>
+                            <SectionTitle dark title="Onde a maioria trava" className="mb-10" />
+                            <ul className="space-y-7">
+                                {PAINS.map((p) => (
+                                    <li key={p.title} className="flex gap-4">
+                                        <XCircle aria-hidden weight="duotone" className="mt-0.5 h-6 w-6 shrink-0 text-[#f08b73]" />
+                                        <div>
+                                            <p className="text-lg font-semibold">{p.title}</p>
+                                            <p className="mt-1 leading-relaxed text-[var(--fg-2)]">{p.text}</p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="rounded-3xl bg-[var(--surface)] p-8 ring-1 ring-[var(--line)] sm:p-10">
+                            <h2 className="text-2xl font-semibold tracking-[-0.02em] sm:text-3xl">
+                                Depois do curso, <Accent>você consegue</Accent>
+                            </h2>
+                            <ul className="mt-8 space-y-5">
+                                {OUTCOMES.map((o) => (
+                                    <li key={o} className="flex gap-3 text-lg leading-snug">
+                                        <CheckCircle aria-hidden weight="fill" className="mt-0.5 h-6 w-6 shrink-0 text-[var(--amber)]" />
+                                        {o}
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="mt-10 [&>a]:w-full">
+                                <Buy section="outcomes" />
+                            </div>
+                        </div>
+                    </Container>
+                </Band>
+
+                {/* Para quem */}
+                <Band tone="deep">
                     <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                         <SectionTitle
                             dark
@@ -359,7 +359,7 @@ export default function FundamentosPage() {
                 </Band>
 
                 {/* Instrutor */}
-                <Band tone="deep">
+                <Band tone="dark">
                     <Container className="grid items-center gap-12 lg:grid-cols-[340px_1fr] lg:gap-16">
                         <div className="relative mx-auto aspect-[4/5] w-full max-w-[340px] overflow-hidden rounded-3xl ring-1 ring-[var(--line)]">
                             <Image src="/tiago-porto.png" alt="Tiago Porto" fill sizes="340px" className="object-cover" />
@@ -394,7 +394,7 @@ export default function FundamentosPage() {
                 </Band>
 
                 {/* Oferta */}
-                <Band tone="dark" id="oferta">
+                <Band tone="deep" id="oferta">
                     <Container className="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-start lg:gap-16">
                         <div>
                             <SectionTitle
@@ -455,7 +455,7 @@ export default function FundamentosPage() {
                 </Band>
 
                 {/* Certificado */}
-                <Band tone="deep">
+                <Band tone="dark">
                     <Container className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16 [&>*]:min-w-0">
                         <div>
                             <SectionTitle
@@ -482,7 +482,7 @@ export default function FundamentosPage() {
                 </Band>
 
                 {/* Perguntas: lista que expande ao clicar */}
-                <Band tone="dark">
+                <Band tone="deep">
                     <Container className="max-w-3xl">
                         <SectionTitle dark center title="Perguntas frequentes" className="mb-12" />
                         <div className="divide-y divide-[var(--line)] border-y border-[var(--line)]">
