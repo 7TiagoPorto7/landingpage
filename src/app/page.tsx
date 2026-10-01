@@ -109,12 +109,9 @@ export default function Home() {
                     <Backdrop tone="dark" />
                     <Container className="relative grid items-center gap-14 py-16 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:gap-12 [&>*]:min-w-0">
                         <div>
-                            <h1 className="text-balance text-[2.5rem] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-5xl lg:text-[3.5rem]">
+                            <h1 className="text-balance text-[3rem] font-semibold leading-[1.02] tracking-[-0.04em] sm:text-[4rem] lg:text-[4.6rem]">
                                 Aprenda modelagem financeira <Accent>na prática</Accent>
                             </h1>
-                            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--fg-2)]">
-                                Cursos, planilhas e guias de Tiago Porto, especialista em Modelagem Financeira. Para usar no trabalho.
-                            </p>
                             <div className="mt-9 flex flex-wrap gap-3">
                                 <LinkButton href="#cursos">Ver cursos</LinkButton>
                                 <LinkButton href="/blog" variant="ghost">
