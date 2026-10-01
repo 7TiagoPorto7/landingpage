@@ -25,7 +25,7 @@ export function FundamentosStickyCTA() {
                 <div className="leading-tight">
                     <p className="text-sm font-semibold"><span className="sm:hidden">Curso Fundamentos</span><span className="hidden sm:inline">{PRODUCT}</span></p>
                     <p className="text-xs text-white/65">
-                        {INSTALLMENT_COUNT} <strong className="text-base font-semibold text-white">{INSTALLMENT_VALUE}</strong> ou {PRICE_LABEL}
+                        {INSTALLMENT_COUNT} <strong className="text-lg font-bold text-white">{INSTALLMENT_VALUE}</strong> ou {PRICE_LABEL}
                     </p>
                 </div>
                 <CheckoutButton href={CHECKOUT_URL} section="sticky_mobile" value={PRICE} product={PRODUCT} size="sm" attention>

@@ -68,7 +68,7 @@ const Buy = ({ section, size }: { section: string; size?: "sm" | "lg" }) => (
 const Installment = ({ className, valueClassName }: { className?: string; valueClassName?: string }) => (
     <span className={cn("whitespace-nowrap", className)}>
         <span className="text-[0.8em] font-medium opacity-80">{INSTALLMENT_COUNT}</span>{" "}
-        <strong className={cn("text-[1.3em] font-semibold tracking-[-0.01em]", valueClassName)}>{INSTALLMENT_VALUE}</strong>
+        <strong className={cn("text-[1.55em] font-bold tracking-[-0.015em]", valueClassName)}>{INSTALLMENT_VALUE}</strong>
     </span>
 );
 
@@ -201,11 +201,11 @@ export default function FundamentosPage() {
                         </div>
 
                         {/* Cartão de preço no canto inferior direito (no celular, abaixo do botão) */}
-                        <div className="mt-10 w-full max-w-[17rem] rounded-2xl bg-white/[0.06] p-5 text-left ring-1 ring-[var(--amber)]/40 backdrop-blur-md lg:absolute lg:bottom-10 lg:right-6 lg:mt-0 xl:right-8">
+                        <div className="mt-10 w-full max-w-[19.5rem] rounded-2xl bg-white/[0.06] p-5 text-left ring-1 ring-[var(--amber)]/40 backdrop-blur-md lg:absolute lg:bottom-10 lg:right-6 lg:mt-0 xl:right-8">
                             <p className="text-sm text-[var(--fg-2)]">No cartão</p>
-                            <p className="mt-1 leading-none">
+                            <p className="mt-1 whitespace-nowrap leading-none">
                                 <span className="text-base font-medium text-[var(--fg-2)]">{INSTALLMENT_COUNT}</span>{" "}
-                                <span className="text-[2.6rem] font-semibold tracking-[-0.03em] text-white">{INSTALLMENT_VALUE}</span>
+                                <span className="text-[3.1rem] font-bold tracking-[-0.03em] text-white">{INSTALLMENT_VALUE}</span>
                             </p>
                             <p className="mt-2 text-sm text-[var(--fg-2)]">ou {PRICE_LABEL} à vista</p>
                             <p className="mt-4 flex items-center gap-2 border-t border-[var(--line)] pt-3 text-sm text-[var(--fg-2)]">
@@ -258,7 +258,6 @@ export default function FundamentosPage() {
                             className="mb-12"
                         />
                         <BonusCatalog />
-                        <CtaRow section="bonus" className="mt-6" />
                     </Container>
                 </section>
 
@@ -275,6 +274,7 @@ export default function FundamentosPage() {
                                 }
                                 lead="Na ordem em que um modelo é construído, até a checagem do Balanço dar zero. Clique em uma aula para ver o que ela cobre."
                             />
+                            <CtaRow section="curriculum" className="mt-10" />
                         </div>
                         <div className="overflow-hidden rounded-2xl bg-[var(--surface)] ring-1 ring-[var(--line)]">
                             <div className="flex items-center justify-between border-b border-[var(--line)] px-5 py-3.5 text-sm text-[var(--fg-3)] sm:px-6">
@@ -323,9 +323,6 @@ export default function FundamentosPage() {
                                 }
                                 lead="O que muda no seu trabalho quando os três demonstrativos deixam de ser abas separadas."
                             />
-                            <div className="mt-10">
-                                <Buy section="outcomes" />
-                            </div>
                         </div>
                         <ul className="space-y-5 rounded-3xl bg-[var(--surface)] p-8 ring-1 ring-[var(--line)] sm:p-10">
                             {OUTCOMES.map((o) => (
@@ -454,7 +451,7 @@ export default function FundamentosPage() {
                             <p className="text-lg font-semibold">{PRODUCT}</p>
                             <p className="mt-1 text-[15px] text-[var(--ink-2)]">Curso, template e 3 bônus</p>
                             <p className="mt-8 text-[15px] text-[var(--ink-2)]">No cartão</p>
-                            <p className="text-5xl font-semibold tracking-[-0.03em]">
+                            <p className="whitespace-nowrap text-[2.75rem] font-bold leading-none tracking-[-0.03em] sm:text-[3.6rem]">
                                 <span className="text-2xl font-medium text-[var(--ink-2)]">{INSTALLMENT_COUNT}</span> {INSTALLMENT_VALUE}
                             </p>
                             <p className="mt-1 text-[var(--ink-2)]">ou {PRICE_LABEL} à vista</p>
