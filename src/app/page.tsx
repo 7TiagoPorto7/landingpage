@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, ChartLineUp, FileXls, GraduationCap, Robot, SquaresFour } from "@phosphor-icons/react/dist/ssr";
 import type { Icon } from "@phosphor-icons/react";
@@ -6,7 +7,6 @@ import { mfpFonts } from "@/lib/fonts";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
-import { CoursePanel } from "@/components/mfp/course-panel";
 import { Marquee } from "@/components/mfp/marquee";
 import { Logo } from "@/components/logo";
 import { PostCover } from "@/components/post-cover";
@@ -136,7 +136,19 @@ export default function Home() {
                                 </LinkButton>
                             </div>
                         </div>
-                        <CoursePanel />
+                        <div className="relative isolate mx-auto w-full max-w-md lg:max-w-none">
+                            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[0_40px_80px_-40px_rgba(7,13,36,0.55)] ring-1 ring-[var(--grid)] sm:aspect-[5/4] lg:aspect-[4/5]">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1657727534676-cac1bb160d64?auto=format&fit=crop&q=80&w=1400"
+                                    alt="Analista de investimentos trabalhando concentrado no escritório"
+                                    fill
+                                    priority
+                                    sizes="(min-width: 1024px) 50vw, 100vw"
+                                    className="object-cover object-[60%_center]"
+                                />
+                            </div>
+                            <span aria-hidden className="absolute -bottom-4 -left-4 -z-10 h-32 w-32 rounded-3xl bg-[var(--amber)]/80" />
+                        </div>
                     </Container>
                 </section>
 

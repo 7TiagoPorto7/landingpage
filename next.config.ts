@@ -2,6 +2,10 @@ import type { NextConfig } from "next";
 import blogRedirects from "./content/blog-redirects.json";
 
 const nextConfig: NextConfig = {
+  // Fotos de banco gratuito (Unsplash) usadas na capa e no blog
+  images: {
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+  },
   async redirects() {
     return [
       { source: "/forum", destination: "/blog", permanent: true },
