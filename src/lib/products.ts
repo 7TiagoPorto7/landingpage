@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
         kind: "curso",
         summary: "Como DRE, Balanço e Fluxo de Caixa se conectam num modelo que fecha.",
         includes: ["Módulo das 3 demonstrações conectadas", "Módulos complementares com novas aulas", "Template Pro e Starter Kit de bônus", "Certificado e garantia de 7 dias"],
-        price: "12x de R$ 19,70",
+        price: "12x de R$ 19,67",
         priceNote: "ou R$ 197 à vista",
         cta: "Conhecer o curso",
         featured: true,

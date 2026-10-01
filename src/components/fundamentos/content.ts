@@ -7,11 +7,13 @@ export const PRODUCT = "Fundamentos da Modelagem Financeira";
 export const CHECKOUT_URL = "https://pay.hotmart.com/F106435738T";
 export const PRICE = 197;
 export const PRICE_LABEL = "R$ 197";
-export const INSTALLMENT_LABEL = "12x de R$ 19,70";
+export const INSTALLMENT_COUNT = "12x de";
+export const INSTALLMENT_VALUE = "R$ 19,67";
+export const INSTALLMENT_LABEL = `${INSTALLMENT_COUNT} ${INSTALLMENT_VALUE}`;
 export const INSTALLMENTS = `${INSTALLMENT_LABEL} no cartão`;
 
 // Um único texto para a intenção de compra, em toda a página
-export const BUY_LABEL = "Quero entrar";
+export const BUY_LABEL = "Comprar agora";
 
 export const MARQUEE = [
     "Módulo das 3 demonstrações conectadas",
@@ -21,7 +23,7 @@ export const MARQUEE = [
     "Checagem automática de fechamento",
     "Certificado de conclusão",
     "Acesso vitalício",
-    "12x de R$ 19,70",
+    "12x de R$ 19,67",
     "Garantia de 7 dias",
 ];
 

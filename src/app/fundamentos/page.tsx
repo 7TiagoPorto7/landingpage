@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Certificate, CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
+import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle, fmt } from "@/components/mfp/ui";
@@ -13,6 +13,7 @@ import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
 import { BalanceCheck } from "@/components/mfp/balance-check";
+import { BonusCatalog } from "@/components/fundamentos/bonus-catalog";
 import { Logo } from "@/components/logo";
 import { projetar } from "@/components/mfp/projection";
 import { FundamentosLeadCapture } from "@/components/fundamentos/lead-capture";
@@ -22,10 +23,10 @@ import {
     BONUS_TOTAL,
     BUY_LABEL,
     CHECKOUT_URL,
-    DELIVERABLES,
     FAQ,
     INCLUDED,
-    INSTALLMENT_LABEL,
+    INSTALLMENT_COUNT,
+    INSTALLMENT_VALUE,
     LESSONS,
     MARQUEE,
     NOT_FOR_WHO,
@@ -38,12 +39,12 @@ import {
     PRODUCT,
 } from "@/components/fundamentos/content";
 
-const TITLE = "Fundamentos da Modelagem Financeira, com Tiago Porto";
+const TITLE = "Aprenda a conectar os três demonstrativos financeiros e alavanque sua carreira";
 const DESCRIPTION =
     "Aprenda a conectar DRE, Balanço e Fluxo de Caixa em um modelo que fecha, com módulos complementares que recebem novas aulas. Template em Excel, R$ 197 ou 12x, garantia de 7 dias.";
 
 export const metadata: Metadata = {
-    title: TITLE,
+    title: { absolute: TITLE },
     description: DESCRIPTION,
     alternates: { canonical: "/fundamentos" },
     openGraph: { title: TITLE, description: DESCRIPTION, type: "website", locale: "pt_BR", url: "/fundamentos" },
@@ -63,16 +64,55 @@ const jsonLdCourse = {
 const ano1 = projetar(1)[0];
 
 const Buy = ({ section, size }: { section: string; size?: "sm" | "lg" }) => (
-    <CheckoutButton href={CHECKOUT_URL} section={section} value={PRICE} product={PRODUCT} size={size}>
+    <CheckoutButton href={CHECKOUT_URL} section={section} value={PRICE} product={PRODUCT} size={size} attention>
         {BUY_LABEL}
     </CheckoutButton>
 );
 
-const PriceLine = ({ className }: { className?: string }) => (
-    <p className={cn("text-[15px] text-[var(--fg-2)]", className)}>
-        <strong className="font-semibold text-white">{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL} à vista. Garantia de 7 dias.
+// Parcela com o "12x de" pequeno e o valor em destaque
+const Installment = ({ className, valueClassName }: { className?: string; valueClassName?: string }) => (
+    <span className={cn("whitespace-nowrap", className)}>
+        <span className="text-[0.8em] font-medium opacity-80">{INSTALLMENT_COUNT}</span>{" "}
+        <strong className={cn("text-[1.3em] font-semibold tracking-[-0.01em]", valueClassName)}>{INSTALLMENT_VALUE}</strong>
+    </span>
+);
+
+const PriceLine = ({ className, light = false }: { className?: string; light?: boolean }) => (
+    <p className={cn("text-[15px]", light ? "text-[var(--ink-2)]" : "text-[var(--fg-2)]", className)}>
+        <Installment className={light ? "text-[var(--ink)]" : "text-white"} /> ou {PRICE_LABEL} à vista. Garantia de 7 dias.
     </p>
 );
+
+// Chamada para o checkout que se repete ao longo da página
+const CtaRow = ({ section, className, light = false, center = false }: { section: string; className?: string; light?: boolean; center?: boolean }) => (
+    <div className={cn("mt-12 flex flex-col gap-3", center ? "items-center text-center" : "items-start", className)}>
+        <Buy section={section} />
+        <PriceLine light={light} />
+    </div>
+);
+
+const CAREERS = [
+    {
+        icon: ChartLineUp,
+        title: "FP&A e controladoria",
+        text: "Orçamento e forecast em que o resultado, o Balanço e o caixa contam a mesma história.",
+    },
+    {
+        icon: Briefcase,
+        title: "Valuation e M&A",
+        text: "Todo DCF começa nos três demonstrativos projetados. Sem a base, o valor da empresa não se sustenta.",
+    },
+    {
+        icon: Bank,
+        title: "Crédito e bancos",
+        text: "A capacidade de pagar uma dívida vem do caixa, não do lucro. É a ligação que você aprende aqui.",
+    },
+    {
+        icon: ChatsCircle,
+        title: "Entrevistas e cases",
+        text: "“Se a depreciação sobe 10, o que muda nos três demonstrativos?” Você responde sem travar.",
+    },
+];
 
 // Ilustração do certificado de conclusão (o nome é do aluno)
 function Certificado() {
@@ -125,7 +165,7 @@ export default function FundamentosPage() {
                     </Link>
                     <div className="flex items-center gap-5">
                         <p className="hidden text-sm text-[var(--fg-2)] md:block">
-                            <strong className="font-semibold text-white">{INSTALLMENT_LABEL}</strong> ou {PRICE_LABEL}
+                            <Installment className="text-white" /> ou {PRICE_LABEL}
                         </p>
                         <Buy section="header" size="sm" />
                     </div>
@@ -136,13 +176,13 @@ export default function FundamentosPage() {
                 {/* Topo: promessa + o modelo funcionando */}
                 <section className="relative overflow-hidden">
                     <Backdrop tone="dark" />
-                    <Container className="relative grid items-center gap-14 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1fr_1fr] lg:gap-12 lg:pb-28 lg:pt-20 [&>*]:min-w-0">
+                    <Container className="relative grid items-center gap-14 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-12 lg:pb-28 lg:pt-20 [&>*]:min-w-0">
                         <div>
-                            <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-5xl lg:text-[3.1rem] xl:text-[3.5rem]">
-                                DRE, Balanço e Caixa num modelo <Accent>que fecha.</Accent>
+                            <h1 className="text-balance text-[2.15rem] font-semibold leading-[1.08] tracking-[-0.035em] sm:text-[2.6rem] xl:text-[2.95rem]">
+                                Aprenda a conectar os três demonstrativos financeiros e <Accent>alavanque sua carreira</Accent>
                             </h1>
                             <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--fg-2)]">
-                                O curso que conecta as três demonstrações financeiras, com módulos que recebem novas aulas.
+                                DRE, Balanço e Fluxo de Caixa num modelo que fecha, com módulos que recebem novas aulas.
                             </p>
                             <div className="mt-9 flex flex-col items-start gap-4">
                                 <Buy section="hero" />
@@ -154,6 +194,33 @@ export default function FundamentosPage() {
                 </section>
 
                 <Marquee items={MARQUEE} />
+
+                {/* Carreira: onde a habilidade é usada */}
+                <Band tone="white">
+                    <Container>
+                        <SectionTitle
+                            title={
+                                <>
+                                    A base que <Accent>todo profissional de finanças</Accent> usa
+                                </>
+                            }
+                            lead="Quem entende como DRE, Balanço e Fluxo de Caixa se conectam fala a língua de todas as áreas de finanças."
+                            className="mb-12"
+                        />
+                        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                            {CAREERS.map(({ icon: Icon, title, text }) => (
+                                <li key={title} className="rounded-2xl bg-[var(--snow)] p-6 ring-1 ring-[var(--grid)] transition-shadow hover:shadow-[0_20px_40px_-24px_rgba(7,13,36,0.35)]">
+                                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--navy)] text-[var(--amber)]">
+                                        <Icon aria-hidden weight="duotone" className="h-6 w-6" />
+                                    </span>
+                                    <h3 className="mt-6 text-lg font-semibold">{title}</h3>
+                                    <p className="mt-2 leading-relaxed text-[var(--ink-2)]">{text}</p>
+                                </li>
+                            ))}
+                        </ul>
+                        <CtaRow section="carreira" light />
+                    </Container>
+                </Band>
 
                 {/* O teste que todo modelo precisa passar */}
                 <Band tone="deep">
@@ -184,6 +251,7 @@ export default function FundamentosPage() {
                                 ))}
                             </dl>
                             <p className="mt-3 text-xs text-[var(--fg-3)]">R$ mil, ano 1 do modelo-exemplo</p>
+                            <CtaRow section="balanco" className="mt-10" />
                         </div>
                         <BalanceCheck />
                     </Container>
@@ -218,6 +286,9 @@ export default function FundamentosPage() {
                                     </li>
                                 ))}
                             </ul>
+                            <div className="mt-10 [&>a]:w-full">
+                                <Buy section="outcomes" />
+                            </div>
                         </div>
                     </Container>
                 </Band>
@@ -239,6 +310,7 @@ export default function FundamentosPage() {
                                 />
                             }
                         />
+                        <CtaRow section="lucro_caixa" center />
                     </Container>
                 </Band>
 
@@ -280,41 +352,27 @@ export default function FundamentosPage() {
                                 </p>
                             </li>
                         </ol>
+                        <CtaRow section="curriculum_fim" className="mt-0 lg:hidden" />
                     </Container>
                 </Band>
 
-                {/* Entregáveis em bento */}
-                <Band tone="deep">
+                {/* Bônus em catálogo de streaming */}
+                <section className="overflow-hidden bg-[#03060f] py-20 sm:py-28">
                     <Container>
                         <SectionTitle
                             dark
                             title={
                                 <>
-                                    Tudo o que <Accent>você recebe</Accent>
+                                    E ainda leva <Accent>estes bônus</Accent>
                                 </>
                             }
+                            lead={`Além do curso, você recebe produtos que também são vendidos separadamente. Só o Template Pro e o Starter Kit somam ${BONUS_TOTAL}.`}
                             className="mb-12"
                         />
-                        <ul className="grid auto-rows-[minmax(9.5rem,auto)] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-                            {DELIVERABLES.map(({ icon: Icon, title, text }, i) => (
-                                <li
-                                    key={title}
-                                    className={cn(
-                                        "flex flex-col justify-between rounded-2xl p-5 ring-1 ring-[var(--line)] sm:p-6",
-                                        i === 0 ? "col-span-2 row-span-2 bg-[var(--amber)] text-[var(--ink)] ring-0" : "bg-[var(--surface)]",
-                                        i === 1 && "col-span-2"
-                                    )}
-                                >
-                                    <Icon aria-hidden weight="duotone" className={cn(i === 0 ? "h-10 w-10" : "h-7 w-7 text-[var(--amber)]")} />
-                                    <div className="mt-6">
-                                        <p className={cn("font-semibold leading-snug", i === 0 ? "text-2xl sm:text-3xl" : "text-lg")}>{title}</p>
-                                        <p className={cn("mt-1 leading-relaxed", i === 0 ? "text-[var(--ink)]/75 sm:text-lg" : "text-sm text-[var(--fg-2)]")}>{text}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
+                        <BonusCatalog />
+                        <CtaRow section="bonus" className="mt-6" />
                     </Container>
-                </Band>
+                </section>
 
                 {/* Para quem */}
                 <Band tone="dark">
@@ -348,6 +406,7 @@ export default function FundamentosPage() {
                                     ))}
                                 </ul>
                             </div>
+                            <CtaRow section="para_quem" />
                         </div>
                     </Container>
                 </Band>
@@ -382,6 +441,7 @@ export default function FundamentosPage() {
                             >
                                 Ver trajetória no LinkedIn
                             </a>
+                            <CtaRow section="instrutor" className="mt-10" />
                         </div>
                     </Container>
                 </Band>
@@ -430,8 +490,10 @@ export default function FundamentosPage() {
                         <div className="rounded-3xl bg-white p-7 text-[var(--ink)] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] sm:p-9 lg:sticky lg:top-24">
                             <p className="text-lg font-semibold">{PRODUCT}</p>
                             <p className="mt-1 text-[15px] text-[var(--ink-2)]">Curso, template e 3 bônus</p>
-                            <p className="mt-8 text-[15px] text-[var(--ink-2)]">Em até</p>
-                            <p className="text-5xl font-semibold tracking-[-0.03em]">{INSTALLMENT_LABEL}</p>
+                            <p className="mt-8 text-[15px] text-[var(--ink-2)]">No cartão</p>
+                            <p className="text-5xl font-semibold tracking-[-0.03em]">
+                                <span className="text-2xl font-medium text-[var(--ink-2)]">{INSTALLMENT_COUNT}</span> {INSTALLMENT_VALUE}
+                            </p>
                             <p className="mt-1 text-[var(--ink-2)]">ou {PRICE_LABEL} à vista</p>
                             <div className="mt-8 [&>a]:w-full">
                                 <Buy section="pricing_main" />
@@ -466,6 +528,7 @@ export default function FundamentosPage() {
                                     </li>
                                 ))}
                             </ul>
+                            <CtaRow section="certificado" className="mt-10" />
                         </div>
                         <Certificado />
                     </Container>
@@ -483,6 +546,7 @@ export default function FundamentosPage() {
                                 </div>
                             ))}
                         </dl>
+                        <CtaRow section="faq" center className="mt-16" />
                     </Container>
                 </Band>
 

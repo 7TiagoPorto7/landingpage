@@ -387,3 +387,42 @@ html {
     font-size: 0.95em;
   }
 }
+
+/* Botão de compra chamativo: brilho que atravessa, pulso de luz e seta que empurra para frente */
+.mfp .cta-pop {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 160ms cubic-bezier(0.4, 0, 0.2, 1), background-color 160ms ease;
+}
+.mfp .cta-pop:hover { transform: translateY(-2px); }
+.mfp .cta-pop:active { transform: scale(0.97); }
+.mfp .cta-pop::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.7) 50%, transparent 70%);
+  transform: translateX(-130%);
+  animation: cta-shine 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.mfp .cta-pop.cta-glow { animation: cta-glow 2.2s ease-out infinite; }
+.mfp .cta-pop .cta-arrow { animation: cta-nudge 1.4s ease-in-out infinite; }
+@keyframes cta-shine {
+  0%, 55% { transform: translateX(-130%); }
+  85%, 100% { transform: translateX(130%); }
+}
+@keyframes cta-glow {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6), 0 12px 28px -12px rgba(245, 158, 11, 0.8); }
+  70%, 100% { box-shadow: 0 0 0 14px rgba(245, 158, 11, 0), 0 12px 28px -12px rgba(245, 158, 11, 0.8); }
+}
+@keyframes cta-nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+/* Com "reduzir movimento" ligado, o botão continua chamando atenção, só que mais devagar e sem a seta pulando */
+@media (prefers-reduced-motion: reduce) {
+  .mfp .cta-pop::before { animation-duration: 5s; }
+  .mfp .cta-pop.cta-glow { animation-duration: 3s; }
+  .mfp .cta-pop .cta-arrow { animation: none; }
+}
