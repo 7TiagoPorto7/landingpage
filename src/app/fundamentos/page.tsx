@@ -6,7 +6,6 @@ import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
-import { ModelWorkbook } from "@/components/mfp/model-workbook";
 import { SecureCheckout } from "@/components/mfp/secure-checkout";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
@@ -168,23 +167,20 @@ export default function FundamentosPage() {
             </header>
 
             <main className="text-white">
-                {/* Topo: promessa + o modelo funcionando */}
+                {/* Topo: promessa e compra */}
                 <section className="relative overflow-hidden">
                     <Backdrop tone="dark" />
-                    <Container className="relative grid items-center gap-14 pb-20 pt-14 sm:pt-20 lg:grid-cols-[1.12fr_0.88fr] lg:gap-12 lg:pb-28 lg:pt-20 [&>*]:min-w-0">
-                        <div>
-                            <h1 className="text-balance text-[2.15rem] font-semibold leading-[1.08] tracking-[-0.035em] sm:text-[2.6rem] xl:text-[2.95rem]">
-                                Aprenda a conectar os três demonstrativos financeiros e <Accent>alavanque sua carreira</Accent>
-                            </h1>
-                            <p className="mt-6 max-w-md text-lg leading-relaxed text-[var(--fg-2)]">
-                                DRE, Balanço e Fluxo de Caixa num modelo que fecha, com módulos que recebem novas aulas.
-                            </p>
-                            <div className="mt-9 flex flex-col items-start gap-4">
-                                <Buy section="hero" />
-                                <PriceLine />
-                            </div>
+                    <Container className="relative flex flex-col items-center pb-24 pt-20 text-center sm:pt-28 lg:pb-32">
+                        <h1 className="max-w-4xl text-balance text-[2.3rem] font-semibold leading-[1.06] tracking-[-0.035em] sm:text-[3.2rem] lg:text-[3.9rem]">
+                            Aprenda a conectar os três demonstrativos financeiros e <Accent>alavanque sua carreira</Accent>
+                        </h1>
+                        <p className="mt-7 max-w-xl text-lg leading-relaxed text-[var(--fg-2)] sm:text-xl">
+                            DRE, Balanço e Fluxo de Caixa num modelo que fecha, com módulos que recebem novas aulas.
+                        </p>
+                        <div className="mt-10 flex flex-col items-center gap-4">
+                            <Buy section="hero" />
+                            <PriceLine />
                         </div>
-                        <ModelWorkbook className="shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)] ring-white/10" />
                     </Container>
                 </section>
 
