@@ -263,7 +263,7 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     {
         name: "Paula S. Castro",
-        role: "Analista de Negócios (Transição)",
+        role: "Analista de Negócios",
         highlight: "Consegui montar meu primeiro modelo com as 3 demonstrações amarradas sozinha",
         text: "Sou formada em engenharia e tô tentando migrar de vez pra área financeira. A parte matemática do Excel eu tirava de letra, mas a lógica contábil de como o DRE impacta o caixa e consequentemente o balanço patrimonial não entrava na minha cabeça de jeito nenhum. O curso desenhou isso. Consegui montar meu primeiro modelo com as 3 demonstrações amarradas sozinha ontem à noite e tô me sentindo bem mais pronta pras entrevistas técnicas.",
     },
