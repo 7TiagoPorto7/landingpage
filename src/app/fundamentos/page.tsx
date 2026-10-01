@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, Plus, XCircle } from "@phosphor-icons/react/dist/ssr";
+import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, Plus, ShieldCheck, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
@@ -177,9 +177,22 @@ export default function FundamentosPage() {
                         <p className="mt-7 max-w-xl text-lg leading-relaxed text-[var(--fg-2)] sm:text-xl">
                             DRE, Balanço e Fluxo de Caixa num modelo que fecha, com módulos que recebem novas aulas.
                         </p>
-                        <div className="mt-10 flex flex-col items-center gap-4">
+                        <div className="mt-10">
                             <Buy section="hero" />
-                            <PriceLine />
+                        </div>
+
+                        {/* Cartão de preço no canto inferior direito (no celular, abaixo do botão) */}
+                        <div className="mt-10 w-full max-w-[17rem] rounded-2xl bg-white/[0.06] p-5 text-left ring-1 ring-[var(--amber)]/40 backdrop-blur-md lg:absolute lg:bottom-10 lg:right-6 lg:mt-0 xl:right-8">
+                            <p className="text-sm text-[var(--fg-2)]">No cartão</p>
+                            <p className="mt-1 leading-none">
+                                <span className="text-base font-medium text-[var(--fg-2)]">{INSTALLMENT_COUNT}</span>{" "}
+                                <span className="text-[2.6rem] font-semibold tracking-[-0.03em] text-white">{INSTALLMENT_VALUE}</span>
+                            </p>
+                            <p className="mt-2 text-sm text-[var(--fg-2)]">ou {PRICE_LABEL} à vista</p>
+                            <p className="mt-4 flex items-center gap-2 border-t border-[var(--line)] pt-3 text-sm text-[var(--fg-2)]">
+                                <ShieldCheck aria-hidden weight="duotone" className="h-5 w-5 text-[var(--amber)]" />
+                                Garantia de 7 dias
+                            </p>
                         </div>
                     </Container>
                 </section>
