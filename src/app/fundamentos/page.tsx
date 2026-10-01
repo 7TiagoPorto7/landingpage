@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Bank, Briefcase, Certificate, ChartLineUp, ChatsCircle, CheckCircle, XCircle } from "@phosphor-icons/react/dist/ssr";
 import { mfpFonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import { Accent, Band, Container, SectionTitle, fmt } from "@/components/mfp/ui";
+import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
 import { ModelWorkbook } from "@/components/mfp/model-workbook";
 import { ProfitVsCash } from "@/components/mfp/profit-vs-cash";
@@ -12,10 +12,8 @@ import { SecureCheckout } from "@/components/mfp/secure-checkout";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
-import { BalanceCheck } from "@/components/mfp/balance-check";
 import { BonusCatalog } from "@/components/fundamentos/bonus-catalog";
 import { Logo } from "@/components/logo";
-import { projetar } from "@/components/mfp/projection";
 import { FundamentosLeadCapture } from "@/components/fundamentos/lead-capture";
 import { FundamentosStickyCTA } from "@/components/fundamentos/sticky-cta";
 import {
@@ -60,8 +58,6 @@ const jsonLdCourse = {
     offers: { "@type": "Offer", price: "197.00", priceCurrency: "BRL", url: CHECKOUT_URL, category: "Paid" },
     hasCourseInstance: { "@type": "CourseInstance", courseMode: "Online" },
 };
-
-const ano1 = projetar(1)[0];
 
 const Buy = ({ section, size }: { section: string; size?: "sm" | "lg" }) => (
     <CheckoutButton href={CHECKOUT_URL} section={section} value={PRICE} product={PRODUCT} size={size} attention>
@@ -218,42 +214,6 @@ export default function FundamentosPage() {
                                 </li>
                             ))}
                         </ul>
-                        <CtaRow section="carreira" light />
-                    </Container>
-                </Band>
-
-                {/* O teste que todo modelo precisa passar */}
-                <Band tone="deep">
-                    <Container className="grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16 [&>*]:min-w-0">
-                        <div>
-                            <SectionTitle
-                                dark
-                                title={
-                                    <>
-                                        O teste que todo modelo <Accent>precisa passar</Accent>
-                                    </>
-                                }
-                                lead="Esqueça de levar o lucro para o patrimônio e o Balanço não fecha. No curso você aprende cada ligação até a checagem dar zero."
-                            />
-                            <dl className="mt-10 grid grid-cols-3 gap-4">
-                                {[
-                                    [`${fmt(ano1.lucro)}`, "lucro do ano"],
-                                    [`${fmt(ano1.caixa)}`, "caixa final"],
-                                    ["0", "diferença"],
-                                ].map(([v, l]) => (
-                                    <div key={l} className="border-l-2 border-[var(--amber)] pl-4">
-                                        <dt className="sr-only">{l}</dt>
-                                        <dd>
-                                            <span className="block text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">{v}</span>
-                                            <span className="mt-1 block text-sm text-[var(--fg-2)]">{l}</span>
-                                        </dd>
-                                    </div>
-                                ))}
-                            </dl>
-                            <p className="mt-3 text-xs text-[var(--fg-3)]">R$ mil, ano 1 do modelo-exemplo</p>
-                            <CtaRow section="balanco" className="mt-10" />
-                        </div>
-                        <BalanceCheck />
                     </Container>
                 </Band>
 
