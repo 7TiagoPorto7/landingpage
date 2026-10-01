@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { Accent, Band, Container, SectionTitle } from "@/components/mfp/ui";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
 import { ModelWorkbook } from "@/components/mfp/model-workbook";
-import { ProfitVsCash } from "@/components/mfp/profit-vs-cash";
 import { SecureCheckout } from "@/components/mfp/secure-checkout";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
@@ -271,29 +270,8 @@ export default function FundamentosPage() {
                     </Container>
                 </Band>
 
-                {/* A lógica, interativa */}
-                <Band tone="deep">
-                    <Container>
-                        <ProfitVsCash
-                            intro={
-                                <SectionTitle
-                                    dark
-                                    title={
-                                        <>
-                                            Teste a lógica <Accent>com números</Accent>
-                                        </>
-                                    }
-                                    lead="Veja o prazo dos clientes encurtar de 120 dias até à vista. O lucro não muda, o caixa sim."
-                                    className="mb-10"
-                                />
-                            }
-                        />
-                        <CtaRow section="lucro_caixa" center />
-                    </Container>
-                </Band>
-
                 {/* Conteúdo em linha do tempo */}
-                <Band tone="dark" id="conteudo">
+                <Band tone="deep" id="conteudo">
                     <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
                         <div className="lg:sticky lg:top-28 lg:self-start">
                             <SectionTitle
