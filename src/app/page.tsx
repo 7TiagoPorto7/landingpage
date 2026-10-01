@@ -15,7 +15,8 @@ import { getCategory } from "@/lib/blog-categories";
 import { KIND_LABEL, PRODUCTS, type Product } from "@/lib/products";
 import { cn } from "@/lib/utils";
 import { CheckoutButton } from "@/components/mfp/checkout-button";
-import { BUY_LABEL, CHECKOUT_URL as FUNDAMENTOS_CHECKOUT, PRICE as FUNDAMENTOS_PRICE, PRODUCT as FUNDAMENTOS } from "@/components/fundamentos/content";
+import { TestimonialCarousel } from "@/components/fundamentos/testimonial-carousel";
+import { BUY_LABEL, CHECKOUT_URL as FUNDAMENTOS_CHECKOUT, TESTIMONIALS, PRICE as FUNDAMENTOS_PRICE, PRODUCT as FUNDAMENTOS } from "@/components/fundamentos/content";
 
 const TITLE = "Modelagem Financeira na Prática | Cursos e planilhas com Tiago Porto";
 const DESCRIPTION =
@@ -228,6 +229,31 @@ export default function Home() {
                         </div>
                     </Container>
                 </Band>
+
+                {/* Depoimentos de alunos do Fundamentos */}
+                {TESTIMONIALS.length > 0 && (
+                    <Band tone="snow">
+                        <Container>
+                            <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+                                <SectionTitle
+                                    title={
+                                        <>
+                                            Quem fez o Fundamentos, <Accent>recomenda</Accent>
+                                        </>
+                                    }
+                                    lead="Mensagens de alunos do curso."
+                                />
+                                <Link
+                                    href="/fundamentos"
+                                    className="inline-flex items-center gap-1.5 font-semibold text-[var(--ink)] underline decoration-[var(--amber)] decoration-2 underline-offset-4 hover:text-[#b45309]"
+                                >
+                                    Conhecer o curso
+                                </Link>
+                            </div>
+                            <TestimonialCarousel items={TESTIMONIALS} />
+                        </Container>
+                    </Band>
+                )}
 
                 {/* Blog em lista editorial */}
                 <Band tone="dark">
