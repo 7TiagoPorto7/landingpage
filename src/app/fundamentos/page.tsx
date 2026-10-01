@@ -10,6 +10,7 @@ import { SecureCheckout } from "@/components/mfp/secure-checkout";
 import { MfpFooter } from "@/components/mfp/footer";
 import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
+import { ShakeOnView } from "@/components/mfp/shake-on-view";
 import { BonusCatalog } from "@/components/fundamentos/bonus-catalog";
 import { Logo } from "@/components/logo";
 import { FundamentosLeadCapture } from "@/components/fundamentos/lead-capture";
@@ -76,9 +77,27 @@ const PriceLine = ({ className, light = false }: { className?: string; light?: b
 );
 
 // Chamada para o checkout que se repete ao longo da página
-const CtaRow = ({ section, className, light = false, center = false }: { section: string; className?: string; light?: boolean; center?: boolean }) => (
+const CtaRow = ({
+    section,
+    className,
+    light = false,
+    center = false,
+    shake = false,
+}: {
+    section: string;
+    className?: string;
+    light?: boolean;
+    center?: boolean;
+    shake?: boolean;
+}) => (
     <div className={cn("mt-12 flex flex-col gap-3", center ? "items-center text-center" : "items-start", className)}>
-        <Buy section={section} />
+        {shake ? (
+            <ShakeOnView className="inline-block">
+                <Buy section={section} />
+            </ShakeOnView>
+        ) : (
+            <Buy section={section} />
+        )}
         <PriceLine light={light} />
     </div>
 );
@@ -347,7 +366,7 @@ export default function FundamentosPage() {
                                     ))}
                                 </ul>
                             </div>
-                            <CtaRow section="para_quem" light />
+                            <CtaRow section="para_quem" light shake />
                         </div>
                     </Container>
                 </Band>
