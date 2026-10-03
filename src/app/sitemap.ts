@@ -51,6 +51,12 @@ const staticRoutes: MetadataRoute.Sitemap = [
         priority: 0.8,
     },
     {
+        url: `${BASE_URL}/gratis/planilha-modelo-integrado`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
         url: `${BASE_URL}/downloads`,
         lastModified: new Date(),
         changeFrequency: "monthly",
