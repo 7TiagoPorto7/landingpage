@@ -36,7 +36,7 @@ export async function addLeadToBrevo({ email, fileId, name }: { email: string; f
                 email,
                 listIds: [listId],
                 updateEnabled: true,
-                ...(name ? { attributes: { FIRSTNAME: name } } : {}),
+                ...(name ? { attributes: { NOME: name } } : {}),
             }),
             signal: AbortSignal.timeout(6000),
         });
