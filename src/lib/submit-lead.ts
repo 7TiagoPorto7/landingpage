@@ -1,5 +1,5 @@
 // Envia um lead para /api/leads com as UTMs da sessão. Retorna true só se o lead foi salvo.
-export async function submitLead(email: string, fileId: string): Promise<boolean> {
+export async function submitLead(email: string, fileId: string, name?: string): Promise<boolean> {
     let utmData = {};
     try {
         const utmStr = sessionStorage.getItem("utm_data");
@@ -10,7 +10,7 @@ export async function submitLead(email: string, fileId: string): Promise<boolean
         const res = await fetch("/api/leads", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...utmData, email, fileId }),
+            body: JSON.stringify({ ...utmData, email, fileId, name }),
         });
         return res.ok;
     } catch (err) {

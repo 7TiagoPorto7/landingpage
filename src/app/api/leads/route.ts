@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb, ensureLeadsTable } from "@/lib/db";
+import { addLeadToBrevo } from "@/lib/brevo";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -10,6 +11,7 @@ export async function POST(req: NextRequest) {
 
         const email = str(body.email, 254)?.toLowerCase();
         const fileId = str(body.fileId, 80);
+        const name = str(body.name, 80);
         const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = {
             utm_source: str(body.utm_source),
             utm_medium: str(body.utm_medium),
@@ -25,16 +27,26 @@ export async function POST(req: NextRequest) {
             );
         }
 
-        // Garante que a tabela existe (idempotente)
-        await ensureLeadsTable();
+        // 1) Banco: registro próprio do lead com UTMs. 2) Brevo: entrega do material e sequência de e-mails.
+        // Um não depende do outro; o lead só é perdido se os dois falharem.
+        let savedDb = false;
+        try {
+            await ensureLeadsTable();
+            const sql = getDb();
+            await sql`
+                INSERT INTO leads (email, file_id, utm_source, utm_medium, utm_campaign, utm_term, utm_content)
+                VALUES (${email}, ${fileId}, ${utm_source || null}, ${utm_medium || null}, ${utm_campaign || null}, ${utm_term || null}, ${utm_content || null})
+            `;
+            savedDb = true;
+        } catch (err) {
+            console.error("[/api/leads] erro no banco:", err);
+        }
 
-        const sql = getDb();
+        const brevo = await addLeadToBrevo({ email, fileId, name });
 
-        // Salva o lead com UTMs
-        await sql`
-            INSERT INTO leads (email, file_id, utm_source, utm_medium, utm_campaign, utm_term, utm_content)
-            VALUES (${email}, ${fileId}, ${utm_source || null}, ${utm_medium || null}, ${utm_campaign || null}, ${utm_term || null}, ${utm_content || null})
-        `;
+        if (!savedDb && !brevo.sent) {
+            return NextResponse.json({ error: "Erro interno ao salvar lead" }, { status: 500 });
+        }
 
         return NextResponse.json({ success: true });
     } catch (err) {
