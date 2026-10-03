@@ -1,4 +1,4 @@
-import { Instrument_Sans } from "next/font/google";
+import { Instrument_Sans, Lato } from "next/font/google";
 
 export const sans = Instrument_Sans({
     subsets: ["latin"],
@@ -8,3 +8,10 @@ export const sans = Instrument_Sans({
 });
 
 export const mfpFonts = sans.variable;
+
+// Fonte da logo (MFP Academy), usada na animação da marca
+export const logoFont = Lato({
+    subsets: ["latin"],
+    weight: ["700"],
+    display: "swap",
+});

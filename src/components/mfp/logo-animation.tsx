@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { logoFont } from "@/lib/fonts";
 
 // "Modelagem Financeira na Prática" encolhe até as iniciais MFP e então "Academy" aparece ao lado.
 // Cada palavra é a inicial (fica) + o resto (recolhe); "na" some inteira.
@@ -47,7 +48,7 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
         <span
             role="img"
             aria-label="Modelagem Financeira na Prática, MFP Academy"
-            className={cn("inline-flex items-baseline whitespace-nowrap font-semibold tracking-[-0.03em]", className)}
+            className={cn(logoFont.className, "inline-flex items-baseline whitespace-nowrap font-bold", className)}
         >
             {WORDS.map((w, i) => (
                 <span key={i} aria-hidden className="inline-flex items-baseline">
@@ -71,9 +72,9 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
             ))}
             <span
                 aria-hidden
-                className="inline-block text-[var(--amber)]"
+                className="inline-block"
                 style={{
-                    marginLeft: stage === "academy" ? "0.28em" : 0,
+                    marginLeft: stage === "academy" ? "0.25em" : 0,
                     opacity: stage === "academy" ? 1 : 0,
                     transform: stage === "academy" ? "translateX(0)" : "translateX(-0.25em)",
                     filter: stage === "academy" ? "blur(0)" : "blur(4px)",
