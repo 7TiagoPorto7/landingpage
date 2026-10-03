@@ -16,8 +16,10 @@ function getDb(): ReturnType<typeof postgres> {
         );
     }
 
+    // Na rede interna do Railway (*.railway.internal) o Postgres não usa SSL; por fora, exige
+    const internal = /@[^/]*\.railway\.internal[:/]/.test(connectionString);
     const sql = postgres(connectionString, {
-        ssl: process.env.NODE_ENV === "production" ? "require" : false,
+        ssl: process.env.NODE_ENV === "production" && !internal ? "require" : false,
         max: 10,
         idle_timeout: 20,
         connect_timeout: 10,
