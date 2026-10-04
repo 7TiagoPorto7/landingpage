@@ -3,8 +3,10 @@ title: "O que é NOPLAT (Lucro Operacional Líquido Após Impostos) e como calcu
 date: "08 Dez 2025"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553550000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do NOPLAT, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1707902665498-a202981fb5ac?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jakub Żerdzicki"
+imageCreditUrl: "https://unsplash.com/@jakubzerdzicki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao NOPLAT

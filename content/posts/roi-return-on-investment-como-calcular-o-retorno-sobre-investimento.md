@@ -3,8 +3,10 @@ title: "ROI (Return on Investment): Como calcular o retorno sobre o investimento
 date: "09 Jun 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=800"
 excerpt: "Aprenda a analisar a eficiência financeira de projetos com o ROI, desvende as vantagens de utilizá-lo e conheça suas principais limitações no tempo."
+image: "https://images.unsplash.com/photo-1705234384679-119488a72a2b?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Winkler"
+imageCreditUrl: "https://unsplash.com/@markuswinkler?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao ROI

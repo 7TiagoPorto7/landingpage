@@ -3,8 +3,10 @@ title: "O que é Q de Tobin e como calcular na prática"
 date: "19 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Q de Tobin, também conhecido como Tobin's Q, é uma medida fundamental na avaliação de ativos e tomada de decisões corporativas, indicando se vale mais a pena investir em ativos existentes ou criar novos. Este conceito é essencial para entender a relação entre o valor de mercado e o custo de reposição dos ativos."
+image: "https://images.unsplash.com/photo-1618044733300-9472054094ee?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Spiske"
+imageCreditUrl: "https://unsplash.com/@markusspiske?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Q de Tobin?

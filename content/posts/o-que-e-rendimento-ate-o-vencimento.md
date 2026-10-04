@@ -3,8 +3,10 @@ title: "O que é Rendimento até o Vencimento e como calcular na prática"
 date: "11 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Rendimento até o Vencimento (YTM) é uma métrica fundamental para avaliar o desempenho de investimentos de renda fixa, oferecendo uma visão clara do retorno total de um investimento até seu vencimento. Ele é essencial para investidores e gestores financeiros que buscam otimizar seus portfólios."
+image: "https://images.unsplash.com/photo-1653378972336-103e1ea62721?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Winkler"
+imageCreditUrl: "https://unsplash.com/@markuswinkler?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Rendimento até o Vencimento?

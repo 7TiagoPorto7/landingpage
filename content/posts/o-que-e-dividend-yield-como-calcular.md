@@ -3,8 +3,10 @@ title: "O que é Dividend Yield (Rendimento de Proventos) e como calcular"
 date: "02 Jun 2025"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553250000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Dividend Yield, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1534951009808-766178b47a4f?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Ibrahim Rifath"
+imageCreditUrl: "https://unsplash.com/@ripey__?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Dividend Yield

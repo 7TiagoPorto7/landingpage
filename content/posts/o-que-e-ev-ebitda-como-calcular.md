@@ -3,8 +3,10 @@ title: "O que é EV-EBITDA (Valor da Empresa sobre o EBITDA) e como calcular"
 date: "09 Set 2026"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552200000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do EV-EBITDA, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1672380135241-c024f7fbfa13?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Radission US"
+imageCreditUrl: "https://unsplash.com/@radission?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao EV-EBITDA

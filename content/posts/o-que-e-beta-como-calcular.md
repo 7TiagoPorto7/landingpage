@@ -3,8 +3,10 @@ title: "O que é Beta (Coeficiente Beta de Risco) e como calcular"
 date: "27 Mar 2025"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553100000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Beta, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Nicholas Cappello"
+imageCreditUrl: "https://unsplash.com/@bash__profile?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Beta

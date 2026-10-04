@@ -3,8 +3,10 @@ title: "O que é VPL (Valor Presente Líquido) e como calcular"
 date: "05 Mai 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552000000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do VPL, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1636115734305-aac2f83cd8d4?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "engin akyurt"
+imageCreditUrl: "https://unsplash.com/@enginakyurt?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao VPL

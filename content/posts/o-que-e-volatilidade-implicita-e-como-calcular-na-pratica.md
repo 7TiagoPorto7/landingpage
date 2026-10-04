@@ -3,8 +3,10 @@ title: "O que é Volatilidade Implícita e como calcular na prática"
 date: "20 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Volatilidade Implícita (IV) é um conceito fundamental em finanças que representa a volatilidade esperada pelo mercado para um ativo subjacente. Ela é essencial para calcular o preço das opções e entender as expectativas do mercado."
+image: "https://images.unsplash.com/photo-1691643158804-d3f02eb456a3?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Yashowardhan Singh"
+imageCreditUrl: "https://unsplash.com/@ysdnsingh?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Volatilidade Implícita?

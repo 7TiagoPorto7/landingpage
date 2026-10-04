@@ -3,8 +3,10 @@ title: "Analisando o EBITDA: Um Guia para Entender a Saúde Financeira de uma Em
 date: "07 Jul 2026"
 readTime: "8 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200"
 excerpt: "Aprenda a analisar o EBITDA de uma empresa e entender como essa métrica pode influenciar a saúde financeira e o desempenho de uma companhia. Neste artigo, vamos explorar como calcular e interpretar o EBITDA de forma eficaz."
+image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Towfiqu barbhuiya"
+imageCreditUrl: "https://unsplash.com/@towfiqu999999?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao EBITDA

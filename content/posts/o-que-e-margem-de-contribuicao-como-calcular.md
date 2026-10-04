@@ -3,8 +3,10 @@ title: "O que é Margem de Contribuição (Contribution Margin) e como calcular"
 date: "24 Dez 2025"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552950000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Margem de Contribuição, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jakub Żerdzicki"
+imageCreditUrl: "https://unsplash.com/@jakubzerdzicki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Margem de Contribuição

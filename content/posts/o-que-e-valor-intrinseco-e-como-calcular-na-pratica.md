@@ -3,8 +3,10 @@ title: "O que é Valor Intrínseco e como calcular na prática"
 date: "12 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Valor Intrínseco é um conceito fundamental em finanças que representa o valor de uma opção caso ela seja exercida imediatamente. Entender como calcular e interpretar esse valor é crucial para investidores e gestores financeiros que buscam tomar decisões informadas sobre suas carteiras de investimentos."
+image: "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jingming Pan"
+imageCreditUrl: "https://unsplash.com/@pokmer?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Valor Intrínseco?

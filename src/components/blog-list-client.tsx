@@ -122,7 +122,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                                             className="group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-[var(--grid)] transition-shadow hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
                                         >
                                             <Link href={`/blog/${post.slug}`} className="aspect-video relative overflow-hidden block">
-                                                <PostCover title={post.title} category={category} />
+                                                <PostCover title={post.title} category={category} image={post.image} alt={post.imageAlt} />
                                             </Link>
                                             <div className="p-5 flex-1 flex flex-col">
                                                 <div className="flex items-center justify-between mb-3.5">

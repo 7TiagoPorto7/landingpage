@@ -3,8 +3,10 @@ title: "O que é ROIC (Retorno sobre o Capital Investido) e como calcular"
 date: "04 Abr 2026"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1551950000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do ROIC, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1543286386-2e659306cd6c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Isaac Smith"
+imageCreditUrl: "https://unsplash.com/@isaacmsmith?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao ROIC

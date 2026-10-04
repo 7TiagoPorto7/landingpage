@@ -3,8 +3,10 @@ title: "O que é Margem Líquida (Net Margin) e como calcular"
 date: "22 Out 2025"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552850000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Margem Líquida, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1730382624709-81e52dd294d4?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Imagine Buddy"
+imageCreditUrl: "https://unsplash.com/@imaginebuddy?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Margem Líquida

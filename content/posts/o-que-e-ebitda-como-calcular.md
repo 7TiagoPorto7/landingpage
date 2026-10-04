@@ -3,8 +3,10 @@ title: "O que é EBITDA (Lucro Antes de Juros, Impostos, Depreciação e Amortiz
 date: "01 Jan 2026"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1551800000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do EBITDA, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1707157284454-553ef0a4ed0d?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jakub Żerdzicki"
+imageCreditUrl: "https://unsplash.com/@jakubzerdzicki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao EBITDA

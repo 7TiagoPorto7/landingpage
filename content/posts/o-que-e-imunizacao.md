@@ -3,8 +3,10 @@ title: "O que é Imunização e como calcular na prática: Uma Abordagem Detalha
 date: "19 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A imunização é uma estratégia financeira crucial para proteger investimentos contra variações de taxas de juros, garantindo a estabilidade do portfólio. Este artigo detalha como calcular e aplicar a imunização na prática, destacando suas vantagens e limitações."
+image: "https://images.unsplash.com/photo-1668761401578-f66731b79a9c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Eyram ds"
+imageCreditUrl: "https://unsplash.com/@mosedac?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Imunização?

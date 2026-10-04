@@ -3,8 +3,10 @@ title: "Diferença entre Capex e Opex nas Finanças Corporativas"
 date: "10 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
 excerpt: "Entenda as distinções fundamentais entre despesas operacionais e bens de capital fixo, e veja como ambos afetam a DRE, o Balanço e o Fluxo de Caixa."
+image: "https://images.unsplash.com/photo-1717386255773-1e3037c81788?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Homa Appliances"
+imageCreditUrl: "https://unsplash.com/@homaappliances?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Capex vs Opex

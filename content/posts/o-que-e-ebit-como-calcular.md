@@ -3,8 +3,10 @@ title: "O que é EBIT (Lucro Antes de Juros e Impostos) e como calcular"
 date: "02 Fev 2026"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1551850000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do EBIT, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Adeolu Eletu"
+imageCreditUrl: "https://unsplash.com/@adeolueletu?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao EBIT

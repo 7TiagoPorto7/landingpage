@@ -3,8 +3,10 @@ title: "O Ciclo de Conversão de Caixa: Um Guia Prático para Melhorar a Eficiê
 date: "06 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Ciclo de Conversão de Caixa (CCC) é uma métrica fundamental para avaliar a eficiência do capital de giro de uma empresa, ajudando a identificar oportunidades para melhorar a gestão de fluxos de caixa. Neste artigo, exploraremos o conceito, a fórmula e a aplicação prática do CCC, além de discutir armadilhas comuns e termos relacionados."
+image: "https://images.unsplash.com/photo-1648201637025-1c77b9be3013?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Aaron Lefler"
+imageCreditUrl: "https://unsplash.com/@alefler?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Ciclo de Conversão de Caixa?

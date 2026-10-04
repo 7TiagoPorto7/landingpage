@@ -3,8 +3,10 @@ title: "O que é NOPAT (Lucro Operacional Líquido Após Impostos) e como calcul
 date: "13 Jan 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552400000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do NOPAT, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Kelly Sikkema"
+imageCreditUrl: "https://unsplash.com/@kellysikkema?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao NOPAT

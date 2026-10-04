@@ -3,8 +3,10 @@ title: "O que é MRR (Monthly Recurring Revenue) e como calcular"
 date: "01 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
 excerpt: "Guia definitivo sobre MRR. Aprenda a calcular, analisar sua composição e otimizar essa métrica para prever o crescimento sustentável de SaaS."
+image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Kari Shea"
+imageCreditUrl: "https://unsplash.com/@karishea?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao MRR

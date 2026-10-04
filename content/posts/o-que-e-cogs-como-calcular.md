@@ -3,8 +3,10 @@ title: "O que é COGS (Custo das Mercadorias Vendidas (CPV)) e como calcular"
 date: "06 Out 2025"
 readTime: "8 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553450000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do COGS, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1647427060118-4911c9821b82?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Simon Kadula"
+imageCreditUrl: "https://unsplash.com/@simonkadula?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao COGS

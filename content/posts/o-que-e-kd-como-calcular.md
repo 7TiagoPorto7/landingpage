@@ -3,8 +3,10 @@ title: "O que é Kd (Custo de Capital de Terceiros) e como calcular"
 date: "01 Mai 2025"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553200000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Kd, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1613243555988-441166d4d6fd?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Winkler"
+imageCreditUrl: "https://unsplash.com/@markuswinkler?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Kd

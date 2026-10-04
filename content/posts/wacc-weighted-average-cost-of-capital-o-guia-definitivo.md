@@ -3,8 +3,10 @@ title: "WACC (Weighted Average Cost of Capital): O Guia Definitivo de Valuation"
 date: "05 Jun 2026"
 readTime: "15 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800"
 excerpt: "Aprenda a calcular o WACC com profundidade matemática e domine a taxa de desconto mais utilizada em finanças corporativas e fluxos de caixa descontados."
+image: "https://images.unsplash.com/photo-1728022873385-1b48bbc41ecc?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jakub Żerdzicki"
+imageCreditUrl: "https://unsplash.com/@jakubzerdzicki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao WACC

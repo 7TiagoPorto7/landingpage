@@ -3,8 +3,10 @@ title: "O que é Análise de Cenários e como calcular na prática"
 date: "06 Jun 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Análise de Cenários é uma ferramenta essencial para gestores e analistas financeiros, permitindo a avaliação de diferentes cenários de mercado e a tomada de decisões informadas. Este post apresenta uma visão detalhada sobre como aplicar essa técnica na prática."
+image: "https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Startaê Team"
+imageCreditUrl: "https://unsplash.com/@startaeteam?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Análise de Cenários?

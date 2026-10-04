@@ -3,8 +3,10 @@ title: "O que é Índice de Capital Tier 1 e como calcular na prática"
 date: "16 Jun 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Índice de Capital Tier 1 é uma medida fundamental para instituições financeiras, indicando a solidez e a capacidade de absorver perdas. Entenda como calcular e interpretar este importante indicador financeiro."
+image: "https://images.unsplash.com/photo-1633059050703-0f1b50828402?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Joshua Woroniecki"
+imageCreditUrl: "https://unsplash.com/@joshuaworoniecki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Índice de Capital Tier 1?

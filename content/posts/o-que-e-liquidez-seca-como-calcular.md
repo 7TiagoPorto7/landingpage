@@ -3,8 +3,10 @@ title: "O que é Liquidez Seca (Quick Ratio) e como calcular"
 date: "19 Jul 2026"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552700000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Liquidez Seca, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Alexander Mils"
+imageCreditUrl: "https://unsplash.com/@alexandermils?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Liquidez Seca

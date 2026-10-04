@@ -3,8 +3,10 @@ title: "O que é Estrutura de Capital (Capital Structure) e como calcular"
 date: "12 Abr 2025"
 readTime: "8 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553750000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Estrutura de Capital, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "C Dustin"
+imageCreditUrl: "https://unsplash.com/@dianamia?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Estrutura de Capital

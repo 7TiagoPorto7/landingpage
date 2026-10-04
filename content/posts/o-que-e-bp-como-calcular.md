@@ -3,8 +3,10 @@ title: "O que é BP (Balanço Patrimonial) e como calcular"
 date: "16 Abr 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552550000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do BP, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1612012060851-20f943c02d3d?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Piret Ilver"
+imageCreditUrl: "https://unsplash.com/@saltsup?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao BP

@@ -3,8 +3,10 @@ title: "O que é Giro de Contas a Pagar e como calcular na prática"
 date: "23 Jun 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Giro de Contas a Pagar, também conhecido como Accounts Payable Turnover, é uma métrica financeira crucial que mede a velocidade com que uma empresa paga seus fornecedores. É essencial para avaliar a eficiência dos pagamentos e manter relações saudáveis com os fornecedores."
+image: "https://images.unsplash.com/photo-1625980344922-a4df108b2bd0?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Chanhee Lee"
+imageCreditUrl: "https://unsplash.com/@jjik_da?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Giro de Contas a Pagar?

@@ -3,8 +3,10 @@ title: "O que é FCFE (Fluxo de Caixa Livre para o Acionista) e como calcular"
 date: "12 Dez 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552350000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do FCFE, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1645226880663-81561dcab0ae?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Adam Śmigielski"
+imageCreditUrl: "https://unsplash.com/@smigielski?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao FCFE

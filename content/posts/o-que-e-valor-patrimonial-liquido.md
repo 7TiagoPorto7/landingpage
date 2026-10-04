@@ -3,8 +3,10 @@ title: "O que é Valor Patrimonial Líquido e como calcular na prática"
 date: "04 Jul 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Valor Patrimonial Líquido, também conhecido como Net Asset Value (NAV), é um conceito fundamental em finanças corporativas que avalia o valor de uma empresa com base em seus ativos e passivos. Ele é especialmente útil para investidores e gestores que precisam tomar decisões informadas sobre empresas de diferentes setores, como REITs, holdings e bancos."
+image: "https://images.unsplash.com/photo-1632961974870-14d1f4fe4e1e?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Alex Shute"
+imageCreditUrl: "https://unsplash.com/@faithgiant?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Valor Patrimonial Líquido?

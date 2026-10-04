@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import "katex/dist/katex.min.css";
@@ -124,6 +125,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                 {post.excerpt}
                             </p>
 
+                            {post.image && (
+                                <figure className="mb-8">
+                                    <div className="relative aspect-[16/9] overflow-hidden rounded-2xl ring-1 ring-[var(--grid)]">
+                                        <Image src={post.image} alt={post.imageAlt || post.title} fill priority sizes="(min-width: 768px) 768px, 100vw" className="object-cover" />
+                                    </div>
+                                    {post.imageCredit && (
+                                        <figcaption className="mt-2 text-xs text-[var(--ink-3)]">
+                                            Foto:{" "}
+                                            <a href={post.imageCreditUrl} target="_blank" rel="noopener nofollow" className="underline underline-offset-2 hover:text-[var(--ink)]">
+                                                {post.imageCredit}
+                                            </a>{" "}
+                                            no{" "}
+                                            <a href="https://unsplash.com/?utm_source=mfnapratica&utm_medium=referral" target="_blank" rel="noopener nofollow" className="underline underline-offset-2 hover:text-[var(--ink)]">
+                                                Unsplash
+                                            </a>
+                                        </figcaption>
+                                    )}
+                                </figure>
+                            )}
+
                             {/* Share Bar */}
                             <div className="flex items-center justify-between py-3 border-y border-[var(--grid)] mb-4">
                                 <span className="text-xs text-[var(--ink-3)] font-semibold uppercase tracking-wider">Compartilhar</span>
@@ -227,7 +248,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                             className="group overflow-hidden rounded-2xl bg-white ring-1 ring-[var(--grid)] transition-shadow hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.35)]"
                                         >
                                             <div className="relative aspect-video">
-                                                <PostCover title={related.title} category={getCategory(related.slug)} />
+                                                <PostCover title={related.title} category={getCategory(related.slug)} image={related.image} alt={related.imageAlt} />
                                             </div>
                                             <div className="p-6">
                                                 <p className="text-sm text-[var(--ink-3)]">

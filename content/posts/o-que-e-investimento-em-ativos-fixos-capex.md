@@ -3,8 +3,10 @@ title: "O que é Investimentos em Ativos Fixos (CAPEX) e como calcular na práti
 date: "03 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Investimentos em Ativos Fixos (CAPEX) é um conceito fundamental em finanças corporativas que se refere aos gastos em ativos fixos, como máquinas, imóveis e equipamentos, essenciais para a manutenção e expansão das operações de uma empresa. Entender como calcular e interpretar o CAPEX é crucial para gestores e investidores."
+image: "https://images.unsplash.com/photo-1575281923032-f40d94ef6160?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Troy Mortier"
+imageCreditUrl: "https://unsplash.com/@troyscanon?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Investimentos em Ativos Fixos (CAPEX)?

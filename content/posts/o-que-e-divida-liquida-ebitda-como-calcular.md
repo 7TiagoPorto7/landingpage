@@ -3,8 +3,10 @@ title: "O que é Dívida Líquida / EBITDA (Net Debt to EBITDA) e como calcular"
 date: "09 Jan 2025"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553600000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Dívida Líquida / EBITDA, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1635859890085-ec8cb5466806?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Dimitri Karastelev"
+imageCreditUrl: "https://unsplash.com/@dkfra19?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Dívida Líquida / EBITDA

@@ -3,8 +3,10 @@ title: "O que é Liquidez Corrente (Current Ratio) e como calcular"
 date: "18 Jun 2026"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552650000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Liquidez Corrente, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1527066236128-2ff79f7b9705?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "David Becker"
+imageCreditUrl: "https://unsplash.com/@beckerworks?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Liquidez Corrente

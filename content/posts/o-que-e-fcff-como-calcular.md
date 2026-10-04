@@ -3,8 +3,10 @@ title: "O que é FCFF (Fluxo de Caixa Livre para a Firma) e como calcular"
 date: "11 Nov 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552300000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do FCFF, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Israel Andrade"
+imageCreditUrl: "https://unsplash.com/@israelandrxde?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao FCFF

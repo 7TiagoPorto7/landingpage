@@ -3,8 +3,10 @@ title: "O que é Perda Esperada (Crédito) e como calcular na prática"
 date: "05 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Perda Esperada (Crédito) é um conceito fundamental em finanças corporativas que ajuda a medir o risco de crédito e calcular provisões para perdas potenciais. É essencial para profissionais de finanças, gestores e estudantes entenderem como calcular e aplicar esse conceito na prática."
+image: "https://images.unsplash.com/photo-1771931322109-180bb1b35bf8?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Sasun Bughdaryan"
+imageCreditUrl: "https://unsplash.com/@sasun1990?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Perda Esperada (Crédito)?

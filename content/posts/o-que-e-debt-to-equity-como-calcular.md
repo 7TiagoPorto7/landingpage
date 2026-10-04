@@ -3,8 +3,10 @@ title: "O que é Debt-to-Equity (Dívida sobre Patrimônio Líquido) e como calc
 date: "20 Ago 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552750000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Debt-to-Equity, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Rodeo Project Management Software"
+imageCreditUrl: "https://unsplash.com/@getrodeo?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Debt-to-Equity

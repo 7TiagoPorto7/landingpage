@@ -3,8 +3,10 @@ title: "O que é LPA (Lucro Por Ação (Earnings Per Share)) e como calcular"
 date: "07 Jul 2026"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552100000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do LPA, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1648275913341-7973ae7bc9b3?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Tyler Prahm"
+imageCreditUrl: "https://unsplash.com/@tprahm?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao LPA

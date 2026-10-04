@@ -3,8 +3,10 @@ title: "O que é ROA (Return on Assets) e como interpretá-lo"
 date: "04 Jun 2026"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800"
 excerpt: "Entenda o conceito de Retorno sobre Ativos e veja como ele mede a produtividade e a rentabilidade a partir do uso dos ativos totais controlados pela gestão."
+image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Sean Pollock"
+imageCreditUrl: "https://unsplash.com/@seanpollock?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao ROA

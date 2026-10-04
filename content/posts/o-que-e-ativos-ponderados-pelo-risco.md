@@ -3,8 +3,10 @@ title: "O que é Ativos Ponderados pelo Risco e como calcular na prática"
 date: "17 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Ativos Ponderados pelo Risco (RWA) é um conceito fundamental no setor bancário, servindo como base para o cálculo do capital regulatório. Ele reflete a exposição de uma instituição financeira ao risco, considerando o peso de risco de cada ativo. Neste artigo, exploraremos em detalhes o que são Ativos Ponderados pelo Risco, como calcular e interpretar esse conceito, além de discutir armadilhas comuns e sua relação com outros termos financeiros importantes."
+image: "https://images.unsplash.com/photo-1684679674829-fc7b436ec8e8?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "POURIA 🦋"
+imageCreditUrl: "https://unsplash.com/@poeti8?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Ativos Ponderados pelo Risco?

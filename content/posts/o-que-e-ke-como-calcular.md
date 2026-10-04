@@ -3,8 +3,10 @@ title: "O que é Ke (Custo do Capital Próprio (CAPM)) e como calcular"
 date: "28 Abr 2025"
 readTime: "8 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553150000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Ke, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1651340981821-b519ad14da7c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Anne Nygård"
+imageCreditUrl: "https://unsplash.com/@polarmermaid?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Ke

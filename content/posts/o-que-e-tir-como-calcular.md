@@ -3,8 +3,10 @@ title: "O que é TIR (Taxa Interna de Retorno) e como calcular"
 date: "06 Jun 2026"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552050000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do TIR, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1759428935131-cee6cd331234?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jakub Żerdzicki"
+imageCreditUrl: "https://unsplash.com/@jakubzerdzicki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao TIR

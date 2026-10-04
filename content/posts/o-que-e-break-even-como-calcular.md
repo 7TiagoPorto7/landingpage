@@ -3,8 +3,10 @@ title: "O que é Break-even (Ponto de Equilíbrio) e como calcular"
 date: "25 Jan 2025"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553000000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Break-even, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1687422808248-f807f4ea2a2e?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Ali Mkumbwa"
+imageCreditUrl: "https://unsplash.com/@mkumbwajr?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Break-even

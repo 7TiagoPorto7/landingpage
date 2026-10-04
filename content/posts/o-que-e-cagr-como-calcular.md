@@ -3,8 +3,10 @@ title: "O que é CAGR (Taxa de Crescimento Anual Composta) e como calcular"
 date: "03 Mar 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1551900000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do CAGR, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "micheile henderson"
+imageCreditUrl: "https://unsplash.com/@micheile?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao CAGR

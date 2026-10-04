@@ -3,8 +3,10 @@ title: "O Custo do Capital Próprio: Uma Análise Profunda e Prática"
 date: "01 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Custo do Capital Próprio, também conhecido como Cost of Equity (Ke), é um conceito fundamental em finanças corporativas que representa o retorno mínimo exigido pelos acionistas. Neste artigo, exploraremos em detalhes sua fórmula, aplicação prática e armadilhas comuns, fornecendo uma base sólida para profissionais e estudantes de finanças."
+image: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Anne Nygård"
+imageCreditUrl: "https://unsplash.com/@polarmermaid?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Custo do Capital Próprio?

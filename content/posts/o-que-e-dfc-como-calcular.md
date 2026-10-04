@@ -3,8 +3,10 @@ title: "O que é DFC (Demonstração do Fluxo de Caixa) e como calcular"
 date: "15 Mar 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552500000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do DFC, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Alexander Grey"
+imageCreditUrl: "https://unsplash.com/@sharonmccutcheon?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao DFC

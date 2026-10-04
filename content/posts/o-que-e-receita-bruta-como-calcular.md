@@ -3,8 +3,10 @@ title: "O que é Receita Bruta (Gross Revenue) e como calcular"
 date: "04 Ago 2025"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553350000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Receita Bruta, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Spiske"
+imageCreditUrl: "https://unsplash.com/@markusspiske?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Receita Bruta

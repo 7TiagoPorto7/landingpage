@@ -3,8 +3,10 @@ title: "Analisando o EBITDA: Um Guia para Entender o Desempenho de uma Empresa"
 date: "04 Mar 2026"
 readTime: "8 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "Entenda como o EBITDA pode ajudar a avaliar o desempenho de uma empresa e tomar decisões informadas. Neste post, exploraremos como analisar o EBITDA de uma empresa de forma eficaz."
+image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Carlos Muza"
+imageCreditUrl: "https://unsplash.com/@kmuza?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao EBITDA

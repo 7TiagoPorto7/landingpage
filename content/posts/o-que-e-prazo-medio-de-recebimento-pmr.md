@@ -3,8 +3,10 @@ title: "O que é Prazo Médio de Recebimento (PMR) e como calcular na prática"
 date: "29 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Prazo Médio de Recebimento (PMR), também conhecido como Days Sales Outstanding (DSO), é uma métrica financeira crucial que mede o tempo médio que uma empresa leva para receber os pagamentos de seus clientes. Essa métrica é essencial para gestores e profissionais de finanças, pois ajuda a identificar possíveis problemas de fluxo de caixa e a tomar decisões informadas sobre a gestão de recebíveis."
+image: "https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jonas Leupe"
+imageCreditUrl: "https://unsplash.com/@jonasleupe?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Prazo Médio de Recebimento (PMR)?

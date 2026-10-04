@@ -3,8 +3,10 @@ title: "O que é Spread de Rendimento e como calcular na prática"
 date: "23 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Spread de Rendimento, também conhecido como Yield Spread, é um conceito fundamental na análise de crédito e gestão de risco, representando o prêmio sobre o título soberano que reflete o risco de crédito de uma empresa. Este artigo explora em detalhes o cálculo, aplicação prática e armadilhas comuns relacionadas ao Spread de Rendimento."
+image: "https://images.unsplash.com/photo-1745270917233-65e776a47547?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Arturo Añez"
+imageCreditUrl: "https://unsplash.com/@americanaez225?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Spread de Rendimento?

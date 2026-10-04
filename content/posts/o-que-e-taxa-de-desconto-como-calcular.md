@@ -3,8 +3,10 @@ title: "O que é Taxa de Desconto (Discount Rate) e como calcular"
 date: "11 Mar 2025"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553700000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Taxa de Desconto, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1656049471577-1c10b7359c7d?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Katie Harp"
+imageCreditUrl: "https://unsplash.com/@kharp?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Taxa de Desconto

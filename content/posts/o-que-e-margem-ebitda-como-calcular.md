@@ -3,8 +3,10 @@ title: "O que é Margem EBITDA (EBITDA Margin) e como calcular"
 date: "21 Set 2025"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552800000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Margem EBITDA, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Jakub Żerdzicki"
+imageCreditUrl: "https://unsplash.com/@jakubzerdzicki?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Margem EBITDA

@@ -3,8 +3,10 @@ title: "O que é Payback (Período de Retorno) e como calcular"
 date: "26 Fev 2025"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553050000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Payback, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1559067096-49ebca3406aa?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Precondo CA"
+imageCreditUrl: "https://unsplash.com/@precondo?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Payback

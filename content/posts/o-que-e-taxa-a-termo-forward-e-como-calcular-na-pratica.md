@@ -3,8 +3,10 @@ title: "O que é Taxa a Termo (Forward) e como calcular na prática"
 date: "13 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Taxa a Termo (Forward) é um conceito fundamental em finanças corporativas que permite aos investidores e gestores entender as expectativas futuras de taxas de juros. Este artigo explora em detalhes a fórmula, aplicação prática e armadilhas comuns relacionadas à Taxa a Termo."
+image: "https://images.unsplash.com/photo-1425342605259-25d80e320565?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Amanda Sandlin"
+imageCreditUrl: "https://unsplash.com/@amanda_sandlin?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Taxa a Termo (Forward)?

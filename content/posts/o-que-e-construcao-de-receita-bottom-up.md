@@ -3,8 +3,10 @@ title: "O que é Construção Receita (Bottom-Up) e como calcular na prática"
 date: "02 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Construção Receita (Bottom-Up) é uma abordagem detalhada e auditável para projetar receita, considerando volume e preço por produto ou segmento, essencial para empresas que buscam precisão em suas previsões financeiras. Este artigo explorará em profundidade como calcular e aplicar essa metodologia de forma eficaz."
+image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Campaign Creators"
+imageCreditUrl: "https://unsplash.com/@campaign_creators?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Construção Receita (Bottom-Up)?

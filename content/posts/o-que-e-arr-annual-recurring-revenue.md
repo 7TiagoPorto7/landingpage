@@ -3,8 +3,10 @@ title: "O que é ARR (Annual Recurring Revenue) e sua importância"
 date: "02 Jun 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
 excerpt: "Descubra como calcular e projetar o ARR, e veja por que investidores de Venture Capital priorizam essa métrica para avaliar o valuation de startups."
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Luke Chesser"
+imageCreditUrl: "https://unsplash.com/@lukechesser?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao ARR

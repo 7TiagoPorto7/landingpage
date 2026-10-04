@@ -3,8 +3,10 @@ title: "O que é Valor em Risco (VaR) e como calcular na prática: Um Guia Avan�
 date: "04 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Valor em Risco (VaR) é uma medida fundamental na gestão de riscos financeiros, permitindo que instituições e investidores compreendam e gerenciem suas exposições potenciais a perdas. Este artigo explorará em profundidade o conceito, sua fórmula, exemplos práticos e armadilhas comuns, oferecendo uma visão abrangente para profissionais e estudantes de finanças."
+image: "https://images.unsplash.com/photo-1705234384936-b75956114126?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Winkler"
+imageCreditUrl: "https://unsplash.com/@markuswinkler?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Valor em Risco (VaR)?

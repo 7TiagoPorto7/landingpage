@@ -3,8 +3,10 @@ title: "O que é FCF (Fluxo de Caixa Livre) e como calcular"
 date: "10 Out 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552250000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do FCF, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Alexander Grey"
+imageCreditUrl: "https://unsplash.com/@sharonmccutcheon?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao FCF

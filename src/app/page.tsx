@@ -277,7 +277,7 @@ export default function Home() {
                                 <li key={post.slug}>
                                     <Link href={`/blog/${post.slug}`} className="group grid grid-cols-[6.5rem_1fr] items-center gap-5 py-5 sm:grid-cols-[8.5rem_1fr]">
                                         <span className="relative block aspect-[4/3] overflow-hidden rounded-xl">
-                                            <PostCover title={post.title} category={getCategory(post.slug)} compact />
+                                            <PostCover title={post.title} category={getCategory(post.slug)} image={post.image} alt={post.imageAlt} sizes="140px" compact />
                                         </span>
                                         <span>
                                             <span className="block text-sm text-[var(--fg-3)]">

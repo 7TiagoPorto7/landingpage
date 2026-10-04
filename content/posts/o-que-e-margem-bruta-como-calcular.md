@@ -3,8 +3,10 @@ title: "O que é Margem Bruta (Gross Margin) e como calcular"
 date: "23 Nov 2025"
 readTime: "9 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552900000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Margem Bruta, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Dennis Siqueira"
+imageCreditUrl: "https://unsplash.com/@densiq?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Margem Bruta

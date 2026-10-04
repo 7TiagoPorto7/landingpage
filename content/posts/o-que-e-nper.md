@@ -3,8 +3,10 @@ title: "O que é NPER e como calcular na prática: Um guia detalhado para profis
 date: "06 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O NPER é uma ferramenta fundamental em finanças corporativas que ajuda a determinar o número de períodos necessários para pagar um empréstimo ou atingir uma meta financeira específica. Compreender como calcular e interpretar o NPER é essencial para tomar decisões informadas em gestão financeira."
+image: "https://images.unsplash.com/photo-1633158829556-6ea20ad39b4f?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Towfiqu barbhuiya"
+imageCreditUrl: "https://unsplash.com/@towfiqu999999?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o NPER?

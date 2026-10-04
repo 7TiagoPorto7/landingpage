@@ -3,8 +3,10 @@ title: "LTV (Lifetime Value): Como calcular e aumentar o valor do cliente"
 date: "07 Jun 2026"
 readTime: "13 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a fórmula do LTV. Aprenda a mensurar a receita futura esperada por usuário ativo e como cruzar com o CAC para estruturar o unit economics de startups."
+image: "https://images.unsplash.com/photo-1761783536272-2fb78dd52c76?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Steph Quernemoen"
+imageCreditUrl: "https://unsplash.com/@stephjq?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao LTV

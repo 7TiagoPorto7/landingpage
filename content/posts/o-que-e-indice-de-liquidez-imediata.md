@@ -3,8 +3,10 @@ title: "O que é Índice de Liquidez Imediata e como calcular na prática"
 date: "18 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Índice de Liquidez Imediata, também conhecido como Cash Ratio, é uma medida fundamental para avaliar a capacidade de uma empresa pagar suas dívidas de curto prazo apenas com seus recursos em caixa. É essencial para gestores financeiros e investidores entenderem como calcular e interpretar este índice para tomar decisões informadas."
+image: "https://images.unsplash.com/photo-1614267118647-20c5ffa6a6e4?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Emil Kalibradov"
+imageCreditUrl: "https://unsplash.com/@emkal?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Índice de Liquidez Imediata?

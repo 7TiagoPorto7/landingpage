@@ -3,8 +3,10 @@ title: "O que é SG&A (Despesas de Vendas, Gerais e Administrativas) e como calc
 date: "07 Nov 2025"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553500000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do SG&A, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Arlington Research"
+imageCreditUrl: "https://unsplash.com/@arlington_research?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao SG&A

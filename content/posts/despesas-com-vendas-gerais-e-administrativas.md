@@ -3,8 +3,10 @@ title: "Desvendando as Despesas com Vendas, Gerais e Admin.: Um Guia Prático pa
 date: "25 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200"
 excerpt: "As despesas com vendas, gerais e administração (SG&A) são um componente crucial no cálculo do desempenho financeiro de uma empresa, influenciando diretamente a rentabilidade e a competitividade no mercado. Entenda como calcular e gerenciar essas despesas de forma eficaz."
+image: "https://images.unsplash.com/photo-1549637642-90187f64f420?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "kate.sade"
+imageCreditUrl: "https://unsplash.com/@kate_sade?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Despesas com Vendas, Gerais e Admin.?

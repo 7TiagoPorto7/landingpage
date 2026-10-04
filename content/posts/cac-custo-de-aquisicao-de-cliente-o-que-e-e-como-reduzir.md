@@ -3,8 +3,10 @@ title: "CAC (Custo de Aquisição de Cliente): O que é e como calcular"
 date: "06 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
 excerpt: "Entenda a fundo o Custo de Aquisição de Clientes, a fórmula contendo todos os componentes de marketing/vendas e estratégias práticas de redução."
+image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Marvin Meyer"
+imageCreditUrl: "https://unsplash.com/@marvelous?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao CAC

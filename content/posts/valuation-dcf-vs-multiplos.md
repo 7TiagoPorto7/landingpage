@@ -3,8 +3,10 @@ title: "Valuation: DCF vs Múltiplos de Mercado"
 date: "10 Dez 2025"
 readTime: "8 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200"
 excerpt: "Entenda as principais diferenças entre as duas metodologias de avaliação de empresas mais utilizadas."
+image: "https://images.unsplash.com/photo-1676276376140-a4030cc596a1?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Walls.io"
+imageCreditUrl: "https://unsplash.com/@walls_io?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 Quando se trata de avaliar quanto vale uma empresa, existem duas metodologias principais que dominam o mercado: o Fluxo de Caixa Descontado (DCF) e a Análise de Múltiplos.

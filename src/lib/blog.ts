@@ -26,6 +26,11 @@ export interface PostData {
     readTime: string;
     author: string;
     excerpt: string;
+    /** Foto do post (Unsplash, licença gratuita) e crédito do fotógrafo */
+    image?: string;
+    imageAlt?: string;
+    imageCredit?: string;
+    imageCreditUrl?: string;
     contentHtml?: string;
     headings?: HeadingItem[];
 }
@@ -71,6 +76,10 @@ function readPostFile(fileName: string) {
             readTime: readingTime(content),
             author: data.author as string,
             excerpt: data.excerpt as string,
+            image: (data.image as string) || undefined,
+            imageAlt: (data.imageAlt as string) || undefined,
+            imageCredit: (data.imageCredit as string) || undefined,
+            imageCreditUrl: (data.imageCreditUrl as string) || undefined,
         } satisfies PostData,
     };
 }

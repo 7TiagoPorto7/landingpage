@@ -3,8 +3,10 @@ title: "O que é FCL para o Acionista (FCFE) e como calcular na prática"
 date: "08 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O FCL para o Acionista (FCFE) é um conceito fundamental em finanças corporativas que representa o caixa livre disponível para os acionistas após o pagamento de dívidas. Entender como calcular e interpretar o FCFE é essencial para avaliar o desempenho e o valor de uma empresa."
+image: "https://images.unsplash.com/photo-1614028674026-a65e31bfd27c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Tech Daily"
+imageCreditUrl: "https://unsplash.com/@techdailyca?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o FCL para o Acionista (FCFE)?

@@ -3,8 +3,10 @@ title: "O que é Capital de Giro (Working Capital) e como calcular"
 date: "17 Mai 2026"
 readTime: "10 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1552600000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Capital de Giro, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "CHUTTERSNAP"
+imageCreditUrl: "https://unsplash.com/@chuttersnap?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Capital de Giro

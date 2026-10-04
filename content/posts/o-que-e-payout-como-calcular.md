@@ -3,8 +3,10 @@ title: "O que é Payout (Taxa de Distribuição de Proventos) e como calcular"
 date: "03 Jul 2025"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1553300000?auto=format&fit=crop&q=80&w=800"
 excerpt: "Domine a definição conceitual do Payout, o método passo a passo de cálculo e aprenda a interpretá-lo profissionalmente no mercado corporativo."
+image: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Towfiqu barbhuiya"
+imageCreditUrl: "https://unsplash.com/@towfiqu999999?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Payout

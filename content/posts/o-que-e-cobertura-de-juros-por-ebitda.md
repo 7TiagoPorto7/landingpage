@@ -3,8 +3,10 @@ title: "O que é Cobertura de Juros por EBITDA e como calcular na prática"
 date: "20 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "A Cobertura de Juros por EBITDA é uma métrica fundamental no endividamento corporativo, permitindo que empresas e investidores avaliem a capacidade de uma companhia de cobrir suas despesas com juros. Entenda como calcular e interpretar essa importante ferramenta financeira."
+image: "https://images.unsplash.com/photo-1769028871759-8099b7474ac4?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Sasun Bughdaryan"
+imageCreditUrl: "https://unsplash.com/@sasun1990?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Cobertura de Juros por EBITDA?

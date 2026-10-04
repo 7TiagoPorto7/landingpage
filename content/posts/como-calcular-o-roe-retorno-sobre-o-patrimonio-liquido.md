@@ -3,8 +3,10 @@ title: "Como calcular o ROE (Retorno sobre o Patrimônio Líquido)"
 date: "03 Jun 2026"
 readTime: "14 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=800"
 excerpt: "Descubra a relevância do ROE para avaliar a eficiência de uma gestão em rentabilizar o capital próprio dos acionistas e como a análise Dupont desmembra essa métrica."
+image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Dylan Gillis"
+imageCreditUrl: "https://unsplash.com/@mainermedia?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao ROE

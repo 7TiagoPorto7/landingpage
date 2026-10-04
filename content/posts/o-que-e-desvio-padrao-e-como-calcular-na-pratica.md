@@ -3,8 +3,10 @@ title: "O que é Desvio Padrão e como calcular na prática"
 date: "01 Jul 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Desvio Padrão é uma medida fundamental de risco em finanças, permitindo que investidores e gestores avaliem a volatilidade de ativos e portfólios. Compreender sua aplicação prática é essencial para tomar decisões informadas no mercado financeiro."
+image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Markus Winkler"
+imageCreditUrl: "https://unsplash.com/@markuswinkler?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Desvio Padrão?

@@ -3,8 +3,10 @@ title: "O que é Churn Rate (Taxa de Cancelamento) e como controlar"
 date: "08 Jun 2026"
 readTime: "11 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&q=80&w=800"
 excerpt: "Tudo sobre Churn Rate. Entenda a diferença de Logochurn vs Revenue Churn, o impacto no fluxo de caixa e estratégias de retenção."
+image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "William Hook"
+imageCreditUrl: "https://unsplash.com/@williamtm?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## Introdução ao Churn Rate

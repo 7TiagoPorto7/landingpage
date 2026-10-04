@@ -3,8 +3,10 @@ title: "O que é Retorno sobre Capital Investido e como calcular na prática"
 date: "24 Jun 2026"
 readTime: "12 min"
 author: "Tiago Porto"
-image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=1200"
 excerpt: "O Retorno sobre Capital Investido (ROIC) é uma métrica fundamental para avaliar a rentabilidade de uma empresa, considerando tanto o capital próprio quanto a dívida. Ele ajuda a entender se a empresa está criando valor para os acionistas ou não, mesmo com lucro positivo."
+image: "https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?auto=format&fit=crop&q=80&w=1600"
+imageCredit: "Vitaly Gariev"
+imageCreditUrl: "https://unsplash.com/@silverkblack?utm_source=mfnapratica&utm_medium=referral"
 ---
 
 ## O que é o Retorno sobre Capital Investido?
