@@ -35,7 +35,7 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
         const run = () => {
             setStage("full");
             timers.push(setTimeout(() => setStage("collapse"), 1600));
-            timers.push(setTimeout(() => setStage("academy"), 2450));
+            timers.push(setTimeout(() => setStage("academy"), 2300));
             if (loop) timers.push(setTimeout(run, 6500));
         };
         run();
@@ -43,7 +43,10 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
     }, [loop]);
 
     const collapsed = stage !== "full";
-    const ease = "cubic-bezier(0.65, 0, 0.35, 1)";
+    // Curva suave: começa firme e desacelera devagar até parar
+    const ease = "cubic-bezier(0.33, 1, 0.68, 1)";
+    // Borda esfumada onde a palavra está sendo engolida
+    const feather = "linear-gradient(to right, #000 calc(100% - 0.5em), transparent)";
 
     return (
         <span
@@ -79,7 +82,9 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
                             // O espaço depois da palavra também recolhe (exceto na última)
                             // A largura vai a zero com o texto preso à esquerda: a borda direita "come" as letras
                             maxWidth: collapsed ? 0 : widths[i] ? widths[i] : undefined,
-                            transition: `max-width 520ms ${ease} ${(WORDS.length - 1 - i) * 80}ms`,
+                            WebkitMaskImage: collapsed ? feather : undefined,
+                            maskImage: collapsed ? feather : undefined,
+                            transition: `max-width 700ms ${ease} ${(WORDS.length - 1 - i) * 55}ms`,
                         }}
                     >
                         {w.rest}
@@ -90,7 +95,7 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
                             className="inline-block"
                             style={{
                                 width: collapsed ? 0 : "0.26em",
-                                transition: `width 180ms ${ease} ${(WORDS.length - 1 - i) * 80 + 400}ms`,
+                                transition: `width 320ms ${ease} ${(WORDS.length - 1 - i) * 55 + 380}ms`,
                             }}
                         />
                     )}
@@ -103,8 +108,8 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
                     marginLeft: stage === "academy" ? "0.25em" : 0,
                     opacity: stage === "academy" ? 1 : 0,
                     transform: stage === "academy" ? "translateX(0)" : "translateX(-0.25em)",
-                    filter: stage === "academy" ? "blur(0)" : "blur(4px)",
-                    transition: "opacity 900ms ease, transform 900ms ease, filter 900ms ease, margin-left 600ms ease",
+                    filter: stage === "academy" ? "blur(0)" : "blur(6px)",
+                    transition: `opacity 1200ms ${ease}, transform 1200ms ${ease}, filter 1200ms ${ease}, margin-left 700ms ${ease}`,
                 }}
             >
                 Academy
