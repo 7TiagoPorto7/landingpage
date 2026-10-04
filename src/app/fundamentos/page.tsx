@@ -12,6 +12,7 @@ import { Backdrop } from "@/components/mfp/backdrop";
 import { Marquee } from "@/components/mfp/marquee";
 import { ShakeOnView } from "@/components/mfp/shake-on-view";
 import { GuaranteeSeal } from "@/components/mfp/guarantee-seal";
+import { LogoAnimation } from "@/components/mfp/logo-animation";
 import { BonusCatalog } from "@/components/fundamentos/bonus-catalog";
 import { Testimonials } from "@/components/fundamentos/testimonials";
 import { Logo } from "@/components/logo";
@@ -173,10 +174,15 @@ export default function FundamentosPage() {
 
             <header className="sticky top-0 z-30 border-b border-[var(--grid)] bg-white/95 text-[var(--ink)] shadow-[0_1px_12px_rgba(7,13,36,0.08)] backdrop-blur-md">
                 <Container className="flex h-16 items-center justify-between gap-4">
-                    <Link href="/" aria-label="Página inicial">
-                        <Logo variant="dark" className="h-7 w-auto" />
+                    {/* No celular a frase completa não cabe ao lado do botão: fica contida e some suave na borda */}
+                    <Link
+                        href="/"
+                        aria-label="Página inicial"
+                        className="min-w-0 flex-1 overflow-hidden py-2 text-[var(--ink)] [mask-image:linear-gradient(to_right,#000_85%,transparent)] sm:flex-none sm:[mask-image:none]"
+                    >
+                        <LogoAnimation loop={false} className="text-[16px] sm:text-[19px]" />
                     </Link>
-                    <div className="flex items-center gap-5">
+                    <div className="flex shrink-0 items-center gap-5">
                         <p className="hidden text-sm text-[var(--ink-2)] md:block">
                             <Installment className="text-[var(--ink)]" /> ou {PRICE_LABEL}
                         </p>
