@@ -35,8 +35,8 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
         const run = () => {
             setStage("full");
             timers.push(setTimeout(() => setStage("collapse"), 1600));
-            timers.push(setTimeout(() => setStage("academy"), 3200));
-            if (loop) timers.push(setTimeout(run, 7500));
+            timers.push(setTimeout(() => setStage("academy"), 2450));
+            if (loop) timers.push(setTimeout(run, 6500));
         };
         run();
         return () => timers.forEach(clearTimeout);
@@ -79,7 +79,7 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
                             // O espaço depois da palavra também recolhe (exceto na última)
                             // A largura vai a zero com o texto preso à esquerda: a borda direita "come" as letras
                             maxWidth: collapsed ? 0 : widths[i] ? widths[i] : undefined,
-                            transition: `max-width 1000ms ${ease} ${(WORDS.length - 1 - i) * 140}ms`,
+                            transition: `max-width 520ms ${ease} ${(WORDS.length - 1 - i) * 80}ms`,
                         }}
                     >
                         {w.rest}
@@ -90,7 +90,7 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
                             className="inline-block"
                             style={{
                                 width: collapsed ? 0 : "0.26em",
-                                transition: `width 300ms ${ease} ${(WORDS.length - 1 - i) * 140 + 750}ms`,
+                                transition: `width 180ms ${ease} ${(WORDS.length - 1 - i) * 80 + 400}ms`,
                             }}
                         />
                     )}
