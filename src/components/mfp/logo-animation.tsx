@@ -4,8 +4,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { logoFont } from "@/lib/fonts";
 
-// "Modelagem Financeira na Prática" encolhe até as iniciais MFP e então "Academy" aparece ao lado.
-// Cada palavra é a inicial (fica) + o resto (recolhe); "na" some inteira.
+// "Modelagem Financeira na Prática" é engolida até as iniciais MFP e então "Academy" aparece ao lado.
+// Cada palavra é a inicial (fica) + o resto, que é cortado da direita para a esquerda; "na" some inteira.
+// O símbolo das faixas fica à esquerda, com a mesma proporção da logo.
 const WORDS = [
     { initial: "M", rest: "odelagem" },
     { initial: "F", rest: "inanceira" },
@@ -34,8 +35,8 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
         const run = () => {
             setStage("full");
             timers.push(setTimeout(() => setStage("collapse"), 1600));
-            timers.push(setTimeout(() => setStage("academy"), 2700));
-            if (loop) timers.push(setTimeout(run, 7000));
+            timers.push(setTimeout(() => setStage("academy"), 3200));
+            if (loop) timers.push(setTimeout(run, 7500));
         };
         run();
         return () => timers.forEach(clearTimeout);
@@ -50,6 +51,22 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
             aria-label="Modelagem Financeira na Prática, MFP Academy"
             className={cn(logoFont.className, "inline-flex items-baseline whitespace-nowrap font-bold", className)}
         >
+            {/* Símbolo das faixas: máscara pintada com a cor do texto */}
+            <span
+                aria-hidden
+                className="mr-[0.55em] inline-block shrink-0 self-baseline"
+                style={{
+                    width: "1.78em",
+                    height: "0.74em",
+                    backgroundColor: "currentColor",
+                    WebkitMaskImage: "url(/logo-mfp-simbolo.png)",
+                    maskImage: "url(/logo-mfp-simbolo.png)",
+                    WebkitMaskSize: "100% 100%",
+                    maskSize: "100% 100%",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                }}
+            />
             {WORDS.map((w, i) => (
                 <span key={i} aria-hidden className="inline-flex items-baseline">
                     {w.initial && <span>{w.initial}</span>}
@@ -60,14 +77,23 @@ export function LogoAnimation({ className, loop = true }: { className?: string; 
                         className="inline-block overflow-hidden"
                         style={{
                             // O espaço depois da palavra também recolhe (exceto na última)
+                            // A largura vai a zero com o texto preso à esquerda: a borda direita "come" as letras
                             maxWidth: collapsed ? 0 : widths[i] ? widths[i] : undefined,
-                            opacity: collapsed ? 0 : 1,
-                            transition: `max-width 900ms ${ease} ${i * 70}ms, opacity 500ms ease ${i * 70}ms`,
+                            transition: `max-width 1000ms ${ease} ${(WORDS.length - 1 - i) * 140}ms`,
                         }}
                     >
                         {w.rest}
-                        {i < WORDS.length - 1 && " "}
                     </span>
+                    {/* Espaço entre as palavras: só fecha quando a palavra termina de ser engolida */}
+                    {i < WORDS.length - 1 && (
+                        <span
+                            className="inline-block"
+                            style={{
+                                width: collapsed ? 0 : "0.26em",
+                                transition: `width 300ms ${ease} ${(WORDS.length - 1 - i) * 140 + 750}ms`,
+                            }}
+                        />
+                    )}
                 </span>
             ))}
             <span
