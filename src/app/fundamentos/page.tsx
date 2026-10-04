@@ -173,13 +173,10 @@ export default function FundamentosPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdCourse) }} />
 
             <header className="sticky top-0 z-30 border-b border-[var(--grid)] bg-white/95 text-[var(--ink)] shadow-[0_1px_12px_rgba(7,13,36,0.08)] backdrop-blur-md">
-                <Container className="flex h-16 items-center justify-between gap-4">
-                    {/* No celular a frase completa não cabe ao lado do botão: fica contida e some suave na borda */}
-                    <Link
-                        href="/"
-                        aria-label="Página inicial"
-                        className="min-w-0 flex-1 overflow-hidden py-2 text-[var(--ink)] [mask-image:linear-gradient(to_right,#000_85%,transparent)] sm:flex-none sm:[mask-image:none]"
-                    >
+                {/* No celular a frase completa empurra o botão para fora da barra; quando ela vira "MFP Academy",
+                    o botão entra deslizando da direita. O overflow escondido evita rolagem lateral na página. */}
+                <Container className="flex h-16 items-center justify-between gap-4 overflow-hidden">
+                    <Link href="/" aria-label="Página inicial" className="shrink-0 text-[var(--ink)]">
                         <LogoAnimation loop={false} className="text-[16px] sm:text-[19px]" />
                     </Link>
                     <div className="flex shrink-0 items-center gap-5">
