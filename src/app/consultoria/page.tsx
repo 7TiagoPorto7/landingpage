@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     alternates: { canonical: "/consultoria" },
 };
 
-const PHOTO = "https://images.unsplash.com/photo-1623113611964-19795ff965bb?auto=format&fit=crop&q=80&w=1400";
+const PHOTO = "https://images.unsplash.com/photo-1665504908551-16e7f6255adc?auto=format&fit=crop&q=80&w=1400";
 
 // Captação de pedidos de consultoria: tela dividida, foto à esquerda e formulário à direita, em cinza neutro
 export default function ConsultoriaPage() {
@@ -19,7 +19,7 @@ export default function ConsultoriaPage() {
             <div className="grid lg:min-h-screen lg:grid-cols-[1.05fr_1fr]">
                 {/* Foto com a logo por cima */}
                 <div className="relative h-[46svh] min-h-[320px] overflow-hidden lg:sticky lg:top-0 lg:h-screen">
-                    <Image src={PHOTO} alt="Profissional concentrada trabalhando no computador em um escritório" fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover object-[60%_35%] grayscale-[20%]" />
+                    <Image src={PHOTO} alt="Empresário de camiseta preta segurando o notebook em um escritório" fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover object-[40%_25%] grayscale-[20%]" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/5 to-[#2a2b2e] lg:to-black/25" />
                     <Link href="/" aria-label="MFP Advisory" className="absolute left-5 top-6 sm:left-10 sm:top-9">
                         <span className="text-[15px] uppercase tracking-[0.32em] text-white sm:text-[17px]">
@@ -28,8 +28,8 @@ export default function ConsultoriaPage() {
                     </Link>
                     <p className="absolute bottom-6 left-10 hidden text-[12px] text-white/60 lg:block">
                         Foto:{" "}
-                        <a href="https://unsplash.com/@goodfacesagency" target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
-                            Good Faces no Unsplash
+                        <a href="https://unsplash.com/@edwardeyer" target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
+                            Edward Eyer no Unsplash
                         </a>
                     </p>
                 </div>
