@@ -90,6 +90,22 @@ export default function ObrigadoDicionarioPage() {
                             Ver tudo o que o Template Pro inclui
                         </Link>
                     </section>
+
+                    {/* Depois do produto intermediário, o curso */}
+                    <section className="mt-6 flex flex-col gap-4 rounded-3xl bg-white p-7 ring-1 ring-[var(--grid)] sm:flex-row sm:items-center sm:justify-between sm:p-8">
+                        <div>
+                            <p className="font-semibold">Quer aprender a montar o modelo do zero?</p>
+                            <p className="mt-1 max-w-md text-[15px] leading-relaxed text-[var(--ink-2)]">
+                                No curso Fundamentos da Modelagem Financeira você liga DRE, Balanço e Fluxo de Caixa passo a passo. 12x de R$ 19,67.
+                            </p>
+                        </div>
+                        <Link
+                            href="/fundamentos?utm_source=site&utm_medium=obrigado&utm_campaign=dicionario-financas"
+                            className="inline-flex h-12 shrink-0 items-center justify-center rounded-lg px-5 font-semibold text-[var(--ink)] ring-1 ring-[var(--ink)]/25 transition-colors hover:bg-[var(--ink)] hover:text-white"
+                        >
+                            Conhecer o curso
+                        </Link>
+                    </section>
                 </Container>
             </main>
 
