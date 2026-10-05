@@ -12,6 +12,7 @@ const API = "https://api.brevo.com/v3/contacts";
 // Listas do Brevo por material (fileId do formulário)
 const LISTS: Record<string, number> = {
     "planilha-modelo-integrado": 3, // "Leads – Planilha modelo integrado", com a sequência de 5 e-mails
+    "newsletter-blog": 6, // "Newsletter do blog", com a sequência dos principais posts
 };
 
 function listFor(fileId: string): number | null {
