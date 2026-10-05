@@ -62,7 +62,7 @@ const LEFT_OUT = [
 const COURSE = [
     "Módulo principal: as 3 demonstrações conectadas, passo a passo",
     "Módulos complementares que recebem novas aulas",
-    "Template do modelo integrado e bônus",
+    "Template do modelo integrado em Excel",
     "Certificado de conclusão e acesso vitalício",
 ];
 
@@ -218,6 +218,19 @@ export default function PlanilhaModeloIntegradoPage() {
                                     </li>
                                 ))}
                             </ul>
+                            {/* Bônus em destaque: o Template Pro vem junto no curso */}
+                            <div className="mt-5 rounded-2xl bg-[#3b82f6]/8 p-4 ring-1 ring-[#3b82f6]/25">
+                                <div className="flex items-start justify-between gap-3">
+                                    <p className="text-sm font-semibold text-[#1d4ed8]">Bônus incluso</p>
+                                    <p className="text-xs text-[var(--ink-3)]">vendido separadamente por R$ 97</p>
+                                </div>
+                                <p className="mt-1 font-semibold">Template Pro</p>
+                                <p className="mt-1 text-[14px] leading-relaxed text-[var(--ink-2)]">
+                                    O modelo completo com DCF até o valor por ação, múltiplos, cenários e Monte Carlo. O próximo degrau depois desta planilha.
+                                </p>
+                            </div>
+                            <p className="mt-2 text-xs text-[var(--ink-3)]">Também incluso: Starter Kit Financeiro e planilha de prompts de IA.</p>
+
                             <p className="mt-6 text-[15px] text-[var(--ink-2)]">
                                 {INSTALLMENT_COUNT} <strong className="text-[1.6em] font-bold text-[var(--ink)]">{INSTALLMENT_VALUE}</strong> ou {PRICE_LABEL} à vista
                             </p>
