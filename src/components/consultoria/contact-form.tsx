@@ -42,7 +42,7 @@ export function ConsultoriaForm() {
     if (status === "sent") {
         return (
             <div role="status" className="py-10">
-                <CheckCircle aria-hidden weight="thin" className="h-14 w-14 text-[var(--amber)]" />
+                <CheckCircle aria-hidden weight="thin" className="h-14 w-14 text-white/80" />
                 <p className="mt-6 text-3xl font-medium tracking-[-0.02em] text-white">Mensagem recebida.</p>
                 <p className="mt-3 max-w-sm leading-relaxed text-white/60">Vamos ler com atenção e responder no e-mail que você informou.</p>
             </div>
@@ -76,7 +76,7 @@ export function ConsultoriaForm() {
                 <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="group inline-flex h-14 cursor-pointer items-center justify-center gap-3 bg-white px-8 text-[15px] font-semibold text-[#1c1d20] transition-colors hover:bg-[var(--amber)] disabled:opacity-60"
+                    className="group inline-flex h-14 cursor-pointer items-center justify-center gap-3 bg-white px-8 text-[15px] font-semibold text-[#1c1d20] transition-colors hover:bg-[#d9d9d6] disabled:opacity-60"
                 >
                     {status === "loading" ? "Enviando..." : "Solicitar contato"}
                     <ArrowRight aria-hidden weight="bold" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
