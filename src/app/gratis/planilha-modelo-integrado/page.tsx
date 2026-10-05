@@ -10,7 +10,7 @@ import { CaptureForm } from "@/components/gratis/capture-form";
 import { Logo } from "@/components/logo";
 
 const TITLE = "Planilha grátis: DRE, Balanço e Fluxo de Caixa ligados";
-const DESCRIPTION = "Baixe grátis um modelo financeiro simplificado em Excel com DRE, Balanço e Fluxo de Caixa conectados e checagem automática de fechamento.";
+const DESCRIPTION = "Baixe grátis um modelo financeiro em Excel com DRE, Balanço e Fluxo de Caixa de 5 anos conectados, o mapa das 8 ligações e checagem automática de fechamento.";
 
 export const metadata: Metadata = {
     title: { absolute: `${TITLE} | Modelagem Financeira na Prática` },
@@ -21,9 +21,10 @@ export const metadata: Metadata = {
 };
 
 const POINTS = [
-    "DRE, Balanço e Fluxo de Caixa de 3 anos, já conectados",
+    "DRE, Balanço e Fluxo de Caixa de 5 anos, já conectados",
+    "Mapa das 8 ligações entre os demonstrativos, conferidas ao vivo",
     "Aba de checagem que avisa na hora se o Balanço não fecha",
-    "Premissas em azul: mude a receita, os custos e os prazos e veja tudo se mover",
+    "5 exercícios guiados, inclusive quebrar uma ligação para ver o erro aparecer",
 ];
 
 // Página de captura: sem menu nem links de saída, o único caminho é o formulário
