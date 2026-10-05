@@ -3,12 +3,16 @@
 //
 // Variáveis de ambiente (configuradas no Railway, nunca no código):
 //   BREVO_API_KEY   chave de API v3 do Brevo
-//   BREVO_LIST_ID   lista padrão para qualquer material (sem ela, usa DEFAULT_LIST_ID)
-//   BREVO_LISTS     opcional, lista por material: "planilha-modelo-integrado:5,dicionario:6"
+//   BREVO_LISTS     opcional, sobrescreve ou acrescenta listas por material: "newsletter-blog:5,dicionario-financas:6"
+//
+// Cada material vai para a SUA lista, porque cada lista dispara uma automação diferente.
+// Material sem lista definida não vai para o Brevo (fica só no banco do site).
 
 const API = "https://api.brevo.com/v3/contacts";
-// Lista "Leads – Planilha modelo integrado" no Brevo
-const DEFAULT_LIST_ID = 3;
+// Listas do Brevo por material (fileId do formulário)
+const LISTS: Record<string, number> = {
+    "planilha-modelo-integrado": 3, // "Leads – Planilha modelo integrado", com a sequência de 5 e-mails
+};
 
 function listFor(fileId: string): number | null {
     const map = Object.fromEntries(
@@ -18,8 +22,7 @@ function listFor(fileId: string): number | null {
             .filter(([id, list]) => id && Number(list) > 0)
             .map(([id, list]) => [id, Number(list)])
     );
-    const fallback = Number(process.env.BREVO_LIST_ID);
-    return map[fileId] ?? (fallback > 0 ? fallback : DEFAULT_LIST_ID);
+    return map[fileId] ?? LISTS[fileId] ?? null;
 }
 
 /** Cria ou atualiza o contato no Brevo e coloca na lista do material. Nunca lança erro. */
@@ -27,6 +30,7 @@ export async function addLeadToBrevo({ email, fileId, name }: { email: string; f
     const key = process.env.BREVO_API_KEY;
     const listId = listFor(fileId);
     if (!key) return { sent: false, reason: "não configurado" } as const;
+    if (!listId) return { sent: false, reason: "sem lista para este material" } as const;
 
     try {
         const res = await fetch(API, {
