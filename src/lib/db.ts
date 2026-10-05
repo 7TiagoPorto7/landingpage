@@ -63,3 +63,31 @@ async function createLeadsTable() {
         await sql.unsafe(`ALTER TABLE leads ADD COLUMN IF NOT EXISTS ${col} TEXT`);
     }
 }
+
+/**
+ * Garante que a tabela de pedidos de consultoria existe (formulário de /consultoria).
+ */
+let consultoriaTableReady: Promise<void> | null = null;
+
+export function ensureConsultoriaTable(): Promise<void> {
+    consultoriaTableReady ??= getDb()`
+        CREATE TABLE IF NOT EXISTS consultoria_leads (
+            id           SERIAL PRIMARY KEY,
+            name         TEXT NOT NULL,
+            email        TEXT NOT NULL,
+            phone        TEXT,
+            company      TEXT,
+            message      TEXT,
+            utm_source   TEXT,
+            utm_medium   TEXT,
+            utm_campaign TEXT,
+            created_at   TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        )
+    `
+        .then(() => undefined)
+        .catch((err) => {
+            consultoriaTableReady = null;
+            throw err;
+        });
+    return consultoriaTableReady;
+}

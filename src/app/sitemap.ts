@@ -27,6 +27,12 @@ const staticRoutes: MetadataRoute.Sitemap = [
         priority: 0.9,
     },
     {
+        url: `${BASE_URL}/consultoria`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
         url: `${BASE_URL}/starter-kit`,
         lastModified: new Date(),
         changeFrequency: "monthly",
