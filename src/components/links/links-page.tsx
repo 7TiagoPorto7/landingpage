@@ -178,7 +178,7 @@ export function LinksPage() {
 
                     {/* Banner: Downloads Gratuitos */}
                     <BannerCard
-                        href="/downloads"
+                        href="/gratis/dicionario-financas"
                         image="/banner_downloads_gratis.png"
                         title="Arquivos Gratuitos para Download"
                         description="Templates, planilhas e materiais de apoio para suas análises financeiras."

@@ -81,10 +81,10 @@ export const PRODUCTS: Product[] = [
     {
         slug: "dicionario",
         accent: "#6366f1",
-        href: "/downloads",
+        href: "/gratis/dicionario-financas",
         name: "Dicionário de Finanças",
         kind: "gratuito",
-        summary: "Os termos de finanças corporativas explicados, numa planilha para consulta.",
+        summary: "340 fórmulas de finanças com explicação, exemplo e armadilhas, numa planilha.",
         includes: ["Arquivo em Excel"],
         cta: "Baixar grátis",
     },

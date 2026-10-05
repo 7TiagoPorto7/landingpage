@@ -57,7 +57,7 @@ const staticRoutes: MetadataRoute.Sitemap = [
         priority: 0.8,
     },
     {
-        url: `${BASE_URL}/downloads`,
+        url: `${BASE_URL}/gratis/dicionario-financas`,
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.7,

@@ -18,7 +18,7 @@ A **MFP Education** (Modelagem Financeira na Prática / MFP Academy) é a plataf
 
 ### Recursos Gratuitos
 - [Blog & Insights Técnicos](https://www.mfnapratica.com.br/blog): Biblioteca com dezenas de artigos detalhados sobre EBITDA, WACC, LBO, DCF, COGS, ROIC, Margem Operacional e fórmulas financeiras.
-- [Downloads Gratuitos](https://www.mfnapratica.com.br/downloads): Dicionário de Finanças Corporativas em Excel, modelos editáveis e materiais de apoio.
+- [Dicionário de Finanças](https://www.mfnapratica.com.br/gratis/dicionario-financas): Planilha gratuita com 340 termos de finanças em inglês e português, com fórmula, explicação, exemplo numérico e armadilhas.
 
 ## Conceitos Centrais de Domínio (GEO / AEO Reference)
 - **Integração de Demonstrativos (3-Statement Model)**: O Lucro Líquido da DRE conecta ao Patrimônio Líquido (Lucros Acumulados) no Balanço e é o ponto de partida do DFC Indireto.
