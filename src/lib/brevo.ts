@@ -15,6 +15,7 @@ const LISTS: Record<string, number> = {
     "newsletter-blog": 6, // "Newsletter do blog", com a sequência dos principais posts
     "ia-para-financas": 7, // "Guia IA para Finanças", entrega do PDF e oferta do 100 Prompts
     "dicionario-financas": 8, // "Dicionário de Finanças", entrega da planilha e oferta do Template Pro
+    consultoria: 9, // "Consultoria (MFP Advisory)", pedidos de contato da página /consultoria
 };
 
 function listFor(fileId: string): number | null {
@@ -29,7 +30,18 @@ function listFor(fileId: string): number | null {
 }
 
 /** Cria ou atualiza o contato no Brevo e coloca na lista do material. Nunca lança erro. */
-export async function addLeadToBrevo({ email, fileId, name }: { email: string; fileId: string; name?: string | null }) {
+export async function addLeadToBrevo({
+    email,
+    fileId,
+    name,
+    attributes = {},
+}: {
+    email: string;
+    fileId: string;
+    name?: string | null;
+    /** Atributos extras do contato (ex.: TELEFONE, EMPRESA, OBSERVACAO). Valores vazios são ignorados. */
+    attributes?: Record<string, string | null | undefined>;
+}) {
     const key = process.env.BREVO_API_KEY;
     const listId = listFor(fileId);
     if (!key) return { sent: false, reason: "não configurado" } as const;
@@ -43,7 +55,7 @@ export async function addLeadToBrevo({ email, fileId, name }: { email: string; f
                 email,
                 listIds: [listId],
                 updateEnabled: true,
-                ...(name ? { attributes: { NOME: name } } : {}),
+                attributes: Object.fromEntries(Object.entries({ NOME: name, ...attributes }).filter(([, v]) => v)),
             }),
             signal: AbortSignal.timeout(6000),
         });

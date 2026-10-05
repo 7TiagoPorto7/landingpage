@@ -6,7 +6,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 // Pedido de contato da página /consultoria.
 // 1) Banco: tabela consultoria_leads. 2) Aviso por e-mail para quem atende, se CONSULTORIA_NOTIFY_EMAIL estiver no Railway.
-// 3) Brevo: só entra numa lista se BREVO_LISTS tiver "consultoria:N".
+// 3) Brevo: contato na lista "Consultoria (MFP Advisory)" com telefone, empresa e observação.
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json();
@@ -42,9 +42,9 @@ export async function POST(req: NextRequest) {
         }
 
         const notified = await notify({ name, email, phone, company, message });
-        await addLeadToBrevo({ email, fileId: "consultoria", name });
+        const brevo = await addLeadToBrevo({ email, fileId: "consultoria", name, attributes: { TELEFONE: phone, EMPRESA: company, OBSERVACAO: message } });
 
-        if (!savedDb && !notified) {
+        if (!savedDb && !notified && !brevo.sent) {
             return NextResponse.json({ error: "Erro interno ao salvar contato" }, { status: 500 });
         }
         return NextResponse.json({ success: true });
