@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     alternates: { canonical: "/consultoria" },
 };
 
-const PHOTO = "https://images.unsplash.com/photo-1772301685774-a4f0e81e032e?auto=format&fit=crop&q=80&w=1400";
+const PHOTO = "https://images.unsplash.com/photo-1759503166523-a0deaf0e6869?auto=format&fit=crop&q=80&w=1400";
 
 // Captação de pedidos de consultoria: tela dividida, foto à esquerda e formulário à direita, em cinza neutro
 export default function ConsultoriaPage() {
@@ -19,15 +19,15 @@ export default function ConsultoriaPage() {
             <div className="grid lg:min-h-screen lg:grid-cols-[1.05fr_1fr]">
                 {/* Foto com a logo por cima */}
                 <div className="relative h-[46svh] min-h-[320px] overflow-hidden lg:sticky lg:top-0 lg:h-screen">
-                    <Image src={PHOTO} alt="Empresário de terno e óculos sentado à mesa com o notebook" fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover object-[35%_0%] lg:object-[35%_30%] grayscale-[20%]" />
+                    <Image src={PHOTO} alt="Silhueta de um executivo olhando a cidade pela janela de um escritório alto" fill priority sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover object-[60%_18%] lg:object-[50%_45%] grayscale-[20%]" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/5 to-[#2a2b2e] lg:to-black/25" />
                     <Link href="/" aria-label="MFP Advisory" className="absolute left-5 top-6 sm:left-10 sm:top-9">
                         <Image src="/logo-mfp-advisory.png" alt="MFP Advisory" width={1959} height={225} priority className="h-6 w-auto sm:h-7" />
                     </Link>
                     <p className="absolute bottom-6 left-10 hidden text-[12px] text-white/60 lg:block">
                         Foto:{" "}
-                        <a href="https://unsplash.com/@madruguinha176" target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
-                            Lucas Silva no Unsplash
+                        <a href="https://unsplash.com/@joakimkingstrom" target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
+                            Joakim Kingstrom no Unsplash
                         </a>
                     </p>
                 </div>
