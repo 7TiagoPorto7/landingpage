@@ -192,7 +192,7 @@ export default function PlanilhaModeloIntegradoPage() {
                             <h2 className="mt-2 text-balance text-[1.9rem] font-semibold leading-[1.1] tracking-[-0.025em] sm:text-[2.6rem]">
                                 Um modelo de verdade tem <Accent>mais peças</Accent>
                             </h2>
-                            <p className="mt-4 text-lg leading-relaxed text-[var(--fg-2)]">A planilha é simplificada para você enxergar a lógica. No trabalho, o modelo precisa de:</p>
+                            <p className="mt-4 text-lg leading-relaxed text-[var(--fg-2)]">A planilha é simplificada para você enxergar a lógica. No trabalho, o modelo ainda ganha:</p>
                             <ul className="mt-6 space-y-3">
                                 {LEFT_OUT.map((t) => (
                                     <li key={t} className="flex gap-3 text-lg leading-snug">
@@ -201,14 +201,14 @@ export default function PlanilhaModeloIntegradoPage() {
                                     </li>
                                 ))}
                             </ul>
-                            <p className="mt-6 leading-relaxed text-[var(--fg-2)]">Para colocar qualquer uma delas sem quebrar as 8 ligações, você precisa entender o modelo por dentro, e não só usar uma planilha pronta.</p>
+                            <p className="mt-6 leading-relaxed text-[var(--fg-2)]">Antes dessas peças vem a base: saber montar os três demonstrativos ligados e achar o erro quando o modelo não fecha. É isso que o curso ensina. Dívida e cenários você encontra prontos no Template Pro, que vem de bônus.</p>
                         </div>
 
                         <div className="rounded-3xl bg-white p-7 text-[var(--ink)] shadow-[0_40px_80px_-40px_rgba(0,0,0,0.8)] sm:p-9">
                             <p className="text-sm font-semibold text-[#b45309]">Curso</p>
                             <p className="mt-1 text-2xl font-semibold leading-snug">Fundamentos da Modelagem Financeira</p>
                             <p className="mt-2 text-[15px] leading-relaxed text-[var(--ink-2)]">
-                                Você monta o modelo do zero, passo a passo, entendendo de onde vem cada número do Balanço. É a base para colocar qualquer peça nova sem quebrar as ligações.
+                                Você monta do zero, passo a passo, a DRE, o Balanço, o Fluxo de Caixa e o capital de giro, e liga tudo até a checagem do Balanço dar zero.
                             </p>
                             <ul className="mt-5 space-y-2.5">
                                 {COURSE.map((c) => (

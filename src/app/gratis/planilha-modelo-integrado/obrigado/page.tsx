@@ -17,7 +17,7 @@ const ARQUIVO = "/materiais/modelo-integrado-simplificado.xlsx";
 
 const INCLUDES = [
     "Módulo principal: as 3 demonstrações conectadas",
-    "Dívida, estoques e cenários sem quebrar o modelo",
+    "Capital de giro: prazos de clientes, fornecedores e estoques",
     "Módulos complementares com novas aulas",
     "Template do modelo integrado, bônus e certificado",
 ];
@@ -63,7 +63,7 @@ export default function ObrigadoPage() {
                             Monte um modelo completo do zero, sabendo de onde vem cada número
                         </h2>
                         <p className="mt-4 max-w-xl leading-relaxed text-[var(--fg-2)]">
-                            A planilha mostra a lógica. No curso {PRODUCT} você constrói o modelo inteiro, passo a passo, com tudo o que ficou de fora.
+                            A planilha mostra a lógica pronta. No curso {PRODUCT} você constrói o modelo do zero, passo a passo, sabendo de onde vem cada número.
                         </p>
                         <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
                             {INCLUDES.map((i) => (

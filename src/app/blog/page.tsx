@@ -87,7 +87,7 @@ export default function BlogPage() {
                                 Aprofunde seus conhecimentos
                             </h3>
                             <p className="mt-4 text-white/65 leading-relaxed">
-                                Receba tutoriais práticos de modelagem, planilhas exclusivas de valuation e artigos direto na sua caixa de entrada. Sem spam.
+                                Receba por e-mail os principais artigos do blog, numa sequência que vai dos demonstrativos e indicadores até o valuation e o modelo financeiro. Sem spam.
                             </p>
                             <div className="mt-8">
                                 <NewsletterForm />

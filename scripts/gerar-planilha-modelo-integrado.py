@@ -489,7 +489,7 @@ put("O que este modelo deixa de fora, de propósito", None, "h")
 for t in ["Dívida e juros (e o efeito deles no caixa e no lucro)", "Dividendos e distribuição de lucro",
           "Estoques e o ciclo de caixa completo", "Cenários e análise de sensibilidade"]:
     put("•", t, "bullet")
-put(None, "No curso Fundamentos da Modelagem Financeira você monta o modelo do zero e adiciona cada uma dessas peças sem quebrar as ligações.", "text")
+put(None, "Antes dessas peças vem a base: no curso Fundamentos da Modelagem Financeira você monta do zero os três demonstrativos ligados, com checagem. Dívida e cenários você encontra prontos no Template Pro, que vem de bônus no curso.", "text")
 r += 1
 s[f"C{r}"] = "Conheça o curso Fundamentos da Modelagem Financeira →"
 s[f"C{r}"].font = Font(name="Calibri", size=12, bold=True, color=AMBER_TXT, underline="single")
