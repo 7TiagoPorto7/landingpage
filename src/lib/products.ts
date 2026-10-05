@@ -69,6 +69,16 @@ export const PRODUCTS: Product[] = [
         cta: "Ver os prompts",
     },
     {
+        slug: "planilha-modelo-integrado",
+        accent: "#f59e0b",
+        href: "/gratis/planilha-modelo-integrado",
+        name: "Planilha Modelo Integrado",
+        kind: "gratuito",
+        summary: "DRE, Balanço e Fluxo de Caixa de 5 anos conectados, com aba que avisa se alguma ligação quebrar.",
+        includes: ["Arquivo em Excel"],
+        cta: "Baixar grátis",
+    },
+    {
         slug: "ia-para-financas",
         accent: "#06b6d4",
         href: "/gratis/ia-para-financas",
