@@ -291,6 +291,28 @@ export default function Home() {
                         </ul>
                     </Container>
                 </Band>
+
+                {/* Consultoria: faixa discreta no tom da página /consultoria */}
+                <section className="border-t border-white/[0.06] text-white" style={{ background: "#2a2b2e" }}>
+                    <Container>
+                        <Link
+                            href="/consultoria?utm_source=site&utm_medium=home&utm_campaign=consultoria"
+                            className="group flex flex-col gap-5 py-9 sm:flex-row sm:items-center sm:justify-between sm:gap-10"
+                        >
+                            <span className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
+                                <Image src="/logo-mfp-advisory.png" alt="MFP Advisory" width={1959} height={225} className="h-5 w-auto shrink-0 self-start opacity-90 sm:self-center" />
+                                <span aria-hidden className="hidden h-8 w-px bg-white/15 sm:block" />
+                                <span className="text-[15px] leading-relaxed text-white/65">
+                                    Sua empresa precisa de um modelo financeiro? Fazemos <span className="text-white">consultoria em modelagem financeira</span>.
+                                </span>
+                            </span>
+                            <span className="inline-flex shrink-0 items-center gap-2 self-start rounded-lg border border-white/15 px-5 py-3 text-sm font-semibold transition-colors group-hover:border-white/40 group-hover:bg-white/[0.06]">
+                                Fale com a gente
+                                <ArrowRight aria-hidden weight="bold" className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                            </span>
+                        </Link>
+                    </Container>
+                </section>
             </main>
 
             <MfpFooter />
