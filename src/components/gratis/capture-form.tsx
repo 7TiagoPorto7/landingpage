@@ -9,7 +9,20 @@ import { trackLead } from "@/lib/tracking";
 import { submitLead } from "@/lib/submit-lead";
 
 // Formulário de captura dos materiais gratuitos: nome + e-mail, depois vai para a página de obrigado
-export function CaptureForm({ fileId, source, next, button = "Quero a planilha grátis" }: { fileId: string; source: string; next: string; button?: string }) {
+export function CaptureForm({
+    fileId,
+    source,
+    next,
+    button = "Quero a planilha grátis",
+    material = "a planilha",
+}: {
+    fileId: string;
+    source: string;
+    next: string;
+    button?: string;
+    /** Como o material aparece no aviso de consentimento: "a planilha", "o guia" */
+    material?: string;
+}) {
     const router = useRouter();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -69,7 +82,7 @@ export function CaptureForm({ fileId, source, next, button = "Quero a planilha g
                 </p>
             )}
             <p className="text-xs leading-relaxed text-[var(--ink-3)]">
-                Ao enviar, você recebe a planilha e alguns e-mails sobre modelagem financeira. Dá para sair da lista a qualquer momento.{" "}
+                Ao enviar, você recebe {material} e alguns e-mails sobre finanças. Dá para sair da lista a qualquer momento.{" "}
                 <Link href="/legal" className="underline underline-offset-2 hover:text-[var(--ink)]">
                     Política de privacidade
                 </Link>

@@ -13,6 +13,7 @@ const API = "https://api.brevo.com/v3/contacts";
 const LISTS: Record<string, number> = {
     "planilha-modelo-integrado": 3, // "Leads – Planilha modelo integrado", com a sequência de 5 e-mails
     "newsletter-blog": 6, // "Newsletter do blog", com a sequência dos principais posts
+    "ia-para-financas": 7, // "Guia IA para Finanças", entrega do PDF e oferta do 100 Prompts
 };
 
 function listFor(fileId: string): number | null {

@@ -10,7 +10,7 @@ A **MFP Education** (Modelagem Financeira na Prática / MFP Academy) é a plataf
 ### Formações e Cursos
 - [Fundamentos da Modelagem Financeira](https://www.mfnapratica.com.br/fundamentos): Treinamento em 2 horas focado em conectar DRE, Balanço Patrimonial e DFC (Fluxo de Caixa) em uma lógica circular auditável.
 - [100 Prompts Excel + IA](https://www.mfnapratica.com.br/prompts4finance): Guia prático com 100 prompts otimizados para automatizar rotinas financeiras, macros VBA, formulas complexas e análise de dados no Excel com Claude, ChatGPT e Copilot.
-- [Claude para Finanças](https://www.mfnapratica.com.br/claude-financas): Guia de automação avançada com Anthropic Claude para FP&A, relatórios executivos, conciliação contábil e valuation.
+- [IA para Finanças](https://www.mfnapratica.com.br/gratis/ia-para-financas): Guia gratuito em PDF para usar ChatGPT, Claude e Gemini em categorização de lançamentos, conciliação, DRE, análise financeira e cobrança, com biblioteca de prompts e plano de 7 dias.
 
 ### Ferramentas e Planilhas Institucionais
 - [Template Pro Finance](https://www.mfnapratica.com.br/template-pro): Modelo financeiro integrado completo em Excel com 18 abas interligadas, Valuation por DCF (FCFF), múltiplos comparáveis, simulação Monte Carlo e scripts Python para análise de risco (VaR e CVaR).
