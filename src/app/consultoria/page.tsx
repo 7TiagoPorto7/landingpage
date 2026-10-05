@@ -33,13 +33,9 @@ export default function ConsultoriaPage() {
                 </div>
 
                 {/* Formulário */}
-                <main className="flex items-center px-5 pb-16 pt-4 sm:px-10 lg:px-16 lg:py-20 xl:px-24" style={{ background: "#2a2b2e" }}>
+                <main className="flex items-center px-5 pb-16 pt-8 sm:px-10 lg:px-16 lg:py-20 xl:px-24" style={{ background: "#2a2b2e" }}>
                     <div className="w-full max-w-xl">
-                        <p className="flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.2em] text-white/50">
-                            <span aria-hidden className="h-px w-8 bg-white/40" />
-                            Consultoria
-                        </p>
-                        <h1 className="mt-6 text-balance text-white text-[2.3rem] font-medium leading-[1.05] tracking-[-0.035em] sm:text-[3.1rem]">
+                        <h1 className="text-balance text-white text-[2.3rem] font-medium leading-[1.05] tracking-[-0.035em] sm:text-[3.1rem]">
                             Precisa de consultoria em modelagem financeira?
                         </h1>
                         <p className="mt-5 text-lg leading-relaxed text-white/60">Entre em contato conosco. Conte o que sua empresa precisa e retornamos para conversar.</p>
